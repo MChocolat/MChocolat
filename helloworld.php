@@ -38,7 +38,7 @@
 			    	<li><a href="newRecipe.html" class="small button">Recipes</a></li>
 			    	<li><a href="batchCreation.php" class="small button">Batches 2</a></li>
 			    	<li><a href="#Packaging" class="small button">Packaging</a></li>
-			    	<li><a href="#Final Product 2" class="small button">Final Product</a></li>
+			    	<li><a href="#Final Product" class="small button">Final Product</a></li>
 				  	</ul>
 				</div>
 		  	</div>
