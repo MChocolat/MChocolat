@@ -36,7 +36,7 @@
 				<ul class="button-group">
 			    	<li><a href="searchForRawMaterials.html" class="small button">Raw Materials</a></li>
 			    	<li><a href="newRecipe.html" class="small button">Recipes</a></li>
-			    	<li><a href="batchCreation.html" class="small button">Batches 2</a></li>
+			    	<li><a href="batchCreation.php" class="small button">Batches 2</a></li>
 			    	<li><a href="#Packaging" class="small button">Packaging</a></li>
 			    	<li><a href="#Final Product" class="small button">Final Product</a></li>
 				  	</ul>
