@@ -48,7 +48,7 @@
 		<div class="row">
 	  		<div class="large-4 columns">
 	  			<div class="panel">
-	  				<div class="h3">New Batch</div>
+	  				<div class="h3">New Batch 2</div>
 	  				<p></p>
 					<div class="row">
 				  		<div class="large-12 medium-4 columns">
