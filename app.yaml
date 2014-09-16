@@ -19,7 +19,4 @@ handlers:
 
 - url: /.*
   script: helloworld.php
-
-- url: /.*
-script: batchCreation.php
   
