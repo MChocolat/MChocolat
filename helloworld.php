@@ -57,9 +57,9 @@
 				<p></p>
 				<div class="button-bar">
 				<ul class="button-group">
-			    	<li><a href="searchForRawMaterials" class="small button">Raw Materials</a></li>
-			    	<li><a href="newRecipe" class="small button">Recipes</a></li>
-			    	<li><a href="batchCreation" class="small button">Batches</a></li>
+			    	echo <li><a href="searchForRawMaterials.html" class="small button">Raw Materials</a></li>
+			    	echo <li><a href="newRecipe.html" class="small button">Recipes</a></li>
+			    	echo <li><a href="batchCreation.html" class="small button">Batches</a></li>
 			    	<li><a href="#Packaging" class="small button">Packaging</a></li>
 			    	<li><a href="#Final Product" class="small button">Final Product</a></li>
 				  	</ul>
