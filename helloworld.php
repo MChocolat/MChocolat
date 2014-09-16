@@ -30,36 +30,13 @@
 			</section>
 		</nav>
 
-  		<!-- Header -->
-		<div class="row">
-		
-			<dl class="tabs" data-tab>
-  <dd class="active"><a href="#panel1">Tab 1</a></dd>
-  <dd><a href="#panel2">Tab 2</a></dd>
-  <dd><a href="#panel3">Tab 3</a></dd>
-  <dd><a href="#panel4">Tab 4</a></dd>
-</dl>
-<div class="tabs-content">
-  <div class="content active" id="panel1">
-    <p>This is the first panel of a basic tab example. This is the first panel of the basic tab example.</p>
-  </div>
-  <div class="content" id="panel2">
-    <p>This is the second panel of a basic tab example. This is the second panel of the basic tab example.</p>
-  </div>
-  <div class="content" id="panel3">
-    <p>This is the third panel of a basic tab example. This is the third panel of the basic tab example.</p>
-  </div>
-  <div class="content" id="panel4">
-    <p>This is the fourth panel of a basic tab example. This is the fourth panel of the basic tab example.</p>
-  </div>
-</div>
 		  	<div class="small-8 large-centered columns">
 				<p></p>
 				<div class="button-bar">
 				<ul class="button-group">
-			    	echo <li><a href="searchForRawMaterials.html" class="small button">Raw Materials</a></li>
-			    	echo <li><a href="newRecipe.html" class="small button">Recipes</a></li>
-			    	echo <li><a href="batchCreation.html" class="small button">Batches</a></li>
+			    	<li><a href="searchForRawMaterials.html" class="small button">Raw Materials</a></li>
+			    	<li><a href="newRecipe.html" class="small button">Recipes</a></li>
+			    	<li><a href="batchCreation.php" class="small button">Batches</a></li>
 			    	<li><a href="#Packaging" class="small button">Packaging</a></li>
 			    	<li><a href="#Final Product" class="small button">Final Product</a></li>
 				  	</ul>
@@ -104,7 +81,7 @@
 		 			<p></p>
 
 					<div class="row">
-				  		<div class="large-12 columns">
+				  		<div class="large-8 columns">
 		  				<div class="h3">Current Batch</div>
 			  				<p></p>
 		  					<table>
