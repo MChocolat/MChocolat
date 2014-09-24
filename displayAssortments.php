@@ -26,33 +26,7 @@ include "_header.php";
     <h2>Assortments </h2>
   
 <?php
-global $con;
-
-$result = mysqli_query($con,"SELECT * FROM assortments");
-
-echo "<table class=\"twelve\">
-<thead>
-<tr>
-<th>AID</th>
-<th>DOC</th>
-<th>quantity</th>
-<th>contents</th>
-</tr>
-</thead>";
-
-echo "<tbody>";
-while($row = mysqli_fetch_array($result)) {
-  echo "<tr>";
-  echo "<td>" . $row['AID'] . "</td>";
-  echo "<td>" . $row['DOC'] . "</td>";
-  echo "<td>" . $row['quantity'] . "</td>";
-  echo "<td>" . $row['contents'] . "</td>";
-  echo "</tr>";
-}
-  echo "</tbody>";
-echo "</table>";
-
-
+table_displayAllAssortments();
 ?>
 
 
