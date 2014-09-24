@@ -5,7 +5,7 @@ api_version: 1
 
 handlers:
 
-- url: /
+- url: /.
   script: helloworld.php
 
 - url: /displayAssortments
@@ -14,3 +14,14 @@ handlers:
 - url: /insertAssortments
   script: insertAssortments.php
 
+- url: /stylesheets
+  static_dir: stylesheets
+
+- url: /css
+  static_dir: css
+
+- url: /js
+  static_dir: js
+
+- url: /img
+  static_dir: img
