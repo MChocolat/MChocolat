@@ -15,12 +15,12 @@ handlers:
 - url: /insertAssortments
   script: insertAssortments.php
 
-- url: /css*
-  static: css/
+- url: /css
+  static_dir: css
 
-- url: /js*
-  static: js/
+- url: /js
+  static_dir: js
 
-- url: /img*
-  static: img/
+- url: /img
+  static_dir: img
 
