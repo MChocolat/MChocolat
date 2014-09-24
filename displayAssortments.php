@@ -30,7 +30,7 @@ global $con;
 
 $result = mysqli_query($con,"SELECT * FROM assortments");
 
-echo "<table border='1'>
+echo "<table border='1' width="75%">
 <tr>
 <th>AID</th>
 <th>DOC</th>
@@ -53,7 +53,7 @@ echo "</table>";
 ?>
 
 
-<form action="/insertAssortments" method="post">
+<form action="/insertAssortments" method="post" width="25%">
 quantity: <input type="int" name="quantity">
 contents: <input type="text" name="contents">
 <input type="submit">
