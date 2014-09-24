@@ -32,5 +32,10 @@ echo "contents: $contents <br />";
 mysqli_close($con);
 
 ?>
+
+<form action="/displayAssortments" method="get">
+<input type="submit" value="Return to displayAssortments">
+</form>
+
 </body>
 </html>
