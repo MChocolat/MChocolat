@@ -69,15 +69,13 @@ function table_displayAllAssortments(){
 	echo "</table>";
 }
 
-	function runQuery($sql){
-		global $con;
+function runQuery($sql){
+	global $con;
 
-		$result = mysqli_query($con,$sql);
-		if (!$result) {
- 	 	die('Error: ' . mysqli_error($con));
- 	 	} else{
- 	 		return $result;
- 	 	}
-	}
-
+	$result = mysqli_query($con,$sql);
+	if (!$result) {
+	 	die('Error: ' . mysqli_error($con));
+	 	} else{
+	 		return $result;
+	 	}
 }
