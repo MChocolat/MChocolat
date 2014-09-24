@@ -11,7 +11,7 @@
 		<nav class="top-bar" data-topbar>
 			<ul class="title-area">
 				<li class="name">
-					<img src="https://cdn.shopify.com/s/files/1/0095/4042/t/5/assets/logo.png" alt="">
+					<img src="https://cdn.shopify.com/s/files/1/0095/4042/t/5/assets/logo.png" height="45" alt="">
 	  				<!-- <img src="http://lorempixel.com/45/45/" alt=""> -->
 				</li>
 			</ul>
