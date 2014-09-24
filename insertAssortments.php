@@ -3,6 +3,9 @@ include "_header.php";
 ?>
 <!DOCTYPE html>
 <html>
+<head>
+	<title>Assortment Inserted</title>
+</head>
 <body>
 <?php
 

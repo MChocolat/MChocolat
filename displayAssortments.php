@@ -4,7 +4,7 @@ include "_header.php";
 <!DOCTYPE html>
 <html>
 <head>
-<title>Title of the document</title>
+<title>Display Assortments</title>
 </head>
 <body>
 TEST
