@@ -16,10 +16,10 @@ include "_header.php";
       <script src="/js/foundation.min.js"></script>
 
 <dl class="tabs" data-tab>
-  <dd class="active"><a href="#panel1">Tab 1</a></dd>
-  <dd><a href="#panel2">Tab 2</a></dd>
-  <dd><a href="#panel3">Tab 3</a></dd>
-  <dd><a href="#panel4">Tab 4</a></dd>
+  <dd class="active"><a href="#panel1">Assortments</a></dd>
+  <dd><a href="#panel2">Batches</a></dd>
+  <dd><a href="#panel3">Raw Ingredients</a></dd>
+  <dd><a href="#panel4">Final Products</a></dd>
 </dl>
 <div class="tabs-content">
   <div class="content active" id="panel1">
@@ -30,7 +30,7 @@ global $con;
 
 $result = mysqli_query($con,"SELECT * FROM assortments");
 
-echo "<table border='1' width="75%">
+echo "<table border='1' width='75%''>
 <tr>
 <th>AID</th>
 <th>DOC</th>
