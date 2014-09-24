@@ -7,7 +7,7 @@ include "_header.php";
 <title>Title of the document</title>
 </head>
 <body>
-Test
+
 <?php
 global $con;
 
