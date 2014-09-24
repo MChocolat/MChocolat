@@ -22,7 +22,7 @@ function add2batch($recipeName){
 	$RecipeID = getRecipeIDbyName($recipeName);
 	$date = date("Y-m-d");
 	$sql = "INSERT INTO batch (BID, DOC, RecipeID) VALUES (null, '$date', '$contents');";
-	runQuery($sql);
+	$result = runQuery($sql);
 }
 
 function add2batchIngr($BID, $IngrID){
