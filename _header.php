@@ -8,4 +8,6 @@ if (mysqli_connect_errno()) {
 
 date_default_timezone_set('EST');
 ini_set('display_errors', 'On');
+
+include "functions.php";
 ?>
