@@ -5,7 +5,7 @@ include "_header.php";
 <html>
 <head>
       <meta charset="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="viewport" content="width=device-width, initial-scale=0.7" />
       <title>M Chocolat Inventory Management System</title>
       <link rel="stylesheet" href="css/foundation.css" />
       <script src="js/vendor/modernizr.js"></script>
@@ -23,18 +23,8 @@ include "_header.php";
 </dl>
 <div class="tabs-content">
   <div class="content active" id="panel1">
-    <p>This is the first panel of the basic tab example. This is the first panel of the basic tab example.</p>
-  </div>
-  <div class="content" id="panel2">
-    <p>This is the second panel of the basic tab example. This is the second panel of the basic tab example.</p>
-  </div>
-  <div class="content" id="panel3">
-    <p>This is the third panel of the basic tab example. This is the third panel of the basic tab example.</p>
-  </div>
-  <div class="content" id="panel4">
-    <p>This is the fourth panel of the basic tab example. This is the fourth panel of the basic tab example.</p>
-  </div>
-</div>
+    <h2>Assortments</h2>
+  
 <?php
 global $con;
 
@@ -69,6 +59,17 @@ contents: <input type="text" name="contents">
 <input type="submit">
 </form>
 
+</div>
+  <div class="content" id="panel2">
+    <p>This is the second panel of the basic tab example. This is the second panel of the basic tab example.</p>
+  </div>
+  <div class="content" id="panel3">
+    <p>This is the third panel of the basic tab example. This is the third panel of the basic tab example.</p>
+  </div>
+  <div class="content" id="panel4">
+    <p>This is the fourth panel of the basic tab example. This is the fourth panel of the basic tab example.</p>
+  </div>
+</div>
 
 <script>
   $(document).foundation();
