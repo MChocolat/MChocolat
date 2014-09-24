@@ -20,7 +20,7 @@ include "_header.php";
 <div class="tabs-content">
   <section role="tabpanel" aria-hidden="false" class="content active" id="panel2-1">
     <h2>First panel content goes here...</h2>
- 
+/*
 <?php
 global $con;
 
@@ -47,6 +47,7 @@ echo "</table>";
 
 
 ?>
+*/
 
 <form action="/insertAssortments" method="post">
 quantity: <input type="int" name="quantity">
