@@ -11,6 +11,10 @@ include "_header.php";
       <script src="js/vendor/modernizr.js"></script>
 </head>
 <body>
+      <script src="/js/vendor/jquery.js"></script>
+      <script src="/js/vendor/fastclick.js"></script>
+      <script src="/js/foundation.min.js"></script>
+
 <dl class="tabs" data-tab>
   <dd class="active"><a href="#panel1">Tab 1</a></dd>
   <dd><a href="#panel2">Tab 2</a></dd>
@@ -66,5 +70,8 @@ contents: <input type="text" name="contents">
 </form>
 
 
+<script>
+  $(document).foundation();
+</script>
 </body>
 </html>
