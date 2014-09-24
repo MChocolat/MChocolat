@@ -11,16 +11,26 @@ include "_header.php";
       <script src="js/vendor/modernizr.js"></script>
 </head>
 <body>
-<dl class="tabs" data-tab role="tablist">
-  <dd class="tab-title active" role="presentational" ><a href="#panel2-1" role="tab" tabindex="0" aria-selected="true" controls="panel2-1">Tab 1</a></dd>
-  <dd class="tab-title" role="presentational" ><a href="#panel2-2" role="tab" tabindex="0"aria-selected="false" controls="panel2-2">Tab 2</a></dd>
-  <dd class="tab-title" role="presentational"><a href="#panel2-3" role="tab" tabindex="0" aria-selected="false" controls="panel2-3">Tab 3</a></dd>
-  <dd class="tab-title" role="presentational" ><a href="#panel2-4" role="tab" tabindex="0" aria-selected="false" controls="panel2-4">Tab 4</a></dd>
+<dl class="tabs" data-tab>
+  <dd class="active"><a href="#panel1">Tab 1</a></dd>
+  <dd><a href="#panel2">Tab 2</a></dd>
+  <dd><a href="#panel3">Tab 3</a></dd>
+  <dd><a href="#panel4">Tab 4</a></dd>
 </dl>
 <div class="tabs-content">
-  <section role="tabpanel" aria-hidden="false" class="content active" id="panel2-1">
-    <h2>First panel content goes here...</h2>
-/*
+  <div class="content active" id="panel1">
+    <p>This is the first panel of the basic tab example. This is the first panel of the basic tab example.</p>
+  </div>
+  <div class="content" id="panel2">
+    <p>This is the second panel of the basic tab example. This is the second panel of the basic tab example.</p>
+  </div>
+  <div class="content" id="panel3">
+    <p>This is the third panel of the basic tab example. This is the third panel of the basic tab example.</p>
+  </div>
+  <div class="content" id="panel4">
+    <p>This is the fourth panel of the basic tab example. This is the fourth panel of the basic tab example.</p>
+  </div>
+</div>
 <?php
 global $con;
 
@@ -47,7 +57,7 @@ echo "</table>";
 
 
 ?>
-*/
+
 
 <form action="/insertAssortments" method="post">
 quantity: <input type="int" name="quantity">
@@ -55,17 +65,6 @@ contents: <input type="text" name="contents">
 <input type="submit">
 </form>
 
- </section>
-  <section role="tabpanel" aria-hidden="true" class="content" id="panel2-2">
-    <h2>Second panel content goes here...</h2>
-  </section>
-  <section role="tabpanel" aria-hidden="true" class="content" id="panel2-3">
-    <h2>Third panel content goes here...</h2>
-  </section>
-  <section role="tabpanel" aria-hidden="true" class="content" id="panel2-4">
-    <h2>Fourth panel content goes here...</h2>
-  </section>
-</div>
 
 </body>
 </html>
