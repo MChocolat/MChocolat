@@ -1,6 +1,6 @@
 <?php
-$con=mysql_connect(':cloudsql/inventorymchocolat:mchocolat',"root","");
-mysql_select_db('test');
+$con=new mysqli(null, 'root', '', 'test', null, '/cloudsql/inventorymchocolat:mchocolat');
+
 // Check connection
 if (mysqli_connect_errno()) {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
