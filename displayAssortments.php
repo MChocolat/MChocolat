@@ -40,17 +40,16 @@ echo "<table class=\"twelve\">
 </tr>
 </thead>";
 
+echo "<tbody>";
 while($row = mysqli_fetch_array($result)) {
-  echo "<tbody>";
   echo "<tr>";
   echo "<td>" . $row['AID'] . "</td>";
   echo "<td>" . $row['DOC'] . "</td>";
   echo "<td>" . $row['quantity'] . "</td>";
   echo "<td>" . $row['contents'] . "</td>";
   echo "</tr>";
-  echo "</tbody>";
 }
-
+  echo "</tbody>";
 echo "</table>";
 
 
@@ -58,7 +57,7 @@ echo "</table>";
 
 
 <form action="/insertAssortments" method="post" width="25">
-quantity: <input type="int" name="quantity">
+quantity: <input type="int" name="quantity"><br>
 contents: <input type="text" name="contents">
 <input type="submit">
 </form>
