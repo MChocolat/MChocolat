@@ -21,7 +21,7 @@ function add2Assortments($date, $quantity, $contents){
 function add2batch($recipeName){
 	$RecipeID = getRecipeIDbyName($recipeName);
 	$date = date("Y-m-d");
-	$sql = "INSERT INTO batch (BID, DOC, RecipeID) VALUES (null, '$date', '$contents');"
+	$sql = "INSERT INTO batch (BID, DOC, RecipeID) VALUES (null, '$date', '$contents');";
 	runQuery($sql);
 }
 
