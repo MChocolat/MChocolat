@@ -55,7 +55,7 @@ contents: <input type="text" name="contents">
 </form>
 
  </section>
-  <section role="tabpanel" aria-hidden="true" class="content" id="panel2-2">
+  <section role="tabpanel" aria-hidden="false" class="content" id="panel2-2">
     <h2>Second panel content goes here...</h2>
   </section>
   <section role="tabpanel" aria-hidden="true" class="content" id="panel2-3">
