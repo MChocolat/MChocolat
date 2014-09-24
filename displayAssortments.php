@@ -14,7 +14,7 @@ include "_header.php";
       <script src="/js/vendor/jquery.js"></script>
       <script src="/js/vendor/fastclick.js"></script>
       <script src="/js/foundation.min.js"></script>
-
+<div class="row">
 <dl class="tabs" data-tab>
   <dd class="active"><a href="#panel1">Assortments</a></dd>
   <dd><a href="#panel2">Batches</a></dd>
@@ -30,21 +30,25 @@ global $con;
 
 $result = mysqli_query($con,"SELECT * FROM assortments");
 
-echo "<table border='1' width='75''>
+echo "<table class=\"twelve\">
+<thead>
 <tr>
 <th>AID</th>
 <th>DOC</th>
 <th>quantity</th>
 <th>contents</th>
-</tr>";
+</tr>
+</thead>";
 
 while($row = mysqli_fetch_array($result)) {
+  echo "<tbody>";
   echo "<tr>";
   echo "<td>" . $row['AID'] . "</td>";
   echo "<td>" . $row['DOC'] . "</td>";
   echo "<td>" . $row['quantity'] . "</td>";
   echo "<td>" . $row['contents'] . "</td>";
   echo "</tr>";
+  echo "</tbody>";
 }
 
 echo "</table>";
@@ -69,6 +73,7 @@ contents: <input type="text" name="contents">
   <div class="content" id="panel4">
     <p>This is the fourth panel of the basic tab example. This is the fourth panel of the basic tab example.</p>
   </div>
+</div>
 </div>
 
 <script>
