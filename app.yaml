@@ -5,6 +5,12 @@ api_version: 1
 
 handlers:
 
-- url: /.*
+- url: /
   script: helloworld.php
-  
+
+- url: /displayAssortments
+  script: displayAssortments.php
+
+- url: /insertAssortments
+  script: insertAssortments.php
+
