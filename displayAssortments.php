@@ -4,7 +4,11 @@ include "_header.php";
 <!DOCTYPE html>
 <html>
 <head>
-<title>Display Assortments</title>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>M Chocolat Inventory Management System</title>
+      <link rel="stylesheet" href="css/foundation.css" />
+      <script src="js/vendor/modernizr.js"></script>
 </head>
 <body>
 <ul class="tabs" data-tab role="tablist">
