@@ -12,4 +12,5 @@ ini_set('display_errors', 'On');
 */
 
 include "functions.php";
+echo "";
 ?>
