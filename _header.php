@@ -1,4 +1,5 @@
 <?php
+/*
 $con=new mysqli(null, 'root', '', 'test', null, '/cloudsql/inventorymchocolat:mchocolat');
 
 // Check connection
@@ -8,6 +9,7 @@ if (mysqli_connect_errno()) {
 
 date_default_timezone_set('EST');
 ini_set('display_errors', 'On');
+*/
 
 include "functions.php";
 ?>
