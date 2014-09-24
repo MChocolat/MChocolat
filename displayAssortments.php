@@ -27,6 +27,7 @@ include "_header.php";
   
 <?php
 table_displayAllAssortments();
+echo "function worked";
 ?>
 
 
