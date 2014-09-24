@@ -23,7 +23,7 @@ include "_header.php";
 </dl>
 <div class="tabs-content">
   <div class="content active" id="panel1">
-    <h2>Assortments</h2>
+    <h2>Assortments </h2>
   
 <?php
 global $con;
