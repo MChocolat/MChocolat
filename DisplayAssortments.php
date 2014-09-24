@@ -36,7 +36,7 @@ echo "</table>";
 
 
 
-<form action="/insert" method="post">
+<form action="/insertAssortments" method="post">
 quantity: <input type="int" name="quantity">
 contents: <input type="text" name="contents">
 <input type="submit">
