@@ -7,7 +7,7 @@ include "_header.php";
 <title>Display Assortments</title>
 </head>
 <body>
-TEST
+
 <?php
 global $con;
 
