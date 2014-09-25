@@ -10,7 +10,7 @@ handlers:
   script: helloworld.php
 
 - url: /(.+)/(.+)\.php$
-  script: \1
+  script: \1\2
 
 - url: /css
   static_dir: css
