@@ -47,7 +47,6 @@ include "functions.php";
         ?>
 
         <form action="/insertBatch" method="post" width="25">
-        RecipeID: <input type="text" name="RecipeName"><br>
         <?php dropdown_RecipeNames(); ?>
         <input type="submit">
         </form>

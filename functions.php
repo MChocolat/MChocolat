@@ -91,7 +91,6 @@ function table_displayAllBatches(){
 	<tr>
 	<th>BID</th>
 	<th>DOC</th>
-	<th>RecipeName</th>
 	<th>RecipeID</th>
 	</tr>";
 
