@@ -47,7 +47,7 @@ include "functions.php";
         ?>
 
         <form action="/insertBatch" method="post" width="25">
-        RecipeID: <input type="int" name="RecipeID"><br>
+        RecipeID: <input type="int" name="RecipeName"><br>
         <input type="submit">
         </form>
 
