@@ -113,11 +113,12 @@ function table_displayAllBatches(){
 function dropdown_RecipeNames(){
 	$toPrint = "<select name='RecipeName'>";
 
-	$sql = "SELECT RecipeName FROM recipe;";
+	$sql = "SELECT RecipeName, RecipeID FROM recipe;";
 	$result = runQuery($sql);
 	foreach ($result as $row) {
 		$name = $row['RecipeName'];
-		$toPrint = $toPrint . "<option value=$name>$name</option>";
+		$id = $row['RecipeID'];
+		$toPrint = $toPrint . "<option value=$id>$name</option>";
 	}
 	$toPrint = $toPrint . "</select>";
 	echo $toPrint;
