@@ -53,6 +53,12 @@ function getRecipeIDbyName($recipeName){
 	return runQuery($sql);
 }
 
+function getRecipeNamebyID($recipeID){
+	$sql = "SELECT RecipeName FROM recipe WHERE RecipeID = '$recipeID';";
+
+	return runQuery($sql);
+}
+
 function table_displayAllAssortments(){
 	$sql = "SELECT * FROM assortments";
 	$result = runQuery($sql);
@@ -85,6 +91,7 @@ function table_displayAllBatches(){
 	<tr>
 	<th>BID</th>
 	<th>DOC</th>
+	<th>RecipeName</th>
 	<th>RecipeID</th>
 	</tr>";
 
@@ -92,6 +99,7 @@ function table_displayAllBatches(){
 	  echo "<tr>";
 	  echo "<td>" . $row['BID'] . "</td>";
 	  echo "<td>" . $row['DOC'] . "</td>";
+	  echo "<td>" . getRecipeNamebyID($row['RecipeID']) . "</td>";
 	  echo "<td>" . $row['RecipeID'] . "</td>";
 	  echo "</tr>";
 	}
