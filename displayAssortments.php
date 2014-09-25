@@ -15,46 +15,46 @@ include "functions.php";
       <script src="/js/vendor/fastclick.js"></script>
       <script src="/js/foundation.min.js"></script>
 
-<div class="row">
-<dl class="tabs" data-tab>
-  <dd class="active"><a href="#panel1">Assortments</a></dd>
-  <dd><a href="#panel2">Batches</a></dd>
-  <dd><a href="#panel3">Raw Ingredients</a></dd>
-  <dd><a href="#panel4">Final Products</a></dd>
-</dl>
-<div class="tabs-content">
-  <div class="content active" id="panel1">
-    <h2>Assortments </h2>
-  
-    <?php
-    table_displayAllAssortments();
-    echo "function worked";
-    ?>
+  <div class="row">
+    <dl class="tabs" data-tab>
+      <dd class="active"><a href="#panel1">Assortments</a></dd>
+      <dd><a href="#panel2">Batchesttt</a></dd>
+      <dd><a href="#panel3">Raw Ingredients</a></dd>
+      <dd><a href="#panel4">Final Products</a></dd>
+    </dl>
+    <div class="tabs-content">
+      <div class="content active" id="panel1">
+        <h2>Assortments </h2>
+      
+        <?php
+        table_displayAllAssortments();
+        echo "function worked";
+        ?>
 
 
-    <form action="/insertAssortments" method="post" width="25">
-    quantitytes: <input type="int" name="quantity"><br>
-    contents: <input type="text" name="contents">
-    <input type="submit">
-    </form>
+        <form action="/insertAssortments" method="post" width="25">
+        quantitytes: <input type="int" name="quantity"><br>
+        contents: <input type="text" name="contents">
+        <input type="submit">
+        </form>
 
-  </div>
-  <div class="content" id="panel2">
-    <h2>Batches </h2>
-    <?php
-    table_displayAllBatches();
-    echo "function worked";
-    ?>
+      </div>
+      <div class="content" id="panel2">
+        <h2>Batches </h2>
+        <?php
+        table_displayAllBatches();
+        echo "function worked";
+        ?>
 
-  </div>
-  <div class="content" id="panel3">
-    <p>This is the third panel of the basic tab example. This is the third panel of the basic tab example.</p>
-  </div>
-  <div class="content" id="panel4">
-    <p>This is the fourth panel of the basic tab example. This is the fourth panel of the basic tab example.</p>
-  </div>
-</div>
-</div>
+      </div>
+      <div class="content" id="panel3">
+        <p>This is the third panel of the basic tab example. This is the third panel of the basic tab example.</p>
+      </div>
+      <div class="content" id="panel4">
+        <p>This is the fourth panel of the basic tab example. This is the fourth panel of the basic tab example.</p>
+      </div>
+    </div><!-- close tabs-content -->
+  </div> <!-- close "row"-->
 
 <script>
   $(document).foundation();
