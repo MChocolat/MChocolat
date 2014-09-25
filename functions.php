@@ -49,8 +49,8 @@ function add2ingredients($UPC, $exp, $price, $distr, $subIngr){
 
 function getRecipeIDbyName($recipeName){
 	$sql = "SELECT RecipeID FROM recipe WHERE RecipeName = '$recipeName';";
-
-	return runQuery($sql);
+	$row = mysqli_fetch_array(runQuery($sql))
+	return $row['RecipeID'];
 }
 
 function getRecipeNamebyID($recipeID){
