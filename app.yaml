@@ -9,8 +9,8 @@ handlers:
 - url: /
   script: helloworld.php
 
-- url: /(.+)/(.+)\.php$
-  script: \1/\2
+- url: /display/(.*)
+  script: /display/\1.php
 
 - url: /css
   static_dir: css
