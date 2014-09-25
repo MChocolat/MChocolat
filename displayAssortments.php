@@ -32,7 +32,7 @@ include "_header.php";
         ?>
 
 
-        <form action="/insertAssortments" method="post" width="25">
+        <form action="insert/insertAssortments" method="post" width="25">
         quantity: <input type="int" name="quantity"><br>
         contents: <input type="text" name="contents">
         <input type="submit">
@@ -46,7 +46,7 @@ include "_header.php";
         echo "function worked";
         ?>
 
-        <form action="/insertBatch" method="post" width="25">
+        <form action="insert/insertBatch" method="post" width="25">
         <?php dropdown_RecipeNames(); ?>
         <input type="submit">
         </form>

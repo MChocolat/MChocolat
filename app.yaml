@@ -9,9 +9,11 @@ handlers:
 - url: /
   script: helloworld.php
 
-- url: /display/(.*)
+- url: /displayAssortments
+  script: displayAssortments.php
+
+- url: /display
   static_dir: display
-  upload: /display/\1.php
 
 - url: /css
   static_dir: css
