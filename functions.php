@@ -16,6 +16,10 @@ ini_set('display_errors', 'On');
 		Display the entire table: table_displayAll<table name>
 		Get id based a criteria: get<ID>by<criteria>
 		Display a dropdown: dropdown_<what you're displaying>
+
+	convention for variables:
+		If referring to SQL table variables, use same cap. (All attributes start with
+			capital letter. All tables start lowercase.);
 */
 
 function add2Assortments($date, $quantity, $contents){
@@ -27,7 +31,7 @@ function add2Assortments($date, $quantity, $contents){
 }
 
 //Date and RID are made here. Don't do it on front end.
-function add2batch($recipeID){
+function add2batch($RecipeID){
 	$date = date("Y-m-d");
 	$sql = "INSERT INTO batch (BID, DOC, RecipeID) VALUES (null, '$date', '$RecipeID');";
 	$result = runQuery($sql);
