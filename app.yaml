@@ -9,14 +9,11 @@ handlers:
 - url: /
   script: helloworld.php
 
-- url: /test
+- url: /(.+\.php) 
   script: test.php
 
-- url: /display/.*
-  static_dir: display
-
-- url: /insert/.*
-  static_dir: insert
+- url: /(.+)/(.+)\.php$
+  script: \1
 
 - url: /css
   static_dir: css
