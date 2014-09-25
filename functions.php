@@ -99,7 +99,7 @@ function table_displayAllBatches(){
 	  echo "<tr>";
 	  echo "<td>" . $row['BID'] . "</td>";
 	  echo "<td>" . $row['DOC'] . "</td>";
-	  echo "<td>" . getRecipeNamebyID($row['RecipeID']) . "</td>";
+	 // echo "<td>" . getRecipeNamebyID($row['RecipeID']) . "</td>";
 	  echo "<td>" . $row['RecipeID'] . "</td>";
 	  echo "</tr>";
 	}
