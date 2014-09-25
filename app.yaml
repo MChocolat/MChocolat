@@ -12,7 +12,7 @@ handlers:
 - url: /displayAssortments
   script: displayAssortments.php
 
-- url: /display
+- url: /display/*
   static_dir: display
 
 - url: /css
