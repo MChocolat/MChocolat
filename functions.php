@@ -111,7 +111,7 @@ function table_displayAllBatches(){
 }
 
 function dropdown_RecipeNames(){
-	$toPrint = "<select name='RecipeName'>"
+	$toPrint = "<select name='RecipeName'>";
 
 	$sql = "SELECT RecipeName FROM recipe;";
 	$result = runQuery($sql);
