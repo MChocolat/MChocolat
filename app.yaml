@@ -9,14 +9,11 @@ handlers:
 - url: /
   script: helloworld.php
 
-- url: /displayAssortments
-  script: displayAssortments.php
+- url: /display
+  static_dir: display
 
-- url: /insertAssortments
-  script: insertAssortments.php
-
-- url: /insertBatch
-  script: insertBatch.php
+- url: /insert
+  static_dir: insert
 
 - url: /css
   static_dir: css
