@@ -11,13 +11,13 @@ include "functions.php";
 		echo "connected... ";
 
 		// escape variables for security
-		$RecipeName = mysqli_real_escape_string($con, $_POST['RecipeName']);
+		$RecipeID = mysqli_real_escape_string($con, $_POST['RecipeID']);
 
-		add2Batch($RecipeName);
+		add2Batch($RecipeID);
 
 		echo "1 record added <br />";
 		echo "Added: <br />";
-		echo "RecipeName: $RecipeName <br />";
+		echo "RecipeID: $RecipeID <br />";
 	?>
 
 	<form action="/displayAssortments" method="get">
