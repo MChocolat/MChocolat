@@ -46,6 +46,11 @@ include "functions.php";
         echo "function worked";
         ?>
 
+        <form action="/insertBatch" method="post" width="25">
+        RecipeID: <input type="int" name="RecipeID"><br>
+        <input type="submit">
+        </form>
+
       </div>
       <div class="content" id="panel3">
         <p>This is the third panel of the basic tab example. This is the third panel of the basic tab example.</p>
