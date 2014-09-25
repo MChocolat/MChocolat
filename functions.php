@@ -27,7 +27,7 @@ function add2Assortments($date, $quantity, $contents){
 
 //Date and RID are made here. Don't do it on front end.
 function add2batch($recipeName){
-	while ($row = mysqli_fetch_array($result)) {
+	while ($row = mysqli_fetch_array(getRecipeIDbyName($recipeName))) {
 		$RecipeID = $row['RecipeID'];
 	}
 	$date = date("Y-m-d");
