@@ -13,7 +13,7 @@ handlers:
   script: displayAssortments.php
 
 - url: /(.*)?/(.*)\.php$
-  static_dir: \1/\2.php
+  script: \1/\2.php
 
 - url: /css
   static_dir: css
