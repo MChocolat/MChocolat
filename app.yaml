@@ -8,8 +8,8 @@ handlers:
 
 - url: /
   script: helloworld.php
-  
-- url: /
+
+- url: /test
   script: test.php
 
 - url: /display
