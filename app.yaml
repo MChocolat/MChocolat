@@ -15,6 +15,9 @@ handlers:
 - url: /insertAssortments
   script: insertAssortments.php
 
+- url: /insertBatch
+script: insertBatch.php
+
 - url: /css
   static_dir: css
 
