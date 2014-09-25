@@ -77,6 +77,28 @@ function table_displayAllAssortments(){
 	echo "</table>";
 }
 
+function table_displayAllBatches(){
+	$sql = "SELECT * FROM batch";
+	$result = runQuery($sql);
+
+	echo "<table border='1'>
+	<tr>
+	<th>BID</th>
+	<th>DOC</th>
+	<th>RecipeID</th>
+	</tr>";
+
+	while($row = mysqli_fetch_array($result)) {
+	  echo "<tr>";
+	  echo "<td>" . $row['BID'] . "</td>";
+	  echo "<td>" . $row['DOC'] . "</td>";
+	  echo "<td>" . $row['RecipeID'] . "</td>";
+	  echo "</tr>";
+	}
+
+	echo "</table>";
+}
+
 function runQuery($sql){
 	global $con;
 
