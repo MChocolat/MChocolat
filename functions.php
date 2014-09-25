@@ -27,7 +27,9 @@ function add2Assortments($date, $quantity, $contents){
 
 //Date and RID are made here. Don't do it on front end.
 function add2batch($recipeName){
-	$RecipeID = getRecipeIDbyName($recipeName);
+	while ($row = mysqli_fetch_array($result)) {
+		$RecipeID = $row['RecipeID'];
+	}
 	$date = date("Y-m-d");
 	$sql = "INSERT INTO batch (BID, DOC, RecipeID) VALUES (null, '$date', '$RecipeID');";
 	$result = runQuery($sql);
@@ -49,8 +51,8 @@ function add2ingredients($UPC, $exp, $price, $distr, $subIngr){
 
 function getRecipeIDbyName($recipeName){
 	$sql = "SELECT RecipeID FROM recipe WHERE RecipeName = '$recipeName';";
-	$row = mysqli_fetch_array(runQuery($sql))
-	return $row['RecipeID'];
+	
+	return runQuery($sql);
 }
 
 function getRecipeNamebyID($recipeID){
