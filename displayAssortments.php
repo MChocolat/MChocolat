@@ -18,7 +18,7 @@ include "functions.php";
   <div class="row">
     <dl class="tabs" data-tab>
       <dd class="active"><a href="#panel1">Assortments</a></dd>
-      <dd><a href="#panel2">Batchesttt</a></dd>
+      <dd><a href="#panel2">Batches</a></dd>
       <dd><a href="#panel3">Raw Ingredients</a></dd>
       <dd><a href="#panel4">Final Products</a></dd>
     </dl>
@@ -33,7 +33,7 @@ include "functions.php";
 
 
         <form action="/insertAssortments" method="post" width="25">
-        quantitytes: <input type="int" name="quantity"><br>
+        quantity: <input type="int" name="quantity"><br>
         contents: <input type="text" name="contents">
         <input type="submit">
         </form>
