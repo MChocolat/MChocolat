@@ -11,7 +11,7 @@ include "functions.php";
 		echo "connected... ";
 
 		// escape variables for security
-		$RecipeID = mysqli_real_escape_string($con, $_POST['RecipeName']);
+		$RecipeName = mysqli_real_escape_string($con, $_POST['RecipeName']);
 
 		add2Batch($RecipeName);
 
