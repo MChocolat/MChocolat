@@ -8,6 +8,9 @@ handlers:
 
 - url: /
   script: helloworld.php
+  
+- url: /
+  script: test.php
 
 - url: /display
   static_dir: display
