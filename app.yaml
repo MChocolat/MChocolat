@@ -12,10 +12,10 @@ handlers:
 - url: /test
   script: test.php
 
-- url: /display
+- url: /display/.*
   static_dir: display
 
-- url: /insert
+- url: /insert/.*
   static_dir: insert
 
 - url: /css
