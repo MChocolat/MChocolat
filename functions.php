@@ -9,6 +9,7 @@ if (mysqli_connect_errno()) {
 date_default_timezone_set('EST');
 ini_set('display_errors', 'On');
 
+
 /*
 	convention for function names:
 		Add an entry into a table: add2<table name>
@@ -107,6 +108,19 @@ function table_displayAllBatches(){
 	}
 
 	echo "</table>";
+}
+
+function dropdown_RecipeNames(){
+	$toPrint = "<select name='RecipeName'>"
+
+	$sql = "SELECT RecipeName FROM recipe;";
+	$result = runQuery($sql);
+	foreach ($result as $row) {
+		$name = $row['RecipeName'];
+		$toPrint = $toPrint . "<option value=$name>$name</option>";
+	}
+	$toPrint = $toPrint . "</select>";
+	echo $toPrint;
 }
 
 function runQuery($sql){
