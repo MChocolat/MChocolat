@@ -14,6 +14,7 @@ include "functions.php";
       <script src="/js/vendor/jquery.js"></script>
       <script src="/js/vendor/fastclick.js"></script>
       <script src="/js/foundation.min.js"></script>
+
 <div class="row">
 <dl class="tabs" data-tab>
   <dd class="active"><a href="#panel1">Assortments</a></dd>
@@ -25,21 +26,33 @@ include "functions.php";
   <div class="content active" id="panel1">
     <h2>Assortments </h2>
   
-<?php
-table_displayAllAssortments();
-echo "function worked";
-?>
+    <?php
+    table_displayAllAssortments();
+    echo "function worked";
+    ?>
 
 
-<form action="/insertAssortments" method="post" width="25">
-quantitytestttttt: <input type="int" name="quantity"><br>
-contents: <input type="text" name="contents">
-<input type="submit">
-</form>
+    <form action="/insertAssortments" method="post" width="25">
+    quantitytes: <input type="int" name="quantity"><br>
+    contents: <input type="text" name="contents">
+    <input type="submit">
+    </form>
 
-</div>
+  </div>
   <div class="content" id="panel2">
-    <p>This is the second panel of the basic tab example. This is the second panel of the basic tab example.</p>
+    <h2>Batches </h2>
+    <?php
+    table_displayAllBatches();
+    echo "function worked";
+    ?>
+
+    <!--
+    <form action="/insertAssortments" method="post" width="25">
+    quantitytes: <input type="int" name="quantity"><br>
+    contents: <input type="text" name="contents">
+    <input type="submit">
+    </form>
+        -->
   </div>
   <div class="content" id="panel3">
     <p>This is the third panel of the basic tab example. This is the third panel of the basic tab example.</p>
