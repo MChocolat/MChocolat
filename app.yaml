@@ -10,7 +10,7 @@ handlers:
   script: helloworld.php
 
 - url: /display/(.*)
-  script: /display/\1.php
+  upload: /display/\1.php
 
 - url: /css
   static_dir: css
