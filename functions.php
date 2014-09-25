@@ -27,9 +27,7 @@ function add2Assortments($date, $quantity, $contents){
 
 //Date and RID are made here. Don't do it on front end.
 function add2batch($recipeName){
-	while ($row = mysqli_fetch_array(getRecipeIDbyName($recipeName))) {
-		$RecipeID = $row['RecipeID'];
-	}
+	$RecipeID = getRecipeIDbyName($recipeName);
 	$date = date("Y-m-d");
 	$sql = "INSERT INTO batch (BID, DOC, RecipeID) VALUES (null, '$date', '$RecipeID');";
 	$result = runQuery($sql);
@@ -52,7 +50,11 @@ function add2ingredients($UPC, $exp, $price, $distr, $subIngr){
 function getRecipeIDbyName($recipeName){
 	$sql = "SELECT RecipeID FROM recipe WHERE RecipeName = '$recipeName';";
 	
-	return runQuery($sql);
+	$result = runQuery($sql);
+	return $result['RecipeID'];
+	//while ($row = mysqli_fetch_array(getRecipeIDbyName($recipeName))) {
+	//	$RecipeID = $row['RecipeID'];
+	//}
 }
 
 function getRecipeNamebyID($recipeID){
@@ -109,6 +111,19 @@ function table_displayAllBatches(){
 	echo "</table>";
 }
 
+
+function dropdown_RecipeNames(){
+	$toPrint = "<select name='RecipeName'>"
+
+	$sql = "SELECT RecipeName FROM recipe;";
+	$result = runQuery($sql);
+	foreach ($result as $row) {
+		$name = $row['RecipeName'];
+		$toPrint = $toPrint . "<option value=$name>$name</option>";
+	}
+	$toPrint = $toPrint . "</select>";
+	echo $toPrint;
+}
 function runQuery($sql){
 	global $con;
 
