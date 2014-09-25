@@ -12,8 +12,8 @@ handlers:
 - url: /displayAssortments
   script: displayAssortments.php
 
-- url: /display/*
-  static_dir: display
+- url: /(.*)?/(.*)\.php$
+  static_dir: \1/\2.php
 
 - url: /css
   static_dir: css
