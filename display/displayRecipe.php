@@ -4,11 +4,10 @@ include "_header.php";
 <html>
 	<body>
 		<div class="row">
-			<h1>Recipes</h1>
+			<h2>Recipes</h2>
 
 			<?php
             table_displayAllIngredients();
-            echo "Function Worked";
             ?>
 
             <form action="insert/insertRecipe" method="post" width="25">

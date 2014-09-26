@@ -4,10 +4,10 @@ include "_header.php";
 <html>
 	<body>
 		<div class="row">
-			<h1>Ingredients</h1>
+			<h2>Ingredients</h2>
 
 			<?php table_displayAllIngredients(); 
-			echo "Function Worked";
+			
 			?>
 
 
