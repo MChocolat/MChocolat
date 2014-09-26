@@ -22,7 +22,7 @@ include "functions.php";
 		echo "Steps: $Steps <br /> ";
 	?>
 
-	<form action="display/displayRecipe.php" method="get">
+	<form action="../display/displayRecipe.php" method="get">
 	<input type="submit" value="Return to Recipes">
 	</form>
 

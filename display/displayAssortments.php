@@ -13,7 +13,7 @@ include "_header.php";
                 ?>
 
 
-                <form action="insert/insertAssortments.php" method="post" width="25">
+                <form action="../insert/insertAssortments.php" method="post" width="25">
                 quantity: <input type="int" name="quantity"><br>
                 contents: <input type="text" name="contents">
                 <input type="submit">
