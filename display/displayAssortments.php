@@ -7,7 +7,6 @@ include "_header.php";
         <div class="row">
                 <h2>Assortments </h2>
               
-              
                 <?php
                 table_displayAllAssortments();
                 echo "function worked";

@@ -9,7 +9,6 @@ include "_header.php";
             table_displayAllBatches();
             echo "function worked";
             ?>
-            
 
             <form action="/insertBatch" method="post" width="25">
             <?php dropdown_RecipeNames(); ?>
