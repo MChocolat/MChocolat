@@ -20,8 +20,8 @@ include "functions.php";
 		echo "RecipeID: $RecipeID <br />";
 	?>
 
-	<form action="/displayAssortments" method="get">
-	<input type="submit" value="Return to displayAssortments">
+	<form action="display/displayAssortments.php" method="get">
+	<input type="submit" value="Return to Assortments">
 	</form>
 
 </body>
