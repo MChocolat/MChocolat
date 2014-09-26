@@ -110,6 +110,44 @@ function table_displayAllBatches(){
 	echo "</table>";
 }
 
+function table_displayAllIngredients(){
+	$sql = "SELECT * FROM ingredients";
+	$result = runQuery($sql);
+
+	$toPrint = "<table border = '1'>
+		<tr>
+		<th>IngrID</th>
+		<th>UPC</th>
+		<th>Date of Purchase</th>
+		<th>Expiration Date</th>
+		<th>Price</th>
+		<th>Distributor</th>
+		<th>Sub Ingredients</th>";
+
+	foreach ($result as $row) {
+		$IngrID = $row['IngrID'];
+		$UPC = $row['UPC'];
+		$DOP = $row['DOP'];
+		$Exp = $row['Exp'];
+		$Price = $row['Price'];
+		$Distributor = $row['Distributor'];
+		$SubIngr = $row['SubIngr'];
+
+		$toPrint .= "<tr>";
+	  	$toPrint .- "<td>'$IngrID'</td>";
+	  	$toPrint .- "<td>'$UPC'</td>";
+	  	$toPrint .- "<td>'$DOP'</td>";
+	  	$toPrint .- "<td>'$Exp'</td>";
+	  	$toPrint .- "<td>'$Price'</td>";
+	  	$toPrint .- "<td>'$Distributor'</td>";
+	  	$toPrint .- "<td>'$SubIngr'</td>";
+
+	  	$toPrint .= "</tr>";
+	}
+
+	echo $toPrint;
+}
+
 function dropdown_RecipeNames(){
 	$toPrint = "<select name='RecipeID'>";
 

@@ -24,10 +24,10 @@ include "functions.php";
       <script src="/js/foundation.min.js"></script>
 
   <div class="row">
-      <a href="/display/displayIngredients">Raw Ingredients</a>
-      <a href="/display/displayBatch">Batches</a>
-      <a href="/display/displayRecipes">Recipes</a>
-      <a href="/display/displayAssortments">Assortments</a>
+      <a href="/display/displayIngredients.php">Raw Ingredients</a>
+      <a href="/display/displayBatch.php">Batches</a>
+      <a href="/display/displayRecipes.php">Recipes</a>
+      <a href="/display/displayAssortments.php">Assortments</a>
    <div>
 </head>
 
