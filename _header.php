@@ -40,7 +40,7 @@ include "functions.php";
         <!-- Left Nav Section -->
         <ul class="left">
             <div class="large-1 columns">  
-              <h4><a href="#Administrator">Administrator</a></h4>
+              <h4><a href="#Administrator">M Chocolat</a></h4>
             </div>
         </ul>
       </section>
@@ -50,22 +50,22 @@ include "functions.php";
         <p></p>
         <div class="button-bar">
         <ul class="button-group">
-            <li><a href="searchForRawMaterials.html" class="small button">Raw Materials</a></li>
-            <li><a href="newRecipe.html" class="small button">Recipes</a></li>
-            <li><a href="batchCreation.php" class="small button">Batches 2</a></li>
-            <li><a href="#Packaging" class="small button">Packaging</a></li>
-            <li><a href="#Final Product" class="small button">Final Product</a></li>
+            <li><a href="display/displayIngredients.php" class="small button">Raw Materials</a></li>
+            <li><a href="display/displayRecipe.php" class="small button">Recipes</a></li>
+            <li><a href="display/displayBatch.php" class="small button">Batches</a></li>
+            <li><a href="display/displayAssortments.php" class="small button">Assortments</a></li>
             </ul>
         </div>
         </div>
     </div>
-
+<!--
   <div class="row">
       <a href="/display/displayIngredients.php">Raw Ingredients</a>
       <a href="/display/displayBatch.php">Batches</a>
       <a href="/display/displayRecipes.php">Recipes</a>
       <a href="/display/displayAssortments.php">Assortments</a>
    <div>
+   -->
 
 
 </head>
