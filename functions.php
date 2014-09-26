@@ -148,6 +148,32 @@ function table_displayAllIngredients(){
 	echo $toPrint;
 }
 
+
+function table_displayAllIngredients(){
+	$sql = "SELECT * FROM recipe";
+	$result = runQuery($sql);
+
+	$toPrint = "<table border = '1'>
+		<tr>
+		<th>RecipeID</th>
+		<th>RecipeName</th>
+		<th>Steps</th>";
+
+	foreach ($result as $row) {
+		$RecipeID = $row['RecipeID'];
+		$RecipeName = $row['RecipeName'];
+		$Steps = $row['Steps'];
+
+		$toPrint .= "<tr>";
+	  	$toPrint .= "<td>'$RecipeID'</td>";
+	  	$toPrint .= "<td>'$RecipeName'</td>";
+	  	$toPrint .= "<td>'$Steps'</td>";
+	  	$toPrint .= "</tr>";
+	}
+
+	echo $toPrint;
+}
+
 function dropdown_RecipeNames(){
 	$toPrint = "<select name='RecipeID'>";
 
