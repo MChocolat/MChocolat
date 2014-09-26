@@ -51,11 +51,6 @@ function add2ingredients($UPC, $exp, $price, $distr, $subIngr){
 	runQuery($sql);
 }
 
-function add2recipes($RecipeName, $Steps){
-	$sql = "INSERT INTO recipe (RecipeID, RecipeName, Steps) VALUES (null, '$RecipeName', '$Steps');";
-	runQuery($sql);
-}
-
 function getRecipeIDbyName($recipeName){
 	$sql = "SELECT RecipeID FROM recipe WHERE RecipeName = '$recipeName';";
 	
