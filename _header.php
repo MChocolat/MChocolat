@@ -54,7 +54,7 @@ include "functions.php";
             <li><a href="displayRecipe.php" class="small button">Recipes</a></li>
             <li><a href="displayBatch.php" class="small button">Batches</a></li>
             <li><a href="displayAssortments.php" class="small button">Assortments</a></li>
-            </ul>
+            </ul> 
         </div>
         </div>
     </div>
