@@ -8,7 +8,7 @@ include "_header.php";
             <?php
             table_displayAllIngredients();
             ?>
-
+ 
             <form action="/insertRecipe" method="post" width="25">
             <!--<?php dropdown_RecipeNames(); ?>-->
             <input type="submit">
