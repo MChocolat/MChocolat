@@ -14,7 +14,7 @@ include "functions.php";
 		$RecipeName = mysqli_real_escape_string($con, $_POST['RecipeID']);
 		$Steps = mysqli_real_escape_string($con, $_POST['Steps']);
 
-		//add2recipes($RecipeName, $Steps);
+		// add2recipes($RecipeName, $Steps);
 
 		echo "1 record added <br />";
 		echo "Added: <br />";
