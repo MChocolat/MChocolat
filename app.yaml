@@ -10,7 +10,7 @@ handlers:
   script: helloworld.php
 
 - url: /displayAssortments
-  script: displayAssortments.php
+  script: /display/displayAssortments.php
 
 - url: /(.*)?/(.*)\.php$
   script: \1/\2.php
