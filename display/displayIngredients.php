@@ -6,7 +6,9 @@ include "_header.php";
 		<div class="row">
 			<h1>Ingredients</h1>
 
-			<?php table_displayAllIngredients(); ?>
+			<?php table_displayAllIngredients(); 
+			echo "";
+			?>
 
 
 			<form action="/insert/insertIngredients.php" method="post" width="25">
