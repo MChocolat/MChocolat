@@ -152,6 +152,7 @@ function table_displayAllIngredients(){
 	}
 
 	echo $toPrint;
+	echo "</table>";
 }
 
 function table_displayAllRecipes(){
@@ -177,6 +178,7 @@ function table_displayAllRecipes(){
 	}
 
 	echo $toPrint;
+	echo "</table>";
 }
 
 function dropdown_RecipeNames(){
