@@ -45,7 +45,6 @@ include "functions.php";
         </ul>
       </section>
     </nav>
-
         <div class="small-8 large-centered columns">
         <p></p>
         <div class="button-bar">
