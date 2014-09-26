@@ -21,7 +21,7 @@ include "functions.php";
 		echo "Added: <br />";
 		echo "Date: $date <br />";
 		echo "quantity: $quantity <br />";
-		echo "contents: $contents <br />";
+		echo "contents: $contents <br /> ";
 	?>
 
 	<form action="display/displayAssortments.php" method="get">

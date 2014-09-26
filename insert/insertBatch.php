@@ -17,7 +17,7 @@ include "functions.php";
 
 		echo "1 record added <br />";
 		echo "Added: <br />";
-		echo "RecipeID: $RecipeID <br />";
+		echo "RecipeID: $RecipeID <br /> ";
 	?>
 
 	<form action="display/displayAssortments.php" method="get">

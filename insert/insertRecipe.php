@@ -19,7 +19,7 @@ include "functions.php";
 		echo "1 record added <br />";
 		echo "Added: <br />";
 		echo "Recipe Name: $RecipeName <br />"
-		echo "Steps: $Steps <br />";
+		echo "Steps: $Steps <br /> ";
 	?>
 
 	<form action="display/displayRecipe.php" method="get">
