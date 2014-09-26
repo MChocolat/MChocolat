@@ -134,13 +134,13 @@ function table_displayAllIngredients(){
 		$SubIngr = $row['SubIngr'];
 
 		$toPrint .= "<tr>";
-	  	$toPrint .- "<td>'$IngrID'</td>";
-	  	$toPrint .- "<td>'$UPC'</td>";
-	  	$toPrint .- "<td>'$DOP'</td>";
-	  	$toPrint .- "<td>'$Exp'</td>";
-	  	$toPrint .- "<td>'$Price'</td>";
-	  	$toPrint .- "<td>'$Distributor'</td>";
-	  	$toPrint .- "<td>'$SubIngr'</td>";
+	  	$toPrint .= "<td>'$IngrID'</td>";
+	  	$toPrint .= "<td>'$UPC'</td>";
+	  	$toPrint .= "<td>'$DOP'</td>";
+	  	$toPrint .= "<td>'$Exp'</td>";
+	  	$toPrint .= "<td>'$Price'</td>";
+	  	$toPrint .= "<td>'$Distributor'</td>";
+	  	$toPrint .= "<td>'$SubIngr'</td>";
 
 	  	$toPrint .= "</tr>";
 	}
