@@ -47,7 +47,7 @@ function add2batchIngr($BID, $IngrID){
 function add2ingredients($UPC, $exp, $price, $distr, $subIngr){
 	$date = date("Y-m-d");
 	$sql = "INSERT INTO ingredients (IngrID, UPC, DOP, Exp, Price, Distributor, SubIngr)
-			VALUES(null, '$UPC', '$date', '$exp', '$price', '$distr', 'subIngr');";
+			VALUES(null, '$UPC', '$date', '$exp', '$price', '$distr', '$subIngr');";
 	$result = runQuery($sql);
 }
 
