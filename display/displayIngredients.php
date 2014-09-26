@@ -9,6 +9,7 @@ include "_header.php";
 			<?php table_displayAllIngredients(); ?>
 
 
+
 			<form action="/insert/insertAssortments" method="post" width="25">
                 UPC: <input type="int" name="quantity"><br>
                 Expiration Date: <input type="text" name="contents">
