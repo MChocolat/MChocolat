@@ -9,11 +9,12 @@ include "_header.php";
 			<?php
             table_displayAllIngredients();
             ?>
-<!--
-            <form action="/insertRecipe" method="post" width="25">
-            <?php dropdown_RecipeNames(); ?>
+
+            <form action="insert/insertRecipe" method="post" width="25">
+            Recipe Name: <input type="int" name="RecipeName"><br>
+            Steps: <input type="text" name="Steps">
             <input type="submit">
-            </form>-->
+            </form>
 		</div>
 	</body>
 </html>
