@@ -35,7 +35,7 @@
 				<p></p>
 				<div class="button-bar">
 				<ul class="button-group">
-			    	<li><a href="searchForRawMaterials.html" class="small button">Raw Materialsblajkdsjfoisaf;djso;afjdsio;ajfis;</a></li>
+			    	<li><a href="searchForRawMaterials.html" class="small button">Raw Materials</a></li>
 			    	<li><a href="newRecipe.html" class="small button">Recipes</a></li>
 			    	<li><a href="batchCreation.php" class="small button">Batches 2</a></li>
 			    	<li><a href="#Packaging" class="small button">Packaging</a></li>
@@ -85,28 +85,6 @@
 				  		<div class="large-8 columns">
 		  				<div class="h3">Current Batch</div>
 			  				<p></p>
-		  					<table>
-						  		<thead>
-							    	<tr>
-								      <th width="200">Operating System</th>
-								      <th width="150">Quantity</th>
-								    </tr>
-								  </thead>
-								  <tbody>
-								    <tr>
-								      <td>Linux</td>
-								      <td>200</td>
-								    </tr>
-								    <tr>
-								      <td>Windows</td>
-								      <td>300</td>
-								    </tr>
-								    <tr>
-								      <td>OS X</td>
-								      <td>100</td>
-							    	</tr>
-							  	</tbody>
-							</table>
 						</div>
 					</div>
 
