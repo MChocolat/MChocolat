@@ -17,6 +17,7 @@ include "functions.php";
 
 		add2ingredients($UPC, $Exp, $Price, $Distributor, $SubIngr);
 		
+		
 
 		echo "1 record added <br />";
 		echo "Added: <br />";
