@@ -26,8 +26,7 @@ include "functions.php";
       <nav class="top-bar" data-topbar>
       <ul class="title-area">
         <li class="name">
-          <!--<img src="img/MchocIconLogo.png" height="30" alt="">-->
-           <img src="http://lorempixel.com/45/45/" alt="">
+          <img src="/img/MchocIconLogo.png" height="30" alt="">
         </li>
       </ul>
       <section class="top-bar-section">
