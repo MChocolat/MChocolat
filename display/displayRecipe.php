@@ -7,7 +7,7 @@ include "_header.php";
 			<h2>Recipes</h2>
 
 			<?php
-            table_displayAllIngredients();
+            table_displayAllRecipes();
             ?>
 
             <form action="insert/insertRecipe" method="post" width="25">
