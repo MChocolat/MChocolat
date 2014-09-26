@@ -11,7 +11,7 @@ include "_header.php";
 			?>
 
 
-			<form action="/insert/insertIngredients.php" method="post" width="25">
+			<form action="insert/insertIngredients.php" method="post" width="25">
                 UPC: <input type="int" name="quantity"><br>
                 Expiration Date: <input type="text" name="contents">
                 Price: <input type="number" name="quantity"><br>
