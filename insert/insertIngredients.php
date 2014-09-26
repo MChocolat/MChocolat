@@ -26,8 +26,8 @@ include "functions.php";
 		echo "SubIngr: $SubIngr <br /> ";
 	?>
 
-	<form action="../display/displayAssortments.php" method="get">
-	<input type="submit" value="Return to Assortments">
+	<form action="../display/displayIngredients.php" method="get">
+	<input type="submit" value="Return to Ingredients">
 	</form>
 
 </body>

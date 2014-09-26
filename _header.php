@@ -50,7 +50,7 @@ include "functions.php";
         <p></p>
         <div class="button-bar">
         <ul class="button-group">
-            <li><a href="displayIngredients.php" class="small button">Raw Materials</a></li> <!--Currently points to displayAssortments as main page-->
+            <li><a href="displayIngredients.php" class="small button">Ingredients</a></li> 
             <li><a href="displayRecipe.php" class="small button">Recipes</a></li>
             <li><a href="displayBatch.php" class="small button">Batches</a></li>
             <li><a href="displayAssortments.php" class="small button">Assortments</a></li>
