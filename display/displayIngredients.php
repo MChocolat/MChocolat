@@ -7,7 +7,7 @@ include "_header.php";
 			<h1>Ingredients</h1>
 
 			<?php table_displayAllIngredients(); 
-			echo "";
+			echo "Function Worked";
 			?>
 
 

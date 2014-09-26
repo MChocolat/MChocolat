@@ -8,7 +8,7 @@ include "_header.php";
 
 			<?php
             table_displayAllIngredients();
-            echo "";
+            echo "Function Worked";
             ?>
 
             <form action="insert/insertRecipe" method="post" width="25">
