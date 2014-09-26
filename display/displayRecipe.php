@@ -10,7 +10,8 @@ include "_header.php";
             ?>
 
             <form action="/insertRecipe" method="post" width="25">
-            <!--<?php dropdown_RecipeNames(); ?>-->
+            Recipe Name: <input type="int" name="RecipeName"><br>
+            Steps: <input type="text" name="Steps">
             <input type="submit">
             </form>
 		</div>
