@@ -40,7 +40,7 @@ include "functions.php";
         <!-- Left Nav Section -->
         <ul class="left">
             <div class="large-1 columns">  
-              <h4><a href="#Administrator">MChocolat</a></h4>
+              <h4><a href="#Administrator">M Chocolat</a></h4>
             </div>
         </ul>
       </section>
