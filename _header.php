@@ -26,8 +26,8 @@ include "functions.php";
       <nav class="top-bar" data-topbar>
       <ul class="title-area">
         <li class="name">
-          <img src="img/MchocIconLogo.png" height="30" alt="">
-            <!-- <img src="http://lorempixel.com/45/45/" alt=""> -->
+          <!--<img src="img/MchocIconLogo.png" height="30" alt="">-->
+           <img src="http://lorempixel.com/45/45/" alt="">
         </li>
       </ul>
       <section class="top-bar-section">
@@ -40,7 +40,7 @@ include "functions.php";
         <!-- Left Nav Section -->
         <ul class="left">
             <div class="large-1 columns">  
-              <h4><a href="#Administrator">M Chocolat</a></h4>
+              <h4><a href="#Administrator">MChocolat</a></h4>
             </div>
         </ul>
       </section>
