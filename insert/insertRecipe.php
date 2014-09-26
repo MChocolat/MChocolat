@@ -11,8 +11,8 @@ include "functions.php";
 		echo "connected... ";
 
 		// escape variables for security
-		$RecipeName = mysqli_real_escape_string($con, $_POST['RecipeID']);
-		$Steps = mysqli_real_escape_string($con, $_POST['Steps']);
+		//$RecipeName = mysqli_real_escape_string($con, $_POST['RecipeID']);
+		//$Steps = mysqli_real_escape_string($con, $_POST['Steps']);
 
 		// add2recipes($RecipeName, $Steps);
 
