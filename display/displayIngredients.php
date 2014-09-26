@@ -3,8 +3,10 @@ include "_header.php";
 ?>
 <html>
 	<body>
-		<h1>Ingredients</h1>
+		<div class="row">
+			<h1>Ingredients</h1>
 
-		<?php table_displayAllIngredients(); ?>
+			<?php table_displayAllIngredients(); ?>
+		</div>
 	</body>
 </html>

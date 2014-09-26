@@ -24,7 +24,7 @@ include "_header.php";
     </dl>
     <div class="tabs-content">
       <div class="content active" id="panel1">
-        <h2>Assortments </h2>
+        <h1>Assortments </h1>
       
         <?php
         table_displayAllAssortments();
