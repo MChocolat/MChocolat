@@ -23,12 +23,51 @@ include "functions.php";
       <script src="/js/vendor/fastclick.js"></script>
       <script src="/js/foundation.min.js"></script>
 
+      <nav class="top-bar" data-topbar>
+      <ul class="title-area">
+        <li class="name">
+          <img src="img/MchocIconLogo.png" height="30" alt="">
+            <!-- <img src="http://lorempixel.com/45/45/" alt=""> -->
+        </li>
+      </ul>
+      <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+            <li><a href="#Logout">Logout</a></li>
+            <li><a href="#Settings">Settings</a></li>
+        </ul>
+
+        <!-- Left Nav Section -->
+        <ul class="left">
+            <div class="large-1 columns">  
+              <h4><a href="#Administrator">Administrator</a></h4>
+            </div>
+        </ul>
+      </section>
+    </nav>
+
+        <div class="small-8 large-centered columns">
+        <p></p>
+        <div class="button-bar">
+        <ul class="button-group">
+            <li><a href="searchForRawMaterials.html" class="small button">Raw Materials</a></li>
+            <li><a href="newRecipe.html" class="small button">Recipes</a></li>
+            <li><a href="batchCreation.php" class="small button">Batches 2</a></li>
+            <li><a href="#Packaging" class="small button">Packaging</a></li>
+            <li><a href="#Final Product" class="small button">Final Product</a></li>
+            </ul>
+        </div>
+        </div>
+    </div>
+
   <div class="row">
       <a href="/display/displayIngredients.php">Raw Ingredients</a>
       <a href="/display/displayBatch.php">Batches</a>
       <a href="/display/displayRecipes.php">Recipes</a>
       <a href="/display/displayAssortments.php">Assortments</a>
    <div>
+
+
 </head>
 
 <script>
