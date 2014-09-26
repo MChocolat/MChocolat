@@ -10,7 +10,7 @@ include "_header.php";
             echo "function worked";
             ?>
 
-            <form action="/insertBatch" method="post" width="25">
+            <form action="insert/insertBatch.php" method="post" width="25">
             <?php dropdown_RecipeNames(); ?>
             <input type="submit">
             </form>
