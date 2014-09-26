@@ -8,15 +8,6 @@ include "functions.php";
 </head>
 <body>
 	<?php
-
-	function add2ingredients($UPC, $exp, $price, $distr, $subIngr){
-	$date = date("Y-m-d");
-	$sql = "INSERT INTO ingredients (IngrID, UPC, DOP, Exp, Price, Distributor, SubIngr)
-			VALUES(null, '$UPC', '$date', '$exp', '$price', '$distr', 'subIngr');";
-	runQuery($sql);
-}
-		echo "connected... ";
-
 		// escape variables for security
 		$UPC = mysqli_real_escape_string($con, $_POST['UPC']);
 		$Exp = mysqli_real_escape_string($con, $_POST['Exp']);

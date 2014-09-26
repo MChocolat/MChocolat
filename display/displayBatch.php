@@ -7,7 +7,6 @@ include "_header.php";
             <h2>Batches </h2>
             <?php
             table_displayAllBatches();
-            echo "function worked";
             ?>
 
             <form action="../insert/insertBatch.php" method="post" width="25">
