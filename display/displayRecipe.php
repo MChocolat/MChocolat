@@ -11,8 +11,8 @@ include "_header.php";
             ?>
 
             <form action="../insert/insertRecipe.php" method="post" width="25">
-            Recipe Name: <input type="int" name="RecipeName"><br>
-            Steps: <input type="text" name="Steps">
+            <!--Recipe Name: <input type="int" name="RecipeName"><br>
+            Steps: <input type="text" name="Steps">-->
             <input type="submit">
             </form>
 		</div>
