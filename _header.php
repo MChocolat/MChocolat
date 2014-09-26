@@ -40,7 +40,7 @@ include "functions.php";
         <!-- Left Nav Section -->
         <ul class="left">
             <div class="large-1 columns">  
-              <h4><a href="#Administrator">M Chocolat</a></h4>
+              <h4><a href="#Administrator">MChocolat</a></h4>
             </div>
         </ul>
       </section>
@@ -50,7 +50,7 @@ include "functions.php";
         <p></p>
         <div class="button-bar">
         <ul class="button-group">
-            <li><a href="displayAssortments.php" class="small button">Raw Materials</a></li> <!--Currently points to displayAssortments as main page-->
+            <li><a href="displayIngredients.php" class="small button">Raw Materials</a></li> <!--Currently points to displayAssortments as main page-->
             <li><a href="displayRecipe.php" class="small button">Recipes</a></li>
             <li><a href="displayBatch.php" class="small button">Batches</a></li>
             <li><a href="displayAssortments.php" class="small button">Assortments</a></li>
