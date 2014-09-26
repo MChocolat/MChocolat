@@ -39,7 +39,7 @@ function add2batch($RecipeID){
 
 function add2batchIngr($BID, $IngrID){
 	$sql = "INSERT INTO batchIngr (BID, IngrID) VALUES ('$BID', '$IngrID');";
-	runQuery($sql);
+	$result = runQuery($sql);
 }
 
 //ID and Date are made here.
@@ -48,12 +48,12 @@ function add2ingredients($UPC, $exp, $price, $distr, $subIngr){
 	$date = date("Y-m-d");
 	$sql = "INSERT INTO ingredients (IngrID, UPC, DOP, Exp, Price, Distributor, SubIngr)
 			VALUES(null, '$UPC', '$date', '$exp', '$price', '$distr', 'subIngr');";
-	runQuery($sql);
+	$result = runQuery($sql);
 }
 
 function add2recipes($RecipeName, $Steps){
 	$sql = "INSERT INTO recipe (RecipeID, RecipeName, Steps) VALUES (null, '$RecipeName', '$Steps');";
-	runQuery($sql);
+	$result = runQuery($sql);
 }
 
 
