@@ -1,4 +1,5 @@
 <?php
+//$con=new mysqli('localhost', 'root', '', 'test');
 $con=new mysqli(null, 'root', '', 'test', null, '/cloudsql/inventorymchocolat:mchocolat');
 
 // Check connection
@@ -8,6 +9,34 @@ if (mysqli_connect_errno()) {
 
 date_default_timezone_set('EST');
 ini_set('display_errors', 'On');
+
+
+if(isset($_POST['action']) && $_POST['action'] == "getRawMaterials") {
+	$sql = "SELECT * FROM ingredients";
+	$result = runQuery($sql);
+	$finalResult = array();
+	while ($row = $result->fetch_assoc()){
+	  $finalResult[] = $row;
+	}
+	echo json_encode($finalResult);
+}
+
+elseif(isset($_POST['action']) && $_POST['action'] == "addRawMaterial") {
+	if(isset($_POST['data'])){
+		$data = $_POST['data'];
+	
+		$UPC = $data['UPC'];
+		$price = $data['Price'];
+		$distr = $data['Distributor'];
+		$subIngr = $data['SubIngr'];
+		$date = date("Y-m-d");
+		//GET ACTUAL EXP DATE
+		$sql = "INSERT INTO ingredients (IngrID, UPC, DOP, Exp, Price, Distributor, SubIngr)
+			VALUES(null, '$UPC', '$date', '$date', '$price', '$distr', '$subIngr');";
+		$result = runQuery($sql); 
+		echo $result;
+	}
+}
 
 
 /*

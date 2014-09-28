@@ -21,3 +21,10 @@ handlers:
 - url: /img
   static_dir: img
 
+- url: /rawMaterials.html
+  static_files: rawMaterials.html
+  upload: rawMaterials.html
+  
+- url: /functions.php
+  script: functions.php
+
