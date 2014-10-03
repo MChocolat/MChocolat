@@ -12,6 +12,9 @@ handlers:
 - url: /index.php
   script: index.php
 
+- url: /index.php
+  script: index.php
+
 - url: /(.*)?/(.*)\.php$
   script: \1/\2.php
 
