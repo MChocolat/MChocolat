@@ -6,9 +6,6 @@ threadsafe: yes
 
 handlers:
 
-- url: /index.php
-  script: index.php
-  
 - url: /
   script: index.php
 
