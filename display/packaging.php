@@ -13,48 +13,13 @@
 		<script src="/js/jquery.dataTables.js"></script>
 		<script type="text/javascript" language="javascript" src="/js/dataTables.foundation.js"></script>
     	<script src="/js/vendor/modernizr.js"></script>
-		<script type="text/javascript" src="/js/rawMaterials.js"></script>
+		<script type="text/javascript" src="/js/packaging.js"></script>
 		
   	</head>
   
   	<body>
-		<nav class="top-bar" data-topbar>
-			<ul class="title-area">
-				<li class="name">
-	  				<img src="http://lorempixel.com/45/45/" alt="">
-				</li>
-			</ul>
-			<section class="top-bar-section">
-				<!-- Right Nav Section -->
-				<ul class="right">
-		  			<li><a href="#Logout">Logout</a></li>
-		  			<li><a href="#Settings">Settings</a></li>
-				</ul>
-
-				<!-- Left Nav Section -->
-				<ul class="left">
-		  			<div class="large-1 columns">  
-		    			<h4><a href="#Administrator">Administrator</a></h4>
-		  			</div>
-				</ul>
-			</section>
-		</nav>
-
-  		<!-- Header -->
-		<div class="row">
-		  	<div class="small-8 large-centered columns">
-				<p></p>
-				<div class="button-bar">
-				<ul class="button-group">
-			    	<li><a href="rawMaterials.html" class="small button">Raw Materials</a></li>
-			    	<li><a href="newRecipe.html" class="small button">Recipes</a></li>
-			    	<li><a href="batchCreation.html" class="small button">Batches</a></li>
-			    	<li><a href="#Packaging" class="small button">Packaging</a></li>
-			    	<li><a href="#Final Product" class="small button">Final Product</a></li>
-				  	</ul>
-				</div>
-		  	</div>
-		</div>
+		<?php include("/includes/header.php"); ?>
+		<?php include("/includes/navigation.php"); ?>
 
 		<!-- Edit Raw Material -->
 			<div id="editRawMaterialSection" class="large-4 columns hidden">

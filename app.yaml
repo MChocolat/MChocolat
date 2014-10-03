@@ -6,6 +6,9 @@ threadsafe: yes
 
 handlers:
 
+- url: /index.php
+  script: index.php
+  
 - url: /
   script: index.php
 
@@ -27,6 +30,3 @@ handlers:
 - url: /display
   static_dir: display
 
-- url: /favicon.ico
-  static_files: favicon.ico
-  upload: favicon.ico

@@ -18,8 +18,8 @@
   	</head>
   
   	<body>
-		<?php include("header.php"); ?>
-		<?php include("navigation.php"); ?>
+		<?php include("/includes/header.php"); ?>
+		<?php include("/includes/navigation.php"); ?>
   		
 
 		<!-- Edit Raw Material -->
