@@ -7,7 +7,7 @@ threadsafe: yes
 handlers:
 
 - url: /
-  script: index.php
+  script: index2.php
 
 - url: /(.*)?/(.*)\.php$
   script: \1/\2.php
