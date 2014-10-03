@@ -1,6 +1,6 @@
 <?php
-$con=new mysqli('localhost', 'root', '', 'test');
-//$con=new mysqli(null, 'root', '', 'test', null, '/cloudsql/inventorymchocolat:mchocolat');
+//$con=new mysqli('localhost', 'root', '', 'test');
+$con=new mysqli(null, 'root', '', 'test', null, '/cloudsql/inventorymchocolat:mchocolat');
 
 // Check connection
 if (mysqli_connect_errno()) {
