@@ -9,29 +9,26 @@
     	<script src="js/vendor/modernizr.js"></script>
   	</head>
   
-  	<body>
-		<nav class="top-bar" data-topbar>
-			<ul class="title-area">
-				<li class="name">
-					<img src="img/MchocIconLogo.png" height="30" alt="">
-	  				<!-- <img src="http://lorempixel.com/45/45/" alt=""> -->
-				</li>
-			</ul>
-			<section class="top-bar-section">
-				<!-- Right Nav Section -->
-				<ul class="right">
-		  			<li><a href="#Logout">Logout</a></li>
-		  			<li><a href="#Settings">Settings</a></li>
-				</ul>
+      <nav class="top-bar" data-topbar>
+      <ul class="title-area">
+        <li class="name">
+          <img src="/img/MchocIconLogo.png" height="30" alt="">
+        </li>
+      </ul>
+      <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+            <li><a href="/login.php">Logout</a></li>
+            <li><a href="#Settings">Settings</a></li>
+        </ul>
 
-				<!-- Left Nav Section -->
-				<ul class="left">
-		  			<div class="large-1 columns">  
-		    			<h4><a href="#Administrator">Administrator</a></h4>
-		  			</div>
-				</ul>
-			</section>
-		</nav>
+        <!-- Left Nav Section -->
+        <ul class="left">
+            <div class="large-1 columns">  
+              <h4><a href="#Administrator">MChocolat</a></h4>
+            </div>
+        </ul>
+      </section>
 
 	<div class = "twelve columns centered">
 		<table>
