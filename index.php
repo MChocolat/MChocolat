@@ -41,7 +41,7 @@
 			</tr>
 			<tr>
 				<td style="text-align: center;"><a href = "page" class = "large button">Add new</a></td>
-				<td style="text-align: center;"><a href = "page" class = "large button">View/Search all</a></td>
+				<td style="text-align: center;"><a href = "/display/displayIngredients.php" class = "large button">View/Search all</a></td>
 				
 				<td style="text-align: center;"><a href = "page" class="large button">Make new</a></td>
 				<td style="text-align: center;"><a href = "page" class="large button">View/Search all</a></td>
@@ -54,7 +54,7 @@
 			<tr>
 				<td style="text-align: center;"><a href = "page" class = "large button">Make new</a></td>
 				<td style="text-align: center;"><a href = "page" class = "large button">View/Search all</a></td>
-				
+
 				<td style="text-align: center;"><a href = "page" class = "large button">Make new</a></td>
 				<td style="text-align: center;"><a href = "page" class = "large button">View/Search all</a></td>
 			</tr>
