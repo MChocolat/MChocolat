@@ -1,7 +1,7 @@
-<html class="no-js" lang="en">
-	<?php include("/includes/header.php"); ?>
-  
+<?php include("/includes/header.php"); ?>
 
+<html class="no-js" lang="en">
+	
 	<div class = "twelve columns centered">
 		<table>
 			<tr>
