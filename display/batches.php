@@ -13,14 +13,13 @@
 		<script src="/js/jquery.dataTables.js"></script>
 		<script type="text/javascript" language="javascript" src="/js/dataTables.foundation.js"></script>
     	<script src="/js/vendor/modernizr.js"></script>
-		<script type="text/javascript" src="/js/rawIngredients.js"></script>
+		<script type="text/javascript" src="/js/batches.js"></script>
 		
   	</head>
   
   	<body>
 		<?php include("/includes/header.php"); ?>
 		<?php include("/includes/navigation.php"); ?>
-  		
 
 		<!-- Edit Raw Material -->
 			<div id="editRawMaterialSection" class="large-4 columns hidden">
@@ -160,7 +159,7 @@
   		
 
 		
-	    <script src="/js/foundation.min.js"></script>
+	    <script src="js/foundation.min.js"></script>
 	    <script>$(document).foundation();</script>
   	</body>
 </html>
