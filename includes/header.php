@@ -33,3 +33,4 @@ include "functions.php";
         </ul>
       </section>
     </nav>
+</body>
