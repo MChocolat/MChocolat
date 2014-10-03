@@ -21,7 +21,7 @@ include "functions.php";
       <section class="top-bar-section">
         <!-- Right Nav Section -->
         <ul class="right">
-            <li><a href="#Logout">Logout</a></li>
+            <li><a href="/login.php">Logout</a></li>
             <li><a href="#Settings">Settings</a></li>
         </ul>
 
