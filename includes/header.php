@@ -12,8 +12,8 @@ include "functions.php";
       <script src="/js/vendor/fastclick.js"></script>
       <script src="/js/foundation.min.js"></script>
 
-</head>
-<body>
+
+
       <!-- Title Bar -->
     <nav class="top-bar foundation-bar" data-topbar>
       <ul class="title-area">
@@ -33,4 +33,4 @@ include "functions.php";
         </ul>
       </section>
     </nav>
-</body>
+    </head>
