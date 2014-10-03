@@ -1,7 +1,13 @@
+<?php include("/includes/header.php"); ?>
+
 <html class="no-js" lang="en">
+<<<<<<< HEAD
 	<?php include("/includes/header.php"); ?>
   
 
+=======
+	<body>
+>>>>>>> FETCH_HEAD
 	<div class = "twelve columns centered">
 		<table>
 			<tr>
@@ -29,8 +35,6 @@
 			</tr>
 		</table>
 	</div>
-
-		
 
 		<script src="js/vendor/jquery.js"></script>
 	    <script src="js/foundation.min.js"></script>
