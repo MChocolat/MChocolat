@@ -1,1 +1,0 @@
-barcodes/IDs don't need to start at different numbers, because no one is going to scan in a batch when they need to be scanning in an ingredient. We're only ever going to use the ingredient barcode when we're searching from the ingredients table.
