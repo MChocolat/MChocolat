@@ -1,5 +1,16 @@
 <?php include("/includes/header.php"); ?>
-<html>
+<html class="no-js" lang="en">
+
+	<head>
+    	<meta charset="utf-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    	<title>M Chocolat Inventory Management System</title>
+    	<link rel="stylesheet" href="css/foundation.css" />
+    	<link rel="stylesheet" href="stylesheets/main.css"/>
+    	<link rel="stylesheet" href="test.css"/>
+    	<script src="js/vendor/modernizr.js"></script>
+  	</head>
+  	
 	<body>
 		<div class = "twelve columns centered">
 			<table>
