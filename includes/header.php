@@ -27,7 +27,7 @@ include "functions.php";
           <!-- Add link to Settings page -->
             <li><a  href=" ">Settings</a></li>
             <!-- Add link to Sign-in page -->
-            <li><a  href="login.html">Logout</a></li>
+            <li><a  href="login.php">Logout</a></li>
         </ul>
       </section>
     </nav>
