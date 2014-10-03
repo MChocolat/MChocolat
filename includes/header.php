@@ -1,6 +1,7 @@
 <?php
 
 include "functions.php";
+echo "including header";
 ?>
 <head>
       <meta charset="utf-8" />
