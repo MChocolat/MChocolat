@@ -2,8 +2,6 @@
 	<?php include("/includes/header.php"); ?>
   
 
-  	<body>
-
 	<div class = "twelve columns centered">
 		<table>
 			<tr>

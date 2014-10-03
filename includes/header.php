@@ -11,7 +11,8 @@ include "functions.php";
       <script src="/js/vendor/jquery.js"></script>
       <script src="/js/vendor/fastclick.js"></script>
       <script src="/js/foundation.min.js"></script>
-
+</head>
+<body>
       <nav class="top-bar" data-topbar>
       <ul class="title-area">
         <li class="name">
