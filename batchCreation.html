@@ -9,27 +9,27 @@
   	</head>
   
   	<body>
-		<nav class="top-bar" data-topbar>
-			<ul class="title-area">
-				<li class="name">
-	  				<img src="http://lorempixel.com/45/45/" alt="">
-				</li>
-			</ul>
-			<section class="top-bar-section">
-				<!-- Right Nav Section -->
-				<ul class="right">
-		  			<li><a href="#Logout">Logout</a></li>
-		  			<li><a href="#Settings">Settings</a></li>
-				</ul>
 
-				<!-- Left Nav Section -->
-				<ul class="left">
-		  			<div class="large-1 columns">  
-		    			<h4><a href="#Administrator">Administrator</a></h4>
-		  			</div>
-				</ul>
-			</section>
+  		<!-- Title Bar -->
+		<nav class="top-bar foundation-bar" data-topbar>
+		  <ul class="title-area">
+		    <li class="name">
+		     <span data-tooltip class="has-tip" title="You are currently logged in as the Administrator."><h1 class="show-for-small-only"><a href="#">Administrator</a></h1></span>
+		     <span data-tooltip class="has-tip" title="You are currently logged in as the Administrator."><h1 class="show-for-medium-only"><a href="#">Administrator</a></h1></span>
+		     <span data-tooltip class="has-tip" title="You are currently logged in as the Administrator."><h1 class="show-for-large-only"><a href="#">Administrator</a></h1></span>
+		    </li>
+		  </ul>
+		  <section class="top-bar-section">
+		    <!-- Right Nav Section -->
+		    <ul class="right">
+		   		<!-- Add link to Settings page -->
+		      	<li><a  href=" ">Settings</a></li>
+		      	<!-- Add link to Sign-in page -->
+		      	<li><a  href="login.html">Logout</a></li>
+		    </ul>
+		  </section>
 		</nav>
+
 
   		<!-- Header -->
 		<div class="row">
@@ -48,6 +48,53 @@
 		</div>
 
 		<!-- Add New Batch -->
+
+	<!-- 
+	<fieldset>
+	    <legend>Fieldset</legend>
+
+	    <div class="row">
+	      <div class="large-12 columns">
+	        <label>Input Label</label>
+	        <input type="text" placeholder="large-12.columns" style="cursor: auto; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==); background-attachment: scroll; background-position: 100% 50%; background-repeat: no-repeat;">
+	      </div>
+	    </div>
+
+	    <div class="row">
+	      <div class="large-4 columns">
+	        <label>Input Label</label>
+	        <input type="text" placeholder="large-4.columns">
+	      </div>
+	      <div class="large-4 columns">
+	        <label>Input Label</label>
+	        <input type="text" placeholder="large-4.columns">
+	      </div>
+	      <div class="large-4 columns">
+	        <div class="row collapse">
+	          <label>Input Label</label>
+	          <div class="small-9 columns">
+	            <input type="text" placeholder="small-9.columns">
+	          </div>
+	          <div class="small-3 columns">
+	            <span class="postfix">.com</span>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+
+	    <div class="row">
+	      <div class="large-12 columns">
+	        <label>Textarea Label</label>
+	        <textarea placeholder="small-12.columns"></textarea>
+	      </div>
+	    </div>
+
+	 </fieldset>
+	-->
+
+
+
+	<form>
 		<div class="row">
 	  		<div class="large-4 columns">
 	  			<div class="panel">
@@ -72,12 +119,28 @@
 				  	</div>
 
 				  	<div class="row">
-				  		<div class="large-7 medium-4 columns">
+				  		<div class="large-6 medium-4 columns">
 				  			<input type = "text" placeholder = "Add Ingredient">
 				  		</div>
 
-				  		<div class="large-5 medium-4 columns">
-				  			<input type = "text" placeholder = "Quantity">
+				  		<div class="large-6 medium-4 columns">
+				  			<!--<input type = "text" placeholder = "Quantity">-->
+
+				  			<div class="row collapse">
+				              <div class="small-6 columns">
+				                <input type="text" placeholder="Quantity">
+				              </div>
+				              <div class="small-6 columns">
+				                <!--<span class="postfix">.com</span>-->
+					              <select>
+					                <option value="gal">Gal</option>
+					                <option value="tbsp">Tbps</option>
+					                <option value="tsp">Tsp</option>
+					                <option value="pnds">Pnds</option>
+					                <option value="cups">Cups</option>
+					              </select>
+				              </div>
+				            </div>
 				  		</div>
 				  	</div>
 		  
@@ -90,22 +153,26 @@
 		  					<table>
 						  		<thead>
 							    	<tr>
-								      <th width="200">Operating System</th>
+								      <th width="200">Ingredient</th>
 								      <th width="150">Quantity</th>
 								    </tr>
 								  </thead>
 								  <tbody>
 								    <tr>
-								      <td>Linux</td>
-								      <td>200</td>
+								      <td>Chocolate</td>
+								      <td>2 pounds</td>
 								    </tr>
 								    <tr>
-								      <td>Windows</td>
-								      <td>300</td>
+								      <td>Cinnamon</td>
+								      <td>2 cups</td>
 								    </tr>
 								    <tr>
-								      <td>OS X</td>
-								      <td>100</td>
+								      <td>Vanilla</td>
+								      <td>1.5 cups</td>
+							    	</tr>
+								    <tr>
+								      <td>Sugar</td>
+								      <td>1 cups</td>
 							    	</tr>
 							  	</tbody>
 							</table>
@@ -123,12 +190,35 @@
 				</div>
 	  		</div>
 	  	</div>
-
+	</form>
 		<!-- Search Bar / Inventory Table --> 
 		<div class="row">
 		  	<div class="row">
 			  	<div class="large-7 medium-4 columns">
 			  		<input type = "text" placeholder = "Search">
+
+					<!--
+			  		<section class="tabs-example">
+					  <ul class="tabs" data-tab="">
+					    <li class="tab-title active"><a href="#panel2-1" aria-selected="true" tabindex="0">Tab 1</a></li>
+					    <li class="tab-title"><a href="#panel2-2" aria-selected="false" tabindex="-1">Tab 2</a></li>
+					    <li class="tab-title"><a href="#panel2-3" aria-selected="false" tabindex="-1">Tab 3</a></li>
+					  </ul>
+					  <div class="tabs-content">
+					    <div class="content active" id="panel2-1" aria-hidden="false" tabindex="-1">
+					      <p tabindex="0" tab-index="0">First panel content goes here...</p>
+					    </div>
+					    <div class="content" id="panel2-2" aria-hidden="true" tabindex="-1">
+					      <p tabindex="0" tab-index="0">Second panel content goes here...</p>
+					    </div>
+					    <div class="content" id="panel2-3" aria-hidden="true" tabindex="-1">
+					      <p tabindex="0" tab-index="0">Third panel content goes here...</p>
+					    </div>
+					  </div>
+					</section>
+					
+					-->
+					
 					<table>
 						<thead>
 						    <tr>
