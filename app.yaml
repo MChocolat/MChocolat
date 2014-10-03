@@ -9,9 +9,9 @@ handlers:
 - url: /
   script: login.php
   
-- url: /index.php
-  script: index.php
-
+- url: /login.php
+  script: login.php
+  
 - url: /index.php
   script: index.php
 
