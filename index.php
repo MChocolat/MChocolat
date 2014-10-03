@@ -1,4 +1,5 @@
-<?php include("/includes/header.php"); ?>
+<?php include("/includes/header.php");
+echo "included stuff"; ?>
 <html class="no-js" lang="en">
 
 	<head>
