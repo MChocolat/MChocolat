@@ -27,3 +27,6 @@ handlers:
 - url: /display
   static_dir: display
 
+- url: /favicon.ico
+  static_files: favicon.ico
+  upload: favicon.ico
