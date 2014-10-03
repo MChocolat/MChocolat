@@ -12,7 +12,7 @@
   	</head>
   	
 	<body>
-		<div class = "small-12">
+		<div class = "small-12 columns">
 			<table>
 				<tr>
 					<th colspan = "2" class = "text-center" ><h2>Ingredients</h2></th>
