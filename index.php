@@ -8,42 +8,8 @@
   	</head>
   
   	<body>
-		<nav class="top-bar" data-topbar>
-			<ul class="title-area">
-				<li class="name">
-					<img src="img/MchocIconLogo.png" height="30" alt="">
-	  				<!-- <img src="http://lorempixel.com/45/45/" alt=""> -->
-				</li>
-			</ul>
-			<section class="top-bar-section">
-				<!-- Right Nav Section -->
-				<ul class="right">
-		  			<li><a href="#Logout">Logout</a></li>
-		  			<li><a href="#Settings">Settings</a></li>
-				</ul>
-
-				<!-- Left Nav Section -->
-				<ul class="left">
-		  			<div class="large-1 columns">  
-		    			<h4><a href="#Administrator">Administrator</a></h4>
-		  			</div>
-				</ul>
-			</section>
-		</nav>
-
-		  	<div class="small-8 large-centered columns">
-				<p></p>
-				<div class="button-bar">
-				<ul class="button-group">
-			    	<li><a href="display/rawIngredients.html" class="small button">Raw Ingredients</a></li>
-			    	<li><a href="display/recipes.html" class="small button">Recipes</a></li>
-			    	<li><a href="display/batches.html" class="small button">Batches</a></li>
-			    	<li><a href="display/packaging.html" class="small button">Packaging</a></li>
-			    	<li><a href="display/finalProducts.html" class="small button">Final Products</a></li>
-				  	</ul>
-				</div>
-		  	</div>
-		</div>
+		<?php include("display/header.php"); ?>
+		<?php include("display/navigation.php"); ?>
 
 		<!-- Add New Batch -->
 		<div class="row">
