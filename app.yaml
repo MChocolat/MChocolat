@@ -20,10 +20,5 @@ handlers:
 
 - url: /img
   static_dir: img
-  
-- url: /functions.php
-  script: functions.php
-  
-- url: /display
-  static_dir: display
+
 
