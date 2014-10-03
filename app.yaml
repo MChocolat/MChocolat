@@ -7,7 +7,7 @@ threadsafe: yes
 handlers:
 
 - url: /
-  script: helloworld.php
+  script: index.php
 
 - url: /(.*)?/(.*)\.php$
   script: \1/\2.php
@@ -20,11 +20,10 @@ handlers:
 
 - url: /img
   static_dir: img
-
-- url: /rawMaterials.html
-  static_files: rawMaterials.html
-  upload: rawMaterials.html
   
 - url: /functions.php
   script: functions.php
+  
+- url: /display
+  static_dir: display
 

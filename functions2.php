@@ -13,6 +13,7 @@ ini_set('display_errors', 'On');
 
 if(isset($_POST['action'])) {
 	if(isset($_POST['data'])){
+		echo "WHOA";
 		$function = $_POST['action'];
 		$function($_POST['data']);
 	}
