@@ -21,4 +21,6 @@ handlers:
 - url: /img
   static_dir: img
 
+-url: /functions.php
+  script: functions.php
 
