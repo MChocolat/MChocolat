@@ -35,4 +35,9 @@ include "functions.php";
       </section>
     </nav>
 </head>
+
+<script>
+  $(document).foundation();
+</script>
+
 </html>
