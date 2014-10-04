@@ -21,6 +21,9 @@ handlers:
 - url: /img
   static_dir: img
 
+- url: /includes
+  static_dir: includes
+
 - url: /functions.php
   script: functions.php
 
