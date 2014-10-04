@@ -1,4 +1,5 @@
 <?php include("/includes/header.php");
+	include "/includes/navigation.php";
 ?>
 <html class="no-js" lang="en">
   	
