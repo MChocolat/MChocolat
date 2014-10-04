@@ -5,7 +5,7 @@ include "functions.php";
 <head>
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=0.7" />
-      <title>M Chocolat Inventory Management System</title>
+      <title>including header</title>
       <link rel="stylesheet" href="/css/foundation.css" />
       <script src="/js/vendor/modernizr.js"></script>
       <script src="/js/vendor/jquery.js"></script>
