@@ -1,12 +1,23 @@
 <?php
 include "functions.php";
+
+use google\appengine\api\users\User;
+use google\appengine\api\users\UserService;
+
+$user = UserService::getCurrentUser();
+
+if (!isset($user)) {
+  echo sprintf('<a href="%s">Sign in or register</a>',
+               UserService::createLoginUrl('/'));
+}
+
 ?>
 <!DOCTYPE html>
 <html>
 <head>
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=0.7" />
-      <title>including header</title>
+      <title>M Chocolat Inventory</title>
       <link rel="stylesheet" href="/css/foundation.css" />
       <script src="/js/vendor/modernizr.js"></script>
       <script src="/js/vendor/jquery.js"></script>
@@ -37,6 +48,8 @@ include "functions.php";
       </section>
     </nav>
 </head>
+
+
 
 <script>
   $(document).foundation();
