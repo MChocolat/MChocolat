@@ -12,11 +12,11 @@
   	
 	<body>
 		<div class="row">
-			<div class="large-12 columns">
+			<div class="small-12 columns">
 				<table>
 					<tr>
-						<th colspan = "2" class = "text-center" ><h3>Ingredients</h2></th>
-						<th colspan = "2" class = "text-center" ><h3>Batches</h2></th>
+						<th colspan = "2" class = "text-center" ><h3>Ingredients</h3></th>
+						<th colspan = "2" class = "text-center" ><h3>Batches</h3></th>
 					</tr>
 					<tr>
 						<td style="text-align: center;"><a href = "/display/addIngredient.php" class = "medium button">Add new</a></td>
@@ -27,8 +27,8 @@
 					</tr>
 
 					<tr>
-						<th colspan = "2" class = "text-center" ><h3>Recipes</h2></th>
-						<th colspan = "2" class = "text-center" ><h3>Box Labels</h2></th>
+						<th colspan = "2" class = "text-center" ><h3>Recipes</h3></th>
+						<th colspan = "2" class = "text-center" ><h3>Box Labels</h3></th>
 					</tr>
 					<tr>
 						<td style="text-align: center;"><a href = "/display/addRecipe.php" class = "medium button">Make new</a></td>
