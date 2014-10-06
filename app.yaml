@@ -8,6 +8,7 @@ handlers:
 
 - url: /
   script: index.php
+  login: required
 
 - url: /(.*)?/(.*)\.php$
   script: \1/\2.php
