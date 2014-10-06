@@ -43,7 +43,7 @@ if (!isset($user)) {
           <!-- Add link to Settings page -->
             <li><a  href="#Settings">Settings</a></li>
             <!-- Add link to Sign-in page -->
-            <li><a  href="/login.php">Logout</a></li>
+            <li><a  href="UserService::createLogoutUrl">Logout</a></li>
         </ul>
       </section>
     </nav>
