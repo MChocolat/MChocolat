@@ -12,9 +12,8 @@
   	</head>
   	
 	<body>
-		<div class="large-4 columns"> </div>
-		
-		<div class="large-4 columns">
+
+		<div class="row">
 			<table>
 				<thead>
 					<tr>
@@ -48,8 +47,6 @@
 				</tbody>
 			</table>
 		</div>
-
-		<div class="large-4 columns"> </div>
 
 	<script src="js/vendor/jquery.js"></script>
     <script src="js/foundation.min.js"></script>
