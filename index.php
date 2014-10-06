@@ -11,48 +11,6 @@
   	</head>
   	
 	<body>
-		<div class="small-12 columns">
-			<header>
-				<h1></h1>
-				<p></p>
-			</header>
-		</div>
-		<div class="small-12 columns">
-			<header>
-				<h1></h1>
-				<p></p>
-			</header>
-		</div>
-		<div class="small-12 columns">
-			<header>
-				<h1></h1>
-				<p></p>
-			</header>
-		</div>
-		<div class="small-12 columns">
-			<header>
-				<h1></h1>
-				<p></p>
-			</header>
-		</div>
-		<div class="small-12 columns">
-			<header>
-				<h1></h1>
-				<p></p>
-			</header>
-		</div>
-		<div class="small-12 columns">
-			<header>
-				<h1></h1>
-				<p></p>
-			</header>
-		</div>
-		<div class="small-12 columns">
-			<header>
-				<h1></h1>
-				<p></p>
-			</header>
-		</div>
 		
 		<div class="large-12 columns">
 			<table>
