@@ -11,7 +11,7 @@
   	</head>
   	
 	<body>
-		<div class="large-12 columns">
+		<div class="row">
 			<table>
 				<tr>
 					<th colspan = "2" class = "text-center" ><h3>Ingredients</h3></th>
