@@ -43,7 +43,9 @@ if (!isset($user)) {
           <!-- Add link to Settings page -->
             <li><a  href="#Settings">Settings</a></li>
             <!-- Add link to Sign-in page -->
-            <li><a  href=<?php echo UserService::createLogoutUrl; ?> >Logout</a></li>
+            <li><a  href=<?php use google\appengine\api\users\UserService;
+                          echo UserService::createLogoutUrl; ?> 
+                          >Logout</a></li>
         </ul>
       </section>
     </nav>
