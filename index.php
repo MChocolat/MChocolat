@@ -12,8 +12,7 @@
   	
 	<body>
 		<div class="row">
-			<div class="large-4 columns">...</div>
-			<div class="large-4 columns">
+			<div class="large-12 columns">
 				<table>
 					<tr>
 						<th colspan = "2" class = "text-center" ><h3>Ingredients</h2></th>
@@ -40,8 +39,7 @@
 					</tr>
 				</table>
 			</div>
-			<div class="large-4 columns">...</div>
-
+		</div>
 		<script src="js/vendor/jquery.js"></script>
 	    <script src="js/foundation.min.js"></script>
 	    <script> $(document).foundation(); </script>
