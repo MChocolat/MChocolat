@@ -18,8 +18,8 @@
   	</head>
   
   	<body>
-		<?php include("/includes/header.php"); ?>
-		<?php include("/includes/navigation.php"); ?>
+		<?php include("header.php"); ?>
+		<?php include("navigation.php"); ?>
 
 		<!-- Edit Raw Material -->
 			<div id="editRawMaterialSection" class="large-4 columns hidden">
