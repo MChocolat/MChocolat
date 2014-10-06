@@ -29,6 +29,6 @@ handlers:
 - url: /functions.php
   script: functions.php
 
-- url: /favicon.ico
+- url: /favicon\.ico
   static_files: favicon.ico
-  upload: favicon.ico
+  upload: favicon\.ico
