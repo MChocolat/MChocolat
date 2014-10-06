@@ -7,8 +7,8 @@ threadsafe: yes
 handlers:
 
 - url: /favicon\.ico
-  static_files: favicon.ico
-  upload: favicon\.ico
+  static_files: /favicon.ico
+  upload: /favicon\.ico
 
 - url: /
   script: index.php
