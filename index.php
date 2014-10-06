@@ -11,7 +11,50 @@
   	</head>
   	
 	<body>
-		<div class="row">
+		<div class="small-12 columns">
+			<header>
+				<h1></h1>
+				<p></p>
+			</header>
+		</div>
+		<div class="small-12 columns">
+			<header>
+				<h1></h1>
+				<p></p>
+			</header>
+		</div>
+		<div class="small-12 columns">
+			<header>
+				<h1></h1>
+				<p></p>
+			</header>
+		</div>
+		<div class="small-12 columns">
+			<header>
+				<h1></h1>
+				<p></p>
+			</header>
+		</div>
+		<div class="small-12 columns">
+			<header>
+				<h1></h1>
+				<p></p>
+			</header>
+		</div>
+		<div class="small-12 columns">
+			<header>
+				<h1></h1>
+				<p></p>
+			</header>
+		</div>
+		<div class="small-12 columns">
+			<header>
+				<h1></h1>
+				<p></p>
+			</header>
+		</div>
+		
+		<div class="large-12 columns">
 			<table>
 				<tr>
 					<th colspan = "2" class = "text-center" ><h3>Ingredients</h3></th>
