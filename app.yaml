@@ -12,6 +12,7 @@ handlers:
 
 - url: /(.*)?/(.*)\.php$
   script: \1/\2.php
+  login: required
 
 - url: /css
   static_dir: css

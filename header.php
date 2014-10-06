@@ -9,6 +9,7 @@ $user = UserService::getCurrentUser();
 if (!isset($user)) {
   echo sprintf('<a href="%s">Sign in or register</a>',
                UserService::createLoginUrl('/'));
+  $logoutURL = UserService::createLogoutUrl('/');
 }
 
 ?>
@@ -43,8 +44,7 @@ if (!isset($user)) {
           <!-- Add link to Settings page -->
             <li><a  href="#Settings">Settings</a></li>
             <!-- Add link to Sign-in page -->
-            <li><a  href=<?php use google\appengine\api\users\UserService;
-                          echo UserService::createLogoutUrl; ?> 
+            <li><a  href=<?php echo $logoutURL; ?> 
                           >Logout</a></li>
         </ul>
       </section>
