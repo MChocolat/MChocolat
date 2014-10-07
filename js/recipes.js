@@ -18,13 +18,9 @@ $(document).ready( function () {
 			self.recipesTable = $('#recipesTable').dataTable({
 				"aaData": jQuery.parseJSON(recipesList),
 				"aoColumns": [
-					{"sTitle": "ID", "mData": 'IngrID' },
-					{"mData": 'UPC' },
-					{"mData": 'DOP' },
-					{"mData": 'Exp' },
-					{"mData": 'Price' },
-					{"mData": 'Distributor' },
-					{"mData": 'SubIngr' }
+					{"mData": 'RecipeID' },
+					{"mData": 'RecipeName' },
+					{"mData": 'Steps' }
 				]
 			});
 			
@@ -69,12 +65,8 @@ function loadEditForm(){
 	//$('#addRecipeSection').addClass('hidden');
 
 	$('#editIdInput').val(self.selectedRow[0].innerText);
-	$('#editUpcInput').val(self.selectedRow[1].innerText);
-	$('#editDopInput').val(self.selectedRow[2].innerText);
-	$('#editExpInput').val(self.selectedRow[3].innerText);
-	$('#editPriceInput').val(self.selectedRow[4].innerText);
-	$('#editDistInput').val(self.selectedRow[5].innerText);
-	$('#editSubInput').val(self.selectedRow[6].innerText);
+	$('#editNameInput').val(self.selectedRow[1].innerText);
+	$('#editStepsInput').val(self.selectedRow[2].innerText);
 }
 
 // Remove a Recipe
@@ -84,10 +76,8 @@ function removeRecipe(){
 
 function addRecipe(){
 	//TODO: form validation
-	var data = {"IngrID":$('#addIdInput').val(),"UPC":$('#addUpcInput').val(),
-									"DOP":$('#addDopInput').val(),"Exp":$('#addExpInput').val(),
-									"Price":$('#addPriceInput').val(),"Distributor":$('#addDistInput').val(),
-									"SubIngr":$('#addSubInput').val()};
+	var data = {"RecipeID":$('#addIdInput').val(),"RecipeName":$('#addNameInput').val(),
+									"Steps":$('#addStepsInput').val()};
 	$.ajax({
             type: 'POST',
             url: '/functions.php',
@@ -105,10 +95,8 @@ function updateRecipe(){
 	//TODO: AJAX call and return from DB b4 changing UI
 	
 	//TODO: Update probably needs to choose last param based on position in table vs its own ID
-	self.recipesTable.fnUpdate({"IngrID":$('#editIdInput').val(),"UPC":$('#editUpcInput').val(),
-									"DOP":$('#editDopInput').val(),"Exp":$('#editExpInput').val(),
-									"Price":$('#editPriceInput').val(),"Distributor":$('#editDistInput').val(),
-									"SubIngr":$('#editSubInput').val()}, parseInt(self.selectedRow[0].innerText)-1);
+	self.recipesTable.fnUpdate({"RecipeID":$('#editIdInput').val(),"RecipeName":$('#editNameInput').val(),
+									"Steps":$('#editStepsInput').val()}, parseInt(self.selectedRow[0].innerText)-1);
 	$('#editRecipeSection').addClass('hidden');
 	$('#editRecipeSection').removeClass('column');
 	//$('#addRecipeSection').removeClass('hidden');							

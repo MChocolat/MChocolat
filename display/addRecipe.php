@@ -23,37 +23,13 @@
 
 					<div class="row">
 						<div class="large-12 medium-4 columns">
-					  		<input id="addUpcInput" type = "text" placeholder = "UPC">
+					  		<input id="addNameInput" type = "text" placeholder = "Name">
 					  	</div>
 					</div>
 
 					<div class="row">
 						<div class="large-12 medium-4 columns">
-					  		<input id="addDopInput" type = "text" placeholder = "Date of Purchase">
-					  	</div>
-					</div>
-
-					<div class="row">
-					  	<div class="large-12 medium-4 columns">
-					  		<input id="addExpInput" type = "text" placeholder = "Purchase Date">
-					  	</div>
-					</div>
-					
-					<div class="row">
-					  	<div class="large-12 medium-4 columns">
-					  		<input id="addPriceInput" type = "text" placeholder = "Price">
-					  	</div>
-					</div>
-
-					<div class="row">
-					  	<div class="large-12 medium-4 columns">
-					  		<input id="addDistInput" type = "text" placeholder = "Distributor">
-					  	</div>
-					</div>
-
-					<div class="row">
-					  	<div class="large-12 medium-4 columns">
-					  		<input id="addSubInput" type = "text" placeholder = "Sub Recipes">
+					  		<input id="addStepsInput" type = "text" placeholder = "Steps">
 					  	</div>
 					</div>
 					  

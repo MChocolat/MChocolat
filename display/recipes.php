@@ -17,43 +17,19 @@
 		  			<p></p>
 		  			<div class="row">
 						<div class="large-12 medium-4 columns">
-					  		<input id="editIdInput" type = "text" placeholder = "Name">
+					  		<input id="editIdInput" type = "text" placeholder = "ID">
 					  	</div>
 					</div>
 
 					<div class="row">
 						<div class="large-12 medium-4 columns">
-					  		<input id="editUpcInput" type = "text" placeholder = "Product ID Number">
+					  		<input id="editNameInput" type = "text" placeholder = "Name">
 					  	</div>
 					</div>
 
 					<div class="row">
 						<div class="large-12 medium-4 columns">
-					  		<input id="editDopInput" type = "text" placeholder = "Quantity">
-					  	</div>
-					</div>
-
-					<div class="row">
-					  	<div class="large-12 medium-4 columns">
-					  		<input id="editExpInput" type = "text" placeholder = "Purchase Date">
-					  	</div>
-					</div>
-					
-					<div class="row">
-					  	<div class="large-12 medium-4 columns">
-					  		<input id="editPriceInput" type = "text" placeholder = "Expiration Date">
-					  	</div>
-					</div>
-
-					<div class="row">
-					  	<div class="large-12 medium-4 columns">
-					  		<input id="editDistInput" type = "text" placeholder = "Manufacturer">
-					  	</div>
-					</div>
-
-					<div class="row">
-					  	<div class="large-12 medium-4 columns">
-					  		<input id="editSubInput" type = "text" placeholder = "Price">
+					  		<input id="editStepsInput" type = "text" placeholder = "Steps">
 					  	</div>
 					</div>
 					  
@@ -75,12 +51,8 @@
 						 	<thead>
 							    <tr>
 									<th>ID</th>
-									<th>UPC</th>
-									<th>Date of Purchase</th>
-									<th>Expiration Date</th>
-									<th>Price</th>
-									<th>Distributor</th>
-									<th>Sub Recipes</th>							    
+									<th>Name</th>
+									<th>Steps</th>							    
 								</tr>
 						 	</thead>
 						</table>

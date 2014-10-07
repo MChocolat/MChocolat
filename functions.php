@@ -1,5 +1,4 @@
 <?php
-//$con=new mysqli('localhost', 'root', '', 'test');
 $con=new mysqli(null, 'root', '', 'test', null, '/cloudsql/inventorymchocolat:mchocolat');
 
 // Check connection
@@ -47,7 +46,7 @@ function addIngredient($data){
 }
 
 function getRecipes(){
-	$sql = "SELECT * FROM ingredients";
+	$sql = "SELECT * FROM recipe";
 	$result = runQuery($sql);
 	$finalResult = array();
 	while ($row = $result->fetch_assoc()){
@@ -56,8 +55,17 @@ function getRecipes(){
 	echo json_encode($finalResult);
 }
 
+function addRecipe($data){
+	$name = $data['RecipeName'];
+	$steps = $data['Steps'];
+	$sql = "INSERT INTO recipe (RecipeID, RecipeName, Steps)
+		VALUES(null, '$name', '$steps');";
+	$result = runQuery($sql); 
+	echo $result;
+}
+
 function getBatches(){
-	$sql = "SELECT * FROM ingredients";
+	$sql = "SELECT * FROM batch";
 	$result = runQuery($sql);
 	$finalResult = array();
 	while ($row = $result->fetch_assoc()){
@@ -67,7 +75,7 @@ function getBatches(){
 }
 
 function getBoxLabels(){
-	$sql = "SELECT * FROM ingredients";
+	$sql = "SELECT * FROM assortments";
 	$result = runQuery($sql);
 	$finalResult = array();
 	while ($row = $result->fetch_assoc()){
