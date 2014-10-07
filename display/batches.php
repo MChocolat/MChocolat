@@ -75,12 +75,8 @@
 						 	<thead>
 							    <tr>
 									<th>ID</th>
-									<th>UPC</th>
-									<th>Date of Purchase</th>
-									<th>Expiration Date</th>
-									<th>Price</th>
-									<th>Distributor</th>
-									<th>Sub Batches</th>							    
+									<th>Recipe Name</th>
+									<th>Date of Creation</th>							    
 								</tr>
 						 	</thead>
 						</table>

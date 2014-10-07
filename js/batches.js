@@ -18,13 +18,9 @@ $(document).ready( function () {
 			self.batchesTable = $('#batchesTable').dataTable({
 				"aaData": jQuery.parseJSON(batchesList),
 				"aoColumns": [
-					{"sTitle": "ID", "mData": 'IngrID' },
-					{"mData": 'UPC' },
-					{"mData": 'DOP' },
-					{"mData": 'Exp' },
-					{"mData": 'Price' },
-					{"mData": 'Distributor' },
-					{"mData": 'SubIngr' }
+					{"mData": 'BID' },
+					{"mData": 'RecipeName' },
+					{"mData": 'DOC' }
 				]
 			});
 			
