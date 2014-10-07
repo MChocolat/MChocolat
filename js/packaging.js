@@ -1,22 +1,22 @@
-var rawMaterialsList = [];
+var packagingList = [];
 var selectedRow;
-var rawMaterialsTable;
+var packagingTable;
 var self;
 
 // Function for when page first loads, what you want it to do
 $(document).ready( function () {
     self = this;
 
-	// Load all Raw Materials  
+	// Load all Packaging  
 	$.ajax({
 		type: "POST",
 		url: '/functions.php',
 		cache: false,
-		data: {'action': 'getRawMaterials'},
+		data: {'action': 'getPackaging'},
 		success: function(data, status) {
-			rawMaterialsList = data;
-			self.rawMaterialsTable = $('#rawMaterialsTable').dataTable({
-				"aaData": jQuery.parseJSON(rawMaterialsList),
+			packagingList = data;
+			self.packagingTable = $('#packagingTable').dataTable({
+				"aaData": jQuery.parseJSON(packagingList),
 				"aoColumns": [
 					{"sTitle": "ID", "mData": 'IngrID' },
 					{"mData": 'UPC' },
@@ -29,22 +29,22 @@ $(document).ready( function () {
 			});
 			
 			// Mouseover row highlighting
-			$('#rawMaterialsTable tbody').on('mouseover', 'tr', function() {
+			$('#packagingTable tbody').on('mouseover', 'tr', function() {
 				$(this).addClass('highlight');
 			});
-			$('#rawMaterialsTable tbody').on('mouseout', 'tr', function() {
+			$('#packagingTable tbody').on('mouseout', 'tr', function() {
 				$(this).removeClass('highlight');
 			});
 			
 			// Mouse click row highlighting
-			$('#rawMaterialsTable tbody').on('click', 'tr', function() {
+			$('#packagingTable tbody').on('click', 'tr', function() {
 			if ( $(this).hasClass('selected') ) {
 				var tr = $(this)
 				//Selected item will populate form
 				loadEditForm(this.cells);
 			}
 			else {
-				self.rawMaterialsTable.$('tr.selected').removeClass('selected');
+				self.packagingTable.$('tr.selected').removeClass('selected');
 				$(this).addClass('selected');
 				self.selectedRow = this.cells;
 				loadEditForm();
@@ -53,20 +53,20 @@ $(document).ready( function () {
 	} );
 		},
 		error: function(xhr, desc, err) {
-			alert("SOME ERROR LOADING RAW MATERIALS");
 		}
 	}); 
 	
 	//Set Button Functions
-	$("#updateRawMaterialButton").bind("click", updateRawMaterial);
-	$("#addRawMaterialButton").bind("click", addRawMaterial);
+	$("#updatePackagingButton").bind("click", updatePackaging);
+	$("#addPackagingButton").bind("click", addPackaging);
 	
 } );
 
-// Load the Edit form with Raw Material's info
+// Load the Edit form with Packaging's info
 function loadEditForm(){
-	$('#editRawMaterialSection').removeClass('hidden');
-	$('#addRawMaterialSection').addClass('hidden');
+	$('#editPackagingSection').removeClass('hidden');
+	$('#editPackagingSection').addClass('column');
+	//$('#addPackagingSection').addClass('hidden');
 
 	$('#editIdInput').val(self.selectedRow[0].innerText);
 	$('#editUpcInput').val(self.selectedRow[1].innerText);
@@ -77,12 +77,12 @@ function loadEditForm(){
 	$('#editSubInput').val(self.selectedRow[6].innerText);
 }
 
-// Remove a Raw Material
-function removeRawMaterial(){
+// Remove a Packaging
+function removePackaging(){
 	table.row('.selected').remove().draw( false );
 }
 
-function addRawMaterial(){
+function addPackaging(){
 	//TODO: form validation
 	var data = {"IngrID":$('#addIdInput').val(),"UPC":$('#addUpcInput').val(),
 									"DOP":$('#addDopInput').val(),"Exp":$('#addExpInput').val(),
@@ -92,24 +92,25 @@ function addRawMaterial(){
             type: 'POST',
             url: '/functions.php',
 			cache: false,
-			data: {'action': 'addRawMaterial', 'data': data},
+			data: {'action': 'addPackaging', 'data': data},
             success: function () {
 				// Maybe get the actual DB to populate row??
-				var idx = self.rawMaterialsTable.fnSettings().fnRecordsTotal() + 1;
-				self.rawMaterialsTable.fnAddData(data);
+				//var idx = self.packagingTable.fnSettings().fnRecordsTotal() + 1;
+				//self.packagingTable.fnAddData(data);
 			}
     });
 }
 
-function updateRawMaterial(){
+function updatePackaging(){
 	//TODO: AJAX call and return from DB b4 changing UI
 	
 	//TODO: Update probably needs to choose last param based on position in table vs its own ID
-	self.rawMaterialsTable.fnUpdate({"IngrID":$('#editIdInput').val(),"UPC":$('#editUpcInput').val(),
+	self.packagingTable.fnUpdate({"IngrID":$('#editIdInput').val(),"UPC":$('#editUpcInput').val(),
 									"DOP":$('#editDopInput').val(),"Exp":$('#editExpInput').val(),
 									"Price":$('#editPriceInput').val(),"Distributor":$('#editDistInput').val(),
 									"SubIngr":$('#editSubInput').val()}, parseInt(self.selectedRow[0].innerText)-1);
-	$('#editRawMaterialSection').addClass('hidden');
-	$('#addRawMaterialSection').removeClass('hidden');							
+	$('#editPackagingSection').addClass('hidden');
+	$('#editPackagingSection').removeClass('column');
+	//$('#addPackagingSection').removeClass('hidden');							
 									
 }

@@ -22,7 +22,7 @@
 					<td style="text-align: center;"><a href = "/display/addIngredient.php" class = "medium button">Add new</a></td>
 					<td style="text-align: center;"><a href = "/display/ingredients.php" class = "medium button">View/Search all</a></td>
 					
-					<td style="text-align: center;"><a href = "/display/addBatches.php" class= "medium button">Make new</a></td>
+					<td style="text-align: center;"><a href = "/display/addBatch.php" class= "medium button">Make new</a></td>
 					<td style="text-align: center;"><a href = "/display/batches.php" class= "medium button">View/Search all</a></td>
 				</tr>
 

@@ -23,7 +23,7 @@ if(isset($_POST['action'])) {
 }
 
 
-function getRawMaterials(){
+function getIngredients(){
 	$sql = "SELECT * FROM ingredients";
 	$result = runQuery($sql);
 	$finalResult = array();
@@ -33,7 +33,7 @@ function getRawMaterials(){
 	echo json_encode($finalResult);
 }
 
-function addRawMaterial($data){
+function addIngredient($data){
 	$UPC = $data['UPC'];
 	$price = $data['Price'];
 	$distr = $data['Distributor'];
@@ -44,6 +44,36 @@ function addRawMaterial($data){
 		VALUES(null, '$UPC', '$date', '$date', '$price', '$distr', '$subIngr');";
 	$result = runQuery($sql); 
 	echo $result;
+}
+
+function getRecipes(){
+	$sql = "SELECT * FROM ingredients";
+	$result = runQuery($sql);
+	$finalResult = array();
+	while ($row = $result->fetch_assoc()){
+	  $finalResult[] = $row;
+	}
+	echo json_encode($finalResult);
+}
+
+function getBatches(){
+	$sql = "SELECT * FROM ingredients";
+	$result = runQuery($sql);
+	$finalResult = array();
+	while ($row = $result->fetch_assoc()){
+	  $finalResult[] = $row;
+	}
+	echo json_encode($finalResult);
+}
+
+function getBoxLabels(){
+	$sql = "SELECT * FROM ingredients";
+	$result = runQuery($sql);
+	$finalResult = array();
+	while ($row = $result->fetch_assoc()){
+	  $finalResult[] = $row;
+	}
+	echo json_encode($finalResult);
 }
 
 

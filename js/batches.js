@@ -1,22 +1,22 @@
-var rawMaterialsList = [];
+var batchesList = [];
 var selectedRow;
-var rawMaterialsTable;
+var batchesTable;
 var self;
 
 // Function for when page first loads, what you want it to do
 $(document).ready( function () {
     self = this;
 
-	// Load all Raw Materials  
+	// Load all Batches  
 	$.ajax({
 		type: "POST",
 		url: '/functions.php',
 		cache: false,
-		data: {'action': 'getRawMaterials'},
+		data: {'action': 'getBatches'},
 		success: function(data, status) {
-			rawMaterialsList = data;
-			self.rawMaterialsTable = $('#rawMaterialsTable').dataTable({
-				"aaData": jQuery.parseJSON(rawMaterialsList),
+			batchesList = data;
+			self.batchesTable = $('#batchesTable').dataTable({
+				"aaData": jQuery.parseJSON(batchesList),
 				"aoColumns": [
 					{"sTitle": "ID", "mData": 'IngrID' },
 					{"mData": 'UPC' },
@@ -29,22 +29,22 @@ $(document).ready( function () {
 			});
 			
 			// Mouseover row highlighting
-			$('#rawMaterialsTable tbody').on('mouseover', 'tr', function() {
+			$('#batchesTable tbody').on('mouseover', 'tr', function() {
 				$(this).addClass('highlight');
 			});
-			$('#rawMaterialsTable tbody').on('mouseout', 'tr', function() {
+			$('#batchesTable tbody').on('mouseout', 'tr', function() {
 				$(this).removeClass('highlight');
 			});
 			
 			// Mouse click row highlighting
-			$('#rawMaterialsTable tbody').on('click', 'tr', function() {
+			$('#batchesTable tbody').on('click', 'tr', function() {
 			if ( $(this).hasClass('selected') ) {
 				var tr = $(this)
 				//Selected item will populate form
 				loadEditForm(this.cells);
 			}
 			else {
-				self.rawMaterialsTable.$('tr.selected').removeClass('selected');
+				self.batchesTable.$('tr.selected').removeClass('selected');
 				$(this).addClass('selected');
 				self.selectedRow = this.cells;
 				loadEditForm();
@@ -53,20 +53,20 @@ $(document).ready( function () {
 	} );
 		},
 		error: function(xhr, desc, err) {
-			alert("SOME ERROR LOADING RAW MATERIALS");
 		}
 	}); 
 	
 	//Set Button Functions
-	$("#updateRawMaterialButton").bind("click", updateRawMaterial);
-	$("#addRawMaterialButton").bind("click", addRawMaterial);
+	$("#updateBatchButton").bind("click", updateBatch);
+	$("#addBatchButton").bind("click", addBatch);
 	
 } );
 
-// Load the Edit form with Raw Material's info
+// Load the Edit form with Batch's info
 function loadEditForm(){
-	$('#editRawMaterialSection').removeClass('hidden');
-	$('#addRawMaterialSection').addClass('hidden');
+	$('#editBatchSection').removeClass('hidden');
+	$('#editBatchSection').addClass('column');
+	//$('#addBatchSection').addClass('hidden');
 
 	$('#editIdInput').val(self.selectedRow[0].innerText);
 	$('#editUpcInput').val(self.selectedRow[1].innerText);
@@ -77,12 +77,12 @@ function loadEditForm(){
 	$('#editSubInput').val(self.selectedRow[6].innerText);
 }
 
-// Remove a Raw Material
-function removeRawMaterial(){
+// Remove a Batch
+function removeBatch(){
 	table.row('.selected').remove().draw( false );
 }
 
-function addRawMaterial(){
+function addBatch(){
 	//TODO: form validation
 	var data = {"IngrID":$('#addIdInput').val(),"UPC":$('#addUpcInput').val(),
 									"DOP":$('#addDopInput').val(),"Exp":$('#addExpInput').val(),
@@ -92,24 +92,25 @@ function addRawMaterial(){
             type: 'POST',
             url: '/functions.php',
 			cache: false,
-			data: {'action': 'addRawMaterial', 'data': data},
+			data: {'action': 'addBatch', 'data': data},
             success: function () {
 				// Maybe get the actual DB to populate row??
-				var idx = self.rawMaterialsTable.fnSettings().fnRecordsTotal() + 1;
-				self.rawMaterialsTable.fnAddData(data);
+				//var idx = self.batchesTable.fnSettings().fnRecordsTotal() + 1;
+				//self.batchesTable.fnAddData(data);
 			}
     });
 }
 
-function updateRawMaterial(){
+function updateBatch(){
 	//TODO: AJAX call and return from DB b4 changing UI
 	
 	//TODO: Update probably needs to choose last param based on position in table vs its own ID
-	self.rawMaterialsTable.fnUpdate({"IngrID":$('#editIdInput').val(),"UPC":$('#editUpcInput').val(),
+	self.batchesTable.fnUpdate({"IngrID":$('#editIdInput').val(),"UPC":$('#editUpcInput').val(),
 									"DOP":$('#editDopInput').val(),"Exp":$('#editExpInput').val(),
 									"Price":$('#editPriceInput').val(),"Distributor":$('#editDistInput').val(),
 									"SubIngr":$('#editSubInput').val()}, parseInt(self.selectedRow[0].innerText)-1);
-	$('#editRawMaterialSection').addClass('hidden');
-	$('#addRawMaterialSection').removeClass('hidden');							
+	$('#editBatchSection').addClass('hidden');
+	$('#editBatchSection').removeClass('column');
+	//$('#addBatchSection').removeClass('hidden');							
 									
 }
