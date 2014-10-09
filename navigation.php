@@ -1,5 +1,6 @@
 <!-- Navigation -->
-<div class="small-8 large-centered columns">
+<div class="row">
+<div class="large-8 columns">
 		<p></p>
 		<div class="button-bar">
 		<ul class="button-group">
@@ -12,4 +13,5 @@
 		  	</ul>
 		</div>
   	</div>
+</div>
 </div>

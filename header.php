@@ -20,6 +20,7 @@ if (!isset($user)) {
       <meta name="viewport" content="width=device-width, initial-scale=0.7" />
       <title>M Chocolat Inventory</title>
       <link rel="stylesheet" href="/css/foundation.css" />
+	  <link rel="stylesheet" href="/css/extra.css" />
       <script src="/js/vendor/modernizr.js"></script>
       <script src="/js/vendor/jquery.js"></script>
       <script src="/js/vendor/fastclick.js"></script>
