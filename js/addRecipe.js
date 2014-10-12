@@ -23,15 +23,17 @@ $(document).ready( function () {
 
 function createIngredientRow(){
 	var div = document.createElement("div");
-	div.class = "row";
+	$(div).addClass("row");
+	self.getElementById('ingredientsList').appendChild(div);
+	
 	
 	var nameDiv = document.createElement("div");
 	var numDiv = document.createElement("div");
 	var unitDiv = document.createElement("div");
 	
-	nameDiv.class = "large-2 columns";
-	numDiv.class = "large-2 columns";
-	unitDiv.class = "large-2 columns end";
+	$(nameDiv).addClass("large-4 columns");
+	$(numDiv).addClass("large-4 columns");
+	$(unitDiv).addClass("large-4 columns end");
 	
 	var name = document.createElement("input");
 	name.type = "text";
@@ -52,7 +54,7 @@ function createIngredientRow(){
 	div.appendChild(numDiv);
 	div.appendChild(unitDiv);
 	
-	self.getElementById('ingredientsList').appendChild(div);	
+		
 }
 
 
