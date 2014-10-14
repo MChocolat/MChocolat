@@ -13,7 +13,7 @@
 	<body>
 
 		<div class="small-12 columns">
-			<table>
+			<table align="center">
 				<div class="row">
 					<thead>
 						<tr>
