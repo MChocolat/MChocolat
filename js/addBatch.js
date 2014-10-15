@@ -17,12 +17,7 @@ $(document).ready( function () {
 		error: function(xhr, desc, err) {
 		}
 	});
-	
-	for(i = 0; i < 15; i++){
-		document.getElementById('ingredientNum').options[i] = new Option(i + 1);
-	}
-	
-	
+
 	//Set Button Functions
 	$("#selectRecipeButton").bind("click", selectRecipe);
 	$("#barcodeButton").bind("click", addIngredients);
