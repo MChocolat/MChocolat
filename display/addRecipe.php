@@ -54,7 +54,7 @@
 					</div>
 					
 					<div class="row ">
-						<div id="ingredientsList" class="large-12 columns panel">	
+						<div id="ingredientsList" class="large-12 columns">	
 						</div>
 					</div>
 					
