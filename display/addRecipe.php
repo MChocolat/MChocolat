@@ -39,7 +39,7 @@
 		  		</div>
 				
 				<!-- right -->
-				<div id="right" class="large-6 columns panel">
+				<div id="right" class="large-5 columns panel">
 
 		  			<div class="h3">Ingredients</div>
 					<p></p>
