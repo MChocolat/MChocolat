@@ -45,12 +45,11 @@
 					<p></p>
 					
 					<div class="row ">
-						<div class="large-12 columns panel">
-							<div class="row ">
-								<select id="ingredientNum">
-								</select>
-								<a id="addIngredients" class="tiny button">Add</a>
-							</div>
+						<div class="large-8 columns panel">
+							<select id="ingredientNum"></select>
+						</div>
+						<div class="large-2 columns panel">
+							<a id="addIngredients" class="tiny button">Add</a>
 						</div>
 					</div>
 					
