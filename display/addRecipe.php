@@ -39,7 +39,7 @@
 		  		</div>
 				
 				<!-- right -->
-				<div id="right" class="large-5 columns panel">
+				<div id="right" class="large-6 columns panel">
 
 		  			<div class="h3">Ingredients</div>
 					<p></p>
@@ -57,7 +57,6 @@
 						<div id="ingredientsList" class="large-12 columns">	
 						</div>
 					</div>
-					
 					  
 					<p></p>
 
@@ -65,7 +64,7 @@
 						<div class="small-8 large-centered columns">
 						  	<ul class="button-group">
 							  <li><a href="#clear" class="tiny button disabled ">Clear</a></li>
-							  <li><a href="#barcode" class="tiny button">Barcode</a></li>
+							  <li><a href="#barcode" class="tiny button">Scan Barcode</a></li>
 							  <li><a id="addRecipeButton" class="tiny button">Add Recipe</a></li>
 							</ul>
 						</div>
