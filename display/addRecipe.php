@@ -46,13 +46,17 @@
 					
 					<div class="row ">
 						<div class="large-12 columns panel">
-							<select id="ingredientNum">
-							</select>
+							<div class="row ">
+								<select id="ingredientNum">
+								</select>
+								<a id="addIngredients" class="tiny button">Add</a>
+							</div>
 						</div>
 					</div>
 					
 					<div class="row ">
-						<div id="ingredientsList" class="large-12 columns panel">
+						<div id="ingredientsList" class="large-12 columns panel">	
+						</div>
 					</div>
 					
 					  

@@ -4,20 +4,14 @@ var self;
 $(document).ready( function () {
     self = this;
 	
-	
 	for(i = 0; i < 15; i++){
 		document.getElementById('ingredientNum').options[i] = new Option(i + 1);
 	}
 	
-	
 	createIngredientRow();
 	
-	
-	
-	
 	//Set Button Functions
-	//$("#updateRecipeButton").bind("click", updateRecipe);
-	//$("#addRecipeButton").bind("click", addRecipe);
+	$("#addIngredients").bind("click", addIngredients);
 	
 } );
 
@@ -37,8 +31,10 @@ function createIngredientRow(){
 	
 	var name = document.createElement("input");
 	name.type = "text";
+	name.placeholder = "Name"
 	var num = document.createElement("input");
 	num.type = "text";
+	num.placeholder = "Amount"
 	var unit = document.createElement("select");
 	
 	unit.options[0] = new Option("cups");
@@ -73,4 +69,13 @@ function addRecipe(){
 				//self.recipesTable.fnAddData(data);
 			}
     });
+}
+
+function addIngredients(){
+	var num = parseInt($('#ingredientNum').val());
+	
+	for(i = 0; i < num; i++){
+		createIngredientRow();
+	}
+	
 }
