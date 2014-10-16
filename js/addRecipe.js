@@ -111,8 +111,34 @@ function addRecipe(){
 				//self.recipesTable.fnAddData(data);
 				
 				//Do another AJAX save ingredients associated with recipe to ingrRecipe table
+				addRecipeIngredients();
 			}
     });
+}
+
+
+function addRecipeIngredients(){
+	//TODO: form validation
+	var data;
+	
+	var ingredientsList = $('#ingredientsList');
+	
+	
+	var data = {"RecipeID":$('#addIdInput').val(),"RecipeName":$('#addNameInput').val(),
+									"Steps":$('#addStepsInput').val()};
+	$.ajax({
+            type: 'POST',
+            url: '/functions.php',
+			cache: false,
+			data: {'action': 'addRecipeIngredients', 'data': data},
+            success: function () {
+				saveSuccessful();
+			}
+    });
+}
+
+function saveSuccessful(){
+	// TODO: Show a fading "Save Successful" Banner
 }
 
 // Add the number of ingredient rows specified

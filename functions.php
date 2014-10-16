@@ -46,7 +46,18 @@ function addIngredient($data){
 }
 
 function getRecipes(){
-	$sql = "SELECT * FROM recipe";
+	$sql = "SELECT * FROM recipes";
+	$result = runQuery($sql);
+	$finalResult = array();
+	while ($row = $result->fetch_assoc()){
+	  $finalResult[] = $row;
+	}
+	echo json_encode($finalResult);
+}
+
+function getRecipeIngredients($data){
+	$RecipeID = $data['RecipeID'];
+	$sql = "SELECT * FROM recipeIngredients WHERE RecipeID = '$RecipeID';";
 	$result = runQuery($sql);
 	$finalResult = array();
 	while ($row = $result->fetch_assoc()){
@@ -58,10 +69,28 @@ function getRecipes(){
 function addRecipe($data){
 	$name = $data['RecipeName'];
 	$steps = $data['Steps'];
-	$sql = "INSERT INTO recipe (RecipeID, RecipeName, Steps)
+	$sql = "INSERT INTO recipes (RecipeID, RecipeName, Steps)
 		VALUES(null, '$name', '$steps');";
 	$result = runQuery($sql); 
 	echo $result;
+}
+
+function addRecipeIngredients($data){
+
+	$ingredients = array();    
+	for($i=0; $i<=count($data); $i++){
+	   $IRID = mysql_real_escape_string($data[$i]['IRID']);
+	   $RecipeID = mysql_real_escape_string($data[$i]['RecipeID']);
+	   $IngrName = mysql_real_escape_string($data[$i]['IngrName']);
+	   $M_unit = mysql_real_escape_string($data[$i]['M_unit']);
+	   $Amount = mysql_real_escape_string($data[$i]['Amount']);
+
+	   $ingredients[] = "('$IRID','$RecipeID','$IngrName','$M_unit','$Amount')";
+	}
+
+	$sql = "INSERT INTO recipeIngredients (`IRID`, `RecipeID`, `IngrName`, `M_unit`, `Amount`) VALUES " . implode(', ', $ingredients);
+
+	$result = mysql_query($sql, $con);
 }
 
 function getBatches(){
