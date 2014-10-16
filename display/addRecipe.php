@@ -29,7 +29,7 @@
 					<div class="row">
 						<div class="large-12 columns">
 						  <label>
-							<textarea rows="10" placeholder="Steps"></textarea>
+							<textarea id="addStepsInput" rows="10" placeholder="Steps"></textarea>
 						  </label>
 						</div>
 					</div>
