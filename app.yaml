@@ -11,7 +11,7 @@ handlers:
   upload: /favicon\.ico
 
 - url: /
-  script: index.php
+  script: login.php
   login: required
 
 - url: /(.*)?/(.*)\.php$
