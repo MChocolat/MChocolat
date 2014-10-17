@@ -14,7 +14,7 @@
 		<div class="row">
 			<div id="editIngredientSection" class="large-5 columns"> <!-- class="large-4 columns hidden"> -->
 		  		<div class="panel">
-		  			<div class="h3">Edit Ingredient</div>
+		  			<div class="h3">Update Ingredient</div>
 		  			<p></p>
 		  			<div class="row">
 						<div class="large-12 medium-4 columns">
@@ -61,11 +61,11 @@
 					<p></p>
 
 					<div class="row ">
-						<div class="large-12 large-centered columns">
+						<div class="large-centered columns">
 						  	<ul class="button-group">
 							  <li><a href="#clear" class="tiny button disabled ">Clear</a></li>
 							  <li><a href="#barcode" class="tiny button">Scan Barcode</a></li>
-							  <li><a id="updateIngredientButton" class="tiny button">Update Ingredient</a></li>
+							  <li><a id="updateIngredientButton" class="tiny button">Save Changes</a></li>
 							</ul>
 						</div>
 					</div>
