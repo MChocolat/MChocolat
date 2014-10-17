@@ -10,7 +10,7 @@
 
 	<body>
 		<div class="row">
-		  	<div class="small-11 large-centered columns">
+		  	<div class="small-11 small-centered columns">
 				<p></p>
 				<div class="button-bar">
 					<ul class="button-group">
