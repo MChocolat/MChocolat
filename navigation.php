@@ -18,7 +18,6 @@
 -->
 
 <div class="columns small-12">
-    <a id="home" href="/en_us/">swatch</a>
 	<span id="mainNavToggle" class="hide-for-medium-up">
 		<a href="#" class="navtoggle">menu</a>
 	</span>
