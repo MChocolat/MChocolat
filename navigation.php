@@ -11,7 +11,8 @@
 	<body>
 		<div class="row">
 		  	<div class="small-11 small-centered columns">
-				<ul class="button-group">
+				<p></p>
+				<ul class="button-group even-5">
 					<li>
 						<a href="#" class="button" data-dropdown="ingredients" data-options="is_hover:true">Ingredients</a>
 						<ul id="ingredients" class="f-dropdown" data-dropdown-content>
@@ -52,7 +53,6 @@
 						</ul>
 			    	</li>
 			  	</ul>
-				</div>
 			</div>
 		</div>
 
