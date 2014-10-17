@@ -71,7 +71,7 @@
 		  	</div>
 	
 			<!-- Search Bar / Inventory Table --> 
-  			<div class="large-6 medium-4 columns">
+  			<div class="large-7 medium-4 columns">
 				<table id="ingredientsTable" class="display">
 				 	<thead>
 					    <tr>
