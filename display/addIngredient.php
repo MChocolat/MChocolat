@@ -9,12 +9,13 @@
   	</head>
   
   	<body>
-
-<!-- Add Ingredient -->
-			<div id="addIngredientSection" class="large-4 columns">
+		<div class="row">
+			<!-- left -->
+			<div id="addIngredientSection" class="large-5 columns">
 		  		<div id="addIngredientSection" class="panel">
-		  			<div class="h3">New Ingredient</div>
+		  			<div class="h3">Add New Ingredient</div>
 		  			<p></p>
+
 		  			<div class="row">
 						<div class="large-12 medium-4 columns">
 					  		<input id="addIdInput" type = "text" placeholder = "ID">
@@ -60,14 +61,16 @@
 					<p></p>
 
 					<div class="row ">
-					  	<ul class="button-group medium-centered columns">
-						  <li><a href="#clear" class="tiny button disabled ">Clear</a></li>
-						  <li><a href="#barcode" class="tiny button">Barcode</a></li>
-						  <li><a id="addIngredientButton" class="tiny button">Add Ingredient</a></li>
-						</ul>
+						<div class="small-8 large-centered columns">
+							<ul class="button-group">
+						  		<li><a href="#clear" class="tiny button disabled ">Clear</a></li>
+						  		<li><a href="#barcode" class="tiny button">Scan Barcode</a></li>
+						  		<li><a id="addIngredientButton" class="tiny button">Add Ingredient</a></li>
+							</ul>
+						</div>
 					</div>
 		  		</div>
 			</div>
-			
+		</div>
   	</body>
 </html>
