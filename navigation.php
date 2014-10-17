@@ -4,7 +4,6 @@
   	<div class="small-8 large-centered columns">
 		<p></p>
 		<div class="button-bar">
-			<ul class="button-group">
 				<li>
 					<a href="#" class="button" data-dropdown="ingredients" data-dropdown="drop">Ingredients</a>
 					<ul id="ingredients" class="f-dropdown" data-dropdown-content>
@@ -45,7 +44,6 @@
 					</ul>
 		    	</li>
 		    -->
-		  	</ul>
 		</div>
   	</div>
 </div>
