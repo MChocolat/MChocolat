@@ -10,20 +10,23 @@
   
   	<body>
 		<div class="row ">
-			<div id="addBatchSection" class="large-12 columns panel">
+			<div id="addBatchSection" class="large-6 columns panel">
 
 	  			<div class="h3">Add Batch</div>
 				<p></p>
 					
-				<div class="large-6 columns panel">
-					<div class="row ">
-						<select id="recipes"></select>
+				<div class="row ">
+					<div class="large-10 columns">
+						<select id="ingredientNum"></select>
+					</div>
+					<div class="large-2 columns">
 						<a id="addIngredients" class="tiny button">Select</a>
 					</div>
 				</div>
 					
-				<div class="row ">
-					<div id="ingredientsList" class="large-12 columns panel"></div>
+				<div id="ingredientsList" class="large-6 columns panel"></div>
+					<div class="h3">Ingredients List</div>
+					<p></p>
 				</div>
 					
 				<p></p>
