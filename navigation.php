@@ -9,7 +9,7 @@
   	</head>
 
 	<body>
-		<div class="row">
+		<div class="">
 		  	<div class="small-11 small-centered columns">
 				<p></p>
 				<div class="button-bar">
