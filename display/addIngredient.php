@@ -60,9 +60,10 @@
 					  
 					<p></p>
 
+
 					<div class="row ">
-						<div class="small-8 large-centered columns">
-							<ul class="button-group">
+					  	<div class="small-8 small-centered columns">
+						    <ul class="button-group even-3">
 						  		<li><a href="#clear" class="tiny button disabled ">Clear</a></li>
 						  		<li><a href="#barcode" class="tiny button">Scan Barcode</a></li>
 						  		<li><a id="addIngredientButton" class="tiny button">Add Ingredient</a></li>
