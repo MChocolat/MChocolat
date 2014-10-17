@@ -31,7 +31,7 @@
 				    	</li>
 
 				    	<li>
-				    		<a href="#" class="small button" data-dropdown="recipes" data-options="is_hover:true">Recipes</a>
+				    		<a href="#" class="button" data-dropdown="recipes" data-options="is_hover:true">Recipes</a>
 							<ul id="recipes" class="f-dropdown" data-dropdown-content>
 							  <li><a href="/display/addRecipe.php">Add New Recipe</a></li>
 							  <li><a href="/display/recipes.php">View/Search All Recipes</a></li>
@@ -39,7 +39,7 @@
 				    	</li>
 
 				    	<li>
-				    		<a href="#" class="small button" data-dropdown="boxLabels" data-options="is_hover:true">Box Labels</a>
+				    		<a href="#" class="button" data-dropdown="boxLabels" data-options="is_hover:true">Box Labels</a>
 							<ul id="boxLabels" class="f-dropdown" data-dropdown-content>
 							  <li><a href="/display/createBoxLabel.php">Add New Box Label</a></li>
 							  <li><a href="/display/boxLabels.php">View/Search All Box Labels</a></li>
