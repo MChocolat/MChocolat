@@ -9,10 +9,9 @@
   	</head>
 
 	<body>
-		<div class="">
+		<div class="row">
 		  	<div class="small-11 small-centered columns">
 				<p></p>
-				<div class="button-bar">
 					<ul class="button-group">
 						<li>
 							<a href="#" class="button" data-dropdown="ingredients" data-options="is_hover:true">Ingredients</a>
@@ -55,7 +54,7 @@
 				    	</li>
 				  	</ul>
 				</div>
-		  	</div>
+			</div>
 		</div>
 
 		<script src="js/vendor/jquery.js"></script>
