@@ -4,9 +4,10 @@
 	<div class="row">
 	  	<div class="small-8 large-centered columns">
 			<p></p>
-
+			<div class="button-bar">
+				<ul class="button-group">
 					<li>
-						<a href="#" class="button" data-dropdown="ingredients" data-options="is_hover:true">Ingredients</a>
+						<a href="/display/ingredients.php" class="small button" data-dropdown="ingredients" data-options="is_hover:true">Ingredients</a>
 						<ul id="ingredients" class="f-dropdown" data-dropdown-content>
 						  <li><a href="/display/addIngredient.php">Add New Ingredient</a></li>
 						  <li><a href="/display/ingredients.php">View/Search All Ingredients</a></li>
@@ -14,7 +15,7 @@
 					</li>
 
 			    	<li>
-						<a href="#" class="button" data-dropdown="batches" data-options="is_hover:true">Batches</a>
+						<a href="/display/batches.php" class="small button" data-dropdown="batches" data-options="is_hover:true">Batches</a>
 						<ul id="batches" class="f-dropdown" data-dropdown-content>
 						  <li><a href="/display/addBatch.php">Add New Batch</a></li>
 						  <li><a href="/display/batches.php">View/Search All Batches</a></li>
@@ -22,7 +23,7 @@
 			    	</li>
 
 			    	<li>
-			    		<a href="#" class="button" data-dropdown="recipes" data-options="is_hover:true">Recipes</a>
+			    		<a href="#" class="small button" data-dropdown="recipes" data-options="is_hover:true">Recipes</a>
 						<ul id="recipes" class="f-dropdown" data-dropdown-content>
 						  <li><a href="/display/addRecipe.php">Add New Recipe</a></li>
 						  <li><a href="/display/recipes.php">View/Search All Recipes</a></li>
@@ -30,7 +31,7 @@
 			    	</li>
 
 			    	<li>
-			    		<a href="#" class="button" data-dropdown="boxLabels" data-options="is_hover:true">Box Labels</a>
+			    		<a href="#" class="small button" data-dropdown="boxLabels" data-options="is_hover:true">Box Labels</a>
 						<ul id="boxLabels" class="f-dropdown" data-dropdown-content>
 						  <li><a href="/display/createBoxLabel.php">Add New Box Label</a></li>
 						  <li><a href="/display/boxLabels.php">View/Search All Box Labels</a></li>
@@ -45,7 +46,8 @@
 						</ul>
 			    	</li>
 			    -->
-
+			  	</ul>
+			</div>
 	  	</div>
 	</div>
 
