@@ -12,7 +12,7 @@
   	<body>
 		<!-- Edit Ingredient -->
 		<div class="row">
-			<div id="editIngredientSection" class="large-4 medium-4 columns"> <!-- class="large-4 columns hidden"> -->
+			<div id="editIngredientSection" class="large-4 columns"> <!-- class="large-4 columns hidden"> -->
 		  		<div class="panel">
 		  			<div class="h3">Edit Ingredient</div>
 		  			<p></p>
@@ -61,7 +61,7 @@
 					<p></p>
 
 					<div class="row ">
-						<div class="small-8 large-centered columns">
+					  	<ul class="button-group large-centered columns">
 						  <li><a href="#clear" class="tiny button disabled ">Clear</a></li>
 						  <li><a href="#barcode" class="tiny button">Barcode</a></li>
 						  <li><a id="updateIngredientButton" class="tiny button">Update Ingredient</a></li>
@@ -71,7 +71,7 @@
 		  	</div>
 	
 			<!-- Search Bar / Inventory Table --> 
-  			<div class="large-7 medium-7 columns">
+  			<div class="large-6 medium-4 columns">
 				<table id="ingredientsTable" class="display">
 				 	<thead>
 					    <tr>
