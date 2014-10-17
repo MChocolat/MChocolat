@@ -8,9 +8,8 @@
     	<script src="js/vendor/modernizr.js"></script>
   	</head>
 
-	<body>
 		<div class="row">
-		  	<div class="small-12 small-centered columns">
+		  	<div class="small-11 small-centered columns">
 				<p></p>
 				<ul class="button-group">
 					<li>
@@ -56,10 +55,7 @@
 			</div>
 		</div>
 
-		<script src="js/vendor/jquery.js"></script>
-	    <script src="js/foundation.min.js"></script>
-	    <script> $(document).foundation(); </script>
- 	 </body>
+
 </html>
 
 
