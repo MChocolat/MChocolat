@@ -15,7 +15,7 @@
 				<div class="button-bar">
 					<ul class="button-group">
 						<li>
-							<a href="/display/ingredients.php" class="small button" data-dropdown="ingredients" data-options="is_hover:true">Ingredients</a>
+							<a href="#" class="button" data-dropdown="ingredients" data-options="is_hover:true">Ingredients</a>
 							<ul id="ingredients" class="f-dropdown" data-dropdown-content>
 							  <li><a href="/display/addIngredient.php">Add New Ingredient</a></li>
 							  <li><a href="/display/ingredients.php">View/Search All Ingredients</a></li>
@@ -23,7 +23,7 @@
 						</li>
 
 				    	<li>
-							<a href="/display/batches.php" class="small button" data-dropdown="batches" data-options="is_hover:true">Batches</a>
+							<a href="#" class="button" data-dropdown="batches" data-options="is_hover:true">Batches</a>
 							<ul id="batches" class="f-dropdown" data-dropdown-content>
 							  <li><a href="/display/addBatch.php">Add New Batch</a></li>
 							  <li><a href="/display/batches.php">View/Search All Batches</a></li>
