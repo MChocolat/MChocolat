@@ -10,7 +10,7 @@
   
   	<body>
 		<div class="row ">
-			<div id="addBatchSection" class="large-6 columns panel">
+			<div id="addBatchSection" class="large-4 columns panel">
 
 	  			<div class="h3">Add Batch</div>
 				<p></p>
@@ -37,7 +37,7 @@
 				</div>
 			</div>
 
-			<div id="ingredientsList" class="large-6 columns panel"></div>
+			<div id="ingredientsList" class="large-7 columns panel"></div>
 				<div class="h3">Ingredients List</div>
 				<p></p>
 			</div>
