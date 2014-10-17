@@ -105,5 +105,5 @@
 
 		</ul>
 	</nav>
-	<!--<div id="nav-overlay" style="height: 3009px;">&nbsp;</div>-->
+	<div id="nav-overlay" style="height: 3009px;">&nbsp;</div>
 </div>
