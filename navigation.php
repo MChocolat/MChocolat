@@ -45,15 +45,14 @@
 							  <li><a href="/display/boxLabels.php">View/Search All Box Labels</a></li>
 							</ul>
 				    	</li>
-					<!--
+
 				    	<li>
 				    		<a href="#" class="button" data-dropdown="packaging" data-options="is_hover:true">Packaging</a>
 							<ul id="packaging" class="f-dropdown" data-dropdown-content>
-							  <li><a href="#">Packaging Option #1</a></li>
-							  <li><a href="#">Packaging Option #2</a></li>
+							  <li><a href="/display/addPackaging.php">Add New Packaging Option</a></li>
+							  <li><a href="/display/packaging.php">View/Search Packaging Options</a></li>
 							</ul>
 				    	</li>
-				    -->
 				  	</ul>
 				</div>
 		  	</div>
