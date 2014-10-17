@@ -61,7 +61,7 @@
 					<p></p>
 
 					<div class="row ">
-						<div class="small-8 large-centered columns">
+						<div class="large-12 large-centered columns">
 						  	<ul class="button-group">
 							  <li><a href="#clear" class="tiny button disabled ">Clear</a></li>
 							  <li><a href="#barcode" class="tiny button">Scan Barcode</a></li>
