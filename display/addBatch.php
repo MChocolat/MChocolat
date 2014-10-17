@@ -24,14 +24,9 @@
 					</div>
 				</div>
 					
-				<div id="ingredientsList" class="large-6 columns panel"></div>
-					<div class="h3">Ingredients List</div>
-					<p></p>
-				</div>
-					
 				<p></p>
 
-				<div class="">
+				<div class="row">
 				  	<div class="small-11 small-centered columns">
 					    <ul class="button-group even-3">
 					  		<li><a href="#clear" class="tiny button">Clear Entries</a></li>
@@ -40,6 +35,11 @@
 						</ul>
 					</div>
 				</div>
+			</div>
+
+			<div id="ingredientsList" class="large-6 columns panel"></div>
+				<div class="h3">Ingredients List</div>
+				<p></p>
 			</div>
 		</div>		
  	</body>
