@@ -59,12 +59,14 @@
 					  
 					<p></p>
 
-					<div class="row ">
-					  	<ul class="button-group medium-centered columns">
-						  <li><a href="#clear" class="tiny button disabled ">Clear</a></li>
-						  <li><a href="#barcode" class="tiny button">Barcode</a></li>
-						  <li><a id="updatePackagingButton" class="tiny button">Update Packaging</a></li>
-						</ul>
+					<div class="">
+					  	<div class="small-11 small-centered columns">
+						    <ul class="button-group even-3">
+						  		<li><a href="#clear" class="tiny button">Clear Entries</a></li>
+						  		<li><a href="#barcode" class="tiny button">Scan Barcode</a></li>
+						  		<li><a id="addIngredientButton" class="tiny button">Update Packaging</a></li>
+							</ul>
+						</div>
 					</div>
 		  		</div>
 		  	</div>

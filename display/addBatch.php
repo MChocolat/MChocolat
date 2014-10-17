@@ -6,43 +6,38 @@
 		<script src="/js/jquery.dataTables.js"></script>
 		<script type="text/javascript" language="javascript" src="/js/dataTables.foundation.js"></script>
 		<script type="text/javascript" src="/js/addBatch.js"></script>
-  	</head>
+	</head>
   
   	<body>
+		<div class="row ">
+			<div id="addBatchSection" class="large-12 columns panel">
 
-	<div class="row ">
-	<div id="addBatchSection" class="large-12 columns panel">
-
-		  			<div class="h3">Add Batch</div>
-					<p></p>
+	  			<div class="h3">Add Batch</div>
+				<p></p>
 					
+				<div class="large-6 columns panel">
 					<div class="row ">
-						<div class="large-12 columns panel">
-							<div class="row ">
-								<select id="recipes">
-								</select>
-								<a id="addIngredients" class="tiny button">Select</a>
-							</div>
-						</div>
+						<select id="recipes"></select>
+						<a id="addIngredients" class="tiny button">Select</a>
 					</div>
+				</div>
 					
-					<div class="row ">
-						<div id="ingredientsList" class="large-12 columns panel">	
-						</div>
-					</div>
+				<div class="row ">
+					<div id="ingredientsList" class="large-12 columns panel"></div>
+				</div>
 					
-					  
-					<p></p>
+				<p></p>
 
-					<div class="row ">
-					  	<ul class="button-group medium-centered columns">
-						  <li><a id="clearButton" class="tiny button disabled ">Clear</a></li>
-						  <li><a id="barcodeButton" class="tiny button">Barcode</a></li>
-						  <li><a id="addBatchButton" class="tiny button">Add Batch</a></li>
+				<div class="">
+				  	<div class="small-11 small-centered columns">
+					    <ul class="button-group even-3">
+					  		<li><a href="#clear" class="tiny button">Clear Entries</a></li>
+					  		<li><a href="#barcode" class="tiny button">Scan Barcode</a></li>
+					  		<li><a id="addIngredientButton" class="tiny button">Add Batch</a></li>
 						</ul>
-					<div class="row ">
-	</div>
-	</div>
-			
- </body>
+					</div>
+				</div>
+			</div>
+		</div>		
+ 	</body>
 </html>
