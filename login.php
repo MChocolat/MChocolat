@@ -18,11 +18,50 @@
 		</div>
 
 		<!-- Weak Hacky way to draw login near middle of page -->
-		<p></p>
-		<p></p>
-		<p></p>
-		<p></p>
+		<div class="small-12 columns">
+			<header>
+				<h1></h1>
+				<p></p>
+			</header>
+		</div>
+		<div class="small-12 columns">
+			<header>
+				<h1></h1>
+				<p></p>
+			</header>
+		</div>
+		<div class="small-12 columns">
+			<header>
+				<h1></h1>
+				<p></p>
+			</header>
+		</div>
+		<div class="small-12 columns">
+			<header>
+				<h1></h1>
+				<p></p>
+			</header>
+		</div>
+		<div class="small-12 columns">
+			<header>
+				<h1></h1>
+				<p></p>
+			</header>
+		</div>
+		<div class="small-12 columns">
+			<header>
+				<h1></h1>
+				<p></p>
+			</header>
+		</div>
+		<div class="small-12 columns">
+			<header>
+				<h1></h1>
+				<p></p>
+			</header>
+		</div>
 
+		<!--Actual login area-->
 		<div class="small-12 columns">
 			<!--compare to // LOOK MORE INTO FORM ACTION-->
 		   <form action="/display/ingredients.php" method="post">
