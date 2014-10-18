@@ -16,10 +16,10 @@
 					<p></p>
 						
 					<div class="row ">
-						<div class="large-10 columns">
+						<div class="small-8 columns">
 							<select id="recipes"></select>
 						</div>
-						<div class="large-2 columns">
+						<div class="small-4 columns">
 							<a id="addIngredients" class="tiny button">Select</a>
 						</div>
 					</div>
