@@ -63,7 +63,7 @@
 					  	<div class="small-11 small-centered columns">
 						    <ul class="button-group even-3">
 						  		<li><a href="#clear" class="tiny button">Clear Entries</a></li>
-						  		<li><a href="#barcode" data-reveal-id="barcode" class="tiny button">Scan Barcode</a></li>
+						  		<li><a href="#" data-reveal-id="barcode" class="tiny button">Scan Barcode</a></li>
 						  		<li><a id="addIngredientButton" class="tiny button">Add Recipe</a></li>
 							</ul>
 
@@ -77,6 +77,11 @@
 					</div>
 				</div>
 	  		</div>
-		</div>			
+		</div>
+
+	<script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script> $(document).foundation(); </script>
+    		
   	</body>
 </html>
