@@ -11,9 +11,10 @@
   	<body>
 		<!-- Add BoxLabel -->
 		<div id="addBoxLabelSection" class="large-4 columns">
-	  		<div id="addBoxLabelSection" class="panel">
-	  			<div class="h3">New BoxLabel</div>
+	  		<div class="panel">
+	  			<div class="h3">New Box Label</div>
 	  			<p></p>
+	  			
 	  			<div class="row">
 					<div class="large-12 medium-4 columns">
 				  		<input id="addIdInput" type = "text" placeholder = "ID">
@@ -76,7 +77,7 @@
 				</div>
 	  		</div>
 		</div>
-		
+
 	<script src="js/vendor/jquery.js"></script>
     <script src="js/foundation.min.js"></script>
     <script> $(document).foundation(); </script>
