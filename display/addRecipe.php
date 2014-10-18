@@ -10,35 +10,35 @@
   
   	<body>
 		<div class="row">
+			
 			<!-- left -->
-	  		<div id="left" class="large-5 columns">
-	  			<div class="h3">New Recipe</div>
-	  			<p></p>
+	  		<div id="left" class="large-7 columns">
+				<div class="panel">
+		  			<div class="h3">New Recipe</div>
+		  			<p></p>
 
-				<div class="row">
-					<div class="large-2 columns">
-				  		<img src="/img/chocolate.jpg" width="300" height="300">
-				  	</div>
-					<div class="large-10 columns">
-				  		<input id="addNameInput" type = "text" placeholder = "Name">
-				  	</div>
-				</div>
+					<div class="row">
+						<div class="large-2 columns">
+					  		<img src="/img/chocolate.jpg" width="300" height="300">
+					  	</div>
+						<div class="large-10 columns">
+					  		<input id="addNameInput" type = "text" placeholder = "Name">
+					  	</div>
+					</div>
 
-				<div class="row">
-					<div class="large-12 columns">
-					  <label>
-						<textarea id="addStepsInput" rows="10" placeholder="Steps"></textarea>
-					  </label>
+					<div class="row">
+						<div class="large-12 columns">
+						  <label>
+							<textarea id="addStepsInput" rows="10" placeholder="Steps"></textarea>
+						  </label>
+						</div>
 					</div>
 				</div>
-				  
 				<p></p>
-
 	  		</div>
 			
 			<!-- right -->
-			<div id="right" class="large-7 columns">
-
+			<div id="right" class="large-5 columns">
 				<div class="panel">
 		  			<div class="h3">Ingredients</div>
 					<p></p>
