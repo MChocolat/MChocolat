@@ -12,7 +12,7 @@
 		<div class="row">
 		  	<div class="small-11 small-centered columns">
 				<p></p>
-				<ul class="button-group even-5">
+				<ul class="button-group even-4">
 					<li>
 						<a href="#" class="button" data-dropdown="ingredients" data-options="is_hover:true">Ingredients</a>
 					</li>

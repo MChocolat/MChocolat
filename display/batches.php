@@ -72,7 +72,7 @@
 		  	</div>
 	
 			<!-- Search Bar / Inventory Table --> 
-  			<div class="large-7 columns">
+  			<div class="large-8 columns">
 				<table id="batchesTable" class="display">
 				 	<thead>
 					    <tr>
