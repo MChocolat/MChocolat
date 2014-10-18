@@ -11,7 +11,7 @@
   	<body>
 		<!-- Add BoxLabel -->
 		<div class="row">
-			<div id="addBoxLabelSection" class="large-4 columns">
+			<div id="addBoxLabelSection" class="large-5 columns">
 		  		<div class="panel">
 		  			<div class="h3">New Box Label</div>
 		  			<p></p>

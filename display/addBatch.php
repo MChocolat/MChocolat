@@ -10,7 +10,7 @@
   
   	<body>
 		<div class="row ">
-			<div id="addBatchSection" class="large-4 columns">
+			<div id="addBatchSection" class="large-5 columns">
 				<div class="panel">
 		  			<div class="h3">Add Batch</div>
 					<p></p>
@@ -44,7 +44,7 @@
 				</div>
 			</div>
 
-			<div id="ingredientsList" class="large-8 columns">
+			<div id="ingredientsList" class="large-7 columns">
 				<div class="panel">
 					<div class="h3">Ingredients List</div>
 					<p></p>
