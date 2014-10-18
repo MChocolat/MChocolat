@@ -10,7 +10,6 @@
   
   	<body>
 		<div class="row">
-			
 			<!-- left -->
 			<div id="right" class="large-6 columns">
 				<div class="panel">
