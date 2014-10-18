@@ -68,7 +68,7 @@
 							</ul>
 
 							<div id="barcode" class="reveal-modal" data-reveal>
-							  <h2>Barocde Scanner!</h2>
+							  <h2>Barocde Scanner.</h2>
 							  <p>Please scan the barcode!</p>
 							  <a class="close-reveal-modal">&#215;</a>
 							</div>
@@ -82,6 +82,6 @@
 	<script src="js/vendor/jquery.js"></script>
     <script src="js/foundation.min.js"></script>
     <script> $(document).foundation(); </script>
-    		
+
   	</body>
 </html>
