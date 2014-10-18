@@ -12,7 +12,7 @@
   	<body>
 		<!-- Edit Recipe -->
 		<div class="row">
-			<div id="editRecipeSection" class="large-4 columns">
+			<div id="editRecipeSection" class="large-5 columns">
 		  		<div class="panel">
 		  			<div class="h3">Update Recipe</div>
 		  			<p></p>
