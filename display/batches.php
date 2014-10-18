@@ -11,7 +11,7 @@
   
   	<body>
 		<div class="row ">
-			<div id="editBatchSection" class="large-4 panel">
+			<div id="editBatchSection" class="large-5 columns">
 	  			
 	  			<div class="h3">Update Batch</div>
 	  			<p></p>
@@ -72,7 +72,7 @@
 		  	</div>
 	
 			<!-- Search Bar / Inventory Table --> 
-  			<div class="large-8 columns">
+  			<div class="large-7 columns">
 				<table id="batchesTable" class="display">
 				 	<thead>
 					    <tr>
