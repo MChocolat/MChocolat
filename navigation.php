@@ -28,10 +28,11 @@
 			    	<li>
 			    		<a href="#" class="button" data-dropdown="boxLabels" data-options="is_hover:true">Box Labels</a>
 			    	</li>
-
+				<!--
 			    	<li>
 			    		<a href="#" class="button" data-dropdown="packaging" data-options="is_hover:true">Packaging</a>
 			    	</li>
+			    -->
 				</ul>
 
 				<ul id="ingredients" class="f-dropdown" data-dropdown-content>

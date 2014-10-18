@@ -11,9 +11,10 @@
   
   	<body>
 		<!-- Edit Recipe -->
-			<div id="editRecipeSection" class="large-4 hidden"> <!-- class="large-4 columns hidden"> -->
+		<div class="row">
+			<div id="editRecipeSection" class="large-4 columns">
 		  		<div class="panel">
-		  			<div class="h3">Edit Recipe</div>
+		  			<div class="h3">Update Recipe</div>
 		  			<p></p>
 		  			<div class="row">
 						<div class="large-12 medium-4 columns">
@@ -48,16 +49,17 @@
 		  	</div>
 	
 			<!-- Search Bar / Inventory Table --> 
-		  			<div class="large-7 medium-4 columns">
-						<table id="recipesTable" class="display">
-						 	<thead>
-							    <tr>
-									<th>ID</th>
-									<th>Name</th>
-									<th>Steps</th>							    
-								</tr>
-						 	</thead>
-						</table>
-					</div>
+  			<div class="large-7 medium-4 columns">
+				<table id="recipesTable" class="display">
+				 	<thead>
+					    <tr>
+							<th>ID</th>
+							<th>Name</th>
+							<th>Steps</th>							    
+						</tr>
+				 	</thead>
+				</table>
+			</div>
+		</div>
   	</body>
 </html>
