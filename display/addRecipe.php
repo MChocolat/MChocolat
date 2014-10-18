@@ -11,7 +11,7 @@
   	<body>
 		<div class="row">
 			<!-- left -->
-	  		<div id="left" class="large-6 columns panel">
+	  		<div id="left" class="large-5 columns">
 	  			<div class="h3">New Recipe</div>
 	  			<p></p>
 
@@ -37,7 +37,7 @@
 	  		</div>
 			
 			<!-- right -->
-			<div id="right" class="large-6 columns panel">
+			<div id="right" class="large-7 columns">
 
 	  			<div class="h3">Ingredients</div>
 				<p></p>
