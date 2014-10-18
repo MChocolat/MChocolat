@@ -11,15 +11,15 @@
   	<body>
 		<div class="row ">
 			<div id="addBatchSection" class="large-4 columns">
-				<div id="addIngredientSection" class="panel">
+				<div class="panel">
 		  			<div class="h3">Add Batch</div>
 					<p></p>
 						
 					<div class="row ">
-						<div class="small-9 columns">
+						<div class="large-9 columns">
 							<select id="ingredientNum"></select>
 						</div>
-						<div class="small-2 columns">
+						<div class="large-2 columns">
 							<a id="addIngredients" class="tiny button">Select</a>
 						</div>
 					</div>
