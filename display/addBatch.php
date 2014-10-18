@@ -16,10 +16,10 @@
 					<p></p>
 						
 					<div class="row ">
-						<div class="large-10 columns">
+						<div class="small-9 columns">
 							<select id="ingredientNum"></select>
 						</div>
-						<div class="large-2 columns">
+						<div class="small-2 columns">
 							<a id="addIngredients" class="tiny button">Select</a>
 						</div>
 					</div>
@@ -39,11 +39,12 @@
 			</div>
 
 			<div id="ingredientsList" class="small-7 columns panel"></div>
-				<div class="h3">Ingredients List</div>
-				<p></p>
-				<div class="row "></div>
+				<div id="ingredientsList" class="panel">
+					<div class="h3">Ingredients List</div>
+					<p></p>
+					<div class="row "></div>
+				</div>
 			</div>
-
 		</div>		
  	</body>
 </html>
