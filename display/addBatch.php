@@ -10,16 +10,16 @@
   
   	<body>
 		<div class="row ">
-			<div id="addBatchSection" class="small-4 columns panel">
+			<div id="addBatchSection" class="large-4 columns panel">
 
 	  			<div class="h3">Add Batch</div>
 				<p></p>
 					
 				<div class="row ">
-					<div class="small-10 columns">
+					<div class="large-10 columns">
 						<select id="ingredientNum"></select>
 					</div>
-					<div class="small-2 columns">
+					<div class="large-2 columns">
 						<a id="addIngredients" class="tiny button">Select</a>
 					</div>
 				</div>
@@ -27,7 +27,7 @@
 				<p></p>
 
 				<div class="row">
-				  	<div class="small-11 small-centered columns">
+				  	<div class="large-11 small-centered columns">
 					    <ul class="button-group even-3">
 					  		<li><a href="#clear" class="tiny button">Clear Entries</a></li>
 					  		<li><a href="#barcode" class="tiny button">Scan Barcode</a></li>
