@@ -38,8 +38,8 @@
 				</div>
 			</div>
 
-			<div id="ingredientsList" class="large-7 columns panel"></div>
-				<div id="ingredientsList" class="panel">
+			<div id="ingredientsList" class="large-7 columns"></div>
+				<div class="panel">
 					<div class="h3">Ingredients List</div>
 					<p></p>
 					<div class="row "></div>
