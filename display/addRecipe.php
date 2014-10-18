@@ -10,67 +10,64 @@
   
   	<body>
 		<div class="row">
-			<!-- whole -->
-			<div id="addRecipeSection" class="large-12 columns">
-				<!-- left -->
-		  		<div id="left" class="large-6 columns panel">
-		  			<div class="h3">New Recipe</div>
-		  			<p></p>
+			<!-- left -->
+	  		<div id="left" class="large-6 columns panel">
+	  			<div class="h3">New Recipe</div>
+	  			<p></p>
 
-					<div class="row">
-						<div class="large-2 columns">
-					  		<img src="/img/chocolate.jpg" width="300" height="300">
-					  	</div>
-						<div class="large-10 columns">
-					  		<input id="addNameInput" type = "text" placeholder = "Name">
-					  	</div>
+				<div class="row">
+					<div class="large-2 columns">
+				  		<img src="/img/chocolate.jpg" width="300" height="300">
+				  	</div>
+					<div class="large-10 columns">
+				  		<input id="addNameInput" type = "text" placeholder = "Name">
+				  	</div>
+				</div>
+
+				<div class="row">
+					<div class="large-12 columns">
+					  <label>
+						<textarea id="addStepsInput" rows="10" placeholder="Steps"></textarea>
+					  </label>
 					</div>
+				</div>
+				  
+				<p></p>
 
-					<div class="row">
-						<div class="large-12 columns">
-						  <label>
-							<textarea id="addStepsInput" rows="10" placeholder="Steps"></textarea>
-						  </label>
-						</div>
-					</div>
-					  
-					<p></p>
+	  		</div>
+			
+			<!-- right -->
+			<div id="right" class="large-6 columns panel">
 
-		  		</div>
+	  			<div class="h3">Ingredients</div>
+				<p></p>
 				
-				<!-- right -->
-				<div id="right" class="large-6 columns panel">
+				<div class="row ">
+					<div class="large-10 columns">
+						<select id="ingredientNum"></select>
+					</div>
+					<div class="large-2 columns">
+						<a id="addIngredients" class="tiny button">Add</a>
+					</div>
+				</div>
+				
+				<div class="row ">
+					<div id="ingredientsList" class="large-12 columns">	
+					</div>
+				</div>
+				  
+				<p></p>
 
-		  			<div class="h3">Ingredients</div>
-					<p></p>
-					
-					<div class="row ">
-						<div class="large-10 columns">
-							<select id="ingredientNum"></select>
-						</div>
-						<div class="large-2 columns">
-							<a id="addIngredients" class="tiny button">Add</a>
-						</div>
+				<div class="">
+				  	<div class="small-11 small-centered columns">
+					    <ul class="button-group even-3">
+					  		<li><a href="#clear" class="tiny button">Clear Entries</a></li>
+					  		<li><a href="#barcode" class="tiny button">Scan Barcode</a></li>
+					  		<li><a id="addIngredientButton" class="tiny button">Add Recipe</a></li>
+						</ul>
 					</div>
-					
-					<div class="row ">
-						<div id="ingredientsList" class="large-12 columns">	
-						</div>
-					</div>
-					  
-					<p></p>
-
-					<div class="">
-					  	<div class="small-11 small-centered columns">
-						    <ul class="button-group even-3">
-						  		<li><a href="#clear" class="tiny button">Clear Entries</a></li>
-						  		<li><a href="#barcode" class="tiny button">Scan Barcode</a></li>
-						  		<li><a id="addIngredientButton" class="tiny button">Add Recipe</a></li>
-							</ul>
-						</div>
-					</div>
-		  		</div>
-			</div>	
+				</div>
+	  		</div>
 		</div>			
   	</body>
 </html>
