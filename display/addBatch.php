@@ -10,29 +10,30 @@
   
   	<body>
 		<div class="row ">
-			<div id="addBatchSection" class="large-4 columns panel">
-
-	  			<div class="h3">Add Batch</div>
-				<p></p>
-					
-				<div class="row ">
-					<div class="large-10 columns">
-						<select id="ingredientNum"></select>
+			<div id="addBatchSection" class="large-4 columns">
+				<div id="addIngredientSection" class="panel">
+		  			<div class="h3">Add Batch</div>
+					<p></p>
+						
+					<div class="row ">
+						<div class="large-10 columns">
+							<select id="ingredientNum"></select>
+						</div>
+						<div class="large-2 columns">
+							<a id="addIngredients" class="tiny button">Select</a>
+						</div>
 					</div>
-					<div class="large-2 columns">
-						<a id="addIngredients" class="tiny button">Select</a>
-					</div>
-				</div>
-					
-				<p></p>
+						
+					<p></p>
 
-				<div class="row">
-				  	<div class="large-11 small-centered columns">
-					    <ul class="button-group even-3">
-					  		<li><a href="#clear" class="tiny button">Clear Entries</a></li>
-					  		<li><a href="#barcode" class="tiny button">Scan Barcode</a></li>
-					  		<li><a id="addIngredientButton" class="tiny button">Add Batch</a></li>
-						</ul>
+					<div class="row">
+					  	<div class="large-11 small-centered columns">
+						    <ul class="button-group even-3">
+						  		<li><a href="#clear" class="tiny button">Clear Entries</a></li>
+						  		<li><a href="#barcode" class="tiny button">Scan Barcode</a></li>
+						  		<li><a id="addIngredientButton" class="tiny button">Add Batch</a></li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
