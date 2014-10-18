@@ -38,7 +38,7 @@
 				</div>
 			</div>
 
-			<div id="ingredientsList" class="small-7 columns panel"></div>
+			<div id="ingredientsList" class="large-7 columns panel"></div>
 				<div id="ingredientsList" class="panel">
 					<div class="h3">Ingredients List</div>
 					<p></p>
