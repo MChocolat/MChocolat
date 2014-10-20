@@ -32,6 +32,16 @@ function getIngredients(){
 	echo json_encode($finalResult);
 }
 
+function ingrUPCLookup($data){
+	$data['UPC'];
+	$sql = "SELECT 1 FROM ingredients WHERE UPC = '$UPC';";
+	$finalResult = array();
+	while ($row = $result->fetch_assoc()){
+		$finalResult[] = $row;
+	}
+	echo json_encode($finalResult);
+}
+
 function addIngredient($data){
 	$UPC = $data['UPC'];
 	$price = $data['Price'];
