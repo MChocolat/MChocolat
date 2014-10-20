@@ -121,11 +121,22 @@ function addRecipeIngredients(){
 	//TODO: form validation
 	var data;
 	
-	var ingredientsList = $('#ingredientsList');
+	var ingredients = $(ingredientsList).children();
 	
+	var ingr;
+	var amnt;
+	var unit;
 	
-	var data = {"RecipeID":$('#addIdInput').val(),"RecipeName":$('#addNameInput').val(),
-									"Steps":$('#addStepsInput').val()};
+	for(i = 0; i < ingredients.size(); i++){
+		ingr = $($(ingredients[0]).children()[0]).children()[0];
+		amnt = $($(ingredients[0]).children()[0]).children()[0];
+		unit = $($(ingredients[0]).children()[0]).children()[0];
+		
+		var row = {"RecipeID": $('#addIdInput').val(),"IngrName":ingr,"Amount":amnt,"M_unit":unit};
+		
+		data[i] = row;
+	}
+
 	$.ajax({
             type: 'POST',
             url: '/functions.php',
