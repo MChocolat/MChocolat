@@ -105,7 +105,7 @@ function addRecipe(){
             url: '/functions.php',
 			cache: false,
 			data: {'action': 'addRecipe', 'data': data},
-            success: function () {
+            success: function (data) {
 				// Maybe get the actual DB to populate row??
 				//var idx = self.recipesTable.fnSettings().fnRecordsTotal() + 1;
 				//self.recipesTable.fnAddData(data);
@@ -128,9 +128,9 @@ function addRecipeIngredients(){
 	var unit;
 	
 	for(i = 0; i < ingredients.size(); i++){
-		ingr = $($(ingredients[0]).children()[0]).children()[0];
-		amnt = $($(ingredients[0]).children()[0]).children()[0];
-		unit = $($(ingredients[0]).children()[0]).children()[0];
+		ingr = $(":selected", $($(ingredients[0]).children()[0]).children()[0]).text();
+		amnt = $($($(ingredients[0]).children()[1]).children()[0]).val();
+		unit = $($($(ingredients[0]).children()[2]).children()[0]).val();
 		
 		var row = {"RecipeID": $('#addIdInput').val(),"IngrName":ingr,"Amount":amnt,"M_unit":unit};
 		
