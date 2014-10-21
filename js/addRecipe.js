@@ -106,10 +106,6 @@ function addRecipe(){
 			cache: false,
 			data: {'action': 'addRecipe', 'data': data},
             success: function (data, status) {
-				// Maybe get the actual DB to populate row??
-				//var idx = self.recipesTable.fnSettings().fnRecordsTotal() + 1;
-				//self.recipesTable.fnAddData(data);
-				
 				//Do another AJAX save ingredients associated with recipe to ingrRecipe table
 				addRecipeIngredients(data);
 			}
@@ -117,7 +113,7 @@ function addRecipe(){
 }
 
 
-function addRecipeIngredients(data){
+function addRecipeIngredients(recipeID){
 	//TODO: form validation
 	var data = new Array();
 	
@@ -132,7 +128,7 @@ function addRecipeIngredients(data){
 		amnt = $($($(ingredients[0]).children()[1]).children()[0]).val();
 		unit = $($($(ingredients[0]).children()[2]).children()[0]).val();
 		
-		var row = {"RecipeID": $('#addIdInput').val(),"IngrName":ingr,"Amount":amnt,"M_unit":unit};
+		var row = {"RecipeID": recipeID,"IngrName":ingr,"Amount":amnt,"M_unit":unit};
 		
 		data[i] = row;
 	}
@@ -149,7 +145,7 @@ function addRecipeIngredients(data){
 }
 
 function saveSuccessful(){
-	// TODO: Show a fading "Save Successful" Banner
+	alert("SAVED");
 }
 
 // Add the number of ingredient rows specified
