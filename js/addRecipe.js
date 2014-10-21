@@ -111,7 +111,7 @@ function addRecipe(){
 				//self.recipesTable.fnAddData(data);
 				
 				//Do another AJAX save ingredients associated with recipe to ingrRecipe table
-				addRecipeIngredients();
+				addRecipeIngredients(data);
 			}
     });
 }
@@ -119,7 +119,7 @@ function addRecipe(){
 
 function addRecipeIngredients(){
 	//TODO: form validation
-	var data;
+	var data = new Array();
 	
 	var ingredients = $(ingredientsDiv).children();
 	
