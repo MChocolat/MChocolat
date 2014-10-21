@@ -26,7 +26,7 @@
 					</div>
 					
 					<div class="row ">
-						<div id="ingredientsList" class="large-12 columns">	
+						<div id="ingredientsDiv" class="large-12 columns">	
 						</div>
 					</div>
 					  

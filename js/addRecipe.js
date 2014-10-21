@@ -34,7 +34,7 @@ $(document).ready( function () {
 function createIngredientRow(){
 	var div = document.createElement("div");
 	$(div).addClass("row");
-	self.getElementById('ingredientsList').appendChild(div);
+	self.getElementById('ingredientsDiv').appendChild(div);
 	
 	
 	var nameDiv = document.createElement("div");
@@ -121,7 +121,7 @@ function addRecipeIngredients(){
 	//TODO: form validation
 	var data;
 	
-	var ingredients = $(ingredientsList).children();
+	var ingredients = $(ingredientsDiv).children();
 	
 	var ingr;
 	var amnt;
