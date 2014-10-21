@@ -82,7 +82,7 @@ function addRecipe($data){
 	$sql = "INSERT INTO recipes (RecipeID, RecipeName, Steps)
 		VALUES(null, '$name', '$steps');";
 	$result = runQuery($sql); 
-	echo mysql_insert_id();
+	echo $result;
 }
 
 function addRecipeIngredients($data){
