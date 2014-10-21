@@ -105,7 +105,7 @@ function addRecipe(){
             url: '/functions.php',
 			cache: false,
 			data: {'action': 'addRecipe', 'data': data},
-            success: function (data) {
+            success: function (data, status) {
 				// Maybe get the actual DB to populate row??
 				//var idx = self.recipesTable.fnSettings().fnRecordsTotal() + 1;
 				//self.recipesTable.fnAddData(data);
@@ -117,7 +117,7 @@ function addRecipe(){
 }
 
 
-function addRecipeIngredients(){
+function addRecipeIngredients(data){
 	//TODO: form validation
 	var data = new Array();
 	
