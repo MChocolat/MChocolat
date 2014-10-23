@@ -1,37 +1,39 @@
 $(document).ready( function () {
 	$(document).keypress(function(e) {
 		if(e.which == 13) {
-			if (document.activeElement.id == 'addUpcInput') {
-				alert ('You Pressed Enter in UPC!');
-					// Load all Ingredients  
+			var UPC = document.activeElement.id;
+			if (document.activeElement.id == 'addUpcInput' && /\S/.test(ID)) {
+				// Load information associated with UPC in field 
 				$.ajax({
 					type: "POST",
 					url: '/functions.php',
 					cache: false,
 					data: {'action': 'ingrUPCLookup'
 							'$data': document.activeElement.id.getVal()},
-					success: function(data, status) {
-						ingredientsList = data;
-						self.ingredientsTable = $('#ingredientsTable').dataTable({
-							"aaData": jQuery.parseJSON(ingredientsList),
-							"aoColumns": [
-								{"sTitle": "ID", "mData": 'IngrID' },
-								{"mData": 'UPC' },
-								{"mData": 'DOP' },
-								{"mData": 'Exp' },
-								{"mData": 'Price' },
-								{"mData": 'Distributor' },
-								{"mData": 'SubIngr' }
-							]
-						});
+					success: process_response,
+					error: function(xhr) {alert("AJAX request failed: "+xhr.status);}
 				
-				} );
-					},
-					error: function(xhr, desc, err) {
-						alert("SOME ERROR LOADING RAW MATERIALS");
-					}
 				});
+			} 
+
+			else {
+				alert("No UPC supplied");
 			}
+
+			/**
+		    * process the response, populating the form fields from the JSON data
+		    * @param {Object} response the JSON data parsed into an object
+		    */
+		    function process_response(response) {
+		        var frm = $("#form-ajax");
+		        var i;
+		 
+		        console.dir(response);      // for debug
+		 
+		        for (i in response) {
+		            frm.find('[name="' + i + '"]').val(response[i]);
+		        }
+		    }
 		}
 	});
 
