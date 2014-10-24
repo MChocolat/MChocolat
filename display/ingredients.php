@@ -10,9 +10,11 @@
   	</head>
   
   	<body>
+	<
 		<!-- Edit Ingredient -->
+		<!--
 		<div class="row">
-			<div id="editIngredientSection" class="large-5 columns"> <!-- class="large-4 columns hidden"> -->
+			<div id="editIngredientSection"  class="large-4 columns hidden"> 
 		  		<div class="panel">
 		  			<div class="h3">Update Ingredient</div>
 		  			<p></p>
@@ -78,18 +80,15 @@
 					</div>
 		  		</div>
 		  	</div>
-	
+			-->
 			<!-- Search Bar / Inventory Table --> 
   			<div class="large-7 medium-4 columns">
 				<table id="ingredientsTable" class="display">
 				 	<thead>
 					    <tr>
-							<th>ID</th>
 							<th>UPC</th>
-							<th>Date of Purchase</th>
 							<th>Expiration Date</th>
-							<th>Price</th>
-							<th>Distributor</th>
+							<th>Lot #</th>
 							<th>Sub Ingredients</th>							    
 						</tr>
 				 	</thead>

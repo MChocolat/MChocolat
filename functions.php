@@ -44,15 +44,22 @@ function ingrUPCLookup($data){
 
 function addIngredient($data){
 	$UPC = $data['UPC'];
-	$price = $data['Price'];
-	$distr = $data['Distributor'];
+	$exp = $data['Exp'];
+	$lotNum = $data['LotNum'];
 	$subIngr = $data['SubIngr'];
+
 	$date = date("Y-m-d");
+	
 	//GET ACTUAL EXP DATE
-	$sql = "INSERT INTO ingredients (IngrID, UPC, DOP, Exp, Price, Distributor, SubIngr)
-		VALUES(null, '$UPC', '$date', '$date', '$price', '$distr', '$subIngr');";
+	$sql = "INSERT INTO uniqueIngr (UPC, IngrName, SubIngr)
+		VALUES('$UPC', 'name', '$subIngr');";
 	$result = runQuery($sql); 
-	echo $result;
+	
+	$sql2 = "INSERT INTO ingredients (IngrID, UPC, DOP, Exp, Lot)
+		VALUES(null, '$UPC', '$date', '$exp', '$lotNum');";
+	$result2 = runQuery($sql); 
+	
+	echo $result2;
 }
 
 function getRecipes(){

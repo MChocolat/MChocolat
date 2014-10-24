@@ -43,9 +43,9 @@ $(document).ready( function () {
 
 function addIngredient(){
 	//TODO: form validation
-	var data = {"IngrID":$('#addIdInput').val(),"UPC":$('#addUpcInput').val(),
-									"DOP":$('#addDopInput').val(),"Exp":$('#addExpInput').val(),
-									"Price":$('#addPriceInput').val(),"Distributor":$('#addDistInput').val(),
+	var data = {"UPC":$('#addUpcInput').val(),
+									"Exp":$('#addExpInput').val(),
+									"LotNum":$('#addLotNumInput').val(),
 									"SubIngr":$('#addSubInput').val()};
 	$.ajax({
             type: 'POST',
@@ -53,9 +53,7 @@ function addIngredient(){
 			cache: false,
 			data: {'action': 'addIngredient', 'data': data},
             success: function (data, status) {
-				// Maybe get the actual DB to populate row??
-				//var idx = self.ingredientsTable.fnSettings().fnRecordsTotal() + 1;
-				//self.ingredientsTable.fnAddData(data);
+				alert("Ingredient SA-SA-SAVED!!!!);
 			}
     });
 }
