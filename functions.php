@@ -35,6 +35,7 @@ function getIngredients(){
 function ingrUPCLookup($data){
 	$UPC = $data;
 	$sql = "SELECT TOP 1 * FROM ingredients WHERE UPC = '$UPC';";
+	$result = runQuery($sql);
 	$finalResult = array();
 	while ($row = $result->fetch_assoc()){
 		$finalResult[] = $row;
