@@ -1,15 +1,14 @@
 $(document).ready( function () {
 	$(document).keypress(function(e) {
 		if(e.which == 13) {
-			var UPC = document.activeElement.id;
-			if (document.activeElement.id == 'addUpcInput' && $("#addUpcInput").val() != "") {
+			if (document.activeElement.id == 'addUpcInput' && $("addUpcInput").val() != "") {
 				// Load information associated with UPC in field 
 				$.ajax({
 					type: "POST",
 					url: '/functions.php',
 					cache: false,
 					data: {'action': 'ingrUPCLookup',
-							'$data': $("#addUpcInput").val()},
+							'data': $("#addUpcInput").val()},
 					success: process_response,
 					error: function(xhr) {alert("AJAX request failed: "+xhr.status);}
 				
