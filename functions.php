@@ -79,8 +79,8 @@ function getRecipeIngredients($data){
 function addRecipe($data){
 	$name = $data['RecipeName'];
 	$steps = $data['Steps'];
-	$sql = "INSERT INTO recipes (RecipeID, RecipeName, Steps)
-		VALUES(null, '$name', '$steps');";
+	$sql = "INSERT INTO recipes (RecipeID, RecipeName)
+		VALUES(null, '$name');";
 	$result = runQuery($sql); 
 	echo $result;
 }
@@ -88,19 +88,20 @@ function addRecipe($data){
 function addRecipeIngredients($data){
 
 	$ingredients = array();    
-	for($i=0; $i<=count($data); $i++){
-	   $ingredientID = $data[$i]['ingredientID'];
-	   $recipeID = $data[$i]['recipeID'];
-	   $ingredientName = $data[$i]['ingredientName'];
-	   $unit = $data[$i]['unit'];
-	   $amount = $data[$i]['amount'];
+	for($i=0; $i<count($data); $i++){
+	   $RecipeID = $data[$i]['RecipeID'];
+	   $IngrName = $data[$i]['IngrName'];
+	   $M_unit = $data[$i]['M_unit'];
+	   $Amount = $data[$i]['Amount'];
 
-	   $ingredients[] = "(null,'$ingredientID','$recipeID','$ingredientName','$unit','$amount')";
+	   $ingredients[] = "(null,'$RecipeID','$IngrName','$M_unit','$Amount')";
 	}
 
-	$sql = "INSERT INTO recipeIngredients (ID, ingredientID, recipeID, ingredientName, unit, amount) VALUES " . implode(', ', $ingredients);
+	$sql = "INSERT INTO ingrRecipe (IRID, RecipeID, IngrName, M_unit, Amount) VALUES " . implode(', ', $ingredients);
 
 	$result = runQuery($sql);
+	
+	echo $sql;
 }
 
 function getBatches(){
@@ -316,6 +317,9 @@ function runQuery($sql){
 	if (!$result) {
 	 	die('Error: ' . mysqli_error($con));
 	 	} else{
-	 		return $result;
+			if(mysqli_insert_id($con)){
+				return mysqli_insert_id($con);
+			}
+	 		else return $result;
 	 	}
 }

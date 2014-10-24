@@ -132,7 +132,7 @@ function addRecipeIngredients(recipeID){
 		amnt = $($($(ingredients[i]).children()[1]).children()[0]).val();
 		unit = $($($(ingredients[i]).children()[2]).children()[0]).val();
 		
-		var row = {"recipeID": recipeID,"ingredientName":ingr,"amount":amnt,"unit":unit};
+		var row = {"RecipeID": recipeID,"IngrName":ingr,"Amount":amnt,"M_unit":unit};
 		
 		data[i] = row;
 	}
