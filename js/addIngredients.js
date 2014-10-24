@@ -53,7 +53,7 @@ function addIngredient(){
 			cache: false,
 			data: {'action': 'addIngredient', 'data': data},
             success: function (data, status) {
-				alert("Ingredient SA-SA-SAVED!!!!);
+				alert("Ingredient SA-SA-SAVED!!!!");
 			}
     });
 }
