@@ -16,11 +16,6 @@
 		  			<div class="h3">Add New Ingredient</div>
 		  			<p></p>
 
-		  			<div class="row">
-						<div class="large-12 medium-4 columns">
-					  		<input id="addIdInput" type = "text" placeholder = "ID">
-					  	</div>
-					</div>
 
 					<div class="row">
 						<div class="large-12 medium-4 columns">
@@ -29,26 +24,14 @@
 					</div>
 
 					<div class="row">
-						<div class="large-12 medium-4 columns">
-					  		<input id="addDopInput" type = "text" placeholder = "Date of Purchase">
+					  	<div class="large-12 medium-4 columns">
+					  		<input id="addExpInput" type = "text" placeholder = "Expiration Date">
 					  	</div>
 					</div>
 
 					<div class="row">
 					  	<div class="large-12 medium-4 columns">
-					  		<input id="addExpInput" type = "text" placeholder = "Purchase Date">
-					  	</div>
-					</div>
-					
-					<div class="row">
-					  	<div class="large-12 medium-4 columns">
-					  		<input id="addPriceInput" type = "text" placeholder = "Price">
-					  	</div>
-					</div>
-
-					<div class="row">
-					  	<div class="large-12 medium-4 columns">
-					  		<input id="addDistInput" type = "text" placeholder = "Distributor">
+					  		<input id="addLotNumInput" type = "text" placeholder = "Lot #">
 					  	</div>
 					</div>
 

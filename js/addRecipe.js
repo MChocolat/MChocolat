@@ -6,24 +6,24 @@ $(document).ready( function () {
     self = this;
 	
 	// Load all Ingredients so the user has something to choose from  
-	$.ajax({
+	/*$.ajax({
 		type: "POST",
 		url: '/functions.php',
 		cache: false,
 		data: {'action': 'getIngredients'},
 		success: function(data, status) {
 			ingredientsList = JSON.parse(data);
-			
-			// Create a way to add multiple ingredients to the existing ingredients
-			for(i = 0; i < 15; i++){
-				document.getElementById('ingredientNum').options[i] = new Option(i + 1);
-			}
-			// Create the row for adding an ingredient to the recipe
-			createIngredientRow();
 		},
 		error: function(xhr, desc, err) {
 		}
-	});
+	});*/
+	
+	// Create a way to add multiple ingredients to the existing ingredients
+	for(i = 0; i < 15; i++){
+		document.getElementById('ingredientNum').options[i] = new Option(i + 1);
+	}
+	// Create the row for adding an ingredient to the recipe
+	createIngredientRow();
 	
 	//Set Button Functions
 	$("#addIngredients").bind("click", addIngredients);
@@ -49,7 +49,7 @@ function createIngredientRow(){
 	
 	// TODO: Replace with autocomplete search box??
 	// Ingredients combo box
-	var nameSelect = document.createElement("select");
+	/*var nameSelect = document.createElement("select");
 	for (var i=0; i < ingredientsList.length; i++)
 	{
 	  var option = document.createElement("option");
@@ -57,7 +57,11 @@ function createIngredientRow(){
 	  option.value = ingredientsList[i];
 	  option.innerHTML = ingredientsList[i].SubIngr;
 	  nameSelect.appendChild(option);
-	}
+	}*/
+	
+	var name = document.createElement("input");
+	name.type = "text";
+	name.placeholder = "Ingredient Name"
 	
 	//Amount input
 	var num = document.createElement("input");
@@ -79,7 +83,7 @@ function createIngredientRow(){
 	
 	
 	
-	nameDiv.appendChild(nameSelect);
+	nameDiv.appendChild(name);
 	numDiv.appendChild(num);
 	unitDiv.appendChild(unit);
 	removeIngrDiv.appendChild(removeIngrButton);
@@ -124,11 +128,11 @@ function addRecipeIngredients(recipeID){
 	var unit;
 	
 	for(i = 0; i < ingredients.size(); i++){
-		ingr = $(":selected", $($(ingredients[0]).children()[0]).children()[0]).text();
-		amnt = $($($(ingredients[0]).children()[1]).children()[0]).val();
-		unit = $($($(ingredients[0]).children()[2]).children()[0]).val();
+		ingr = $($($(ingredients[i]).children()[0]).children()[0]).val();
+		amnt = $($($(ingredients[i]).children()[1]).children()[0]).val();
+		unit = $($($(ingredients[i]).children()[2]).children()[0]).val();
 		
-		var row = {"RecipeID": recipeID,"IngrName":ingr,"Amount":amnt,"M_unit":unit};
+		var row = {"recipeID": recipeID,"ingredientName":ingr,"amount":amnt,"unit":unit};
 		
 		data[i] = row;
 	}
@@ -138,7 +142,7 @@ function addRecipeIngredients(recipeID){
             url: '/functions.php',
 			cache: false,
 			data: {'action': 'addRecipeIngredients', 'data': data},
-            success: function () {
+            success: function (data, status) {
 				saveSuccessful();
 			}
     });

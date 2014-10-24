@@ -18,7 +18,7 @@ $(document).ready( function () {
 			self.ingredientsTable = $('#ingredientsTable').dataTable({
 				"aaData": jQuery.parseJSON(ingredientsList),
 				"aoColumns": [
-					{"sTitle": "ID", "mData": 'IngrID' },
+					{"mData": 'IngrID' },
 					{"mData": 'UPC' },
 					{"mData": 'DOP' },
 					{"mData": 'Exp' },
@@ -59,7 +59,7 @@ $(document).ready( function () {
 	
 	//Set Button Functions
 	$("#updateIngredientButton").bind("click", updateIngredient);
-	$("#addIngredientButton").bind("click", addIngredient);
+	
 	
 } );
 
@@ -83,24 +83,7 @@ function removeIngredient(){
 	table.row('.selected').remove().draw( false );
 }
 
-function addIngredient(){
-	//TODO: form validation
-	var data = {"IngrID":$('#addIdInput').val(),"UPC":$('#addUpcInput').val(),
-									"DOP":$('#addDopInput').val(),"Exp":$('#addExpInput').val(),
-									"Price":$('#addPriceInput').val(),"Distributor":$('#addDistInput').val(),
-									"SubIngr":$('#addSubInput').val()};
-	$.ajax({
-            type: 'POST',
-            url: '/functions.php',
-			cache: false,
-			data: {'action': 'addIngredient', 'data': data},
-            success: function () {
-				// Maybe get the actual DB to populate row??
-				//var idx = self.ingredientsTable.fnSettings().fnRecordsTotal() + 1;
-				//self.ingredientsTable.fnAddData(data);
-			}
-    });
-}
+
 
 function updateIngredient(){
 	//TODO: AJAX call and return from DB b4 changing UI

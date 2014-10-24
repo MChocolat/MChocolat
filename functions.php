@@ -89,18 +89,18 @@ function addRecipeIngredients($data){
 
 	$ingredients = array();    
 	for($i=0; $i<=count($data); $i++){
-	   $IRID = mysql_real_escape_string($data[$i]['IRID']);
-	   $RecipeID = mysql_real_escape_string($data[$i]['RecipeID']);
-	   $IngrName = mysql_real_escape_string($data[$i]['IngrName']);
-	   $M_unit = mysql_real_escape_string($data[$i]['M_unit']);
-	   $Amount = mysql_real_escape_string($data[$i]['Amount']);
+	   $ingredientID = $data[$i]['ingredientID'];
+	   $recipeID = $data[$i]['recipeID'];
+	   $ingredientName = $data[$i]['ingredientName'];
+	   $unit = $data[$i]['unit'];
+	   $amount = $data[$i]['amount'];
 
-	   $ingredients[] = "('$IRID','$RecipeID','$IngrName','$M_unit','$Amount')";
+	   $ingredients[] = "(null,'$ingredientID','$recipeID','$ingredientName','$unit','$amount')";
 	}
 
-	$sql = "INSERT INTO recipeIngredients (`IRID`, `RecipeID`, `IngrName`, `M_unit`, `Amount`) VALUES " . implode(', ', $ingredients);
+	$sql = "INSERT INTO recipeIngredients (ID, ingredientID, recipeID, ingredientName, unit, amount) VALUES " . implode(', ', $ingredients);
 
-	$result = mysql_query($sql, $con);
+	$result = runQuery($sql);
 }
 
 function getBatches(){
