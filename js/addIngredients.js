@@ -8,7 +8,7 @@ $(document).ready( function () {
 					type: "POST",
 					url: '/functions.php',
 					cache: false,
-					data: {'action': 'ingrUPCLookup'
+					data: {'action': 'ingrUPCLookup',
 							'$data': document.activeElement.id.getVal()},
 					success: process_response,
 					error: function(xhr) {alert("AJAX request failed: "+xhr.status);}
