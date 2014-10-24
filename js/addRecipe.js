@@ -71,9 +71,19 @@ function createIngredientRow(){
 	// Units combobox
 	var unit = document.createElement("select");
 	unit.options[0] = new Option("cups");
-	unit.options[1] = new Option("liters");
-	unit.options[2] = new Option("TBsp");
+	unit.options[2] = new Option("tbsp");
 	unit.options[3] = new Option("tsp");
+	unit.options[4] = new Option("oz");
+	unit.options[5] = new Option("grams");
+	unit.options[6] = new Option("drops");
+	unit.options[7] = new Option("item (egg)");
+	unit.options[8] = new Option("item (tea bag)");
+	unit.options[9] = new Option("item (lemon peel)");
+	unit.options[10] = new Option("item (herb sprig)");
+	unit.options[11] = new Option("item (herb leaf)");
+	unit.options[12] = new Option("item (vanilla bean)");
+	unit.options[13] = new Option("item (topping)");
+	unit.options[14] = new Option("item (drizzle)");
 	
 	//Button to remove unneeded ingredients
 	var removeIngrButton = document.createElement("button");
