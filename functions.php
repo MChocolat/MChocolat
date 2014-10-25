@@ -55,12 +55,12 @@ function addIngredient($data){
 	$sql = "INSERT INTO uniqueIngr (UPC, IngrName, SubIngr)
 		VALUES('$UPC', 'name', '$subIngr');";
 	$result = runQuery($sql); 
-	
+	/*
 	$sql2 = "INSERT INTO ingredients (IngrID, UPC, DOP, Exp, Lot)
 		VALUES(null, '$UPC', '$date', '$exp', '$lotNum');";
 	$result2 = runQuery($sql); 
-	
-	echo $result2;
+	*/
+	echo $result;
 }
 
 function getRecipes(){
