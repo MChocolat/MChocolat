@@ -18,12 +18,11 @@ $(document).ready( function () {
 			self.ingredientsTable = $('#ingredientsTable').dataTable({
 				"aaData": jQuery.parseJSON(ingredientsList),
 				"aoColumns": [
-					{"mData": 'IngrID' },
+					{"mData": 'Name' },
 					{"mData": 'UPC' },
 					{"mData": 'DOP' },
 					{"mData": 'Exp' },
-					{"mData": 'Price' },
-					{"mData": 'Distributor' },
+					{"mData": 'Lot' },
 					{"mData": 'SubIngr' }
 				]
 			});
@@ -69,12 +68,9 @@ function loadEditForm(){
 	$('#editIngredientSection').addClass('column');
 	//$('#addIngredientSection').addClass('hidden');
 
-	$('#editIdInput').val(self.selectedRow[0].innerText);
 	$('#editUpcInput').val(self.selectedRow[1].innerText);
 	$('#editDopInput').val(self.selectedRow[2].innerText);
 	$('#editExpInput').val(self.selectedRow[3].innerText);
-	$('#editPriceInput').val(self.selectedRow[4].innerText);
-	$('#editDistInput').val(self.selectedRow[5].innerText);
 	$('#editSubInput').val(self.selectedRow[6].innerText);
 }
 
@@ -89,9 +85,8 @@ function updateIngredient(){
 	//TODO: AJAX call and return from DB b4 changing UI
 	
 	//TODO: Update probably needs to choose last param based on position in table vs its own ID
-	self.ingredientsTable.fnUpdate({"IngrID":$('#editIdInput').val(),"UPC":$('#editUpcInput').val(),
+	self.ingredientsTable.fnUpdate({"UPC":$('#editUpcInput').val(),
 									"DOP":$('#editDopInput').val(),"Exp":$('#editExpInput').val(),
-									"Price":$('#editPriceInput').val(),"Distributor":$('#editDistInput').val(),
 									"SubIngr":$('#editSubInput').val()}, parseInt(self.selectedRow[0].innerText)-1);
 	$('#editIngredientSection').addClass('hidden');
 	$('#editIngredientSection').removeClass('column');

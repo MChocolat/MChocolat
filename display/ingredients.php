@@ -86,9 +86,11 @@
 				<table id="ingredientsTable" class="display">
 				 	<thead>
 					    <tr>
+					    	<th>Name</th>
 							<th>UPC</th>
+							<th>Date Of Purchase</th>
 							<th>Expiration Date</th>
-							<th>Lot #</th>
+							<th>Lot Number</th>
 							<th>Sub Ingredients</th>							    
 						</tr>
 				 	</thead>
