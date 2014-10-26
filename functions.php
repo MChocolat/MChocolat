@@ -21,9 +21,24 @@ if(isset($_POST['action'])) {
 	}
 }
 
-
+/*
+{"mData": 'Name' },
+{"mData": 'UPC' },
+{"mData": 'DOP' },
+{"mData": 'Exp' },
+{"mData": 'Lot' },
+{"mData": 'SubIngr' }
+*/
 function getIngredients(){
-	$sql = "SELECT * FROM ingredients";
+	$sql = "SELECT uniqueIngr.IngrName,
+				uniqueIngr.UPC, 
+				ingredients.DOP,
+				ingredients.Exp,
+				ingredients.Lot,
+				uniqueIngr.SubIngr
+			FROM ingredients
+			INNER JOIN uniqueIngr
+			WHERE ingredients.UPC = uniqueIngr.UPC";
 	$result = runQuery($sql);
 	$finalResult = array();
 	while ($row = $result->fetch_assoc()){
