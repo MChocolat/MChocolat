@@ -27,6 +27,7 @@ $(document).ready( function () {
 				]
 			});
 			
+			
 			// Mouseover row highlighting
 			$('#ingredientsTable tbody').on('mouseover', 'tr', function() {
 				$(this).addClass('highlight');
