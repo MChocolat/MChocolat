@@ -59,6 +59,7 @@ function ingrUPCLookup($data){
 }
 
 function addIngredient($data){
+	$IngrName = $data['IngrName'];
 	$UPC = $data['UPC'];
 	$exp = $data['Exp'];
 	$lotNum = $data['LotNum'];
@@ -69,7 +70,7 @@ function addIngredient($data){
 	//GET ACTUAL EXP DATE
 
 	$sql = "INSERT INTO uniqueIngr (UPC, IngrName, SubIngr)
-		VALUES('$UPC', 'name', '$subIngr');";
+		VALUES('$UPC', '$IngrName', '$subIngr');";
 	$result = runQuery($sql); 
 	
 	$sql2 = "INSERT INTO ingredients (IngrID, UPC, DOP, Exp, Lot)

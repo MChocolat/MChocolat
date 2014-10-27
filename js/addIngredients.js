@@ -45,10 +45,11 @@ $(document).ready( function () {
 
 function addIngredient(){
 	//TODO: form validation
-	var data = {"UPC":$('#addUpcInput').val(),
-									"Exp":$('#addExpInput').val(),
-									"LotNum":$('#addLotNumInput').val(),
-									"SubIngr":$('#addSubInput').val()};
+	var data = {"IngrName":$('#addNameInput').val(),
+				"UPC":$('#addUpcInput').val(),
+				"Exp":$('#addExpInput').val(),
+				"LotNum":$('#addLotNumInput').val(),
+				"SubIngr":$('#addSubInput').val()};
 	$.ajax({
             type: 'POST',
             url: '/functions.php',
