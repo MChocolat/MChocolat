@@ -19,6 +19,12 @@
 
 					<div class="row">
 						<div class="large-12 medium-4 columns">
+					  		<input id="addNameInput" type = "text" placeholder = "Name (temp)">
+					  	</div>
+					</div>
+
+					<div class="row">
+						<div class="large-12 medium-4 columns">
 					  		<input id="addUpcInput" type = "text" placeholder = "UPC">
 					  	</div>
 					</div>
