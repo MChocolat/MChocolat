@@ -12,7 +12,7 @@ $(document).ready( function () {
 		cache: false,
 		data: {'action': 'getRecipes'},
 		success: function(data, status) {
-			recipesList = data;
+			recipesList = JSON.parse(data);
 		},
 		error: function(xhr, desc, err) {
 		}
