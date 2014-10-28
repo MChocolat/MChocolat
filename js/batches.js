@@ -53,8 +53,7 @@ $(document).ready( function () {
 	}); 
 	
 	//Set Button Functions
-	$("#updateBatchButton").bind("click", updateBatch);
-	$("#addBatchButton").bind("click", addBatch);
+	//$("#updateBatchButton").bind("click", updateBatch);
 	
 } );
 
