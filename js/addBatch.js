@@ -18,8 +18,8 @@ $(document).ready( function () {
 		}
 	});
 
-	for (var i = 0; i < recipesList.length; i++) {
-		document.getElementById('recipes').options[i] = new Option(recipesList[i]['RecipeName']);
+	for (entry in recipesList) {
+		document.getElementById('recipes').options[i] = new Option(entry['RecipeName']);
 	};
 
 	//Set Button Functions
