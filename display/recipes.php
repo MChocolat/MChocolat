@@ -59,7 +59,7 @@
 			-->
 	
 			<!-- Search Bar / Inventory Table --> 
-  			<div class="large-12 columns">
+  			<div class="small-12 small-center column">
 				<table id="recipesTable" class="display">
 				 	<thead>
 					    <tr>
