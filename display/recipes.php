@@ -11,6 +11,7 @@
   
   	<body>
 		<!-- Edit Recipe -->
+		<!--
 		<div class="row">
 			<div id="editRecipeSection" class="large-5 columns">
 		  		<div class="panel">
@@ -54,6 +55,7 @@
 					</div>
 		  		</div>
 		  	</div>
+			-->
 	
 			<!-- Search Bar / Inventory Table --> 
   			<div class="large-7 medium-4 columns">
@@ -61,8 +63,7 @@
 				 	<thead>
 					    <tr>
 							<th>ID</th>
-							<th>Name</th>
-							<th>Steps</th>							    
+							<th>Name</th>						    
 						</tr>
 				 	</thead>
 				</table>

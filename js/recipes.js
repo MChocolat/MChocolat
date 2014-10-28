@@ -19,8 +19,7 @@ $(document).ready( function () {
 				"aaData": jQuery.parseJSON(recipesList),
 				"aoColumns": [
 					{"mData": 'RecipeID' },
-					{"mData": 'RecipeName' },
-					{"mData": 'Steps' }
+					{"mData": 'RecipeName' }
 				]
 			});
 			
@@ -54,7 +53,6 @@ $(document).ready( function () {
 	
 	//Set Button Functions
 	$("#updateRecipeButton").bind("click", updateRecipe);
-	$("#addRecipeButton").bind("click", addRecipe);
 	
 } );
 
@@ -66,7 +64,6 @@ function loadEditForm(){
 
 	$('#editIdInput').val(self.selectedRow[0].innerText);
 	$('#editNameInput').val(self.selectedRow[1].innerText);
-	$('#editStepsInput').val(self.selectedRow[2].innerText);
 }
 
 // Remove a Recipe
@@ -74,22 +71,6 @@ function removeRecipe(){
 	table.row('.selected').remove().draw( false );
 }
 
-function addRecipe(){
-	//TODO: form validation
-	var data = {"RecipeID":$('#addIdInput').val(),"RecipeName":$('#addNameInput').val(),
-									"Steps":$('#addStepsInput').val()};
-	$.ajax({
-            type: 'POST',
-            url: '/functions.php',
-			cache: false,
-			data: {'action': 'addRecipe', 'data': data},
-            success: function () {
-				// Maybe get the actual DB to populate row??
-				//var idx = self.recipesTable.fnSettings().fnRecordsTotal() + 1;
-				//self.recipesTable.fnAddData(data);
-			}
-    });
-}
 
 function updateRecipe(){
 	//TODO: AJAX call and return from DB b4 changing UI
