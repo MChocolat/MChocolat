@@ -60,7 +60,7 @@
 	
 			<!-- Search Bar / Inventory Table --> 
   			<div class="small-12 small-center column">
-				<table id="recipesTable" class="display">
+				<table id="recipesTable" class="display small-center">
 				 	<thead>
 					    <tr>
 							<th>ID</th>
