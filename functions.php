@@ -130,7 +130,7 @@ function addRecipeIngredients($data){
 }
 
 function getBatches(){
-	$sql = "SELECT BID, batch.DOC, recipe.RecipeID, recipe.RecipeName FROM batch INNER JOIN recipe ON batch.RecipeID = recipe.RecipeID";
+	$sql = "SELECT BID, batches.DOC, recipe.RecipeID, recipe.RecipeName FROM batches INNER JOIN recipe ON batches.RecipeID = recipe.RecipeID";
 	$result = runQuery($sql);
 	$finalResult = array();
 	while ($row = $result->fetch_assoc()){
