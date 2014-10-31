@@ -10,10 +10,10 @@
   	</head>
   
   	<body>
-	<
 		<!-- Edit Ingredient -->
-		<!--
+		
 		<div class="row">
+		<!--
 			<div id="editIngredientSection"  class="large-4 columns hidden"> 
 		  		<div class="panel">
 		  			<div class="h3">Update Ingredient</div>
