@@ -23,11 +23,7 @@ $(document).ready( function () {
 		error: function(xhr, desc, err) {
 		}
 	});
-
-	for (var i = 0; i<recipesList.length; i++) {
-		document.getElementById('recipes').options[i] = new Option(recipesList[i]['RecipeName']);
-	};
-
+	
 	//Set Button Functions
 	$("#selectRecipeButton").bind("click", selectRecipe);
 	$("#barcodeButton").bind("click", addIngredients);
@@ -38,7 +34,7 @@ $(document).ready( function () {
 function createIngredientRow(i){
 	var div = document.createElement("div");
 	$(div).addClass("row");
-	self.getElementById('ingredientsList').appendChild(div);
+	self.getElementById('ingredientsDiv').appendChild(div);
 	
 	
 	var nameDiv = document.createElement("div");
@@ -46,9 +42,11 @@ function createIngredientRow(i){
 	
 	$(nameDiv).addClass("large-6 columns");
 	$(upcDiv).addClass("large-6 columns");
+
+	var name = document.createElement("p");
+	var t = document.createTextNode(ingredientsList[i]['IngrName']);
+	name.appendChild(t);
 	
-	var name = document.createElement("input");
-	name.text = ingredientsList[i]['IngrName'];
 	var upc = document.createElement("input");
 	upc.type = "text";
 	upc.placeholder = "Ingredient UPC";
@@ -119,10 +117,8 @@ function addBatchIngredients(batchID){
 	var upc;
 	
 	for(i = 0; i < ingredients.size(); i++){
-		upc = $($($(ingredients[i]).children()[0]).children()[0]).val();
-		
-		var row = {"BID": batchID,"IngrID":upc};
-		
+		upc = $($($(ingredients[i]).children()[1]).children()[0]).val()
+		var row = {"BID": batchID, "IngrID":upc};
 		data[i] = row;
 	}
 

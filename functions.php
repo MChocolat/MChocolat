@@ -156,10 +156,10 @@ function addBatchIngredients($data){
 	   $BID = $data[$i]['BID'];
 	   $IngrID = $data[$i]['IngrID'];
 
-	   $ingredients[] = "('$BID', '$IngrID')";
+	   $ingredients[] = "(null, '$BID', '$IngrID')";
 	}
 
-	$sql = "INSERT INTO batchIngr2 (BID, IngrID) VALUES " . implode(', ', $ingredients);
+	$sql = "INSERT INTO batchIngr2 (ID, BID, IngrID) VALUES " . implode(', ', $ingredients);
 
 	$result = runQuery($sql);
 	

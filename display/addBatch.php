@@ -45,7 +45,7 @@
 			</div>
 
 			
-			<div id="ingredientsList" class="large-7 columns panel">
+			<div id="ingredientsDiv" class="large-7 columns panel">
 			
 			
 			</div>
