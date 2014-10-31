@@ -17,10 +17,10 @@
 						
 					<div class="row ">
 						<div class="small-8 columns">
-							<select id="recipes"></select>
+							<select id="recipeSelect"></select>
 						</div>
 						<div class="small-4 columns">
-							<a id="addIngredients" class="tiny button">Select</a>
+							<a id="selectRecipeButton" class="tiny button">Select</a>
 						</div>
 					</div>
 						
@@ -31,7 +31,7 @@
 						    <ul class="button-group even-3">
 						  		<li><a href="#clear" class="tiny button">Clear Entries</a></li>
 						  		<li><a href="#" data-reveal-id="barcode" class="tiny button">Scan Barcode</a></li>
-						  		<li><a id="addIngredientButton" class="tiny button">Add Batch</a></li>
+						  		<li><a id="addBatchButton" class="tiny button">Add Batch</a></li>
 							</ul>
 
 							<div id="barcode" class="reveal-modal" data-reveal>
@@ -44,12 +44,10 @@
 				</div>
 			</div>
 
-			<div id="ingredientsList" class="large-7 columns">
-				<div class="panel">
-					<div class="h3">Ingredients List</div>
-					<p></p>
-					<div class="row "></div>
-				</div>
+			
+			<div id="ingredientsList" class="large-7 columns panel">
+			
+			
 			</div>
 		</div>		
 

@@ -91,8 +91,8 @@ function getRecipes(){
 }
 
 function getRecipeIngredients($data){
-	$RecipeID = $data['RecipeID'];
-	$sql = "SELECT * FROM recipeIngredients WHERE RecipeID = '$RecipeID';";
+	$RecipeID = $data;
+	$sql = "SELECT * FROM ingrRecipe WHERE RecipeID = '$RecipeID';";
 	$result = runQuery($sql);
 	$finalResult = array();
 	while ($row = $result->fetch_assoc()){
@@ -138,6 +138,34 @@ function getBatches(){
 	}
 	echo json_encode($finalResult);
 }
+
+function addBatch($data){
+	$RecipeID = $data['RecipeID'];
+	$date = date("Y-m-d");
+	
+	$sql = "INSERT INTO batches (BID, DOC, RecipeID)
+		VALUES(null, '$date', '$RecipeID');";
+	$result = runQuery($sql); 
+	echo $result;
+}
+
+function addBatchIngredients($data){
+
+	$ingredients = array();    
+	for($i=0; $i<count($data); $i++){
+	   $BID = $data[$i]['BID'];
+	   $IngrID = $data[$i]['IngrID'];
+
+	   $ingredients[] = "('$BID', '$IngrID')";
+	}
+
+	$sql = "INSERT INTO batchIngr2 (BID, IngrID) VALUES " . implode(', ', $ingredients);
+
+	$result = runQuery($sql);
+	
+	echo $sql;
+}
+
 
 function getBoxLabels(){
 	$sql = "SELECT * FROM assortments";
