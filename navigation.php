@@ -12,7 +12,7 @@
 		<div class="row">
 		  	<div class="small-11 small-centered columns">
 				<p></p>
-				<ul class="button-group even-4">
+				<ul class="button-group even-3">
 					<li>
 						<a href="#" class="button" data-dropdown="ingredients" data-options="is_hover:true">Ingredients</a>
 					</li>
@@ -24,10 +24,11 @@
 			    	<li>
 			    		<a href="#" class="button" data-dropdown="recipes" data-options="is_hover:true">Recipes</a>
 			    	</li>
-
+<!--
 			    	<li>
 			    		<a href="#" class="button" data-dropdown="boxLabels" data-options="is_hover:true">Box Labels</a>
 			    	</li>
+		-->
 				<!--
 			    	<li>
 			    		<a href="#" class="button" data-dropdown="packaging" data-options="is_hover:true">Packaging</a>
