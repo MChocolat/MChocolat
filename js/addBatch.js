@@ -24,6 +24,10 @@ $(document).ready( function () {
 		}
 	});
 
+	for (var i = 0; i<recipesList.length; i++) {
+		document.getElementById('recipes').options[i] = new Option(recipesList[i]['RecipeName']);
+	};
+
 	//Set Button Functions
 	$("#selectRecipeButton").bind("click", selectRecipe);
 	$("#barcodeButton").bind("click", addIngredients);
