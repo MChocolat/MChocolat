@@ -11,7 +11,7 @@ handlers:
   upload: /favicon\.ico
 
 - url: /
-  script: login.php
+  script: /display/addIngredient.php
   login: required
 
 - url: /(.*)?/(.*)\.php$
