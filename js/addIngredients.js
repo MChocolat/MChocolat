@@ -31,7 +31,7 @@ $(document).ready( function () {
 		 
 		        //for (i in response) {
 		        //    frm.find('[name="' + i + '"]').val(response[i]);
-		            $("#addSubInput").val(jQuery.parseJSON(response)[0]["SubIngr"])
+		            //$("#addSubInput").val(jQuery.parseJSON(response)[0]["SubIngr"])
 
 		        //}
 		    }
