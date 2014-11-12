@@ -39,12 +39,12 @@ function createIngredientRow(){
 	
 	var nameDiv = document.createElement("div");
 	var numDiv = document.createElement("div");
-	var unitDiv = document.createElement("div");
+	//var unitDiv = document.createElement("div");
 	var removeIngrDiv = document.createElement("div");
 	
 	$(nameDiv).addClass("large-3 columns");
 	$(numDiv).addClass("large-3 columns");
-	$(unitDiv).addClass("large-3 columns");
+	//$(unitDiv).addClass("large-3 columns");
 	$(removeIngrDiv).addClass("large-3 columns end");
 	
 	// TODO: Replace with autocomplete search box??
@@ -69,7 +69,7 @@ function createIngredientRow(){
 	num.placeholder = "Amount"
 	
 	// Units combobox
-	var unit = document.createElement("select");
+	/*var unit = document.createElement("select");
 	unit.options[0] = new Option("cups");
 	unit.options[2] = new Option("tbsp");
 	unit.options[3] = new Option("tsp");
@@ -84,6 +84,7 @@ function createIngredientRow(){
 	unit.options[12] = new Option("item (vanilla bean)");
 	unit.options[13] = new Option("item (topping)");
 	unit.options[14] = new Option("item (drizzle)");
+	*/
 	
 	//Button to remove unneeded ingredients
 	var removeIngrButton = document.createElement("button");
@@ -95,13 +96,13 @@ function createIngredientRow(){
 	
 	nameDiv.appendChild(name);
 	numDiv.appendChild(num);
-	unitDiv.appendChild(unit);
+	//unitDiv.appendChild(unit);
 	removeIngrDiv.appendChild(removeIngrButton);
 	
 	
 	div.appendChild(nameDiv);
 	div.appendChild(numDiv);
-	div.appendChild(unitDiv);
+	//div.appendChild(unitDiv);
 	div.appendChild(removeIngrDiv);
 	
 	$(removeIngrButton).bind("click", function(){div.remove();});
@@ -112,8 +113,7 @@ function createIngredientRow(){
 
 function addRecipe(){
 	//TODO: form validation
-	var data = {"RecipeID":$('#addIdInput').val(),"RecipeName":$('#addNameInput').val(),
-									"Steps":$('#addStepsInput').val()};
+	var data = {"RecipeName":$('#addNameInput').val()};
 	$.ajax({
             type: 'POST',
             url: '/functions.php',
@@ -135,14 +135,15 @@ function addRecipeIngredients(recipeID){
 	
 	var ingr;
 	var amnt;
-	var unit;
+	//var unit;
 	
 	for(i = 0; i < ingredients.size(); i++){
 		ingr = $($($(ingredients[i]).children()[0]).children()[0]).val();
 		amnt = $($($(ingredients[i]).children()[1]).children()[0]).val();
-		unit = $($($(ingredients[i]).children()[2]).children()[0]).val();
+		//unit = $($($(ingredients[i]).children()[2]).children()[0]).val();
 		
-		var row = {"RecipeID": recipeID,"IngrName":ingr,"Amount":amnt,"M_unit":unit};
+		//var row = {"RecipeID": recipeID,"IngrName":ingr,"Amount":amnt,"M_unit":unit};
+		var row = {"RecipeID": recipeID,"IngrName":ingr,"Amount":amnt};
 		
 		data[i] = row;
 	}

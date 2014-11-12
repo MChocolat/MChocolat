@@ -103,7 +103,6 @@ function getRecipeIngredients($data){
 
 function addRecipe($data){
 	$name = $data['RecipeName'];
-	$steps = $data['Steps'];
 	$sql = "INSERT INTO recipes (RecipeID, RecipeName)
 		VALUES(null, '$name');";
 	$result = runQuery($sql); 
@@ -116,13 +115,15 @@ function addRecipeIngredients($data){
 	for($i=0; $i<count($data); $i++){
 	   $RecipeID = $data[$i]['RecipeID'];
 	   $IngrName = $data[$i]['IngrName'];
-	   $M_unit = $data[$i]['M_unit'];
+	   //$M_unit = $data[$i]['M_unit'];
 	   $Amount = $data[$i]['Amount'];
 
-	   $ingredients[] = "(null,'$RecipeID','$IngrName','$M_unit','$Amount')";
+	   //$ingredients[] = "(null,'$RecipeID','$IngrName','$M_unit','$Amount')";
+	   $ingredients[] = "(null,'$RecipeID','$IngrName','$Amount')";
 	}
 
-	$sql = "INSERT INTO ingrRecipe (IRID, RecipeID, IngrName, M_unit, Amount) VALUES " . implode(', ', $ingredients);
+	//$sql = "INSERT INTO ingrRecipe (IRID, RecipeID, IngrName, M_unit, Amount) VALUES " . implode(', ', $ingredients);
+	$sql = "INSERT INTO ingrRecipe (IRID, RecipeID, IngrName, Amount) VALUES " . implode(', ', $ingredients);
 
 	$result = runQuery($sql);
 	
