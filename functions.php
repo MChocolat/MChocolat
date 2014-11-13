@@ -30,7 +30,8 @@ if(isset($_POST['action'])) {
 {"mData": 'SubIngr' }
 */
 function getIngredients(){
-	$sql = "SELECT uniqueIngr.IngrName,
+	$sql = "SELECT ingredients.IngrID, 
+				uniqueIngr.IngrName,
 				uniqueIngr.UPC, 
 				ingredients.DOP,
 				ingredients.Exp,
@@ -82,9 +83,9 @@ function addIngredient($data){
 
 function deleteIngredient($data){
 	$IngrName = $data['IngrName'];
-	$UPC = $data['UPC'];
+	$IngrID = $data['IngrID'];
 	
-	$sql = "DELETE FROM uniqueIngr WHERE IngrName = '$IngrName' AND UPC = '$UPC';";
+	$sql = "DELETE FROM ingredients WHERE IngrID = '$IngrID';";
 	$result = runQuery($sql); 
 }
 
