@@ -58,7 +58,7 @@
 		  		</div>
 		  	</div>
 			-->
-			<div id="dialog" title="Edit Recipe">
+			<div id="dialog" class="dialog" title="Edit Recipe">
 				<div class="row">
 					<!-- left -->
 					<div id="right" class="large-6 columns">
