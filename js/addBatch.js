@@ -32,7 +32,7 @@ $(document).ready( function () {
 } );
 
 function clearBatchIngredients(){
-	self.getElementById('ingredientsDiv').empty();
+	$('#ingredientsDiv').empty();
 	ingredientsList = [];
 }
 
