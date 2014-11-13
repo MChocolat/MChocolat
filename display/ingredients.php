@@ -86,7 +86,6 @@
 				<table id="ingredientsTable" class="display">
 				 	<thead>
 					    <tr>
-							<th>ID</th>
 					    	<th>Name</th>
 							<th>UPC</th>
 							<th>Date Of Purchase</th>
