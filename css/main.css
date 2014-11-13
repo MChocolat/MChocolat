@@ -1,3 +1,7 @@
 .highlight{
-	background-color: #F7B8A3;
+	background-color: #F7B8A3 !important;
+}
+
+.selected{
+	background-color: #B38781 !important;
 }
