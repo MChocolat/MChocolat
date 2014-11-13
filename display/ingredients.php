@@ -96,6 +96,7 @@
 				 	</thead>
 				</table>
 			</div>
+			<a id="deleteIngredientButton" class="tiny button">Delete Selected</a>
 		</div>
 
 	<script src="js/vendor/jquery.js"></script>

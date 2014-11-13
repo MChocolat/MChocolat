@@ -59,12 +59,14 @@ $(document).ready( function () {
 	
 	//Set Button Functions
 	$("#updateIngredientButton").bind("click", updateIngredient);
+	$("#deleteIngredientButton").bind("click", deleteIngredient);
 	
 	
 } );
 
 // Load the Edit form with Ingredient's info
 function loadEditForm(){
+	/*
 	$('#editIngredientSection').removeClass('hidden');
 	$('#editIngredientSection').addClass('column');
 	//$('#addIngredientSection').addClass('hidden');
@@ -73,9 +75,27 @@ function loadEditForm(){
 	$('#editDopInput').val(self.selectedRow[2].innerText);
 	$('#editExpInput').val(self.selectedRow[3].innerText);
 	$('#editSubInput').val(self.selectedRow[6].innerText);
+	*/
 }
 
-// Remove a Ingredient
+//Delete ingredient from DB
+function deleteIngredient(){
+	$.ajax({
+		type: "POST",
+		url: '/functions.php',
+		cache: false,
+		data: {'action': 'deleteIngredient',
+				'data': self.selectedRow[1]},
+		success: function (data, status) {
+				alert("Ingredient Deleted!!!!");
+				removeIngredient();
+		},
+		error: function() {alert("Error when deleting ingredient!");}
+				
+	});
+}
+
+// Remove a Ingredient from the table
 function removeIngredient(){
 	table.row('.selected').remove().draw( false );
 }
