@@ -18,6 +18,7 @@ $(document).ready( function () {
 			self.ingredientsTable = $('#ingredientsTable').dataTable({
 				"aaData": jQuery.parseJSON(ingredientsList),
 				"aoColumns": [
+					{"mData": 'ID' },
 					{"mData": 'IngrName' },
 					{"mData": 'UPC' },
 					{"mData": 'DOP' },
@@ -80,12 +81,15 @@ function loadEditForm(){
 
 //Delete ingredient from DB
 function deleteIngredient(){
+	var data = {"IngrName":self.selectedRow[0]},
+				"UPC":self.selectedRow[1]}};
+
 	$.ajax({
 		type: "POST",
 		url: '/functions.php',
 		cache: false,
 		data: {'action': 'deleteIngredient',
-				'data': self.selectedRow[1]},
+				'data': data,
 		success: function (data, status) {
 				alert("Ingredient Deleted!!!!");
 				removeIngredient();

@@ -80,6 +80,14 @@ function addIngredient($data){
 	echo $result2;
 }
 
+function deleteIngredient($data){
+	$IngrName = $data['IngrName'];
+	$UPC = $data['UPC'];
+	
+	$sql = "DELETE FROM uniqueIngr WHERE IngrName = '$IngrName' AND UPC = '$UPC';";
+	$result = runQuery($sql); 
+}
+
 function getRecipes(){
 	$sql = "SELECT * FROM recipes";
 	$result = runQuery($sql);
