@@ -179,7 +179,7 @@ function addBatchIngredients($data){
 function deleteBatch($data){
 	$BID = $data['BID'];
 	
-	$sql = "DELETE FROM batchIngr WHERE BID = '$BID';";
+	$sql = "DELETE FROM batchIngr2 WHERE BID = '$BID';";
 	$result = runQuery($sql); 
 	
 	$sql2 = "DELETE FROM batches WHERE BID = '$BID';";
