@@ -89,7 +89,7 @@ function deleteIngredient(){
 		url: '/functions.php',
 		cache: false,
 		data: {'action': 'deleteIngredient',
-				'data': data,
+				'data': data},
 		success: function (data, status) {
 				alert("Ingredient Deleted!!!!");
 				removeIngredient();
