@@ -70,7 +70,7 @@ function addIngredient($data){
 	
 	//GET ACTUAL EXP DATE
 
-	$sql = "INSERT INTO uniqueIngr (UPC, IngrName, SubIngr)
+	$sql = "INSERT IGNORE INTO uniqueIngr (UPC, IngrName, SubIngr)
 		VALUES('$UPC', '$IngrName', '$subIngr');";
 	$result = runQuery($sql); 
 	
