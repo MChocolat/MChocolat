@@ -58,7 +58,53 @@
 		  		</div>
 		  	</div>
 			-->
-			<div id="dialog" title="Dialog Title">I'm a dialog</div>
+			<div id="dialog" title="Edit Recipe">
+				<div class="row">
+					<!-- left -->
+					<div id="right" class="large-6 columns">
+						<div class="large-10 columns">
+									<input id="addNameInput" type = "text" placeholder = "Name">
+						</div>
+						<div class="panel">
+							<div class="h3">Ingredients</div>
+							<p></p>
+							
+							<div class="row ">
+								<div class="large-10 columns">
+									<select id="ingredientNum"></select>
+								</div>
+								<div class="large-2 columns">
+									<a id="addIngredients" class="tiny button">Add</a>
+								</div>
+							</div>
+							
+							<div class="row ">
+								<div id="ingredientsDiv" class="large-12 columns">	
+								</div>
+							</div>
+							  
+							<p></p>
+
+							<div class="">
+								<div class="small-11 small-centered columns">
+									<ul class="button-group even-3">
+										<li><a href="#clear" class="tiny button">Clear Entries</a></li>
+										<li><a href="#" data-reveal-id="barcode" class="tiny button">Scan Barcode</a></li>
+										<li><a id="addRecipeButton" class="tiny button">Add Recipe</a></li>
+									</ul>
+
+									<div id="barcode" class="reveal-modal" data-reveal>
+									  <h2>Barocde Scanner.</h2>
+									  <p>Please scan the barcode!</p>
+									  <a class="close-reveal-modal">&#215;</a>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 			<!-- Search Bar / Inventory Table --> 
 			<a id="editRecipeButton" class="tiny button">Edit Selected</a>
 			<a id="deleteRecipeButton" class="tiny button">Delete Selected</a>

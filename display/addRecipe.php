@@ -65,15 +65,6 @@
 					  		<input id="addNameInput" type = "text" placeholder = "Name">
 					  	</div>
 					</div>
-				<!--
-					<div class="row">
-						<div class="large-12 columns">
-						  <label>
-							<textarea id="addStepsInput" rows="10" placeholder="Steps"></textarea>
-						  </label>
-						</div>
-					</div>
-					-->
 				</div>
 				<p></p>
 	  		</div>
