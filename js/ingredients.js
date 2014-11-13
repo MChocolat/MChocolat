@@ -80,8 +80,8 @@ function loadEditForm(){
 
 //Delete ingredient from DB
 function deleteIngredient(){
-	var data = {"IngrName":self.selectedRow[0],
-				"UPC":self.selectedRow[1]};
+	var data = {"IngrName":self.selectedRow[0].innerText,
+				"UPC":self.selectedRow[1].innerText};
 
 	$.ajax({
 		type: "POST",
@@ -90,7 +90,6 @@ function deleteIngredient(){
 		data: {'action': 'deleteIngredient',
 				'data': data},
 		success: function (data, status) {
-				alert("Ingredient Deleted!!!!");
 				removeIngredient();
 		},
 		error: function() {alert("Error when deleting ingredient!");}
@@ -100,7 +99,9 @@ function deleteIngredient(){
 
 // Remove a Ingredient from the table
 function removeIngredient(){
-	table.row('.selected').remove().draw( false );
+	// HOW DO I GET THIS TO WORK AGAIN????
+	self.ingredientsTable.row('.selected').remove().draw( false );
+	alert("Ingredient Deleted!!!!");
 }
 
 
