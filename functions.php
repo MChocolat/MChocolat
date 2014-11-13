@@ -139,6 +139,16 @@ function addRecipeIngredients($data){
 	echo $sql;
 }
 
+function deleteRecipe($data){
+	$RecipeID = $data['RecipeID'];
+	
+	$sql = "DELETE FROM ingrRecipe WHERE RecipeID = '$RecipeID';";
+	$result = runQuery($sql); 
+	
+	$sql2 = "DELETE FROM recipes WHERE RecipeID = '$RecipeID';";
+	$result2 = runQuery($sql2); 
+}
+
 function getBatches(){
 	$sql = "SELECT BID, batches.DOC, recipes.RecipeID, recipes.RecipeName FROM batches INNER JOIN recipes ON batches.RecipeID = recipes.RecipeID";
 	$result = runQuery($sql);

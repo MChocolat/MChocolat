@@ -69,6 +69,7 @@
 				 	</thead>
 				</table>
 			</div>
+			<a id="deleteRecipeButton" class="tiny button">Delete Selected</a>
 		</div>
 
 	<script src="js/vendor/jquery.js"></script>

@@ -15,7 +15,7 @@ $(document).ready( function () {
 		data: {'action': 'getRecipes'},
 		success: function(data, status) {
 			recipesList = data;
-			self.recipesTable = $('#recipesTable').dataTable({
+			self.recipesTable = $('#recipesTable').DataTable({
 				"aaData": jQuery.parseJSON(recipesList),
 				"aoColumns": [
 					{"mData": 'RecipeID' },
@@ -53,22 +53,44 @@ $(document).ready( function () {
 	
 	//Set Button Functions
 	$("#updateRecipeButton").bind("click", updateRecipe);
+	$("#deleteRecipeButton").bind("click", deleteRecipe);
 	
 } );
 
 // Load the Edit form with Recipe's info
 function loadEditForm(){
+	/*
 	$('#editRecipeSection').removeClass('hidden');
 	$('#editRecipeSection').addClass('column');
 	//$('#addRecipeSection').addClass('hidden');
 
 	$('#editIdInput').val(self.selectedRow[0].innerText);
 	$('#editNameInput').val(self.selectedRow[1].innerText);
+	*/
 }
 
-// Remove a Recipe
-function removeRecipe(){
-	table.row('.selected').remove().draw( false );
+//Delete recipe from DB
+function deleteRecipe(){
+	var data = {"RecipeID":self.selectedRow[0].innerText};
+
+	$.ajax({
+		type: "POST",
+		url: '/functions.php',
+		cache: false,
+		data: {'action': 'deleteRecipe',
+				'data': data},
+		success: function (data, status) {
+				removeRecipeRow();
+		},
+		error: function() {alert("Error when deleting recipe!");}
+				
+	});
+}
+
+// Remove a recipe from the table
+function removeRecipeRow(){
+	self.recipesTable.row('.selected').remove().draw( false );
+	alert("Recipe Deleted!!!!");
 }
 
 
