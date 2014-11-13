@@ -15,7 +15,7 @@ $(document).ready( function () {
 		data: {'action': 'getBatches'},
 		success: function(data, status) {
 			batchesList = data;
-			self.batchesTable = $('#batchesTable').dataTable({
+			self.batchesTable = $('#batchesTable').DataTable({
 				"aaData": jQuery.parseJSON(batchesList),
 				"aoColumns": [
 					{"mData": 'BID' },
@@ -54,11 +54,13 @@ $(document).ready( function () {
 	
 	//Set Button Functions
 	//$("#updateBatchButton").bind("click", updateBatch);
+	$("#deleteBatchButton").bind("click", deleteBatch);
 	
 } );
 
 // Load the Edit form with Batch's info
 function loadEditForm(){
+	/*
 	$('#editBatchSection').removeClass('hidden');
 	$('#editBatchSection').addClass('column');
 	//$('#addBatchSection').addClass('hidden');
@@ -70,11 +72,31 @@ function loadEditForm(){
 	$('#editPriceInput').val(self.selectedRow[4].innerText);
 	$('#editDistInput').val(self.selectedRow[5].innerText);
 	$('#editSubInput').val(self.selectedRow[6].innerText);
+	*/
 }
 
-// Remove a Batch
-function removeBatch(){
-	table.row('.selected').remove().draw( false );
+//Delete batch from DB
+function deleteBatch(){
+	var data = {"BID":self.selectedRow[0].innerText};
+
+	$.ajax({
+		type: "POST",
+		url: '/functions.php',
+		cache: false,
+		data: {'action': 'deleteBatch',
+				'data': data},
+		success: function (data, status) {
+				removeBatchRow();
+		},
+		error: function() {alert("Error when deleting batch!");}
+				
+	});
+}
+
+// Remove a batch from the table
+function removeBatchRow(){
+	self.batchesTable.row('.selected').remove().draw( false );
+	alert("Batch Deleted!!!!");
 }
 
 function addBatch(){

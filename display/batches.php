@@ -94,6 +94,7 @@
 				 	</thead>
 				</table>
 			</div>	
+			<a id="deleteBatchButton" class="tiny button">Delete Selected</a>
 		</div>
 
 	<script src="js/vendor/jquery.js"></script>

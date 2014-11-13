@@ -176,6 +176,16 @@ function addBatchIngredients($data){
 	echo $sql;
 }
 
+function deleteBatch($data){
+	$BID = $data['BID'];
+	
+	$sql = "DELETE FROM batchIngr WHERE BID = '$BID';";
+	$result = runQuery($sql); 
+	
+	$sql2 = "DELETE FROM batches WHERE BID = '$BID';";
+	$result2 = runQuery($sql2); 
+}
+
 
 function getBoxLabels(){
 	$sql = "SELECT * FROM assortments";

@@ -99,7 +99,6 @@ function deleteIngredient(){
 
 // Remove a Ingredient from the table
 function removeIngredient(){
-	// HOW DO I GET THIS TO WORK AGAIN????
 	self.ingredientsTable.row('.selected').remove().draw( false );
 	alert("Ingredient Deleted!!!!");
 }
