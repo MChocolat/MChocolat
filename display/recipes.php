@@ -59,6 +59,7 @@
 			-->
 	
 			<!-- Search Bar / Inventory Table --> 
+			<a id="deleteRecipeButton" class="tiny button">Delete Selected</a>
   			<div class="small-12 small-center column">
 				<table id="recipesTable" class="display small-center">
 				 	<thead>
@@ -69,7 +70,7 @@
 				 	</thead>
 				</table>
 			</div>
-			<a id="deleteRecipeButton" class="tiny button">Delete Selected</a>
+			
 		</div>
 
 	<script src="js/vendor/jquery.js"></script>
