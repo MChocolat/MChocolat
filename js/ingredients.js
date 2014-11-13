@@ -18,7 +18,6 @@ $(document).ready( function () {
 			self.ingredientsTable = $('#ingredientsTable').dataTable({
 				"aaData": jQuery.parseJSON(ingredientsList),
 				"aoColumns": [
-					{"mData": 'ID' },
 					{"mData": 'IngrName' },
 					{"mData": 'UPC' },
 					{"mData": 'DOP' },
