@@ -15,7 +15,7 @@ $(document).ready( function () {
 		data: {'action': 'getIngredients'},
 		success: function(data, status) {
 			ingredientsList = data;
-			self.ingredientsTable = $('#ingredientsTable').dataTable({
+			self.ingredientsTable = $('#ingredientsTable').DataTable({
 				"aaData": jQuery.parseJSON(ingredientsList),
 				"aoColumns": [
 					{"mData": 'IngrName' },
