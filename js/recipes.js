@@ -55,10 +55,9 @@ $(document).ready( function () {
 	$("#editRecipeButton").bind("click", editRecipe);
 	$("#deleteRecipeButton").bind("click", deleteRecipe);
 	
-	$( "#dialog" ).dialog({ autoOpen: false, maxWidth:600,
-                    maxHeight: 500,
-                    width: 600,
-                    height: 500, });
+	$( "#dialog" ).dialog({ autoOpen: false,
+							width: 800,
+							height: 800});
 	
 } );
 
