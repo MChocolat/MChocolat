@@ -6,6 +6,7 @@
 		<link rel="stylesheet" type="text/css" href="/css/dataTables.foundation.css"/>
 		<script src="/js/jquery.dataTables.js"></script>
 		<script type="text/javascript" language="javascript" src="/js/dataTables.foundation.js"></script>
+		<script type="text/javascript" language="javascript" src="/js/jquery.simplemodal.1.4.4.min.js"></script>
 		<script type="text/javascript" src="/js/recipes.js"></script>
   	</head>
   
@@ -59,6 +60,7 @@
 			-->
 	
 			<!-- Search Bar / Inventory Table --> 
+			<a id="editRecipeButton" class="tiny button">Edit Selected</a>
 			<a id="deleteRecipeButton" class="tiny button">Delete Selected</a>
   			<div class="small-12 small-center column">
 				<table id="recipesTable" class="display small-center">

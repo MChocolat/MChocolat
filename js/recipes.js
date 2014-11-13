@@ -52,7 +52,7 @@ $(document).ready( function () {
 	}); 
 	
 	//Set Button Functions
-	$("#updateRecipeButton").bind("click", updateRecipe);
+	$("#editRecipeButton").bind("click", editRecipe);
 	$("#deleteRecipeButton").bind("click", deleteRecipe);
 	
 } );
@@ -91,6 +91,10 @@ function deleteRecipe(){
 function removeRecipeRow(){
 	self.recipesTable.row('.selected').remove().draw( false );
 	alert("Recipe Deleted!!!!");
+}
+
+function editRecipe(){
+	$.modal('HI');
 }
 
 
