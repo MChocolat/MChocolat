@@ -81,7 +81,7 @@ function loadEditForm(){
 
 //Delete ingredient from DB
 function deleteIngredient(){
-	var data = {"IngrName":self.selectedRow[0]},
+	var data = {"IngrName":self.selectedRow[0],
 				"UPC":self.selectedRow[1]}};
 
 	$.ajax({
