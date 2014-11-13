@@ -55,6 +55,8 @@ $(document).ready( function () {
 	$("#editRecipeButton").bind("click", editRecipe);
 	$("#deleteRecipeButton").bind("click", deleteRecipe);
 	
+	$( "#dialog" ).dialog({ autoOpen: false });
+	
 } );
 
 // Load the Edit form with Recipe's info
@@ -94,7 +96,7 @@ function removeRecipeRow(){
 }
 
 function editRecipe(){
-	$.modal('HI');
+	$( "#dialog" ).dialog( "open" );
 }
 
 

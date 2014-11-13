@@ -58,7 +58,7 @@
 		  		</div>
 		  	</div>
 			-->
-	
+			<div id="dialog" title="Dialog Title">I'm a dialog</div>
 			<!-- Search Bar / Inventory Table --> 
 			<a id="editRecipeButton" class="tiny button">Edit Selected</a>
 			<a id="deleteRecipeButton" class="tiny button">Delete Selected</a>
