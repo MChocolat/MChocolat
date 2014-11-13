@@ -31,6 +31,11 @@ $(document).ready( function () {
 	
 } );
 
+function clearBatchIngredients(){
+	self.getElementById('ingredientsDiv').empty();
+	ingredientsList = [];
+}
+
 function createIngredientRow(i){
 	var div = document.createElement("div");
 	$(div).addClass("row");
@@ -59,6 +64,7 @@ function createIngredientRow(i){
 }
 
 function selectRecipe(){
+	clearBatchIngredients();
 
 	recipeID = getRecipeID($("#recipeSelect option:selected").text());
 
