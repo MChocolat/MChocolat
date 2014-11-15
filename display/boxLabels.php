@@ -12,7 +12,7 @@
   	<body>
 		<!-- Edit BoxLabel -->
 		<div class="row">
-			<div id="editBoxLabelSection" class="large-5 columns">
+			<div id="editBoxLabelSection" class="large-5 large-centered columns">
 				<div class="panel">
 		  			<div class="h3">Update Box Label</div>
 		  			<p></p>
