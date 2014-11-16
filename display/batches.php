@@ -12,7 +12,7 @@
   	<body>
 		<div class="row ">
 			<!-- Search Bar / Inventory Table --> 
-  			<div class="large-7 medium-4 columns">
+  			<div class="large-7 large-centered columns">
 				<table id="batchesTable" class="display">
 				 	<thead>
 					    <tr>

@@ -11,7 +11,7 @@
   	<body>
 		<div class="row">
 			<!-- left -->
-			<div id="addIngredientSection" class="large-5 large-centered columns">
+			<div id="addIngredientSection" class="large-6 large-centered columns">
 		  		<div id="addIngredientSection" class="panel">
 		  			<div class="h3">Add New Ingredient</div>
 		  			<p></p>
@@ -63,7 +63,6 @@
 							  <p>Please scan the barcode!</p>
 							  <a class="close-reveal-modal">&#215;</a>
 							</div>
-
 						</div>
 					</div>
 		  		</div>
