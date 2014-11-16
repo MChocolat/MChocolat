@@ -89,8 +89,8 @@ function createIngredientRow(){
 	
 	//Button to remove unneeded ingredients
 	var removeIngrButton = document.createElement("button");
-	$(removeIngrButton).addClass("tiny button");
-	$(removeIngrButton).innerHTML = "--";
+	$(removeIngrButton).addClass("small button");
+	$(removeIngrButton).innerHTML = "-";
 	
 	nameDiv.appendChild(name);
 	numDiv.appendChild(num);
