@@ -13,7 +13,7 @@
 		<div class="row">
 			<!-- Search Bar / Inventory Table -->
 			<a id="deleteIngredientButton" class="tiny button">Delete Selected</a>
-			
+
   			<div class="small-12 small-center column">
 				<table id="ingredientsTable" class="display large-center">
 				 	<thead>
@@ -21,7 +21,7 @@
 							<th>IngrID</th>
 					    	<th>Name</th>
 							<th>UPC</th>
-							<th>Date Of Purchase</th>
+							<th>Date of Purchase</th>
 							<th>Expiration Date</th>
 							<th>Lot Number</th>
 							<th>Sub Ingredients</th>							    
