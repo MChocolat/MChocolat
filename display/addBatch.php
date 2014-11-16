@@ -26,7 +26,7 @@
 						
 					<p></p>
 
-					<div class="row">
+					<div class="">
 					  	<div class="small-11 small-centered columns">
 						    <ul class="button-group even-3">
 						  		<li><a href="#clear" class="tiny button">Clear Entries</a></li>
