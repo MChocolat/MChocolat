@@ -20,7 +20,7 @@
 							<select id="ingredientNum"></select>
 						</div>
 						<div class="large-2 columns">
-							<a id="addIngredients" class="small button">Add</a>
+							<a id="addIngredients" class="tiny button">Add</a>
 						</div>
 					</div>
 					
