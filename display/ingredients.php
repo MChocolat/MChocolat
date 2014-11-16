@@ -11,8 +11,10 @@
   
   	<body>
 		<div class="row">
-			<!-- Search Bar / Inventory Table --> 
-  			<div class="large-7 columns">
+			<!-- Search Bar / Inventory Table -->
+			<a id="deleteIngredientButton" class="tiny button">Delete Selected</a>
+			
+  			<div class="small-12 small-center column">
 				<table id="ingredientsTable" class="display large-center">
 				 	<thead>
 					    <tr>
@@ -27,7 +29,7 @@
 				 	</thead>
 				</table>
 			</div>
-			<a id="deleteIngredientButton" class="tiny button">Delete Selected</a>
+			
 		</div>
 
 	<script src="js/vendor/jquery.js"></script>

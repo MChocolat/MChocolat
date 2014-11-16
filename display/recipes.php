@@ -62,7 +62,7 @@
 			</div>
 	
 			<!--<a id="editRecipeButton" class="tiny button">Edit Selected</a>-->
-			<a class="button small" href="#editRecipe" data-reveal-id="editRecipe">Fill Out A Form</a>
+			<a class="tiny button" href="#editRecipe" data-reveal-id="editRecipe">Fill Out A Form</a>
 			<a id="deleteRecipeButton" class="tiny button">Delete Selected</a>
 
 			<div class="reveal-modal small" id="editRecipe" data-reveal="">

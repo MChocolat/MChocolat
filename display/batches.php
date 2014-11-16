@@ -11,8 +11,10 @@
   
   	<body>
 		<div class="row ">
-			<!-- Search Bar / Inventory Table --> 
-  			<div class="large-7 columns">
+			<!-- Search Bar / Inventory Table -->
+			<a id="deleteBatchButton" class="tiny button">Delete Selected</a>
+
+  			<div class="small-12 small-center column">
 				<table id="batchesTable" class="display large-center">
 				 	<thead>
 					    <tr>
@@ -23,7 +25,6 @@
 				 	</thead>
 				</table>
 			</div>	
-			<a id="deleteBatchButton" class="tiny button">Delete Selected</a>
 		</div>
 
 	<script src="js/vendor/jquery.js"></script>
