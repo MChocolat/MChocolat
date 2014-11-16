@@ -15,11 +15,11 @@
 		  			<div class="h3">Add New Batch</div>
 					<p></p>
 						
-					<div class="row ">
-						<div class="small-8 columns">
+					<div class="row">
+						<div class="small-9 columns">
 							<select id="recipeSelect"></select>
 						</div>
-						<div class="small-4 columns">
+						<div class="small-3 columns">
 							<a id="selectRecipeButton" class="tiny button">Select</a>
 						</div>
 					</div>
