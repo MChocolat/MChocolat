@@ -62,19 +62,15 @@
 			</div>
 	
 			<!--<a id="editRecipeButton" class="tiny button">Edit Selected</a>-->
-			<a class="editRecipeButton" class="tiny button" href="#editRecipe" data-reveal-id="editRecipe">Edit Recipe</a>
+			<a class="button small" href="#editRecipe" data-reveal-id="editRecipe">Fill Out A Form</a>
 			<a id="deleteRecipeButton" class="tiny button">Delete Selected</a>
 
-			<ul class="large-block-grid-2">
-				<li><a class="button large" href="#editRecipe" data-reveal-id="editRecipe">Fill Out A Form</a>
-					<div class="reveal-modal small" id="myCform" data-reveal="">
-						<h2>Edit Recipe</h2>
-						Please contact me! I am lonely and need to hear from other people! I set this Foundation Reveal modal to <code>medium</code> and yes, this is a real form and it works.
-						[Add form code here]
-						<a class="close-reveal-modal">×</a>
-					</div>
-				</li>
-			</ul>	
+			<div class="reveal-modal small" id="editRecipe" data-reveal="">
+				<h3>Edit Recipe</h3>
+				Please contact me! I am lonely and need to hear from other people! I set this Foundation Reveal modal to <code>medium</code> and yes, this is a real form and it works.
+				[Add form code here]
+				<a class="close-reveal-modal">×</a>
+			</div>
 
   			<div class="small-12 small-center column">
 				<table id="recipesTable" class="display large-center">
