@@ -91,7 +91,7 @@ function createIngredientRow(){
 
 	var removeIngrButton = document.createElement("button");
 	$(removeIngrButton).addClass("small button");
-	$(removeIngrButton).innerHTML = '<button type="button">I am button</button>';
+	$(removeIngrButton).innerHTML = '-';
 	
 	nameDiv.appendChild(name);
 	numDiv.appendChild(num);
