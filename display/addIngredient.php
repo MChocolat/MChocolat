@@ -16,10 +16,9 @@
 		  			<div class="h3">Add New Ingredient</div>
 		  			<p></p>
 
-
 					<div class="row">
 						<div class="large-12 medium-4 columns">
-					  		<input id="addNameInput" type = "text" placeholder = "Name (temp)">
+					  		<input id="addNameInput" type = "text" placeholder = "Name (Temp)">
 					  	</div>
 					</div>
 
