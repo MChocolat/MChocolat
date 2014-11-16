@@ -42,10 +42,11 @@ function createIngredientRow(){
 	//var unitDiv = document.createElement("div");
 	var removeIngrDiv = document.createElement("div");
 	
-	$(nameDiv).addClass("large-3 columns");
-	$(numDiv).addClass("large-3 columns");
+	$(nameDiv).addClass("large-6 columns");
+	$(numDiv).addClass("large-4 columns");
+	$(removeIngrDiv).addClass("large-2 columns end");
 	//$(unitDiv).addClass("large-3 columns");
-	$(removeIngrDiv).addClass("large-3 columns end");
+	
 	
 	// TODO: Replace with autocomplete search box??
 	// Ingredients combo box
@@ -89,20 +90,14 @@ function createIngredientRow(){
 	//Button to remove unneeded ingredients
 	var removeIngrButton = document.createElement("button");
 	$(removeIngrButton).addClass("tiny button");
-	$(removeIngrButton).innerHTML = "-";
-	
-	
-	
+	$(removeIngrButton).innerHTML = "--";
 	
 	nameDiv.appendChild(name);
 	numDiv.appendChild(num);
-	//unitDiv.appendChild(unit);
 	removeIngrDiv.appendChild(removeIngrButton);
-	
 	
 	div.appendChild(nameDiv);
 	div.appendChild(numDiv);
-	//div.appendChild(unitDiv);
 	div.appendChild(removeIngrDiv);
 	
 	$(removeIngrButton).bind("click", function(){div.remove();});
