@@ -10,7 +10,7 @@
   	</head>
   
   	<body>
-		<div class="row ">
+		<div class="row">
 			<!-- Search Bar / Inventory Table -->
 			<a id="deleteBatchButton" class="tiny button">Delete Selected</a>
 

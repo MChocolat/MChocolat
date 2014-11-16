@@ -56,14 +56,16 @@
 
 				<div class="row">
 					<!-- left -->
-					<div id="right" class="large-6 columns">
-						<div class="large-10 columns">
-									<input id="addNameInput" type = "text" placeholder = "Name">
-						</div>
+					<div class="large-12 columns">
+						<div class="h3">Ingredients</div>
+
 						<div class="panel">
-							<div class="h3">Ingredients</div>
 							<p></p>
 							
+							<div class="large-12 columns">
+									<input id="addNameInput" type = "text" placeholder = "Name">
+							</div>
+
 							<div class="row ">
 								<div class="large-10 columns">
 									<select id="ingredientNum"></select>
