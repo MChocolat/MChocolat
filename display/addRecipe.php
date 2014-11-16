@@ -10,7 +10,7 @@
   
   	<body>
 		<div class="row">
-			<div id="right" class="large-5 columns">
+			<div id="right" class="large-6 columns">
 				<div class="panel">
 		  			<div class="h3">Ingredients</div>
 					<p></p>
@@ -32,7 +32,7 @@
 					<p></p>
 
 					<div class="">
-					  	<div class="small-12 small-centered columns">
+					  	<div class="small-11 small-centered columns">
 						    <ul class="button-group even-3">
 						  		<li><a href="#clear" class="tiny button">Clear Entries</a></li>
 						  		<li><a href="#" data-reveal-id="barcode" class="tiny button">Scan Barcode</a></li>
@@ -49,7 +49,7 @@
 				</div>
 	  		</div>
 
-	  		<div id="left" class="large-7 columns">
+	  		<div id="left" class="large-6 columns">
 				<div class="panel">
 		  			<div class="h3">New Recipe</div>
 		  			<p></p>
