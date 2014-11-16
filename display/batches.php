@@ -12,8 +12,8 @@
   	<body>
 		<div class="row ">
 			<!-- Search Bar / Inventory Table --> 
-  			<div class="large-7 large-centered columns">
-				<table id="batchesTable" class="display">
+  			<div class="large-7 columns">
+				<table id="batchesTable" class="display large-center">
 				 	<thead>
 					    <tr>
 							<th>ID</th>
