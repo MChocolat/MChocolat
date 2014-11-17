@@ -98,8 +98,6 @@ function removeRecipeRow(){
 }
 
 function editRecipe(){
-	$( "#dialog" ).dialog( "open" );
-	
 	// Create a way to add multiple ingredients to the existing ingredients
 	for(i = 0; i < 15; i++){
 		document.getElementById('ingredientNum').options[i] = new Option(i + 1);
