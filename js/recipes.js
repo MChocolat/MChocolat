@@ -225,7 +225,7 @@ function createIngredientRowFromData(dataRow){
 
 function updateRecipe(){
 	//TODO: form validation
-	var data = {"RecipeID":self.selectedRow[0].innerText, "RecipeName":$('#editNameInput').val();};
+	var data = {"RecipeID":self.selectedRow[0].innerText, "RecipeName":$('#editNameInput').val()};
 	$.ajax({
             type: 'POST',
             url: '/functions.php',
