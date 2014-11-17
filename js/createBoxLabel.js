@@ -29,7 +29,7 @@ $(document).ready( function () {
 	document.getElementById('numberSelect').options[i] = new Option(boxSizes[i]);
 	}
 	//Set Button Functions
-	$("#selectRecipeButton").bind("click", selectNumber);
+	$("#selectNumberButton").bind("click", selectNumber);
 	
 } );
 
