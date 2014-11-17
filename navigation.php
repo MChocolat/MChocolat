@@ -24,11 +24,10 @@
 			    	<li>
 			    		<a href="#" class="button" data-dropdown="recipes" data-options="is_hover:true">Recipes</a>
 			    	</li>
-<!--
+
 			    	<li>
-			    		<a href="#" class="button" data-dropdown="boxLabels" data-options="is_hover:true">Box Labels</a>
+			    		<a href="#" class="button" data-dropdown="boxLabels" data-options="is_hover:true">Labels</a>
 			    	</li>
-		-->
 
 				</ul>
 
@@ -38,18 +37,20 @@
 				</ul>
 
 				<ul id="batches" class="f-dropdown" data-dropdown-content>
-				  <li><a href="/display/addBatch.php">Add New Batch</a></li>
+				  <li><a href="/display/addBatch.php">Make New Batch</a></li>
 				  <li><a href="/display/batches.php">View/Search All Batches</a></li>
 				</ul>
 
 				<ul id="recipes" class="f-dropdown" data-dropdown-content>
-				  <li><a href="/display/addRecipe.php">Add New Recipe</a></li>
+				  <li><a href="/display/addRecipe.php">Create New Recipe</a></li>
 				  <li><a href="/display/recipes.php">View/Search All Recipes</a></li>
 				</ul>
 
 				<ul id="boxLabels" class="f-dropdown" data-dropdown-content>
-				  <li><a href="/display/createBoxLabel.php">Add New Box Label</a></li>
+				  <li><a href="/display/createBoxLabel.php">Make New Box Label</a></li>
+				 <!--
 				  <li><a href="/display/boxLabels.php">View/Search All Box Labels</a></li>
+				-->
 				</ul>
 			</div>
 		</div>
