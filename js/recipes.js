@@ -233,7 +233,7 @@ function updateRecipe(){
 			data: {'action': 'updateRecipe', 'data': data},
             success: function (data, status) {
 				//Do another AJAX save ingredients associated with recipe to ingrRecipe table
-				updateRecipeIngredients(data);
+				updateRecipeIngredients(self.selectedRow[0].innerText);
 			}
     });
 }
