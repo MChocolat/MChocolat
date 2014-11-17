@@ -263,7 +263,7 @@ function updateRecipeIngredients(recipeID){
             type: 'POST',
             url: '/functions.php',
 			cache: false,
-			data: {'action': 'addRecipeIngredients', 'data': data},
+			data: {'action': 'updateRecipeIngredients', 'data': data},
             success: function (data, status) {
 				$('ingredientsDiv').empty();
 				saveSuccessful();
