@@ -120,6 +120,49 @@ function addIngredients(){
 	
 }
 
+function createIngredientRow(){
+	var div = document.createElement("div");
+	$(div).addClass("row");
+	self.getElementById('ingredientsDiv').appendChild(div);
+	
+	
+	var nameDiv = document.createElement("div");
+	var numDiv = document.createElement("div");
+	var removeIngrDiv = document.createElement("div");
+	
+	$(nameDiv).addClass("large-6 columns");
+	$(numDiv).addClass("large-4 columns");
+	$(removeIngrDiv).addClass("large-2 columns end");
+	
+	var name = document.createElement("input");
+	name.type = "text";
+	name.placeholder = "Ingredient Name"
+	
+	//Amount input
+	var num = document.createElement("input");
+	num.type = "text";
+	num.placeholder = "Amount"
+
+	
+	//Button to remove unneeded ingredients
+
+	var removeIngrButton = document.createElement("button");
+	$(removeIngrButton).addClass("small button");
+	$(removeIngrButton).innerHTML = '-';
+	
+	nameDiv.appendChild(name);
+	numDiv.appendChild(num);
+	removeIngrDiv.appendChild(removeIngrButton);
+	
+	div.appendChild(nameDiv);
+	div.appendChild(numDiv);
+	div.appendChild(removeIngrDiv);
+	
+	$(removeIngrButton).bind("click", function(){div.remove();});
+	
+		
+}
+
 
 function updateRecipe(){
 	//TODO: AJAX call and return from DB b4 changing UI
