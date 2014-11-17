@@ -195,12 +195,12 @@ function createIngredientRowFromData(dataRow){
 	
 	var name = document.createElement("input");
 	name.type = "text";
-	name.innerText = dataRow["IngrName"];
+	$(name).text(dataRow["IngrName"]);
 	
 	//Amount input
 	var num = document.createElement("input");
 	num.type = "text";
-	num.innerText = dataRow["Amount"];
+	$(num).text(dataRow["Amount"]);
 
 	
 	//Button to remove unneeded ingredients
