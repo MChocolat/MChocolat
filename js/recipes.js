@@ -265,7 +265,12 @@ function updateRecipeIngredients(recipeID){
 			cache: false,
 			data: {'action': 'addRecipeIngredients', 'data': data},
             success: function (data, status) {
+				$('ingredientsDiv').empty();
 				saveSuccessful();
 			}
     });
+}
+
+function saveSuccessful(){
+	alert("SAVED");
 }
