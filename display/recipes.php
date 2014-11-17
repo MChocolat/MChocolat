@@ -11,10 +11,42 @@
   	</head>
   
   	<body>
-		
+		<!-- Edit Recipe -->
+		<div class="row">
+			<div id="dialog" class="dialog" title="Edit Recipe">
+				<div class="row">
+					<!-- left -->
+					<div id="right" class="large-6 columns">
+						<div class="large-10 columns">
+									<input id="editNameInput" type = "text" placeholder = "Name">
+						</div>
+						<div class="panel">
+							<div class="h3">Ingredients</div>
+							<p></p>
+							
+							<div class="row ">
+								<div class="large-10 columns">
+									<select id="ingredientNum"></select>
+								</div>
+								<div class="large-2 columns">
+									<a id="addIngredients" class="tiny button">Add</a>
+								</div>
+							</div>
+							
+							<div class="row ">
+								<div id="ingredientsDiv" class="large-12 columns">	
+								</div>
+							</div>
+							  
+							<p></p>
+
+						</div>
+					</div>
+				</div>
+			</div>
 	
 			<!--<a id="editRecipeButton" class="tiny button">Edit Selected</a>-->
-			<a class="tiny button" href="#editRecipe" data-reveal-id="editRecipe">Edit Selected</a>
+			<a class="tiny button" href="#editRecipe" data-reveal-id="dialog">Edit Selected</a>
 			<a id="deleteRecipeButton" class="tiny button">Delete Selected</a>
 
 			<div class="reveal-modal small" id="dialog" data-reveal="">
