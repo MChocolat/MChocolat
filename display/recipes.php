@@ -51,9 +51,7 @@
 
 			<div class="reveal-modal small" id="editRecipe" data-reveal="">
 				<h3>Edit Recipe</h3>
-				[Add Recipe form code here. If there was a way to reference the selected code and add it here maybe?]
 				<a class="close-reveal-modal">×</a>
-
 				<div class="row">
 					<div class="large-12 columns">
 						<div class="panel">
@@ -81,7 +79,7 @@
 									<ul class="button-group even-3">
 										<li><a href="#clear" class="tiny button">Clear Entries</a></li>
 										<li><a href="#" data-reveal-id="barcode" class="tiny button">Scan Barcode</a></li>
-										<li><a id="addRecipeButton" class="tiny button">Save Recipe</a></li>
+										<li><a id="updateRecipeButton" class="tiny button">Update Recipe</a></li>
 
 									</ul>
 

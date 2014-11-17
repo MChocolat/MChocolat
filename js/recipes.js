@@ -99,6 +99,27 @@ function removeRecipeRow(){
 
 function editRecipe(){
 	$( "#dialog" ).dialog( "open" );
+	
+	// Create a way to add multiple ingredients to the existing ingredients
+	for(i = 0; i < 15; i++){
+		document.getElementById('ingredientNum').options[i] = new Option(i + 1);
+	}
+	// Create the row for adding an ingredient to the recipe
+	createIngredientRow();
+	
+	//Set Button Functions
+	$("#addIngredients").bind("click", addIngredients);
+	$("#updateRecipeButton").bind("click", updateRecipe);
+}
+
+// Add the number of ingredient rows specified
+function addIngredients(){
+	var num = parseInt($('#ingredientNum').val());
+	
+	for(i = 0; i < num; i++){
+		createIngredientRow();
+	}
+	
 }
 
 
