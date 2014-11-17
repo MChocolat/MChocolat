@@ -263,8 +263,9 @@ function updateRecipeIngredients(recipeID){
 			cache: false,
 			data: {'action': 'updateRecipeIngredients', 'data': data},
             success: function (data, status) {
-				$(self.selectedRow[0]).text($('#editNameInput').val());
+				$(self.selectedRow[1]).text($('#editNameInput').val());
 				$('#ingredientsDiv').empty();
+				$('#dialog').trigger('reveal:close');
 				saveSuccessful();
 			}
     });
