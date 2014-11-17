@@ -46,10 +46,10 @@
 			</div>
 	
 			<!--<a  class="tiny button">Edit Selected</a>-->
-			<a id="editRecipeButton" class="tiny button" data-reveal-id="dialog">Edit Selected</a>
+			<a id="editRecipeButton" class="tiny button">Edit Selected</a>
 			<a id="deleteRecipeButton" class="tiny button">Delete Selected</a>
 
-			<div class="reveal-modal small" id="dialog" data-reveal="">
+			<div class="reveal-modal small" id="dialog">
 				<h3>Edit Recipe</h3>
 				<a class="close-reveal-modal">×</a>
 				<div class="row">

@@ -55,9 +55,6 @@ $(document).ready( function () {
 	$("#editRecipeButton").bind("click", editRecipe);
 	$("#deleteRecipeButton").bind("click", deleteRecipe);
 	
-	$("#dialog").dialog({ autoOpen: false,
-							width: 800,
-							height: 800});
 	
 } );
 
@@ -98,7 +95,7 @@ function removeRecipeRow(){
 }
 
 function editRecipe(){
-	$( "#dialog" ).dialog( "open" );
+	$('#dialog').foundation('reveal', 'open');
 	
 	// Create a way to add multiple ingredients to the existing ingredients
 	for(i = 0; i < 15; i++){
