@@ -100,7 +100,7 @@ function getRecipes(){
 }
 
 function getRecipeIngredients($data){
-	$RecipeID = $data;
+	$RecipeID = $data['RecipeID'];
 	$sql = "SELECT * FROM ingrRecipe WHERE RecipeID = '$RecipeID';";
 	$result = runQuery($sql);
 	$finalResult = array();

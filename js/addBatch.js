@@ -67,13 +67,14 @@ function selectRecipe(){
 	clearBatchIngredients();
 
 	recipeID = getRecipeID($("#recipeSelect option:selected").text());
+	var data = {"RecipeID":recipeID};
 
 	//Load ingredients for selected recipe
 	$.ajax({
 		type: "POST",
 		url: '/functions.php',
 		cache: false,
-		data: {'action': 'getRecipeIngredients', 'data': recipeID},
+		data: {'action': 'getRecipeIngredients', 'data': data},
 		success: function(data, status) {
 			ingredientsList = jQuery.parseJSON(data);
 			
