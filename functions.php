@@ -151,8 +151,9 @@ function deleteRecipe($data){
 
 function updateRecipe($data){
 	$RecipeID = $data['RecipeID'];	
+	$name = $data['RecipeName'];
 	
-	$sql = "DELETE FROM recipes WHERE RecipeID = '$RecipeID';";
+	$sql = "UPDATE recipes SET RecipeName = '$name' WHERE RecipeID = '$RecipeID';";
 	$result = runQuery($sql); 
 }
 

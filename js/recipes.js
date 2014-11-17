@@ -225,7 +225,7 @@ function createIngredientRowFromData(dataRow){
 
 function updateRecipe(){
 	//TODO: form validation
-	var data = {"RecipeID":self.selectedRow[0].innerText};
+	var data = {"RecipeID":self.selectedRow[0].innerText, "RecipeName":self.selectedRow[1].innerText};
 	$.ajax({
             type: 'POST',
             url: '/functions.php',
@@ -251,9 +251,7 @@ function updateRecipeIngredients(recipeID){
 	for(i = 0; i < ingredients.size(); i++){
 		ingr = $($($(ingredients[i]).children()[0]).children()[0]).val();
 		amnt = $($($(ingredients[i]).children()[1]).children()[0]).val();
-		//unit = $($($(ingredients[i]).children()[2]).children()[0]).val();
 		
-		//var row = {"RecipeID": recipeID,"IngrName":ingr,"Amount":amnt,"M_unit":unit};
 		var row = {"RecipeID": recipeID,"IngrName":ingr,"Amount":amnt};
 		
 		data[i] = row;
