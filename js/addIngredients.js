@@ -59,4 +59,9 @@ function addIngredient(){
 				alert("Ingredient SA-SA-SAVED!!!!");
 			}
     });
+	
+	w=window.open();
+	w.document.write('');
+	w.print();
+	w.close();
 }
