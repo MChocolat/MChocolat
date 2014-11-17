@@ -17,10 +17,10 @@
 				<div class="row">
 					<!-- left -->
 					<div id="right" class="large-6 columns">
-						<div class="large-10 columns">
+						<div class="panel">
+							<div class="large-10 columns">
 									<input id="editNameInput" type = "text" placeholder = "Name">
 						</div>
-						<div class="panel">
 							<div class="h3">Ingredients</div>
 							<p></p>
 							
