@@ -107,14 +107,17 @@ function editRecipe(){
 			cache: false,
 			data: {'action': 'getRecipeIngredients', 'data': data},
             success: function (data, status) {
+					data = jQuery.parseJSON(data);
 					$('#editNameInput').val(self.selectedRow[1].innerText);
 			
 					// Create a way to add multiple ingredients to the existing ingredients
 					for(i = 0; i < 15; i++){
 						document.getElementById('ingredientNum').options[i] = new Option(i + 1);
 					}
-					// Create the row for adding an ingredient to the recipe
-					createIngredientRow();
+					
+					for(j = 0; j < data.length; j++){
+						createIngredientRowFromData(data[j]);
+					}
 					
 					//Set Button Functions
 					$("#addIngredients").bind("click", addIngredients);
@@ -176,15 +179,93 @@ function createIngredientRow(){
 		
 }
 
+function createIngredientRowFromData(dataRow){
+	var div = document.createElement("div");
+	$(div).addClass("row");
+	self.getElementById('ingredientsDiv').appendChild(div);
+	
+	
+	var nameDiv = document.createElement("div");
+	var numDiv = document.createElement("div");
+	var removeIngrDiv = document.createElement("div");
+	
+	$(nameDiv).addClass("large-6 columns");
+	$(numDiv).addClass("large-4 columns");
+	$(removeIngrDiv).addClass("large-2 columns end");
+	
+	var name = document.createElement("input");
+	name.type = "text";
+	name.innerText = dataRow["IngrName"];
+	
+	//Amount input
+	var num = document.createElement("input");
+	num.type = "text";
+	num.innerText = dataRow["Amount"];
+
+	
+	//Button to remove unneeded ingredients
+
+	var removeIngrButton = document.createElement("button");
+	$(removeIngrButton).addClass("small button");
+	$(removeIngrButton).innerHTML = '-';
+	
+	nameDiv.appendChild(name);
+	numDiv.appendChild(num);
+	removeIngrDiv.appendChild(removeIngrButton);
+	
+	div.appendChild(nameDiv);
+	div.appendChild(numDiv);
+	div.appendChild(removeIngrDiv);
+	
+	$(removeIngrButton).bind("click", function(){div.remove();});
+	
+		
+}
+
 
 function updateRecipe(){
-	//TODO: AJAX call and return from DB b4 changing UI
+	//TODO: form validation
+	var data = {"RecipeID":self.selectedRow[0].innerText};
+	$.ajax({
+            type: 'POST',
+            url: '/functions.php',
+			cache: false,
+			data: {'action': 'updateRecipe', 'data': data},
+            success: function (data, status) {
+				//Do another AJAX save ingredients associated with recipe to ingrRecipe table
+				updateRecipeIngredients(data);
+			}
+    });
+}
+
+function updateRecipeIngredients(recipeID){
+	//TODO: form validation
+	var data = new Array();
 	
-	//TODO: Update probably needs to choose last param based on position in table vs its own ID
-	self.recipesTable.fnUpdate({"RecipeID":$('#editIdInput').val(),"RecipeName":$('#editNameInput').val(),
-									"Steps":$('#editStepsInput').val()}, parseInt(self.selectedRow[0].innerText)-1);
-	$('#editRecipeSection').addClass('hidden');
-	$('#editRecipeSection').removeClass('column');
-	//$('#addRecipeSection').removeClass('hidden');							
-									
+	var ingredients = $(ingredientsDiv).children();
+	
+	var ingr;
+	var amnt;
+	//var unit;
+	
+	for(i = 0; i < ingredients.size(); i++){
+		ingr = $($($(ingredients[i]).children()[0]).children()[0]).val();
+		amnt = $($($(ingredients[i]).children()[1]).children()[0]).val();
+		//unit = $($($(ingredients[i]).children()[2]).children()[0]).val();
+		
+		//var row = {"RecipeID": recipeID,"IngrName":ingr,"Amount":amnt,"M_unit":unit};
+		var row = {"RecipeID": recipeID,"IngrName":ingr,"Amount":amnt};
+		
+		data[i] = row;
+	}
+
+	$.ajax({
+            type: 'POST',
+            url: '/functions.php',
+			cache: false,
+			data: {'action': 'addRecipeIngredients', 'data': data},
+            success: function (data, status) {
+				saveSuccessful();
+			}
+    });
 }

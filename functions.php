@@ -149,6 +149,33 @@ function deleteRecipe($data){
 	$result2 = runQuery($sql2); 
 }
 
+function updateRecipe($data){
+	$RecipeID = $data['RecipeID'];	
+	
+	$sql = "DELETE FROM recipes WHERE RecipeID = '$RecipeID';";
+	$result = runQuery($sql); 
+}
+
+function updateRecipeIngredients($data){
+	$RecipeID = $data[0]['RecipeID'];
+	$ingredients = array();    
+	for($i=0; $i<count($data); $i++){
+	   $RecipeID = $data[$i]['RecipeID'];
+	   $IngrName = $data[$i]['IngrName'];
+	   $Amount = $data[$i]['Amount'];
+
+	   $ingredients[] = "(null,'$RecipeID','$IngrName','$Amount')";
+	}
+
+	$sql = "DELETE FROM ingrRecipe WHERE RecipeID = '$RecipeID';";
+	$result = runQuery($sql);
+
+	$sql2 = "INSERT INTO ingrRecipe (IRID, RecipeID, IngrName, Amount) VALUES " . implode(', ', $ingredients);
+	$result2 = runQuery($sql2);
+	
+	echo $sql;
+}
+
 function getBatches(){
 	$sql = "SELECT BID, batches.DOC, recipes.RecipeID, recipes.RecipeName FROM batches INNER JOIN recipes ON batches.RecipeID = recipes.RecipeID";
 	$result = runQuery($sql);
