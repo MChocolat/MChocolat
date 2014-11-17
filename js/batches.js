@@ -22,7 +22,11 @@ $(document).ready( function () {
 					{"mData": 'RecipeName' },
 					{"mData": 'DOC' }
 				]
-			});
+			}
+			if ( batchesTable.length > 0 ) {
+                batchesTable.fnAdjustColumnSizing();
+            }
+			);
 			
 			// Mouseover row highlighting
 			$('#batchesTable tbody').on('mouseover', 'tr', function() {
