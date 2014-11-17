@@ -45,8 +45,8 @@
 				</div>
 			</div>
 	
-			<!--<a id="editRecipeButton" class="tiny button">Edit Selected</a>-->
-			<a class="tiny button" href="#editRecipe" data-reveal-id="dialog">Edit Selected</a>
+			<!--<a  class="tiny button">Edit Selected</a>-->
+			<a id="editRecipeButton" class="tiny button" data-reveal-id="dialog">Edit Selected</a>
 			<a id="deleteRecipeButton" class="tiny button">Delete Selected</a>
 
 			<div class="reveal-modal small" id="dialog" data-reveal="">
