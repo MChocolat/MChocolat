@@ -1,5 +1,5 @@
 var self;
-var recipesList;
+var boxSize;
 var ingredientsList;
 var recipeID;
 
@@ -7,7 +7,7 @@ var recipeID;
 $(document).ready( function () {
     self = this;
 	
-	// Load all Recipes  
+	/* Load all Recipes  
 	$.ajax({
 		type: "POST",
 		url: '/functions.php',
@@ -23,19 +23,21 @@ $(document).ready( function () {
 		error: function(xhr, desc, err) {
 		}
 	});
-	
+*/
+	var boxSizes = [4,6,8,12,15,16,24,30,36,45,60];
+	for (var i = 0; i<boxSizes.length; i++){
+	document.getElementById('numberSelect').options[i] = new Option(boxSizes[i]);
+	}
 	//Set Button Functions
-	$("#selectRecipeButton").bind("click", selectRecipe);
-	$("#barcodeButton").bind("click", addIngredients);
-	$("#addBatchButton").bind("click", addBatch);
+	$("#selectRecipeButton").bind("click", selectNumber);
 	
 } );
 
-function clearBatchIngredients(){
-	$('#ingredientsDiv').empty();
+function clearBatches(){
+	$('#batchesDiv').empty();
 	ingredientsList = [];
 }
-
+/*
 function createIngredientRow(i){
 	var div = document.createElement("div");
 	$(div).addClass("row");
@@ -62,40 +64,36 @@ function createIngredientRow(i){
 	div.appendChild(nameDiv);
 	div.appendChild(upcDiv);	
 }
+*/
 
-function selectRecipe(){
-	clearBatchIngredients();
+function selectNumber(){
+	clearBatches();
 
-	recipeID = getRecipeID($("#recipeSelect option:selected").text());
+	boxSize = $("#numberSelect option:selected").text();
 
 	//Load ingredients for selected recipe
-	$.ajax({
-		type: "POST",
-		url: '/functions.php',
-		cache: false,
-		data: {'action': 'getRecipeIngredients', 'data': recipeID},
-		success: function(data, status) {
-			ingredientsList = jQuery.parseJSON(data);
-			
-			for (var i = 0; i<ingredientsList.length; i++) {
-				createIngredientRow(i);
-			}
-		},
-		error: function(xhr, desc, err) {
-		}
-	});
-	
-	
+	for (var i = 0; i<boxSize; i++) {
+		createBatchSpot();
+	}
 }
 
-function getRecipeID(recipe){
-	var ID;
-	for (var i = 0; i<recipesList.length; i++) {
-		if (recipesList[i]['RecipeName'] == recipe){
-			ID = recipesList[i]['RecipeID'];
-		}
-	}
-	return ID.toString();
+function createBatchSpot(){
+	var div = document.createElement("div");
+	$(div).addClass("row");
+	self.getElementById('ingredientsDiv').appendChild(div);
+	
+	var upcDiv = document.createElement("div");
+
+	$(upcDiv).addClass("large-6 columns");
+
+	
+	var upc = document.createElement("input");
+	upc.type = "text";
+	upc.placeholder = "Ingredient UPC";
+
+	upcDiv.appendChild(upc);
+
+	div.appendChild(upcDiv);
 }
 
 function addBatch(){

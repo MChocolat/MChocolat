@@ -10,17 +10,17 @@
   
   	<body>
 		<div class="row ">
-			<div id="addBatchSection" class="large-6 columns">
+			<div id="selectNumberSection" class="large-6 columns">
 				<div class="panel">
 		  			<div class="h3">How many chocolates are in your box?</div>
 					<p></p>
 						
 					<div class="row">
 						<div class="small-9 columns">
-							<select id="recipeSelect"></select>
+							<select id="numberSelect"></select>
 						</div>
 						<div class="small-3 columns">
-							<a id="selectRecipeButton" class="tiny button">Select</a>
+							<a id="selectNumberButton" class="tiny button">Select</a>
 						</div>
 					</div>
 						
@@ -29,7 +29,7 @@
 			</div>
 
 			
-			<div id="ingredientsDiv" class="large-6 columns panel">
+			<div id="batchesDiv" class="large-6 columns panel">
 			
 			
 			</div>
