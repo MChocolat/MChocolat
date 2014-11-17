@@ -63,7 +63,7 @@
 					<!-- left -->
 					<div id="right" class="large-6 columns">
 						<div class="large-10 columns">
-									<input id="addNameInput" type = "text" placeholder = "Name">
+									<input id="editNameInput" type = "text" placeholder = "Name">
 						</div>
 						<div class="panel">
 							<div class="h3">Ingredients</div>
@@ -90,7 +90,7 @@
 									<ul class="button-group even-3">
 										<li><a href="#clear" class="tiny button">Clear Entries</a></li>
 										<li><a href="#" data-reveal-id="barcode" class="tiny button">Scan Barcode</a></li>
-										<li><a id="addRecipeButton" class="tiny button">Add Recipe</a></li>
+										<li><a id="addRecipeButton" class="tiny button">Save Recipe</a></li>
 									</ul>
 
 									<div id="barcode" class="reveal-modal" data-reveal>
