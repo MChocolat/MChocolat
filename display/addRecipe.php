@@ -10,7 +10,6 @@
   
   	<body>
 		<div class="row">
-			<!-- left -->
 			<div id="right" class="large-6 columns">
 				<div class="panel">
 		  			<div class="h3">Ingredients</div>
@@ -45,23 +44,18 @@
 							  <p>Please scan the barcode!</p>
 							  <a class="close-reveal-modal">&#215;</a>
 							</div>
-
 						</div>
 					</div>
 				</div>
 	  		</div>
 
-			<!-- right -->
 	  		<div id="left" class="large-6 columns">
 				<div class="panel">
 		  			<div class="h3">New Recipe</div>
 		  			<p></p>
 
 					<div class="row">
-						<div class="large-2 medium-2 small-2 columns">
-					  		<img src="/img/chocolate.jpg" width="300" height="300">
-					  	</div>
-						<div class="large-10 columns">
+						<div class="large-12 columns">
 					  		<input id="addNameInput" type = "text" placeholder = "Name">
 					  	</div>
 					</div>

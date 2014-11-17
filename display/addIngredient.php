@@ -10,16 +10,14 @@
   
   	<body>
 		<div class="row">
-			<!-- left -->
-			<div id="addIngredientSection" class="large-5 columns">
+			<div id="addIngredientSection" class="large-6 large-centered columns">
 		  		<div id="addIngredientSection" class="panel">
 		  			<div class="h3">Add New Ingredient</div>
 		  			<p></p>
 
-
 					<div class="row">
 						<div class="large-12 medium-4 columns">
-					  		<input id="addNameInput" type = "text" placeholder = "Name (temp)">
+					  		<input id="addNameInput" type = "text" placeholder = "Name (Temp)">
 					  	</div>
 					</div>
 
@@ -63,7 +61,6 @@
 							  <p>Please scan the barcode!</p>
 							  <a class="close-reveal-modal">&#215;</a>
 							</div>
-
 						</div>
 					</div>
 		  		</div>

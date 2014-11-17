@@ -12,52 +12,7 @@
   
   	<body>
 		<!-- Edit Recipe -->
-		
 		<div class="row">
-		<!--
-			<div id="editRecipeSection" class="large-5 columns">
-		  		<div class="panel">
-		  			<div class="h3">Update Recipe</div>
-		  			<p></p>
-		  			<div class="row">
-						<div class="large-12 medium-4 columns">
-					  		<input id="editIdInput" type = "text" placeholder = "ID">
-					  	</div>
-					</div>
-
-					<div class="row">
-						<div class="large-12 medium-4 columns">
-					  		<input id="editNameInput" type = "text" placeholder = "Name">
-					  	</div>
-					</div>
-
-					<div class="row">
-						<div class="large-12 medium-4 columns">
-					  		<input id="editStepsInput" type = "text" placeholder = "Steps">
-					  	</div>
-					</div>
-					  
-					<p></p>
-
-					<div class="">
-					  	<div class="small-11 small-centered columns">
-						    <ul class="button-group even-3">
-						  		<li><a href="#clear" class="tiny button">Clear Entries</a></li>
-						  		<li><a href="#" data-reveal-id="barcode" class="tiny button">Scan Barcode</a></li>
-						  		<li><a id="addIngredientButton" class="tiny button">Update Recipe</a></li>
-							</ul>
-
-							<div id="barcode" class="reveal-modal" data-reveal>
-							  <h2>Barocde Scanner.</h2>
-							  <p>Please scan the barcode!</p>
-							  <a class="close-reveal-modal">&#215;</a>
-							</div>
-
-						</div>
-					</div>
-		  		</div>
-		  	</div>
-			-->
 			<div id="dialog" class="dialog" title="Edit Recipe">
 				<div class="row">
 					<!-- left -->
@@ -85,12 +40,49 @@
 							  
 							<p></p>
 
+						</div>
+					</div>
+				</div>
+			</div>
+	
+			<!--<a id="editRecipeButton" class="tiny button">Edit Selected</a>-->
+			<a class="tiny button" href="#editRecipe" data-reveal-id="editRecipe">Edit Selected</a>
+			<a id="deleteRecipeButton" class="tiny button">Delete Selected</a>
+
+			<div class="reveal-modal small" id="editRecipe" data-reveal="">
+				<h3>Edit Recipe</h3>
+				[Add Recipe form code here. If there was a way to reference the selected code and add it here maybe?]
+				<a class="close-reveal-modal">×</a>
+
+				<div class="row">
+					<div class="large-12 columns">
+						<div class="panel">
+				  			<div class="h3">Ingredients</div>
+							<p></p>
+							
+							<div class="row ">
+								<div class="large-10 columns">
+									<select id="ingredientNum"></select>
+								</div>
+								<div class="large-2 columns">
+									<a id="addIngredients" class="tiny button">Add</a>
+								</div>
+							</div>
+							
+							<div class="row ">
+								<div id="ingredientsDiv" class="large-12 columns">	
+								</div>
+							</div>
+							  
+							<p></p>
+
 							<div class="">
 								<div class="small-11 small-centered columns">
 									<ul class="button-group even-3">
 										<li><a href="#clear" class="tiny button">Clear Entries</a></li>
 										<li><a href="#" data-reveal-id="barcode" class="tiny button">Scan Barcode</a></li>
 										<li><a id="addRecipeButton" class="tiny button">Save Recipe</a></li>
+
 									</ul>
 
 									<div id="barcode" class="reveal-modal" data-reveal>
@@ -98,18 +90,15 @@
 									  <p>Please scan the barcode!</p>
 									  <a class="close-reveal-modal">&#215;</a>
 									</div>
-
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- Search Bar / Inventory Table --> 
-			<a id="editRecipeButton" class="tiny button">Edit Selected</a>
-			<a id="deleteRecipeButton" class="tiny button">Delete Selected</a>
+
   			<div class="small-12 small-center column">
-				<table id="recipesTable" class="display small-center">
+				<table id="recipesTable" class="display large-center">
 				 	<thead>
 					    <tr>
 							<th>ID</th>

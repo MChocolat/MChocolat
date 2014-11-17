@@ -12,7 +12,7 @@
 		<div class="row">
 		  	<div class="small-11 small-centered columns">
 				<p></p>
-				<ul class="button-group even-3">
+				<ul class="button-group even-4">
 					<li>
 						<a href="#" class="button" data-dropdown="ingredients" data-options="is_hover:true">Ingredients</a>
 					</li>
@@ -24,16 +24,11 @@
 			    	<li>
 			    		<a href="#" class="button" data-dropdown="recipes" data-options="is_hover:true">Recipes</a>
 			    	</li>
-<!--
+
 			    	<li>
-			    		<a href="#" class="button" data-dropdown="boxLabels" data-options="is_hover:true">Box Labels</a>
+			    		<a href="#" class="button" data-dropdown="boxLabels" data-options="is_hover:true">Labels</a>
 			    	</li>
-		-->
-				<!--
-			    	<li>
-			    		<a href="#" class="button" data-dropdown="packaging" data-options="is_hover:true">Packaging</a>
-			    	</li>
-			    -->
+
 				</ul>
 
 				<ul id="ingredients" class="f-dropdown" data-dropdown-content>
@@ -42,23 +37,20 @@
 				</ul>
 
 				<ul id="batches" class="f-dropdown" data-dropdown-content>
-				  <li><a href="/display/addBatch.php">Add New Batch</a></li>
+				  <li><a href="/display/addBatch.php">Make New Batch</a></li>
 				  <li><a href="/display/batches.php">View/Search All Batches</a></li>
 				</ul>
 
 				<ul id="recipes" class="f-dropdown" data-dropdown-content>
-				  <li><a href="/display/addRecipe.php">Add New Recipe</a></li>
+				  <li><a href="/display/addRecipe.php">Create New Recipe</a></li>
 				  <li><a href="/display/recipes.php">View/Search All Recipes</a></li>
 				</ul>
 
 				<ul id="boxLabels" class="f-dropdown" data-dropdown-content>
-				  <li><a href="/display/createBoxLabel.php">Add New Box Label</a></li>
+				  <li><a href="/display/createBoxLabel.php">Make New Box Label</a></li>
+				 <!--
 				  <li><a href="/display/boxLabels.php">View/Search All Box Labels</a></li>
-				</ul>
-
-				<ul id="packaging" class="f-dropdown" data-dropdown-content>
-				  <li><a href="/display/addPackaging.php">Add New Packaging Option</a></li>
-				  <li><a href="/display/packaging.php">View/Search Packaging Options</a></li>
+				-->
 				</ul>
 			</div>
 		</div>

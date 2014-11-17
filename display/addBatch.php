@@ -10,28 +10,28 @@
   
   	<body>
 		<div class="row ">
-			<div id="addBatchSection" class="large-5 columns">
+			<div id="addBatchSection" class="large-6 columns">
 				<div class="panel">
-		  			<div class="h3">Add Batch</div>
+		  			<div class="h3">Add New Batch</div>
 					<p></p>
 						
-					<div class="row ">
-						<div class="small-8 columns">
+					<div class="row">
+						<div class="small-9 columns">
 							<select id="recipeSelect"></select>
 						</div>
-						<div class="small-4 columns">
+						<div class="small-3 columns">
 							<a id="selectRecipeButton" class="tiny button">Select</a>
 						</div>
 					</div>
 						
 					<p></p>
 
-					<div class="row">
-					  	<div class="large-11 small-centered columns">
+					<div class="">
+					  	<div class="small-11 small-centered columns">
 						    <ul class="button-group even-3">
 						  		<li><a href="#clear" class="tiny button">Clear Entries</a></li>
 						  		<li><a href="#" data-reveal-id="barcode" class="tiny button">Scan Barcode</a></li>
-						  		<li><a id="addBatchButton" class="tiny button">Add Batch</a></li>
+						  		<li><a href="addBatchButton" class="tiny button">Add Batch</a></li>
 							</ul>
 
 							<div id="barcode" class="reveal-modal" data-reveal>
@@ -45,7 +45,7 @@
 			</div>
 
 			
-			<div id="ingredientsDiv" class="large-7 columns panel">
+			<div id="ingredientsDiv" class="large-6 columns panel">
 			
 			
 			</div>
