@@ -80,7 +80,7 @@ function selectNumber(){
 function createBatchSpot(){
 	var div = document.createElement("div");
 	$(div).addClass("row");
-	self.getElementById('ingredientsDiv').appendChild(div);
+	self.getElementById('batchesDiv').appendChild(div);
 	
 	var upcDiv = document.createElement("div");
 
