@@ -263,6 +263,7 @@ function updateRecipeIngredients(recipeID){
 			cache: false,
 			data: {'action': 'updateRecipeIngredients', 'data': data},
             success: function (data, status) {
+				self.selectedRow[0].innerText($('#editNameInput').val());
 				$('ingredientsDiv').empty();
 				saveSuccessful();
 			}
