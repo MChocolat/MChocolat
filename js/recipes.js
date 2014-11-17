@@ -98,16 +98,29 @@ function removeRecipeRow(){
 }
 
 function editRecipe(){
-	// Create a way to add multiple ingredients to the existing ingredients
-	for(i = 0; i < 15; i++){
-		document.getElementById('ingredientNum').options[i] = new Option(i + 1);
-	}
-	// Create the row for adding an ingredient to the recipe
-	createIngredientRow();
-	
-	//Set Button Functions
-	$("#addIngredients").bind("click", addIngredients);
-	$("#updateRecipeButton").bind("click", updateRecipe);
+
+	//Load all recipe's ingredients
+	var data = {"RecipeID":self.selectedRow[0].innerText};
+	$.ajax({
+            type: 'POST',
+            url: '/functions.php',
+			cache: false,
+			data: {'action': 'getRecipeIngredients', 'data': data},
+            success: function (data, status) {
+					$('#editNameInput').val(self.selectedRow[1].innerText);
+			
+					// Create a way to add multiple ingredients to the existing ingredients
+					for(i = 0; i < 15; i++){
+						document.getElementById('ingredientNum').options[i] = new Option(i + 1);
+					}
+					// Create the row for adding an ingredient to the recipe
+					createIngredientRow();
+					
+					//Set Button Functions
+					$("#addIngredients").bind("click", addIngredients);
+					$("#updateRecipeButton").bind("click", updateRecipe);
+			}
+    });
 }
 
 // Add the number of ingredient rows specified
