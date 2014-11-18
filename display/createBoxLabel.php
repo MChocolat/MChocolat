@@ -19,17 +19,18 @@
 						<div class="small-9 columns">
 							<select id="numberSelect"></select>
 						</div>
-						<div class="small-3 columns">
-							<a id="selectNumberButton" class="tiny button">Select</a>
-						</div>
+						
 					</div>
 
 					<div class="h3">Would you like to scan the batch barcodes or select them from a dropdown menu?</div>
 					<p></p>
 					<div class = "row">
-						<div class="small-3 columns">
+						<div class="small-9 columns">
 							<input type="checkbox" id="type" value="scan">Scan<br>
 							<input type="checkbox" id="type" value="select">Select
+						</div>
+						<div class="small-3 columns">
+							<a id="selectNumberButton" class="tiny button">Next</a>
 						</div>
 					</div>
 					<p></p>
