@@ -207,8 +207,6 @@ function getBatches(){
 }
 
 function getBatchesByDate(){
-join recipes where batches.RecipeID = recipes.RecipeID
-order by batches.DOC, batches.DOC ASC;
 	$sql = "SELECT BID, batches.RecipeID, recipes.RecipeName, DOC FROM batches 
 		JOIN recipes WHERE batches.RecipeID = recipes.RecipeID 
 		order by batches.DOC, batches.DOC ASC;";
