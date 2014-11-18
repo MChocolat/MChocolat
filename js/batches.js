@@ -165,7 +165,7 @@ function createIngredientRow(i){
 	
 	var upc = document.createElement("input");
 	upc.type = "text";
-	$(upc).val(dataRow['UPC']);
+	$(upc).val(ingredientsList[i]['UPC']);
 	
 	idDiv.appendChild(id);
 	nameDiv.appendChild(name);
