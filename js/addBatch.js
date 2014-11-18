@@ -129,6 +129,7 @@ function addBatchIngredients(batchID){
 	var ingredients = $(ingredientsDiv).children();
 	
 	var upc;
+	var IngrID;
 	
 	for(i = 0; i < ingredients.size(); i++){
 		IngrID = $($($(ingredients[i]).children()[0]).children()[0]).text();

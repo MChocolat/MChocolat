@@ -234,6 +234,23 @@ function addBatchIngredients($data){
 	echo $sql;
 }
 
+function updateBatchIngredients($data){
+
+	$ingredients = array();    
+	for($i=0; $i<count($data); $i++){
+	   $ID = $data[$i]['ID'];
+	   $UPC = $data[$i]['UPC'];
+
+	   $ingredients[] = "('$ID', '$UPC')";
+	}
+
+	//$sql = "UPDATE batchIngr2 SET UPC = '$UPC' WHERE ID = '$ID' VALUES " . implode(', ', $ingredients);
+	
+	//$result = runQuery($sql);
+	
+	echo $sql;
+}
+
 function deleteBatch($data){
 	$BID = $data['BID'];
 	

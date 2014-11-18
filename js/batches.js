@@ -177,6 +177,28 @@ function createIngredientRow(i){
 }
 
 function updateBatch(){
-//TODO actually save the things						
+	var data = new Array();
+
+	var ingredients = $(ingredientsDiv).children();
+
+	var upc;
+	var ID;
+	
+	for(i = 0; i < ingredients.size(); i++){
+		ID = $($($(ingredients[i]).children()[0]).children()[0]).text();
+		upc = $($($(ingredients[i]).children()[2]).children()[0]).val();
+		var row = {"ID":ID, "UPC":upc};
+		data[i] = row;
+	}
+
+	$.ajax({
+            type: 'POST',
+            url: '/functions.php',
+			cache: false,
+			data: {'action': 'updateBatchIngredients', 'data': data},
+            success: function (data, status) {
+				saveSuccessful();
+			}
+    });					
 									
 }
