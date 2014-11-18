@@ -64,5 +64,5 @@ function addIngredient(){
 }
 
 function generateI25(){
-	$('.barcodeI25').barcode({code:'I25'}
+	$('.barcodeI25').barcode({code:'I25'});
 }
