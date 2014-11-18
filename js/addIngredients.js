@@ -24,16 +24,16 @@ $(document).ready( function () {
 		    * @param {Object} response the JSON data parsed into an object
 		    */
 		    function process_response(response) {
-		        //var frm = $("#form-ajax");
-		        //var i;
+		        var frm = $("#form-ajax");
+		        var i;
 		 
 		        //console.dir(response);      // for debug
 		 
-		        //for (i in response) {
-		        //    frm.find('[name="' + i + '"]').val(response[i]);
-		            //$("#addSubInput").val(jQuery.parseJSON(response)[0]["SubIngr"])
+		        for (i in response) {
+		            frm.find('[name="' + i + '"]').val(response[i]);
+		            $("#addSubInput").val(jQuery.parseJSON(response)[0]["SubIngr"])
 
-		        //}
+		        }
 		    }
 		}
 	});
