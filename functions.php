@@ -68,7 +68,6 @@ function addIngredient($data){
 
 	$date = date("Y-m-d");
 	
-	//GET ACTUAL EXP DATE
 
 	$sql = "INSERT IGNORE INTO uniqueIngr (UPC, IngrName, SubIngr)
 		VALUES('$UPC', '$IngrName', '$subIngr');";
@@ -87,6 +86,26 @@ function deleteIngredient($data){
 	
 	$sql = "DELETE FROM ingredients WHERE IngrID = '$IngrID';";
 	$result = runQuery($sql); 
+}
+
+function updateIngredient($data){
+	$IngrID = $data['IngrID'];
+	$IngrName = $data['IngrName'];
+	$UPC = $data['UPC'];
+	$exp = $data['Exp'];
+	$lotNum = $data['LotNum'];
+	$subIngr = $data['SubIngr'];
+
+	$date = date("Y-m-d");
+	
+	$sql = "INSERT IGNORE INTO uniqueIngr (UPC, IngrName, SubIngr)
+		VALUES('$UPC', '$IngrName', '$subIngr');";
+	$result = runQuery($sql); 
+
+	$sql2 = "UPDATE ingredients SET UPC = '$UPC', DOP = '$date', Exp = '$Exp', Lot = '$lotNum'  WHERE IngrID = '$IngrID';";
+	$result2 = runQuery($sql); 
+	
+	echo $result2;
 }
 
 function getRecipes(){

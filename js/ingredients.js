@@ -71,19 +71,6 @@ $(document).ready( function () {
 	
 } );
 
-// Load the Edit form with Ingredient's info
-function loadEditForm(){
-	/*
-	$('#editIngredientSection').removeClass('hidden');
-	$('#editIngredientSection').addClass('column');
-	//$('#addIngredientSection').addClass('hidden');
-
-	$('#editUpcInput').val(self.selectedRow[1].innerText);
-	$('#editDopInput').val(self.selectedRow[2].innerText);
-	$('#editExpInput').val(self.selectedRow[3].innerText);
-	$('#editSubInput').val(self.selectedRow[6].innerText);
-	*/
-}
 
 //Delete ingredient from DB
 function deleteIngredient(){
@@ -110,18 +97,39 @@ function removeIngredient(){
 }
 
 function editIngredient(){
+	$('#editNameInput').val(self.selectedRow[1].innerText);
+	$('#editUpcInput').val(self.selectedRow[2].innerText);
+	$('#editLotNumInput').val(self.selectedRow[5].innerText);
+	$('#editExpInput').val(self.selectedRow[4].innerText);
+	$('#editSubInput').val(self.selectedRow[6].innerText);
+	
+	$("#updateIngredientButton").bind("click", updateIngredient);
 	
 }
 
 function updateIngredient(){
-	//TODO: AJAX call and return from DB b4 changing UI
-	
-	//TODO: Update probably needs to choose last param based on position in table vs its own ID
-	self.ingredientsTable.fnUpdate({"UPC":$('#editUpcInput').val(),
-									"DOP":$('#editDopInput').val(),"Exp":$('#editExpInput').val(),
-									"SubIngr":$('#editSubInput').val()}, parseInt(self.selectedRow[0].innerText)-1);
-	$('#editIngredientSection').addClass('hidden');
-	$('#editIngredientSection').removeClass('column');
-	//$('#addIngredientSection').removeClass('hidden');							
-									
+	//TODO: form validation
+	var data = {"IngrID":self.selectedRow[0].innerText,
+				"IngrName":$('#editNameInput').val(),
+				"UPC":$('#editUpcInput').val(),
+				"Exp":$('#editExpInput').val(),
+				"LotNum":$('#editLotNumInput').val(),
+				"SubIngr":$('#editSubInput').val()};
+	$.ajax({
+            type: 'POST',
+            url: '/functions.php',
+			cache: false,
+			data: {'action': 'updateIngredient', 'data': data},
+            success: function (data, status) {
+			
+				$(self.selectedRow[1]).text($('#editNameInput').val());
+				$(self.selectedRow[2]).text($('#editUpcInput').val());
+				$(self.selectedRow[4]).text($('#editLotNumInput').val());
+				$(self.selectedRow[5]).text($('#editLotNumInput').val());
+				$(self.selectedRow[6]).text($('#editSubInput').val());
+				
+				$('#dialog').trigger('reveal:close');
+				alert("Ingredient SA-SA-SAVED!!!!");
+			}
+    });
 }
