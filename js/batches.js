@@ -120,7 +120,7 @@ function addBatch(){
 }
 
 function editBatch(){
-
+	$('#ingredientsDiv').empty();
 	$('#batchNameHeader').text(self.selectedRow[1].innerText);
 	var data = {"BID":self.selectedRow[0].innerText};
 

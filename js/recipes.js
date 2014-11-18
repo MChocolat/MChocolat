@@ -87,7 +87,7 @@ function removeRecipeRow(){
 }
 
 function editRecipe(){
-
+	$('#ingredientsDiv').empty();
 	//Load all recipe's ingredients
 	var data = {"RecipeID":self.selectedRow[0].innerText};
 	$.ajax({
