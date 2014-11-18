@@ -22,7 +22,7 @@
 					<div class="large-12 columns">
 						<div class="panel">
 							<div class="h2" id="batchNameHeader"></div>
-							<div id="ingredientsDiv" class="large-6 columns panel">
+							<div id="ingredientsDiv" >
 							</div>
 								
 							<p></p>
