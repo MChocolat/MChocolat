@@ -83,6 +83,7 @@ function createBatchSpotSelect(){
 		selection.appendChild(opt);
 	}
 
+	selectDiv.appendChild(selection);
 	div.appendChild(selectDiv);
 }
 
