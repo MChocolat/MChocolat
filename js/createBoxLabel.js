@@ -39,9 +39,15 @@ function selectNumber(){
 
 	boxSize = $("#numberSelect option:selected").text();
 
-	//Load ingredients for selected recipe
-	for (var i = 0; i<boxSize; i++) {
-		createBatchSpotSelect();
+	var type = self.getElementById('type').value;
+	if (type == 0){
+		for (var i = 0; i<boxSize; i++) {
+		createBatchSpotScan();
+		}
+	} else{
+		for (var i = 0; i<boxSize; i++) {
+			createBatchSpotSelect();
+		}
 	}
 }
 

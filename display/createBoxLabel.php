@@ -26,8 +26,8 @@
 					<p></p>
 					<div class = "row">
 						<div class="small-9 columns">
-							<input type="checkbox" id="type" value="0">Scan<br>
-							<input type="checkbox" id="type" value="1">Select
+							<input type="checkbox" id="type"/>Scan<br>
+							<input type="checkbox" id="type"/>Select
 						</div>
 						<div class="small-3 columns">
 							<a id="selectNumberButton" class="tiny button">Next</a>
