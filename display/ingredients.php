@@ -10,6 +10,7 @@
   	</head>
   
   	<body>
+		<div class="bodyContent">
 		<div class="row">
 			<!-- Search Bar / Inventory Table -->
 			<a id="editIngredientButton" class="tiny button" data-reveal-id="dialog">Edit Selected</a>
@@ -90,6 +91,7 @@
 				</table>
 			</div>
 			
+		</div>
 		</div>
 
 	<script src="js/vendor/jquery.js"></script>
