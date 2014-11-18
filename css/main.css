@@ -24,18 +24,11 @@
 * { color: #371d10; }
 
 .bodyContent{
-	background: #FFFFFF;
 	margin:0 auto;
 	padding: 10px;
 	width: 1000px;
 }
 
-.panel {
-	background: #FFFFFF;
-}
 
-#datatable {
-    width: 100% !Important;
-}
 
 
