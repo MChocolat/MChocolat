@@ -48,7 +48,6 @@ $(document).ready( function () {
 				self.ingredientsTable.$('tr.selected').removeClass('selected');
 				$(this).addClass('selected');
 				self.selectedRow = this.cells;
-				loadEditForm();
 			}
 	
 	} );
@@ -63,10 +62,6 @@ $(document).ready( function () {
 	$("#deleteIngredientButton").bind("click", deleteIngredient);
 	
 	$("#editIngredientButton").bind("click", editIngredient);
-	
-	$("#dialog").dialog({ autoOpen: false,
-							width: 800,
-							height: 800});
 	
 	
 } );
