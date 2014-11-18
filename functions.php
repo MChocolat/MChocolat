@@ -222,12 +222,11 @@ function addBatchIngredients($data){
 	for($i=0; $i<count($data); $i++){
 	   $BID = $data[$i]['BID'];
 	   $IngrID = $data[$i]['IngrID'];
-	   $UPC = $data[$i]['UPC'];
 
-	   $ingredients[] = "(null, '$BID', '$IngrID', '$UPC')";
+	   $ingredients[] = "('$BID', '$IngrID')";
 	}
 
-	$sql = "INSERT INTO batchIngr2 (ID, BID, IngrID, UPC) VALUES " . implode(', ', $ingredients);
+	$sql = "INSERT INTO batchIngr (BID, IngrID) VALUES " . implode(', ', $ingredients);
 
 	$result = runQuery($sql);
 	
