@@ -37,7 +37,6 @@
 									<a id="addIngredients" class="tiny button">Add</a>
 								</div>
 							</div>
-							
 							<div class="row ">
 								<div id="ingredientsDiv" class="large-12 columns">	
 								</div>

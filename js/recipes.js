@@ -61,17 +61,6 @@ $(document).ready( function () {
 	
 } );
 
-// Load the Edit form with Recipe's info
-function loadEditForm(){
-	/*
-	$('#editRecipeSection').removeClass('hidden');
-	$('#editRecipeSection').addClass('column');
-	//$('#addRecipeSection').addClass('hidden');
-
-	$('#editIdInput').val(self.selectedRow[0].innerText);
-	$('#editNameInput').val(self.selectedRow[1].innerText);
-	*/
-}
 
 //Delete recipe from DB
 function deleteRecipe(){

@@ -62,6 +62,12 @@ $(document).ready( function () {
 	$("#updateIngredientButton").bind("click", updateIngredient);
 	$("#deleteIngredientButton").bind("click", deleteIngredient);
 	
+	$("#editIngredientButton").bind("click", editIngredient);
+	
+	$("#dialog").dialog({ autoOpen: false,
+							width: 800,
+							height: 800});
+	
 	
 } );
 
@@ -103,7 +109,9 @@ function removeIngredient(){
 	alert("Ingredient Deleted!!!!");
 }
 
-
+function editIngredient(){
+	
+}
 
 function updateIngredient(){
 	//TODO: AJAX call and return from DB b4 changing UI
