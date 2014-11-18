@@ -97,9 +97,6 @@ function editIngredient(){
 	$('#editLotNumInput').val(self.selectedRow[5].innerText);
 	$('#editExpInput').val(self.selectedRow[4].innerText);
 	$('#editSubInput').val(self.selectedRow[6].innerText);
-	
-	$("#updateIngredientButton").bind("click", updateIngredient);
-	
 }
 
 function updateIngredient(){
