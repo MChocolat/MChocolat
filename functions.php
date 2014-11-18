@@ -74,7 +74,7 @@ function addIngredient($data){
 	$result = runQuery($sql); 
 	
 	$sql2 = "INSERT INTO ingredients (IngrID, UPC, DOP, Exp, Lot, IngrName)
-		VALUES(null, '$UPC', '$date', '$exp', '$lotNum', $IngrName);";
+		VALUES(null, '$UPC', '$date', '$exp', '$lotNum', '$IngrName');";
 	$result2 = runQuery($sql2); 
 	
 	echo $result2;
