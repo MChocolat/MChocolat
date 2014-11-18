@@ -147,38 +147,36 @@ function createIngredientRow(i){
 	$(div).addClass("row");
 	self.getElementById('ingredientsDiv').appendChild(div);
 	
-	
+	var idDiv = document.createElement("div");
 	var nameDiv = document.createElement("div");
 	var upcDiv = document.createElement("div");
 	
-	$(nameDiv).addClass("large-6 columns");
-	$(upcDiv).addClass("large-6 columns");
+	$(idDiv).addClass("large-4 columns");
+	$(nameDiv).addClass("large-4 columns");
+	$(upcDiv).addClass("large-4 columns");
 
+	var id = document.createElement("p");
+	var s = document.createTextNode(ingredientsList[i]['ID']);
+	id.appendChild(s);
+	
 	var name = document.createElement("p");
 	var t = document.createTextNode(ingredientsList[i]['IngrName']);
 	name.appendChild(t);
 	
 	var upc = document.createElement("input");
 	upc.type = "text";
-	upc.placeholder = "Ingredient UPC";
+	$(upc).val(dataRow['UPC']);
 	
+	idDiv.appendChild(id);
 	nameDiv.appendChild(name);
 	upcDiv.appendChild(upc);
 	
+	div.appendChild(idDiv);
 	div.appendChild(nameDiv);
 	div.appendChild(upcDiv);	
 }
 
 function updateBatch(){
-	//TODO: AJAX call and return from DB b4 changing UI
-	
-	//TODO: Update probably needs to choose last param based on position in table vs its own ID
-	self.batchesTable.fnUpdate({"IngrID":$('#editIdInput').val(),"UPC":$('#editUpcInput').val(),
-									"DOP":$('#editDopInput').val(),"Exp":$('#editExpInput').val(),
-									"Price":$('#editPriceInput').val(),"Distributor":$('#editDistInput').val(),
-									"SubIngr":$('#editSubInput').val()}, parseInt(self.selectedRow[0].innerText)-1);
-	$('#editBatchSection').addClass('hidden');
-	$('#editBatchSection').removeClass('column');
-	//$('#addBatchSection').removeClass('hidden');							
+//TODO actually save the things						
 									
 }

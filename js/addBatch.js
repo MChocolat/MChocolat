@@ -45,9 +45,9 @@ function createIngredientRow(i){
 	var nameDiv = document.createElement("div");
 	var upcDiv = document.createElement("div");
 	
-	$(idDiv).addClass("large-6 columns");
-	$(nameDiv).addClass("large-6 columns");
-	$(upcDiv).addClass("large-6 columns");
+	$(idDiv).addClass("large-4 columns");
+	$(nameDiv).addClass("large-4 columns");
+	$(upcDiv).addClass("large-4 columns");
 
 	var id = document.createElement("p");
 	var s = document.createTextNode(ingredientsList[i]['IRID']);
