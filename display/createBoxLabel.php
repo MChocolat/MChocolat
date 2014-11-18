@@ -23,7 +23,15 @@
 							<a id="selectNumberButton" class="tiny button">Select</a>
 						</div>
 					</div>
-						
+
+					<div class="h3">Would you like to scan the batch barcodes or select them from a dropdown menu?</div>
+					<p></p>
+					<div class = "row">
+						<div>
+							<input type="checkbox" id="type" value="scan">Scan<br>
+							<input type="checkbox" id="type" value="select">Select
+						</div>
+					</div>
 					<p></p>
 				</div>
 			</div>

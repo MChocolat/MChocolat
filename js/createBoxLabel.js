@@ -1,6 +1,6 @@
 var self;
 var boxSize;
-var ingredientsList;
+var batchesList;
 var recipeID;
 
 // Function for when page first loads, what you want it to do
