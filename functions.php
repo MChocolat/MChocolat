@@ -105,7 +105,7 @@ function updateIngredient($data){
 	$sql2 = "UPDATE ingredients SET UPC = '$UPC', DOP = '$date', Exp = '$exp', Lot = '$lotNum'  WHERE IngrID = '$IngrID';";
 	$result2 = runQuery($sql); 
 	
-	echo $result2;
+	echo $sql2;
 }
 
 function getRecipes(){
