@@ -41,33 +41,26 @@ function createIngredientRow(i){
 	$(div).addClass("row");
 	self.getElementById('ingredientsDiv').appendChild(div);
 	
-	var idDiv = document.createElement("div");
 	var nameDiv = document.createElement("div");
-	var upcDiv = document.createElement("div");
+	var idDiv = document.createElement("div");
 	
-	$(idDiv).addClass("large-4 columns");
-	$(nameDiv).addClass("large-4 columns");
-	$(upcDiv).addClass("large-4 columns");
+	$(nameDiv).addClass("large-6 columns");
+	$(idDiv).addClass("large-6 columns");
 
-	var id = document.createElement("p");
-	var s = document.createTextNode(ingredientsList[i]['IRID']);
-	id.appendChild(s);
-	
 	var name = document.createElement("p");
 	var t = document.createTextNode(ingredientsList[i]['IngrName']);
 	name.appendChild(t);
 	
-	var upc = document.createElement("input");
-	upc.type = "text";
-	upc.placeholder = "Ingredient UPC";
+	var id = document.createElement("input");
+	id.type = "text";
+	id.placeholder = "Ingredient ID";
 	
-	idDiv.appendChild(id);
 	nameDiv.appendChild(name);
-	upcDiv.appendChild(upc);
+	idDiv.appendChild(id);
 	
-	div.appendChild(idDiv);
+
 	div.appendChild(nameDiv);
-	div.appendChild(upcDiv);	
+	div.appendChild(idDiv);	
 }
 
 function selectRecipe(){
@@ -128,7 +121,7 @@ function addBatchIngredients(batchID){
 
 	var ingredients = $(ingredientsDiv).children();
 	
-	var upc;
+	var id;
 	var IngrID;
 	
 	for(i = 0; i < ingredients.size(); i++){
