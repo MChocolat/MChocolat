@@ -39,7 +39,7 @@ function getIngredients(){
 				uniqueIngr.SubIngr
 			FROM ingredients
 			left JOIN uniqueIngr
-			WHERE ingredients.UPC = uniqueIngr.UPC;";
+			ON ingredients.UPC = uniqueIngr.UPC;";
 	$result = runQuery($sql);
 	$finalResult = array();
 	while ($row = $result->fetch_assoc()){
