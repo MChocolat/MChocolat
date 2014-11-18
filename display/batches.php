@@ -16,20 +16,18 @@
 			<a id="deleteBatchButton" class="tiny button">Delete Selected</a>
 			
 			<div class="reveal-modal small" id="dialog" data-reveal="">
-				<h3>Edit Ingredient</h3>
+				<h3>Edit Batch</h3>
 				<a class="close-reveal-modal">×</a>
 				<div class="row">
 					<div class="large-12 columns">
 						<div class="panel">
-							<div class="h3">Add New Batch</div>
-							<p></p>
 							<div class="h2" id="editNameHeader"></div>
 							<div id="ingredientsDiv" class="large-6 columns panel">
 							</div>
 								
 							<p></p>
 
-							<div class="">
+							<div class="row">
 								<div class="small-11 small-centered columns">
 									<ul class="button-group even-3">
 										<li><a href="#clear" class="tiny button">Clear Entries</a></li>
