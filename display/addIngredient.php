@@ -5,6 +5,12 @@
 		<link rel="stylesheet" type="text/css" href="/css/dataTables.foundation.css"/>
 		<script src="/js/jquery.dataTables.js"></script>
 		<script type="text/javascript" src="/js/addIngredients.js"></script>
+		<script src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.js"></script>
+		<script src="jquery.barcode.0.3.js"></script>
+		<meta charset="utf-8" />
+		<style type="text/css" media="print">
+			.no-print { display: none; }
+		</style>
   	</head>
   
   	<body>
@@ -64,6 +70,10 @@
 					</div>
 		  		</div>
 			</div>
+		</div>
+		
+		<div class="barcodeI25" style="width:153px;height:25px;border:1px solid red;">
+			123456789
 		</div>
 
 	<script src="/js/vendor/jquery.js"></script>

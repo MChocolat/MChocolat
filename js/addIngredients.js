@@ -58,6 +58,11 @@ function addIngredient(){
 			data: {'action': 'addIngredient', 'data': data},
             success: function (data, status) {
 				alert("Ingredient SA-SA-SAVED!!!!");
+				generateI25();
 			}
     });
+}
+
+function generateI25(){
+	$('.barcodeI25').barcode({code:'I25'}
 }
