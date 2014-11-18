@@ -12,7 +12,42 @@
   	<body>
 		<div class="row">
 			<!-- Search Bar / Inventory Table -->
+			<a id="editBatchButton" class="tiny button" data-reveal-id="dialog">Edit Selected</a>
 			<a id="deleteBatchButton" class="tiny button">Delete Selected</a>
+			
+			<div class="reveal-modal small" id="dialog" data-reveal="">
+				<h3>Edit Ingredient</h3>
+				<a class="close-reveal-modal">×</a>
+				<div class="row">
+					<div class="large-12 columns">
+						<div class="panel">
+							<div class="h3">Add New Batch</div>
+							<p></p>
+							<div class="h2" id="editNameHeader"></div>
+							<div id="ingredientsDiv" class="large-6 columns panel">
+							</div>
+								
+							<p></p>
+
+							<div class="">
+								<div class="small-11 small-centered columns">
+									<ul class="button-group even-3">
+										<li><a href="#clear" class="tiny button">Clear Entries</a></li>
+										<li><a href="#" data-reveal-id="barcode" class="tiny button">Scan Barcode</a></li>
+										<li><a href="addBatchButton" class="tiny button">Add Batch</a></li>
+									</ul>
+
+									<div id="barcode" class="reveal-modal" data-reveal>
+									  <h2>Barocde Scanner.</h2>
+									  <p>Please scan the barcode!</p>
+									  <a class="close-reveal-modal">&#215;</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
   			<div class="small-12 small-center column">
 				<table id="batchesTable" class="display large-center">
