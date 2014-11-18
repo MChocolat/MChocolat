@@ -263,8 +263,8 @@ function deleteBatch($data){
 function getBatchIngredients($data){
 	$BID = $data['BID'];
 
-	$sql = "SELECT batchIngr2.*, ingrRecipe.IngrName FROM batchIngr2 INNER JOIN ingrRecipe
-			WHERE batchIngr2.BID = '$BID' AND batchIngr2.IngrID = ingrRecipe.IRID;";
+	$sql = "SELECT batchIngr.*, ingredients.IngrName FROM batchIngr INNER JOIN ingredients
+			ON batchIngr.IngrID = ingredients.IngrID WHERE batchIngr.BID = '$BID';";
 	$result = runQuery($sql);
 	$finalResult = array();
 	while ($row = $result->fetch_assoc()){

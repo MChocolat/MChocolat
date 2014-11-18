@@ -12,7 +12,7 @@
   	<body>
 		<div class="row">
 			<!-- Search Bar / Inventory Table -->
-			<a id="editBatchButton" class="tiny button" data-reveal-id="dialog">Edit Selected</a>
+			<a id="editBatchButton" class="tiny button" data-reveal-id="dialog">View Ingredients of Batch</a>
 			<a id="deleteBatchButton" class="tiny button">Delete Selected</a>
 			
 			<div class="reveal-modal small" id="dialog" data-reveal="">
@@ -28,7 +28,7 @@
 							<p></p>
 
 							
-								<div class="small-11 small-centered columns">
+								<!--<div class="small-11 small-centered columns">
 									<ul class="button-group even-3">
 										<li><a href="#clear" class="tiny button">Clear Entries</a></li>
 										<li><a href="#" data-reveal-id="barcode" class="tiny button">Scan Barcode</a></li>
@@ -41,6 +41,7 @@
 									  <a class="close-reveal-modal">&#215;</a>
 									</div>
 								</div>
+								-->
 						</div>
 					</div>
 				</div>

@@ -149,31 +149,26 @@ function createIngredientRow(i){
 	
 	var idDiv = document.createElement("div");
 	var nameDiv = document.createElement("div");
-	var upcDiv = document.createElement("div");
 	
-	$(idDiv).addClass("large-4 columns");
-	$(nameDiv).addClass("large-4 columns");
-	$(upcDiv).addClass("large-4 columns");
+	$(idDiv).addClass("large-6 columns");
+	$(nameDiv).addClass("large-6 columns");
 
-	var id = document.createElement("p");
-	var s = document.createTextNode(ingredientsList[i]['ID']);
-	id.appendChild(s);
+	
 	
 	var name = document.createElement("p");
 	var t = document.createTextNode(ingredientsList[i]['IngrName']);
 	name.appendChild(t);
 	
-	var upc = document.createElement("input");
-	upc.type = "text";
-	$(upc).val(ingredientsList[i]['UPC']);
+	var id = document.createElement("p");
+	var s = document.createTextNode(ingredientsList[i]['IngrID']);
+	id.appendChild(s);
+	
 	
 	idDiv.appendChild(id);
 	nameDiv.appendChild(name);
-	upcDiv.appendChild(upc);
 	
 	div.appendChild(idDiv);
-	div.appendChild(nameDiv);
-	div.appendChild(upcDiv);	
+	div.appendChild(nameDiv);	
 }
 
 function updateBatch(){
