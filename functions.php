@@ -206,6 +206,20 @@ function getBatches(){
 	echo json_encode($finalResult);
 }
 
+function getBatchesByDate(){
+join recipes where batches.RecipeID = recipes.RecipeID
+order by batches.DOC, batches.DOC ASC;
+	$sql = "SELECT BID, batches.RecipeID, recipes.RecipeName, DOC FROM batches 
+		JOIN recipes WHERE batches.RecipeID = recipes.RecipeID 
+		order by batches.DOC, batches.DOC ASC;";
+	$result = runQuery($sql);
+	$finalResult = array();
+	while ($row = $result->fetch_assoc()){
+	  $finalResult[] = $row;
+	}
+	echo json_encode($finalResult);
+}
+
 function addBatch($data){
 	$RecipeID = $data['RecipeID'];
 	$date = date("Y-m-d");

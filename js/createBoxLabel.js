@@ -6,24 +6,20 @@ var recipeID;
 // Function for when page first loads, what you want it to do
 $(document).ready( function () {
     self = this;
-	
-	/* Load all Recipes  
+
+    // Load all Batches  
 	$.ajax({
 		type: "POST",
 		url: '/functions.php',
 		cache: false,
-		data: {'action': 'getRecipes'},
+		data: {'action': 'getBatchesByDate'},
 		success: function(data, status) {
-			recipesList = jQuery.parseJSON(data);
-			
-			for (var i = 0; i<recipesList.length; i++) {
-				document.getElementById('recipeSelect').options[i] = new Option(recipesList[i]['RecipeName']);
-			}
+			batchesList = jQuery.parseJSON(data);
 		},
 		error: function(xhr, desc, err) {
 		}
 	});
-*/
+
 	var boxSizes = [4,6,8,12,15,16,24,30,36,45,60];
 	for (var i = 0; i<boxSizes.length; i++){
 	document.getElementById('numberSelect').options[i] = new Option(boxSizes[i]);
@@ -37,34 +33,6 @@ function clearBatches(){
 	$('#batchesDiv').empty();
 	ingredientsList = [];
 }
-/*
-function createIngredientRow(i){
-	var div = document.createElement("div");
-	$(div).addClass("row");
-	self.getElementById('ingredientsDiv').appendChild(div);
-	
-	
-	var nameDiv = document.createElement("div");
-	var upcDiv = document.createElement("div");
-	
-	$(nameDiv).addClass("large-6 columns");
-	$(upcDiv).addClass("large-6 columns");
-
-	var name = document.createElement("p");
-	var t = document.createTextNode(ingredientsList[i]['IngrName']);
-	name.appendChild(t);
-	
-	var upc = document.createElement("input");
-	upc.type = "text";
-	upc.placeholder = "Ingredient UPC";
-	
-	nameDiv.appendChild(name);
-	upcDiv.appendChild(upc);
-	
-	div.appendChild(nameDiv);
-	div.appendChild(upcDiv);	
-}
-*/
 
 function selectNumber(){
 	clearBatches();
@@ -73,11 +41,11 @@ function selectNumber(){
 
 	//Load ingredients for selected recipe
 	for (var i = 0; i<boxSize; i++) {
-		createBatchSpot();
+		createBatchSpotSelect();
 	}
 }
 
-function createBatchSpot(){
+function createBatchSpotScan(){
 	var div = document.createElement("div");
 	$(div).addClass("row");
 	self.getElementById('batchesDiv').appendChild(div);
@@ -96,58 +64,29 @@ function createBatchSpot(){
 	div.appendChild(upcDiv);
 }
 
-function addBatch(){
-	//Save batch to DB
+function createBatchSpotSelect(){
+	var div = document.createElement("div");
+	$(div).addClass("row");
+	self.getElementById('batchesDiv').appendChild(div);
 	
-	var data = {"RecipeID": recipeID};
-	$.ajax({
-            type: 'POST',
-            url: '/functions.php',
-			cache: false,
-			data: {'action': 'addBatch', 'data': data},
-            success: function (data, status) {
-				//Do another AJAX save ingredients associated with recipe to ingrRecipe table
-				addBatchIngredients(data);
-			}
-    });
-}
+	var selectDiv = document.createElement("div");
 
-function addBatchIngredients(batchID){
-	//TODO: form validation
-	var data = new Array();
+	$(selectDiv).addClass("large-6 columns");
 
-	var ingredients = $(ingredientsDiv).children();
 	
-	var upc;
-	
-	for(i = 0; i < ingredients.size(); i++){
-		upc = $($($(ingredients[i]).children()[1]).children()[0]).val()
-		var row = {"BID": batchID, "IngrID":upc};
-		data[i] = row;
+	var selection = document.createElement("select");
+
+	for (var i = 0; i<batchesList.length; i++){
+		var opt = document.createElement("option");
+		opt.value = batchesList[i]['BID'];
+		opt.text = batchesList[i]['RecipeName'] + batchesList[i]['DOC'];
 	}
 
-	$.ajax({
-            type: 'POST',
-            url: '/functions.php',
-			cache: false,
-			data: {'action': 'addBatchIngredients', 'data': data},
-            success: function (data, status) {
-				saveSuccessful();
-			}
-    });
-
+	div.appendChild(selectDiv);
 }
+
 
 function saveSuccessful(){
 	alert("SAVED");
 }
 
-
-
-
-function addIngredients(){
-	// TODO: actually take barcode info and create rows
-	for(i = 0; i < 10; i++){
-		createIngredientRow();
-	}	
-}
