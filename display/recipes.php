@@ -2,11 +2,11 @@
 <?php include("navigation.php");?>
 
 <html class="no-js" lang="en">
-	<head>   
-		<script type="text/javascript" language="javascript" src="/js/jquery-ui-1.11.2/jquery-ui.min.js"></script> 	
-		<script src="/js/jquery.dataTables.js"></script>
+	<head>    	
 		<link rel="stylesheet" type="text/css" href="/css/dataTables.foundation.css"/>
+		<script src="/js/jquery.dataTables.js"></script>
 		<script type="text/javascript" language="javascript" src="/js/dataTables.foundation.js"></script>
+		<script type="text/javascript" language="javascript" src="/js/jquery-ui-1.11.2/jquery-ui.min.js"></script>
 		<script type="text/javascript" src="/js/recipes.js"></script>
   	</head>
   
