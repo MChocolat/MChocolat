@@ -31,14 +31,14 @@ if(isset($_POST['action'])) {
 */
 function getIngredients(){
 	$sql = "SELECT ingredients.IngrID, 
-				uniqueIngr.IngrName,
+				ingredients.IngrName,
 				uniqueIngr.UPC, 
 				ingredients.DOP,
 				ingredients.Exp,
 				ingredients.Lot,
 				uniqueIngr.SubIngr
 			FROM ingredients
-			INNER JOIN uniqueIngr
+			left JOIN uniqueIngr
 			WHERE ingredients.UPC = uniqueIngr.UPC";
 	$result = runQuery($sql);
 	$finalResult = array();
@@ -73,8 +73,8 @@ function addIngredient($data){
 		VALUES('$UPC', '$IngrName', '$subIngr');";
 	$result = runQuery($sql); 
 	
-	$sql2 = "INSERT INTO ingredients (IngrID, UPC, DOP, Exp, Lot)
-		VALUES(null, '$UPC', '$date', '$exp', '$lotNum');";
+	$sql2 = "INSERT INTO ingredients (IngrID, UPC, DOP, Exp, Lot, IngrName)
+		VALUES(null, '$UPC', '$date', '$exp', '$lotNum', $IngrName);";
 	$result2 = runQuery($sql2); 
 	
 	echo $result2;
