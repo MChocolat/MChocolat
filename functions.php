@@ -484,7 +484,7 @@ function dropdown_RecipeNames(){
 
 function runQuery($sql){
 	global $con;
-	
+	$sql = mysqli_real_escape_string($sql);
 	$result = mysqli_query($con,$sql);
 	if (!$result) {
 	 	die('Error: ' . mysqli_error($con));
