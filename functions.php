@@ -49,7 +49,7 @@ function getIngredients(){
 }
 
 function ingrUPCLookup($data){
-	$UPC = $data;
+	$UPC = mysqli_real_escape_string($data);
 	$sql = "SELECT * FROM uniqueIngr WHERE UPC = '$UPC' LIMIT 1;";
 	$result = runQuery($sql);
 	$finalResult = array();
