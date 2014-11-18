@@ -12,7 +12,7 @@ ini_set('display_errors', 'On');
 
 if(isset($_POST['action'])) {
 	if(isset($_POST['data'])){
-		$function = $_POST['action'];
+		$function = $_POST['action']
 		$function($_POST['data']);
 	}
 	else{
