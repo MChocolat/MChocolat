@@ -49,7 +49,7 @@ function getIngredients(){
 }
 
 function ingrUPCLookup($data){
-	$UPC = $data;
+	$UPC = mysqli_real_escape_string($con, $data);
 	$sql = "SELECT * FROM uniqueIngr WHERE UPC = '$UPC' LIMIT 1;";
 	$result = runQuery($sql);
 	$finalResult = array();
@@ -484,7 +484,6 @@ function dropdown_RecipeNames(){
 
 function runQuery($sql){
 	global $con;
-	$sql = mysqli_real_escape_string($con, $sql);
 	$result = mysqli_query($con,$sql);
 	if (!$result) {
 	 	die('Error: ' . mysqli_error($con));
