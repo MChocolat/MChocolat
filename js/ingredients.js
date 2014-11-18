@@ -17,6 +17,7 @@ $(document).ready( function () {
 			ingredientsList = data;
 			self.ingredientsTable = $('#ingredientsTable').DataTable({
 				"aaData": jQuery.parseJSON(ingredientsList),
+				"bAutoWidth": false,
 				"aoColumns": [
 					{"mData": 'IngrID' },
 					{"mData": 'IngrName' },

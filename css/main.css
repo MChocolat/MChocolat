@@ -30,6 +30,10 @@
 	width: 1000px;
 }
 
+.panel {
+	background: #FFFFFF;
+}
+
 #datatable {
     width: 100% !Important;
 }

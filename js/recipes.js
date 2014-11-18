@@ -17,6 +17,7 @@ $(document).ready( function () {
 			recipesList = data;
 			self.recipesTable = $('#recipesTable').DataTable({
 				"aaData": jQuery.parseJSON(recipesList),
+				"bAutoWidth": false,
 				"aoColumns": [
 					{"mData": 'RecipeID' },
 					{"mData": 'RecipeName' }
