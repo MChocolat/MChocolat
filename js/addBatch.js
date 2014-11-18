@@ -125,7 +125,7 @@ function addBatchIngredients(batchID){
 	var IngrID;
 	
 	for(i = 0; i < ingredients.size(); i++){
-		IngrID = $($($(ingredients[i]).children()[0]).children()[0]).text();
+		IngrID = $($($(ingredients[i]).children()[1]).children()[0]).val();
 		var row = {"BID": batchID, "IngrID":IngrID};
 		data[i] = row;
 	}
