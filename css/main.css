@@ -12,3 +12,12 @@
     border-width: 1px;
 }
 
+.top-bar {
+	background: #371d10;
+	overflow: visible;
+}
+
+#label {
+	color: #371d10;
+}
+
