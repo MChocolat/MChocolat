@@ -31,7 +31,7 @@
 						    <ul class="button-group even-3">
 						  		<li><a href="#clear" class="tiny button">Clear Entries</a></li>
 						  		<li><a href="#" data-reveal-id="barcode" class="tiny button">Scan Barcode</a></li>
-						  		<li><a href="addBatchButton" class="tiny button">Add Batch</a></li>
+						  		<li><a id="addBatchButton" class="tiny button">Add Batch</a></li>
 							</ul>
 
 							<div id="barcode" class="reveal-modal" data-reveal>

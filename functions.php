@@ -222,11 +222,12 @@ function addBatchIngredients($data){
 	for($i=0; $i<count($data); $i++){
 	   $BID = $data[$i]['BID'];
 	   $IngrID = $data[$i]['IngrID'];
+	   $UPC = $data[$i]['UPC'];
 
-	   $ingredients[] = "(null, '$BID', '$IngrID')";
+	   $ingredients[] = "(null, '$BID', '$IngrID', '$UPC')";
 	}
 
-	$sql = "INSERT INTO batchIngr2 (ID, BID, IngrID) VALUES " . implode(', ', $ingredients);
+	$sql = "INSERT INTO batchIngr2 (ID, BID, IngrID, UPC) VALUES " . implode(', ', $ingredients);
 
 	$result = runQuery($sql);
 	
@@ -241,6 +242,27 @@ function deleteBatch($data){
 	
 	$sql2 = "DELETE FROM batches WHERE BID = '$BID';";
 	$result2 = runQuery($sql2); 
+}
+
+function getBatchIngredients($data){
+	$BID = $data['BID'];
+	
+	$sql = "SELECT ingredients.IngrID, 
+				uniqueIngr.IngrName,
+				uniqueIngr.UPC, 
+				ingredients.DOP,
+				ingredients.Exp,
+				ingredients.Lot,
+				uniqueIngr.SubIngr
+			FROM ingredients
+			INNER JOIN uniqueIngr
+			WHERE ingredients.UPC = uniqueIngr.UPC";
+	$result = runQuery($sql);
+	$finalResult = array();
+	while ($row = $result->fetch_assoc()){
+	  $finalResult[] = $row;
+	}
+	echo json_encode($finalResult);
 }
 
 

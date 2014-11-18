@@ -53,7 +53,8 @@ $(document).ready( function () {
 	}); 
 	
 	//Set Button Functions
-	//$("#updateBatchButton").bind("click", updateBatch);
+	$("#editBatchButton").bind("click", editBatch);
+	$("#updateBatchButton").bind("click", updateBatch);
 	$("#deleteBatchButton").bind("click", deleteBatch);
 	
 } );
@@ -116,6 +117,56 @@ function addBatch(){
 				//self.batchesTable.fnAddData(data);
 			}
     });
+}
+
+function editBatch(){
+
+	$('#batchNameHeader').text(self.selectedRow[1].innerText);
+	var data = {"BID":self.selectedRow[0].innerText};
+
+	//Load ingredients for selected recipe
+	$.ajax({
+		type: "POST",
+		url: '/functions.php',
+		cache: false,
+		data: {'action': 'getBatchIngredients', 'data': data},
+		success: function(data, status) {
+			ingredientsList = jQuery.parseJSON(data);
+			
+			for (var i = 0; i<ingredientsList.length; i++) {
+				createIngredientRow(i);
+			}
+		},
+		error: function(xhr, desc, err) {
+		}
+	});	
+}
+
+function createIngredientRow(i){
+	var div = document.createElement("div");
+	$(div).addClass("row");
+	self.getElementById('ingredientsDiv').appendChild(div);
+	
+	
+	var nameDiv = document.createElement("div");
+	var upcDiv = document.createElement("div");
+	
+	$(nameDiv).addClass("large-6 columns");
+	$(upcDiv).addClass("large-6 columns");
+
+	var name = document.createElement("p");
+	var t = document.createTextNode(ingredientsList[i]['IngrName']);
+	name.appendChild(t);
+	
+	var upc = document.createElement("input");
+	upc.type = "text";
+	upc.placeholder = "Ingredient UPC";
+	
+	nameDiv.appendChild(name);
+	upcDiv.appendChild(upc);
+	
+	div.appendChild(nameDiv);
+	div.appendChild(upcDiv);	
 }
 
 function updateBatch(){
