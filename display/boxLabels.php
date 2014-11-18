@@ -5,6 +5,7 @@
 	<head>    	
 		<link rel="stylesheet" type="text/css" href="/css/dataTables.foundation.css"/>
 		<script src="/js/jquery.dataTables.js"></script>
+		<script type="text/javascript" language="javascript" src="/js/dataTables.foundation.js"></script>
 		<script type="text/javascript" src="/js/boxLabels.js"></script>
   	</head>
   

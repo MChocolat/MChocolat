@@ -4,6 +4,7 @@
 	<head>    	
 		<link rel="stylesheet" type="text/css" href="/css/dataTables.foundation.css"/>
 		<script src="/js/jquery.dataTables.js"></script>
+		<script type="text/javascript" language="javascript" src="/js/dataTables.foundation.js"></script>
 		<script type="text/javascript" src="/js/addIngredients.js"></script>
 		<script src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.js"></script>
 		<script src="jquery.barcode.0.3.js"></script>
