@@ -96,7 +96,7 @@ function editIngredient(){
 	$('#editUpcInput').val(self.selectedRow[2].innerText);
 	$('#editLotNumInput').val(self.selectedRow[5].innerText);
 	$('#editExpInput').val(self.selectedRow[4].innerText);
-	$('#editSubInput').val(self.selectedRow[6].innerText);
+	$('#editSubInput').val(self.selectedRow[6].innerText);	
 }
 
 function updateIngredient(){
@@ -116,7 +116,7 @@ function updateIngredient(){
 			
 				$(self.selectedRow[1]).text($('#editNameInput').val());
 				$(self.selectedRow[2]).text($('#editUpcInput').val());
-				$(self.selectedRow[4]).text($('#editLotNumInput').val());
+				$(self.selectedRow[4]).text($('#editExpInput').val());
 				$(self.selectedRow[5]).text($('#editLotNumInput').val());
 				$(self.selectedRow[6]).text($('#editSubInput').val());
 				
