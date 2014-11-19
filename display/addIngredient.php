@@ -1,17 +1,17 @@
 <?php include("header.php");?>
 <?php include("navigation.php");?>
 <html class="no-js" lang="en">
+	<script src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.js"></script>
+	<script src="/js/jquery.barcode.0.3.js"></script>
+	<meta charset="utf-8" />
+	<style type="text/css" media="print">
+				.no-print { display: none; }
+	</style>
 	<head>    	
 		<link rel="stylesheet" type="text/css" href="/css/dataTables.foundation.css"/>
 		<script src="/js/jquery.dataTables.js"></script>
 		<script type="text/javascript" language="javascript" src="/js/dataTables.foundation.js"></script>
 		<script type="text/javascript" src="/js/addIngredients.js"></script>
-		<script src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.js"></script>
-		<script src="jquery.barcode.0.3.js"></script>
-		<meta charset="utf-8" />
-		<style type="text/css" media="print">
-			.no-print { display: none; }
-		</style>
   	</head>
   
   	<body>
@@ -59,7 +59,7 @@
 						    <ul class="button-group even-3">
 						  		<li><a href="#clear" class="tiny button">Clear Entries</a></li>
 						  		<li><a href="#" data-reveal-id="barcode" class="tiny button">Scan Barcode</a></li>
-						  		<li><a id="addIngredientButton" class="tiny button">Add Ingredient</a></li>
+						  		<li><a id="addIngredientButton" class="tiny button" onclick="generateI25();">Add Ingredient</a></li>
 							</ul>
 
 							<div id="barcode" class="reveal-modal" data-reveal>
