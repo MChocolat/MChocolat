@@ -43,8 +43,8 @@ $(document).ready( function () {
 	//Set Button Functions
 	$("#selectNumberButton").bind("click", selectNumber);
 	$("#createLabelButton").bind("click", createLabel);
-	$("scanButton").bind("click", createBatchSpotScan);
-	$("selectButton").bind("click", createBatchSpotSelect)
+	$("#scanButton").bind("click", createBatchSpotScan);
+	$("#selectButton").bind("click", createBatchSpotSelect);
 	
 } );
 
