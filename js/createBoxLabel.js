@@ -110,7 +110,7 @@ function createBatchSpotSelect(){
 }
 
 function createLabel(){
-
+	var labelData = new Object();
 }
 
 

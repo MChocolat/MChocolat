@@ -25,7 +25,8 @@
 					<div class="h3">Would you like to scan the batch barcodes or select them from a dropdown menu?</div>
 					<p></p>
 					<div class = "row">
-						<div class="small-9 columns" id = "type">
+						<div class="small-9 columns">
+							<input id = "type">
 							<!--
 							<input type="radio" id="type" value = 0 >Scan<br>
 							<input type="radio" id="type" value = 1 >Select
