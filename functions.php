@@ -58,9 +58,9 @@ function ingrUPCLookup($data){
 		$finalResult[] = $row;
 	}
 	try {
-    var json = $.parseJSON($finalResult);
+    $json = $.parseJSON($finalResult);
     //if code below here runs, means json is valid
-    echo json;
+    echo $json;
 
 	} catch(e){
     //if code below here runs, means json is invalid
