@@ -37,12 +37,7 @@
 			</div>
 
 			
-			<div id="batchesDiv" class="large-6 columns panel">
-				<div class = "row">
-					<a id = "createLabelButton" class = "tiny button">Create label</a>
-				</div>
-			
-			</div>
+			<div id="batchesDiv" class="large-6 columns panel">	</div>
 		</div>		
 
 	<script src="js/vendor/jquery.js"></script>

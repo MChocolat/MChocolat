@@ -129,6 +129,7 @@ function createBatchSpotSelect(){
 	$(div).addClass("row");
 	self.getElementById('batchesDiv').appendChild(div);
 	var btn = document.createElement("BUTTON");        // Create a <button> element
+	btn.setAttribute("id", "createLabelButton")
 	var t = document.createTextNode("Create Label");       // Create a text node
 	btn.appendChild(t); 
 	div.appendChild(btn);
@@ -141,9 +142,10 @@ function createLabel(){
 	var value;
 	//get all BID's out of form
 	for (var i = 0; i<boxSize; i++){
-		value = $($($($(batchesDiv).children()[1]).children()[0]).children()[0]).val();
+		value = $($($($(batchesDiv).children()[i]).children()[0]).children()[0]).val();
 		BIDs[i] = value;
 	}
+	console.log(BIDs);
 
 
 }
