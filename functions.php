@@ -57,7 +57,6 @@ function ingrUPCLookup($data){
 	while ($row = $result->fetch_assoc()){
 		$finalResult[] = $row;
 	}
-	console.log($finalResult);
 	echo json_encode($finalResult);
 }
 
