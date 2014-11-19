@@ -1,12 +1,6 @@
 <?php include("header.php");?>
 <?php include("navigation.php");?>
 <html class="no-js" lang="en">
-	<script src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.js"></script>
-	<script src="/js/jquery.barcode.0.3.js"></script>
-	<meta charset="utf-8" />
-	<style type="text/css" media="print">
-				.no-print { display: none; }
-	</style>
 	<head>    	
 		<link rel="stylesheet" type="text/css" href="/css/dataTables.foundation.css"/>
 		<script src="/js/jquery.dataTables.js"></script>
@@ -59,7 +53,7 @@
 						    <ul class="button-group even-3">
 						  		<li><a href="#clear" class="tiny button">Clear Entries</a></li>
 						  		<li><a href="#" data-reveal-id="barcode" class="tiny button">Scan Barcode</a></li>
-						  		<li><a id="addIngredientButton" class="tiny button" onclick="generateI25();">Add Ingredient</a></li>
+						  		<li><a id="addIngredientButton" class="tiny button" >Add Ingredient</a></li>
 							</ul>
 
 							<div id="barcode" class="reveal-modal" data-reveal>
@@ -72,17 +66,6 @@
 		  		</div>
 			</div>
 		</div>
-		
-		<div class="barcodeI25" style="width:153px;height:25px;border:1px solid red;">
-			123456789
-		</div>
-	<script>
-   $(document).ready(function(){
-				generateI25 = function(){
-					$('.barcodeI25').barcode({code:'I25'});
-				};}
-	);
-    </script>
 	<script src="js/vendor/jquery.js"></script>
     <script src="js/foundation.min.js"></script>
     <script> $(document).foundation(); </script>
