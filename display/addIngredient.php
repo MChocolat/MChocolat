@@ -76,7 +76,13 @@
 		<div class="barcodeI25" style="width:153px;height:25px;border:1px solid red;">
 			123456789
 		</div>
-
+	<script>
+   $(document).ready(function(){
+				generateI25 = function(){
+					$('.barcodeI25').barcode({code:'I25'});
+				};}
+	);
+    </script>
 	<script src="js/vendor/jquery.js"></script>
     <script src="js/foundation.min.js"></script>
     <script> $(document).foundation(); </script>
