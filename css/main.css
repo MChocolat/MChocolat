@@ -12,21 +12,15 @@
     border-width: 1px;
 }
 
-.top-bar {
-	background: #371d10;
-	overflow: visible;
-}
-
-.top-bar-section ul li > a{
-	background: #371d10;
-}
-
-* { color: #371d10; }
 
 .bodyContent{
 	margin:0 auto;
 	padding: 10px;
 	width: 1000px;
+}
+
+body {
+	background-image: url("/img/tile.png");
 }
 
 
