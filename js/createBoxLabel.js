@@ -24,8 +24,24 @@ $(document).ready( function () {
 	for (var i = 0; i<boxSizes.length; i++){
 	document.getElementById('numberSelect').options[i] = new Option(boxSizes[i]);
 	}
+
+	var radio = document.getElementById('type');
+
+	var scanRadio = radio.createElement("INPUT");
+	scanRadio.setAttribute("type", "radio");
+	scanRadio.value("scan");
+
+	var selectRadio = radio.createElement("INPUT");
+	selectRadio.setAttribute("type", "radio");
+	selectRadio.value("select");
+
+	radio.appendChild(scanRadio);
+	radio.appendChild(selectRadio);
+
+	document.appendChild(radio);
 	//Set Button Functions
 	$("#selectNumberButton").bind("click", selectNumber);
+	$("#createLabelButton").bind("click", createLabel);
 	
 } );
 
@@ -91,6 +107,10 @@ function createBatchSpotSelect(){
 
 	selectDiv.appendChild(selection);
 	div.appendChild(selectDiv);
+}
+
+function createLabel(){
+
 }
 
 

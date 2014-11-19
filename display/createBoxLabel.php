@@ -25,9 +25,11 @@
 					<div class="h3">Would you like to scan the batch barcodes or select them from a dropdown menu?</div>
 					<p></p>
 					<div class = "row">
-						<div class="small-9 columns">
+						<div class="small-9 columns" id = "type">
+							<!--
 							<input type="radio" id="type" value = 0 >Scan<br>
 							<input type="radio" id="type" value = 1 >Select
+						-->
 						</div>
 						<div class="small-3 columns">
 							<a id="selectNumberButton" class="tiny button">Next</a>
@@ -40,7 +42,7 @@
 			
 			<div id="batchesDiv" class="large-6 columns panel">
 				<div class = "row">
-					<a id = "createLabel" class = "tiny button">Create label</a>
+					<a id = "createLabelButton" class = "tiny button">Create label</a>
 				</div>
 			
 			</div>
