@@ -57,15 +57,8 @@ function ingrUPCLookup($data){
 	while ($row = $result->fetch_assoc()){
 		$finalResult[] = $row;
 	}
-	try {
-    $json = $.parseJSON($finalResult);
-    //if code below here runs, means json is valid
-    echo $json;
-
-	} catch(e){
-    //if code below here runs, means json is invalid
-		console.log($finalResult);
-	}
+	console.log($finalResult);
+	echo json_encode($finalResult);
 }
 
 function addIngredient($data){
