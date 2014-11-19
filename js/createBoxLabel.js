@@ -24,7 +24,7 @@ $(document).ready( function () {
 	for (var i = 0; i<boxSizes.length; i++){
 	document.getElementById('numberSelect').options[i] = new Option(boxSizes[i]);
 	}
-
+/*
 	var radio = document.getElementById('type');
 
 	var scanRadio = radio.createElement("INPUT");
@@ -39,9 +39,12 @@ $(document).ready( function () {
 	radio.appendChild(selectRadio);
 
 	document.appendChild(radio);
+	*/
 	//Set Button Functions
 	$("#selectNumberButton").bind("click", selectNumber);
 	$("#createLabelButton").bind("click", createLabel);
+	$("scanButton").bind("click", createBatchSpotScan);
+	$("selectButton").bind("click", createBatchSpotSelect)
 	
 } );
 
@@ -55,6 +58,7 @@ function selectNumber(){
 
 	boxSize = $("#numberSelect option:selected").text();
 
+	/*
 	var type = self.getElementById('type').checked();
 	if (type == 0){
 		for (var i = 0; i<boxSize; i++) {
@@ -65,48 +69,62 @@ function selectNumber(){
 			createBatchSpotSelect();
 		}
 	}
+	*/
 }
 
 function createBatchSpotScan(){
-	var div = document.createElement("div");
-	$(div).addClass("row");
-	self.getElementById('batchesDiv').appendChild(div);
-	
-	var upcDiv = document.createElement("div");
 
-	$(upcDiv).addClass("large-6 columns");
+	clearBatches();
 
-	
-	var upc = document.createElement("input");
-	upc.type = "text";
-	upc.placeholder = "Ingredient UPC";
+	boxSize = $("#numberSelect option:selected").text();
 
-	upcDiv.appendChild(upc);
+	for (var i = 0; i<boxSize; i++){
+		var div = document.createElement("div");
+		$(div).addClass("row");
+		self.getElementById('batchesDiv').appendChild(div);
+		
+		var upcDiv = document.createElement("div");
 
-	div.appendChild(upcDiv);
+		$(upcDiv).addClass("large-6 columns");
+
+		
+		var upc = document.createElement("input");
+		upc.type = "text";
+		upc.placeholder = "Ingredient UPC";
+
+		upcDiv.appendChild(upc);
+
+		div.appendChild(upcDiv);
+	}
 }
 
 function createBatchSpotSelect(){
-	var div = document.createElement("div");
-	$(div).addClass("row");
-	self.getElementById('batchesDiv').appendChild(div);
-	
-	var selectDiv = document.createElement("div");
+	clearBatches();
 
-	$(selectDiv).addClass("large-6 columns");
+	boxSize = $("#numberSelect option:selected").text();
 
-	
-	var selection = document.createElement("select");
+	for (var i = 0; i<boxSize; i++){
+		var div = document.createElement("div");
+		$(div).addClass("row");
+		self.getElementById('batchesDiv').appendChild(div);
+		
+		var selectDiv = document.createElement("div");
 
-	for (var i = 0; i<batchesList.length; i++){
-		var opt = document.createElement("option");
-		opt.value = batchesList[i]['BID'];
-		opt.text = batchesList[i]['RecipeName'] + batchesList[i]['DOC'];
-		selection.appendChild(opt);
+		$(selectDiv).addClass("large-6 columns");
+
+		
+		var selection = document.createElement("select");
+
+		for (var i = 0; i<batchesList.length; i++){
+			var opt = document.createElement("option");
+			opt.value = batchesList[i]['BID'];
+			opt.text = batchesList[i]['RecipeName'] + batchesList[i]['DOC'];
+			selection.appendChild(opt);
+		}
+
+		selectDiv.appendChild(selection);
+		div.appendChild(selectDiv);
 	}
-
-	selectDiv.appendChild(selection);
-	div.appendChild(selectDiv);
 }
 
 function createLabel(){
