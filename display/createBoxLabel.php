@@ -39,7 +39,9 @@
 
 			
 			<div id="batchesDiv" class="large-6 columns panel">
-			
+				<div class = "row">
+					<a id = "createLabel" class = "tiny button">Create label</a>
+				</div>
 			
 			</div>
 		</div>		

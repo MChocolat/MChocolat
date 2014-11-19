@@ -39,7 +39,7 @@ function selectNumber(){
 
 	boxSize = $("#numberSelect option:selected").text();
 
-	var type = self.getElementById('type').value;
+	var type = self.getElementById('type').checked();
 	if (type == 0){
 		for (var i = 0; i<boxSize; i++) {
 		createBatchSpotScan();
