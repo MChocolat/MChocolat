@@ -103,7 +103,7 @@ function createBatchSpotSelect(){
 
 	boxSize = $("#numberSelect option:selected").text();
 
-	for (var i = 0; i<boxSize; i++){
+	for (var j = 0; j<boxSize; j++){
 		var div = document.createElement("div");
 		$(div).addClass("row");
 		self.getElementById('batchesDiv').appendChild(div);
