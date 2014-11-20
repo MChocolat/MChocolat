@@ -15,7 +15,7 @@
 					$('.barcodeI25').barcode({code:'I25'});
 				};}
 	);
-    </script>
 	window.print();
+    </script>
 	<meta http-equiv="refresh" content="0; url=/display/addIngredient.php" />
 </html>
