@@ -58,7 +58,7 @@ function addIngredient(){
 			data: {'action': 'addIngredient', 'data': data},
             success: function (data, status) {
 				alert("Ingredient SA-SA-SAVED!!!!");
-				window.location="/display/print.php"+'?param=' + $(this).data('IngrID');
+				window.location="/display/print.php"+'?param=' + $(this).data('UPC');
 			}
     });
 }
