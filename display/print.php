@@ -11,10 +11,10 @@
 				generateI25 = function(){
 					$('.barcodeI25').barcode({code:'I25'});
 				};}
-				
 				var IRID = getUrlParameter('param');
-			
-				
+				$(IRID).appendTo('.barcodeI25');
+				generateI25();
+				window.print();
 	);
 	
 	function getUrlParameter(sParam){
@@ -29,7 +29,7 @@
 			}
 		}
 	} 
-	window.print();
+	
     </script>
 	<meta http-equiv="refresh" content="0; url=/display/addIngredient.php" />
 </html>
