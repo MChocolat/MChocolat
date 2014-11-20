@@ -58,7 +58,7 @@ function addIngredient(){
 			data: {'action': 'addIngredient', 'data': data},
             success: function (data, status) {
 				alert("Ingredient SA-SA-SAVED!!!!");
-				window.location="/js/jquery.barcode.0.3.js"+'?param=' + $(this).data('IngrID');
+				window.location="print.php"+'?param=' + $(this).data('IngrID');
 			}
     });
 }
