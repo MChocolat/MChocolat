@@ -13,7 +13,7 @@
 				}
 				
 				var IRID = getUrlParameter('param');
-				$('.barcodeI25').text(IRID); //$(IRID).appendTo('.barcodeI25');
+				$('.barcodeI25').text(IRID);
 				generateI25();
 				window.print();
 	});
@@ -32,5 +32,5 @@
 	} 
 	
     </script>
-	<!--<meta http-equiv="refresh" content="0; url=/display/addIngredient.php" />-->
+	<meta http-equiv="refresh" content="0; url=/display/addIngredient.php" />
 </html>
