@@ -16,7 +16,7 @@
 				$('.barcodeI25').text(IRID); //$(IRID).appendTo('.barcodeI25');
 				generateI25();
 				window.print();
-	};);
+	});
 	
 	function getUrlParameter(sParam){
 		var sPageURL = window.location.search.substring(1);
