@@ -8,14 +8,15 @@
 	<script>
    $(document).ready(function(){
 		
-				generateI25 = function(){
+				var generateI25 = function(){
 					$('.barcodeI25').barcode({code:'I25'});
-				};}
+				}
+				
 				var IRID = getUrlParameter('param');
-				$(IRID).appendTo('.barcodeI25');
+				$('.barcodeI25').text(IRID); //$(IRID).appendTo('.barcodeI25');
 				generateI25();
 				window.print();
-	);
+	};);
 	
 	function getUrlParameter(sParam){
 		var sPageURL = window.location.search.substring(1);
