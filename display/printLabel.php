@@ -3,7 +3,7 @@
 	<script src="/js/jquery.barcode.0.3.js"></script>
 	<meta charset="utf-8" />
 	<div data-param="foo" class="barcodeI25" style="width:153px;height:25px;border:1px solid red;">
-	123
+	
 	</div>
 	
 	<script>

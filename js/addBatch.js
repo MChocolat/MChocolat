@@ -137,6 +137,7 @@ function addBatchIngredients(batchID){
 			data: {'action': 'addBatchIngredients', 'data': data},
             success: function (data, status) {
 				saveSuccessful();
+				window.location="/display/printBatch.php"+'?param=' + $(this).data('IngrID');
 			}
     });
 
