@@ -8,11 +8,44 @@
 	
 	<script>
    $(document).ready(function(){
-				generateI25 = function(){
+   
+			var data = {"BID":getUrlParameter('param')};
+			
+			$.ajax({
+				type: 'POST',
+				url: '/functions.php',
+				cache: false,
+				data: {'action': 'getBatchIngredients', 'data': data},
+				success: function (data, status) {
+					ingredientsList = jQuery.parseJSON(data);
+					for i in ingredientsList{
+						document.write(ingredientsList[i]['IngrName']);
+					}
+				}
+			});
+		
+				var generateI25 = function(){
 					$('.barcodeI25').barcode({code:'I25'});
-				};}
-	);
-	window.print();
+				}
+				
+				var IRID = getUrlParameter('param');
+				$('.barcodeI25').text(IRID);
+				generateI25();
+				window.print();
+	});
+	
+	function getUrlParameter(sParam){
+		var sPageURL = window.location.search.substring(1);
+		var sURLVariables = sPageURL.split('&');
+		for (var i = 0; i < sURLVariables.length; i++) 
+		{
+			var sParameterName = sURLVariables[i].split('=');
+			if (sParameterName[0] == sParam) 
+			{
+				return sParameterName[1];
+			}
+		}
+	}
     </script>
 	<meta http-equiv="refresh" content="0; url=/display/addIngredient.php" />
 </html>
