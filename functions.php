@@ -61,11 +61,12 @@ function ingrUPCLookup($data){
 }
 
 function addIngredient($data){
-	$IngrName = $data['IngrName'];
-	$UPC = $data['UPC'];
-	$exp = $data['Exp'];
-	$lotNum = $data['LotNum'];
-	$subIngr = $data['SubIngr'];
+	global $con;
+	$IngrName = mysqli_real_escape_string($con, $data['IngrName']);
+	$UPC = mysqli_real_escape_string($con, $data['UPC']);
+	$exp = mysqli_real_escape_string($con, $data['Exp']);
+	$lotNum = mysqli_real_escape_string($con, $data['LotNum']);
+	$subIngr = mysqli_real_escape_string($con, $data['SubIngr']);
 
 	$date = date("Y-m-d");
 	
@@ -82,20 +83,22 @@ function addIngredient($data){
 }
 
 function deleteIngredient($data){
-	$IngrName = $data['IngrName'];
-	$IngrID = $data['IngrID'];
+	global $con;
+	$IngrName = mysqli_real_escape_string($con, $data['IngrName']);
+	$IngrID = mysqli_real_escape_string($con, $data['IngrID']);
 	
 	$sql = "DELETE FROM ingredients WHERE IngrID = '$IngrID';";
 	$result = runQuery($sql); 
 }
 
 function updateIngredient($data){
-	$IngrID = $data['IngrID'];
-	$IngrName = $data['IngrName'];
-	$UPC = $data['UPC'];
-	$exp = $data['Exp'];
-	$lotNum = $data['LotNum'];
-	$subIngr = $data['SubIngr'];
+	global $con;
+	$IngrID = mysqli_real_escape_string($con, $data['IngrID']);
+	$IngrName = mysqli_real_escape_string($con, $data['IngrName']);
+	$UPC = mysqli_real_escape_string($con, $data['UPC']);
+	$exp = mysqli_real_escape_string($con, $data['Exp']);
+	$lotNum = mysqli_real_escape_string($con, $data['LotNum']);
+	$subIngr = mysqli_real_escape_string($con, $data['SubIngr']);
 
 	$date = date("Y-m-d");
 	
@@ -120,7 +123,8 @@ function getRecipes(){
 }
 
 function getRecipeIngredients($data){
-	$RecipeID = $data['RecipeID'];
+	global $con;
+	$RecipeID = mysqli_real_escape_string($con, $data['RecipeID']);
 	$sql = "SELECT * FROM ingrRecipe WHERE RecipeID = '$RecipeID';";
 	$result = runQuery($sql);
 	$finalResult = array();
@@ -131,7 +135,8 @@ function getRecipeIngredients($data){
 }
 
 function addRecipe($data){
-	$name = $data['RecipeName'];
+	global $con;
+	$name = mysqli_real_escape_string($con, $data['RecipeName']);
 	$sql = "INSERT INTO recipes (RecipeID, RecipeName)
 		VALUES(null, '$name');";
 	$result = runQuery($sql); 
@@ -139,13 +144,13 @@ function addRecipe($data){
 }
 
 function addRecipeIngredients($data){
-
+	global $con;
 	$ingredients = array();    
 	for($i=0; $i<count($data); $i++){
-	   $RecipeID = $data[$i]['RecipeID'];
-	   $IngrName = $data[$i]['IngrName'];
+	   $RecipeID = mysqli_real_escape_string($con, $data[$i]['RecipeID']);
+	   $IngrName = mysqli_real_escape_string($con, $data[$i]['IngrName']);
 	   //$M_unit = $data[$i]['M_unit'];
-	   $Amount = $data[$i]['Amount'];
+	   $Amount = mysqli_real_escape_string($con, $data[$i]['Amount']);
 
 	   //$ingredients[] = "(null,'$RecipeID','$IngrName','$M_unit','$Amount')";
 	   $ingredients[] = "(null,'$RecipeID','$IngrName','$Amount')";
@@ -160,7 +165,8 @@ function addRecipeIngredients($data){
 }
 
 function deleteRecipe($data){
-	$RecipeID = $data['RecipeID'];
+	global $con;
+	$RecipeID = mysqli_real_escape_string($con, $data['RecipeID']);
 	
 	$sql = "DELETE FROM ingrRecipe WHERE RecipeID = '$RecipeID';";
 	$result = runQuery($sql); 
@@ -170,20 +176,22 @@ function deleteRecipe($data){
 }
 
 function updateRecipe($data){
-	$RecipeID = $data['RecipeID'];	
-	$name = $data['RecipeName'];
+	global $con;
+	$RecipeID = mysqli_real_escape_string($con, $data['RecipeID']);	
+	$name = mysqli_real_escape_string($con, $data['RecipeName']);
 	
 	$sql = "UPDATE recipes SET RecipeName = '$name' WHERE RecipeID = '$RecipeID';";
 	$result = runQuery($sql); 
 }
 
 function updateRecipeIngredients($data){
-	$RecipeID = $data[0]['RecipeID'];
+	global $con;
+	$RecipeID = mysqli_real_escape_string($con, $data[0]['RecipeID']);
 	$ingredients = array();    
 	for($i=0; $i<count($data); $i++){
-	   $RecipeID = $data[$i]['RecipeID'];
-	   $IngrName = $data[$i]['IngrName'];
-	   $Amount = $data[$i]['Amount'];
+	   $RecipeID = mysqli_real_escape_string($con, $data[$i]['RecipeID']);
+	   $IngrName = mysqli_real_escape_string($con, $data[$i]['IngrName']);
+	   $Amount = mysqli_real_escape_string($con, $data[$i]['Amount']);
 
 	   $ingredients[] = "(null,'$RecipeID','$IngrName','$Amount')";
 	}
@@ -220,9 +228,9 @@ function getBatchesByDate(){
 }
 
 function addBatch($data){
-	$RecipeID = $data['RecipeID'];
+	global $con;
+	$RecipeID = mysqli_real_escape_string($con, $data['RecipeID']);
 	$date = date("Y-m-d");
-	
 	$sql = "INSERT INTO batches (BID, DOC, RecipeID)
 		VALUES(null, '$date', '$RecipeID');";
 	$result = runQuery($sql); 
@@ -230,11 +238,11 @@ function addBatch($data){
 }
 
 function addBatchIngredients($data){
-
+	global $con;
 	$ingredients = array();    
 	for($i=0; $i<count($data); $i++){
-	   $BID = $data[$i]['BID'];
-	   $IngrID = $data[$i]['IngrID'];
+	   $BID = mysqli_real_escape_string($con, $data[$i]['BID']);
+	   $IngrID = mysqli_real_escape_string($con, $data[$i]['IngrID']);
 
 	   $ingredients[] = "('$BID', '$IngrID')";
 	}
@@ -247,11 +255,11 @@ function addBatchIngredients($data){
 }
 
 function updateBatchIngredients($data){
-
+	global $con;
 	$ingredients = array();    
 	for($i=0; $i<count($data); $i++){
-	   $ID = $data[$i]['ID'];
-	   $UPC = $data[$i]['UPC'];
+	   $ID = mysqli_real_escape_string($con, $data[$i]['ID']);
+	   $UPC = mysqli_real_escape_string($con, $data[$i]['UPC']);
 
 	   $ingredients[] = "('$ID', '$UPC')";
 	}
@@ -264,7 +272,8 @@ function updateBatchIngredients($data){
 }
 
 function deleteBatch($data){
-	$BID = $data['BID'];
+	global $con;
+	$BID = mysqli_real_escape_string($con, $data['BID']);
 	
 	$sql = "DELETE FROM batchIngr2 WHERE BID = '$BID';";
 	$result = runQuery($sql); 
@@ -274,7 +283,8 @@ function deleteBatch($data){
 }
 
 function getBatchIngredients($data){
-	$BID = $data['BID'];
+	global $con;
+	$BID = mysqli_real_escape_string($con, $data['BID']);
 
 	$sql = "SELECT batchIngr.*, ingredients.IngrName FROM batchIngr INNER JOIN ingredients
 			ON batchIngr.IngrID = ingredients.IngrID WHERE batchIngr.BID = '$BID';";

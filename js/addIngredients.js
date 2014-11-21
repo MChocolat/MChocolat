@@ -1,6 +1,6 @@
 $(document).ready( function () {
 	$(document).keypress(function(e) {
-		if(e.which == 13) {
+		if(e.which == 13 || e.which == 9) {
 			if (document.activeElement.id == 'addUpcInput' && $("#addUpcInput").val() != "") {
 				// Load information associated with UPC in field 
 				$.ajax({
