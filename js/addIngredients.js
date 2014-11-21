@@ -1,7 +1,7 @@
 $(document).ready( function () {
 	$(document).keypress(function(e) {
-		if(e.which == 13 || e.keyCode == 9) {
-			if ((document.activeElement.id == 'addUpcInput'||(e.keyCode == 9 && document.activeElement.id == 'addExpInput')) && $("#addUpcInput").val() != "") {
+		if(e.which == 13) {
+			if (document.activeElement.id == 'addUpcInput' && $("#addUpcInput").val() != "") {
 				// Load information associated with UPC in field 
 				$.ajax({
 					type: "POST",
