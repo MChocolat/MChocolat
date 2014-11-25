@@ -17,8 +17,8 @@
 				cache: false,
 				data: {'action': 'getBatchIngredients', 'data': data},
 				success: function (data, status) {
-					ingredientsList = jQuery.parseJSON(data);
-					for i in ingredientsList{
+					var ingredientsList = jQuery.parseJSON(data);
+					for var i in ingredientsList{
 						document.write(ingredientsList[i]['IngrName']);
 					}
 				}
