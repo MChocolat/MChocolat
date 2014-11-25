@@ -251,7 +251,7 @@ function addBatchIngredients($data){
 
 	$result = runQuery($sql);
 	
-	echo $sql;
+	echo $BID;
 }
 
 function updateBatchIngredients($data){
