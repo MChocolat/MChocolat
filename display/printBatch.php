@@ -47,5 +47,5 @@
 		}
 	}
     </script>
-	<meta http-equiv="refresh" content="0; url=/display/addIngredient.php" />
+	<meta http-equiv="refresh" content="0; url=/display/addBatch.php" />
 </html>

@@ -14,5 +14,5 @@
 	);
 	window.print();
     </script>
-	<meta http-equiv="refresh" content="0; url=/display/addIngredient.php" />
+	<meta http-equiv="refresh" content="0; url=/display/boxLabels.php" />
 </html>
