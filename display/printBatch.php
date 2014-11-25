@@ -21,7 +21,7 @@
 					var ingredientsList = jQuery.parseJSON(data);
 					for (var i = 0; i < ingredientsList.length; i++){
 					//document.write(ingredientsList[i]['IngrName']);
-						$('#ingredients').text($('#ingredients').text() + ingredientsList[i][['IngrName']);
+						$('#ingredients').text($('#ingredients').text() + ingredientsList[i]['IngrName']);
 					}
 				}
 			});
