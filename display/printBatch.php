@@ -2,9 +2,10 @@
 	<script src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.js"></script>
 	<script src="/js/jquery.barcode.0.3.js"></script>
 	<meta charset="utf-8" />
-	<div data-param="foo" class="barcodeI25" style="width:153px;height:25px;border:1px solid red;">
+	<div class="barcodeI25" style="width:153px;height:25px;border:1px solid red;"></div>
+	<div id="date"></div>
+	<div id="ingredients"></div>
 	
-	</div>
 	
 	<script>
    $(document).ready(function(){
@@ -19,7 +20,8 @@
 				success: function (data, status) {
 					var ingredientsList = jQuery.parseJSON(data);
 					for (var i = 0; i < ingredientsList.length; i++){
-						document.write(ingredientsList[i]['IngrName']);
+					//document.write(ingredientsList[i]['IngrName']);
+						$('#ingredients').text($('#ingredients').text() + ingredientsList[i][['IngrName']);
 					}
 				}
 			});
