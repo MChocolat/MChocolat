@@ -50,6 +50,7 @@ function createIngredientRow(i){
 	var name = document.createElement("p");
 	var t = document.createTextNode(ingredientsList[i]['IngrName']);
 	name.appendChild(t);
+	name.value = ingredientsList[i]['Amount'];
 	
 	var id = document.createElement("input");
 	id.type = "text";
@@ -126,7 +127,8 @@ function addBatchIngredients(batchID){
 	
 	for(i = 0; i < ingredients.size(); i++){
 		IngrID = $($($(ingredients[i]).children()[1]).children()[0]).val();
-		var row = {"BID": batchID, "IngrID":IngrID};
+		IRID = $($($(ingredients[i]).children()[0]).children()[0]).val();
+		var row = {"BID": batchID, "IngrID":IngrID, "IRID":IRID};
 		data[i] = row;
 	}
 
