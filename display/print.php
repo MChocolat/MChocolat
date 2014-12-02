@@ -2,9 +2,16 @@
 	<script src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.js"></script>
 	<script src="/js/jquery.barcode.0.3.js"></script>
 	<meta charset="utf-8" />
-	<div data-param="foo" class="barcodeI25" style="width:153px;height:25px;border:1px solid red;">
+	<div id="div1" data-param="foo" class="barcodeI25" style="width:153px;height:25px;border:1px solid red;">
 	</div>
-	
+	<style> 
+
+	div#div1 {
+		-ms-transform: rotate(-90deg); /* IE 9 */
+		-webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+		transform: rotate(-90deg); /* Standard syntax */
+	}
+</style>
 	<script>
    $(document).ready(function(){
 		
