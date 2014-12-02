@@ -21,7 +21,7 @@
 				$('.barcodeI25').text(IRID);
 				generateI25();
 				var recipeName=getUrlParameter('param2');
-				$('recipeName').text(recipeName);
+				$('.recipeName').text(recipeName);
 				window.print();
 	});
 	
