@@ -6,6 +6,7 @@
 	<div class="recipeName"></div>
 	<div id="date"></div>
 	<div id="ingredients"></div>
+	<div id="date"></div>	
 	
 	
 	<script>
@@ -23,6 +24,21 @@
 				var recipeName=getUrlParameter('param2');
 				recipeName=decodeURIComponent(recipeName);
 				$('.recipeName').text(recipeName);
+				var today = new Date();
+				var dd = today.getDate();
+				var mm = today.getMonth()+1; //January is 0!
+				var yyyy = today.getFullYear();
+
+				if(dd<10) {	
+					dd='0'+dd
+				} 
+
+				if(mm<10) {
+					mm='0'+mm
+				} 
+
+				today = mm+'/'+dd+'/'+yyyy;
+				$('.date').text(today);
 				window.print();
 	});
 	
