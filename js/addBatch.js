@@ -139,7 +139,7 @@ function addBatchIngredients(batchID){
 			data: {'action': 'addBatchIngredients', 'data': data},
             success: function (data, status) {
 				saveSuccessful();
-				window.location="/display/printBatch.php"+'?param=' + data;
+				window.location="/display/printBatch.php"+'?param=' + data + "&param2="+ $("#recipeSelect option:selected").text;
 			}
     });
 
