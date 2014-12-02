@@ -4,9 +4,7 @@
 	<meta charset="utf-8" />
 	<div class="barcodeI25" style="width:153px;height:25px;border:1px solid red;"></div>
 	<div class="recipeName"></div>
-	<div id="date"></div>
-	<div id="ingredients"></div>
-	<div id="date"></div>	
+	<div class="date"></div>	
 	
 	
 	<script>
