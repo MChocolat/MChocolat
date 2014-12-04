@@ -2,7 +2,7 @@
 	<script src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.js"></script>
 	<script src="/js/jquery.barcode.0.3.js"></script>
 	<meta charset="utf-8" />
-	<div data-param="foo" class="barcodeI25" style="width:150px;height:30px;border:2px solid red;"></div>
+	<div data-param="foo" class="barcodeI25" style="width:150px;height:90px;border:2px solid red;"></div>
 	<style> 
 </style>
 	<script>
