@@ -24,22 +24,7 @@ $(document).ready( function () {
 	for (var i = 0; i<boxSizes.length; i++){
 	document.getElementById('numberSelect').options[i] = new Option(boxSizes[i]);
 	}
-/*
-	var radio = document.getElementById('type');
 
-	var scanRadio = radio.createElement("INPUT");
-	scanRadio.setAttribute("type", "radio");
-	scanRadio.value("scan");
-
-	var selectRadio = radio.createElement("INPUT");
-	selectRadio.setAttribute("type", "radio");
-	selectRadio.value("select");
-
-	radio.appendChild(scanRadio);
-	radio.appendChild(selectRadio);
-
-	document.appendChild(radio);
-	*/
 	//Set Button Functions
 	$("#selectNumberButton").bind("click", selectNumber);
 	$("#scanButton").bind("click", createBatchSpotScan);
@@ -56,19 +41,6 @@ function selectNumber(){
 	clearBatches();
 
 	boxSize = $("#numberSelect option:selected").text();
-
-	/*
-	var type = self.getElementById('type').checked();
-	if (type == 0){
-		for (var i = 0; i<boxSize; i++) {
-		createBatchSpotScan();
-		}
-	} else{
-		for (var i = 0; i<boxSize; i++) {
-			createBatchSpotSelect();
-		}
-	}
-	*/
 }
 
 function createBatchSpotScan(){
@@ -159,7 +131,18 @@ function createLabel(){
 		value = $($($($(batchesDiv).children()[i]).children()[0]).children()[0]).val();
 		BIDs[i] = value;
 	}
-	console.log(BIDs);
+	var data = BIDs;
+	$.ajax({
+            type: 'POST',
+            url: '/functions.php',
+			cache: false,
+			data: {'action': 'createSubIngredientList', 'data': data},
+            success: function (data, status) {
+				//Do another AJAX save ingredients associated with recipe to ingrRecipe table
+				//addBatchIngredients(data);
+				console.log(data);
+			}
+    });
 
 
 }
