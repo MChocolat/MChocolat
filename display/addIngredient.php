@@ -15,15 +15,15 @@
 		  			<div class="h3">Add New Ingredient</div>
 		  			<p></p>
 
-					<div class="row">
+		  			<div class="row">
 						<div class="large-12 medium-4 columns">
-					  		<input id="addNameInput" type = "text" placeholder = "Name (Temp)">
+					  		<input id="addUpcInput" type = "text" placeholder = "UPC">
 					  	</div>
 					</div>
 
 					<div class="row">
 						<div class="large-12 medium-4 columns">
-					  		<input id="addUpcInput" type = "text" placeholder = "UPC">
+					  		<input id="addNameInput" type = "text" placeholder = "Name">
 					  	</div>
 					</div>
 
@@ -50,9 +50,7 @@
 
 					<div class="">
 					  	<div class="small-11 small-centered columns">
-						    <ul class="button-group even-3">
-						  		<li><a href="#clear" class="tiny button">Clear Entries</a></li>
-						  		<li><a href="#" data-reveal-id="barcode" class="tiny button">Scan Barcode</a></li>
+						    <ul class="button-group even-1">
 						  		<li><a id="addIngredientButton" class="tiny button" >Add Ingredient</a></li>
 							</ul>
 
