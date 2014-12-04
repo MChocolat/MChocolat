@@ -142,6 +142,7 @@ function createLabel(){
 				data = jQuery.parseJSON(data)
 				var ingrName;
 				var subIngr;
+				ingrList = "";
 				for (var i = 0; i<data.length; i++){
 					ingrName = data[i]['IngrName'];
 					subIngr = data[i]['SubIngr'];
