@@ -8,7 +8,7 @@
 	<script>
    $(document).ready(function(){<!--The function reads in the IRID from the data passed in from addingridients.js and generates a barcode in the foo div and then prints-->
 		
-				generateI25 = function(){
+				var generateI25 = function(){
 					$('.barcodeI25').barcode({code:'I25'});
 				};
 				
