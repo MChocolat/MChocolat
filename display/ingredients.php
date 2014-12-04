@@ -57,11 +57,7 @@
 
 						<div class="">
 							<div class="small-11 small-centered columns">
-								<ul class="button-group even-3">
-									<li><a href="#clear" class="tiny button">Clear Entries</a></li>
-									<li><a href="#" data-reveal-id="barcode" class="tiny button">Scan Barcode</a></li>
-									<li><a id="updateIngredientButton" class="tiny button">Update Ingredient</a></li>
-								</ul>
+									<a id="updateIngredientButton" class="tiny button">Update Ingredient</a>
 
 								<div id="barcode" class="reveal-modal" data-reveal>
 								  <h2>Barocde Scanner.</h2>
