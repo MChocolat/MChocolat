@@ -153,10 +153,9 @@ function createLabel(){
 					}
 				}
 				console.log(ingrList);
+				displayList(ingrList);
 			}
     });
-
-    displayList(ingrList);
 }
 
 function displayList(ingrList){
