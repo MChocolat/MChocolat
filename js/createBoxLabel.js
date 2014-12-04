@@ -118,7 +118,7 @@ function createBatchSpotSelect(){
 		for (var i = 0; i<batchesList.length; i++){
 			var opt = document.createElement("option");
 			opt.value = batchesList[i]['BID'];
-			opt.text = batchesList[i]['RecipeName'] + batchesList[i]['DOC'];
+			opt.text = batchesList[i]['RecipeName'] + "- " + batchesList[i]['DOC'];
 			selection.appendChild(opt);
 		}
 
