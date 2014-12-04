@@ -2,6 +2,7 @@ var self;
 var boxSize;
 var batchesList;
 var recipeID;
+var ingrList;
 
 // Function for when page first loads, what you want it to do
 $(document).ready( function () {
@@ -138,32 +139,45 @@ function createLabel(){
 			cache: false,
 			data: {'action': 'createSubIngredientList', 'data': data},
             success: function (data, status) {
-				//Do another AJAX save ingredients associated with recipe to ingrRecipe table
-				//addBatchIngredients(data);
-				console.log(data);
 				data = jQuery.parseJSON(data)
-				var list = "";
 				var ingrName;
 				var subIngr;
 				for (var i = 0; i<data.length; i++){
 					ingrName = data[i]['IngrName'];
 					subIngr = data[i]['SubIngr'];
-					/*
 					if (subIngr == null || subIngr == ""){
-						list = list + ingrName + ", ";
+						ingrList = ingrList + ingrName + ", ";
 					} else {
-						list = list + ingrName + "(" + subIngr + "), ";
+						ingrList = ingrList + ingrName + " (" + subIngr + "), ";
 					}
-					*/
-					list = list + ingrName + "(" + subIngr + "), ";
 				}
-				console.log(list);
+				console.log(ingrList);
 			}
     });
 
-
+    displayList();
 }
 
+function displayList(){
+		var div = document.createElement("div");
+		$(div).addClass("h4");
+		self.getElementById('selectNumberSection').appendChild(div);
+		
+		var textDiv = document.createElement("div");
+		textDiv.setAttribute("class", "panel");
+
+		var titleDiv = document.createElement("div");
+		titleDiv.setAttribute("class", "row");
+		var title = document.createTextNode("Sub-Ingredients List:");
+		titleDiv.appendChild(title);
+		textDiv.appendChild(titleDiv);
+		
+		var text = document.createTextNode(ingrList);
+		textDiv.appendChild(text);
+		div.appendChild(textDiv);
+		
+
+}
 
 function saveSuccessful(){
 	alert("SAVED");
