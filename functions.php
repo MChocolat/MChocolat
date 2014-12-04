@@ -60,6 +60,11 @@ function ingrUPCLookup($data){
 	echo json_encode($finalResult);
 }
 
+/*
+This method takes data about an ingredient from the form and inserts it into the DB.
+If there is no UPC on the ingredient, the user enters a 0. In that case, the name
+has the sub-ingredients attached to it.
+*/
 function addIngredient($data){
 	global $con;
 	$IngrName = mysqli_real_escape_string($con, $data['IngrName']);
@@ -75,6 +80,9 @@ function addIngredient($data){
 		VALUES('$UPC', '$IngrName', '$subIngr');";
 	$result = runQuery($sql); 
 	
+	if ($UPC == 0){
+		$IngrName = $IngrName . " (" . $subIngr . ")";
+	}
 	$sql2 = "INSERT INTO ingredients (IngrID, UPC, DOP, Exp, Lot, IngrName)
 		VALUES(null, '$UPC', '$date', '$exp', '$lotNum', '$IngrName');";
 	$result2 = runQuery($sql2); 
@@ -295,6 +303,32 @@ function getBatchIngredients($data){
 	  $finalResult[] = $row;
 	}
 	echo json_encode($finalResult);
+}
+
+function createSubIngredientList($data){
+	global $con;
+	$where = "where batchIngr.BID = " . mysqli_real_escape_string($con, $data[0]);   
+	for($i=1; $i<count($data); $i++){
+	   $BID = mysqli_real_escape_string($con, $data[$i]);
+	   $where = " or batchIngr.BID = " . $BID;
+	}
+
+	$sql = "SELECT uniqueIngr.SubIngr, ingredients.IngrName, SUM(batchIngr.Amount)
+			from
+			    ingredients
+			        left join
+			    uniqueIngr ON ingredients.UPC = uniqueIngr.UPC
+						join batchIngr ON batchIngr.IngrID = ingredients.IngrID
+						'$where' 
+				GROUP by IngrName
+				order by batchIngr.Amount;";
+	$result = runQuery($sql);
+	$finalResult = array();
+	while ($row = $result->fetch_assoc()){
+	  $finalResult[] = $row;
+	}
+	echo json_encode($finalResult);
+
 }
 
 
