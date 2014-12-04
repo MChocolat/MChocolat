@@ -10,7 +10,7 @@
 	$(document).ready(function(){
 				var ingredients =getUrlParameter('param');
 				ingredients = decodeURIComponent(ingredients);
-				$('.Labeldiv').text(Lavel);
+				$('.Labeldiv').text(ingredients);
 				
 		window.print();
 	});
@@ -30,5 +30,5 @@
 	}
 	
     </script>
-	<!--<meta http-equiv="refresh" content="0; url=/display/createBoxLabel.php" />-->
+	<meta http-equiv="refresh" content="0; url=/display/createBoxLabel.php" />
 </html>
