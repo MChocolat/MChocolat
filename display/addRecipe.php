@@ -12,6 +12,16 @@
 		<div class="row">
 			<div id="right" class="large-6 columns">
 				<div class="panel">
+		  			<div class="h3">New Recipe</div>
+		  			<p></p>
+
+					<div class="row">
+						<div class="large-12 columns">
+					  		<input id="addNameInput" type = "text" placeholder = "Name">
+					  	</div>
+					</div>
+					<p></p>
+
 		  			<div class="h3">Ingredients</div>
 					<p></p>
 					
@@ -47,20 +57,6 @@
 						</div>
 					</div>
 				</div>
-	  		</div>
-
-	  		<div id="left" class="large-6 columns">
-				<div class="panel">
-		  			<div class="h3">New Recipe</div>
-		  			<p></p>
-
-					<div class="row">
-						<div class="large-12 columns">
-					  		<input id="addNameInput" type = "text" placeholder = "Name">
-					  	</div>
-					</div>
-				</div>
-				<p></p>
 	  		</div>
 		</div>
     <script> $(document).foundation(); </script>

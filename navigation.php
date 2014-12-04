@@ -33,7 +33,7 @@
 
 				<ul id="ingredients" class="f-dropdown" data-dropdown-content>
 				  <li><a href="/display/addIngredient.php">Add New Ingredient</a></li>
-				  <li><a href="/display/ingredients.php">View/Search All Ingredients</a></li>
+				  <li><a href="/display/ingredients.php">View/Edit All Ingredients</a></li>
 				</ul>
 
 				<ul id="batches" class="f-dropdown" data-dropdown-content>
