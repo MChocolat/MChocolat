@@ -310,7 +310,7 @@ function createSubIngredientList($data){
 	$where = "where batchIngr.BID = " . mysqli_real_escape_string($con, $data[0]);   
 	for($i=1; $i<count($data); $i++){
 	   $BID = mysqli_real_escape_string($con, $data[$i]);
-	   $where = " or batchIngr.BID = " . $BID;
+	   $where = $where . " or batchIngr.BID = " . $BID;
 	}
 
 	$sql = "SELECT uniqueIngr.SubIngr, ingredients.IngrName, SUM(batchIngr.Amount)
