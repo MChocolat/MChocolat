@@ -307,10 +307,10 @@ function getBatchIngredients($data){
 
 function createSubIngredientList($data){
 	global $con;
-	$where = "where batchIngr.BID = " . mysqli_real_escape_string($con, $data[0]);   
+	$where = " WHERE batchIngr.BID = " . mysqli_real_escape_string($con, $data[0]);   
 	for($i=1; $i<count($data); $i++){
 	   $BID = mysqli_real_escape_string($con, $data[$i]);
-	   $where = $where . " or batchIngr.BID = " . $BID;
+	   $where = $where . " OR batchIngr.BID = " . $BID;
 	}
 
 	$sql = "SELECT uniqueIngr.SubIngr, ingredients.IngrName, SUM(batchIngr.Amount)
@@ -319,7 +319,7 @@ function createSubIngredientList($data){
 			        left join
 			    uniqueIngr ON ingredients.UPC = uniqueIngr.UPC
 						join batchIngr ON batchIngr.IngrID = ingredients.IngrID
-						'$where' 
+						'$where'  
 				GROUP by IngrName
 				order by batchIngr.Amount;";
 	$result = runQuery($sql);
