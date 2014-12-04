@@ -50,8 +50,10 @@
 
 					<div class="">
 					  	<div class="small-11 small-centered columns">
-						    <ul class="button-group even-1">
+						    <ul class="button-group even-3">
+						    	<li></li>
 						  		<li><a id="addIngredientButton" class="tiny button" >Add Ingredient</a></li>
+						  		<li></li>
 							</ul>
 
 							<div id="barcode" class="reveal-modal" data-reveal>
