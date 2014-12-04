@@ -10,7 +10,7 @@
   
   	<body>
 		<div class="row">
-			<div id="right" class="large-6 columns">
+			<div id="right" class="large-6 large-centered columns">
 				<div class="panel">
 		  			<div class="h3">New Recipe</div>
 		  			<p></p>
