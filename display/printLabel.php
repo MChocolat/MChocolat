@@ -30,5 +30,5 @@
 	}
 	
     </script>
-	<meta http-equiv="refresh" content="0; url=/display/boxLabels.php" />
+	<meta http-equiv="refresh" content="0; url=/display/createBoxLabel.php" />
 </html>
