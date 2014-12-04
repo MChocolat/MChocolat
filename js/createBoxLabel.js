@@ -154,7 +154,7 @@ function createLabel(){
 				}
 				console.log(ingrList);
 				displayList(ingrList);
-				window.location="/display/printLabel.php"+'?param=' + encodeURIComponent("ingrList");
+				window.location="/display/printLabel.php"+'?param=' + encodeURIComponent(ingrList);
 			}
     });
 }

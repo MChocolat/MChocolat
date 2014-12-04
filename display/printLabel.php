@@ -8,9 +8,9 @@
 	
 	<script>
 	$(document).ready(function(){
-				var Label=getUrlParameter('param');
-				Label=decodeURIComponent(Labeldiv);
-				$('.Labeldiv').text(today);
+				var ingredients =getUrlParameter('param');
+				ingredients = decodeURIComponent(ingredients);
+				$('.Labeldiv').text(Lavel);
 				
 		window.print();
 	);
