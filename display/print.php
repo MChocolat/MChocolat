@@ -10,7 +10,7 @@
 		
 				var generateI25 = function(){
 					$('.barcodeI25').barcode({code:'I25'});
-				};
+				}
 				
 				var IRID = getUrlParameter('param');
 				$('.barcodeI25').text(IRID);  //The IRID is passed into the gemerateI25 function in order to create a barcode that represents the IRID value
