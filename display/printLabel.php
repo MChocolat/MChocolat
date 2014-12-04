@@ -7,11 +7,28 @@
 	</div>
 	
 	<script>
-   $(document).ready(function(){
+	$(document).ready(function(){
 				var Label=getUrlParameter('param');
 				Label=decodeURIComponent(Labeldiv);
+				$('.Labeldiv').text(today);
+				
+		window.print();
 	);
-	window.print();
+	
+	
+	function getUrlParameter(sParam){<!-- The data from addBatch.js is parsed in order to find the BID and recipe name-->
+		var sPageURL = window.location.search.substring(1);
+		var sURLVariables = sPageURL.split('&');
+		for (var i = 0; i < sURLVariables.length; i++) 
+		{
+			var sParameterName = sURLVariables[i].split('=');
+			if (sParameterName[0] == sParam) 
+			{
+				return sParameterName[1];
+			}
+		}
+	}
+	
     </script>
 	<meta http-equiv="refresh" content="0; url=/display/boxLabels.php" />
 </html>
