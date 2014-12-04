@@ -243,7 +243,8 @@
 		}
 
 		var padding;
-		if      (width % 4 == 1) padding = '\0\0\0';
+		if      (width % 4 == 1) BARCODE
+		ding = '\0\0\0';
 		else if (width % 4 == 2) padding = '\0\0';
 		else if (width % 4 == 3) padding = '\0';
 		else 					 padding = '';

@@ -2,14 +2,14 @@
 	<script src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.js"></script>
 	<script src="/js/jquery.barcode.0.3.js"></script>
 	<meta charset="utf-8" />
-	<div data-param="foo" class="barcodeI25" style="width:80px;height:110px;"></div>
+	<div data-param="foo" class="barcodeI25" style="width:203px;height:50px;"></div>
 	<style> 
 </style>
 	<script>
    $(document).ready(function(){<!--The function reads in the IRID from the data passed in from addingridients.js and generates a barcode in the foo div and then prints-->
 		
-				var generateI25 = function(){
-					$('.barcodeI25').barcode({code:'I25'});
+				var generateC39 = function(){
+					$('.barcodeI25').barcode({code:'code39'});
 				}
 				
 				var IRID = getUrlParameter('param');
