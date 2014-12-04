@@ -127,7 +127,7 @@ function createLabel(){
 	var BIDs = new Array();
 	var value;
 	//get all BID's out of form
-	for (var i = 0; i<boxSize; i++){
+	for (var i = 0; i<boxSize; i++){ 
 		value = $($($($(batchesDiv).children()[i]).children()[0]).children()[0]).val();
 		BIDs[i] = value;
 	}
