@@ -34,11 +34,13 @@ if (!isset($user)) {
         <!-- Right Nav Section -->
         <ul class="right">
             <!-- Add link to Sign-in page -->
-            <li><a  href=</login.php>Logout</a></li>
-            <!--
-              //?php echo $logoutURL; ?> 
-                          >Logout</a></li>
-            -->
+            
+            <?php 
+              $user = UserService::getCurrentUser();
+              if (isset($user)) {
+                echo sprintf('<li><a  href=<%s>Logout</a></li>',
+                             UserService::createLogoutUrl('/'));
+              } ?>
         </ul>
       </section>
     </nav>
