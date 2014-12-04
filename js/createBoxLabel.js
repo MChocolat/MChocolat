@@ -156,10 +156,10 @@ function createLabel(){
 			}
     });
 
-    displayList();
+    displayList(ingrList);
 }
 
-function displayList(){
+function displayList(ingrList){
 		var div = document.createElement("div");
 		$(div).addClass("h4");
 		self.getElementById('selectNumberSection').appendChild(div);
