@@ -42,7 +42,6 @@ $(document).ready( function () {
 	*/
 	//Set Button Functions
 	$("#selectNumberButton").bind("click", selectNumber);
-	$("#createLabelButton").bind("click", createLabel);
 	$("#scanButton").bind("click", createBatchSpotScan);
 	$("#selectButton").bind("click", createBatchSpotSelect);
 	
@@ -96,6 +95,18 @@ function createBatchSpotScan(){
 
 		div.appendChild(upcDiv);
 	}
+
+		var div = document.createElement("div");
+	$(div).addClass("row");
+	self.getElementById('batchesDiv').appendChild(div);
+	var btn = document.createElement("BUTTON");        // Create a <button> element
+	btn.setAttribute("id", "createLabelButton");
+	btn.setAttribute("class", "tiny button");
+	var t = document.createTextNode("Create Label");       // Create a text node
+	btn.appendChild(t); 
+	div.appendChild(btn);
+	
+	$("#createLabelButton").bind("click", createLabel);
 }
 
 function createBatchSpotSelect(){
@@ -134,6 +145,8 @@ function createBatchSpotSelect(){
 	var t = document.createTextNode("Create Label");       // Create a text node
 	btn.appendChild(t); 
 	div.appendChild(btn);
+
+	$("#createLabelButton").bind("click", createLabel);
 }
 
 function createLabel(){
