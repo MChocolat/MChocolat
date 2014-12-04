@@ -41,7 +41,7 @@ if (!isset($user)) {
                 echo sprintf('<li><a  href=<%s>Logout</a></li>',
                              UserService::createLogoutUrl('/'));
               } ?>
-        </ul>
+        </ul> 
       </section>
     </nav>
   </head>
