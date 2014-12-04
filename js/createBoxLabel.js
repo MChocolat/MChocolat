@@ -141,6 +141,7 @@ function createLabel(){
 				//Do another AJAX save ingredients associated with recipe to ingrRecipe table
 				//addBatchIngredients(data);
 				console.log(data);
+				data = jQuery.parseJSON(data)
 				var list = "";
 				var ingrName;
 				var subIngr;
