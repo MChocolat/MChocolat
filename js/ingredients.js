@@ -79,7 +79,7 @@ function deleteIngredient(){
 		data: {'action': 'deleteIngredient',
 				'data': data},
 		success: function (data, status) {
-				removeIngredient();
+				removeIngredient(); 
 		},
 		error: function() {alert("Error when deleting ingredient!");}
 				
