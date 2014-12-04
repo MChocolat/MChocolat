@@ -6,7 +6,7 @@
 	<style> 
 </style>
 	<script>
-   $(document).ready(function(){<!--The function reads in the IRID from the data passed in from addingridients.js and generates a barcode in the foo div and then prints-->
+   $(document).ready(function(){ //The function reads in the IRID from the data passed in from addingridients.js and generates a barcode in the foo div and then prints
 		
 				var generateI25 = function(){
 					$('.barcodeI25').barcode({code:'I25'});
@@ -18,7 +18,7 @@
 				window.print();
 	});
 	
-	function getUrlParameter(sParam){<!-- The data from addingridients.js is parsed in order to find the IRID-->
+	function getUrlParameter(sParam){ // The data from addingridients.js is parsed in order to find the IRID-->
 		var sPageURL = window.location.search.substring(1);
 		var sURLVariables = sPageURL.split('&');
 		for (var i = 0; i < sURLVariables.length; i++) 
