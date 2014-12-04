@@ -141,6 +141,19 @@ function createLabel(){
 				//Do another AJAX save ingredients associated with recipe to ingrRecipe table
 				//addBatchIngredients(data);
 				console.log(data);
+				var list = "";
+				var ingrName;
+				var subIngr;
+				for (var i = 0; i<data.length; i++){
+					ingrName = data[i]['IngrName'];
+					subIngr = data[i]['SubIngr'];
+					if (subIngr == null || subIngr == ""){
+						list = list + ingrName + ", ";
+					} else {
+						list = list + ingrName + "(" + subIngr + "), ";
+					}
+				}
+				console.log(list);
 			}
     });
 
