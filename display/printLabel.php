@@ -2,15 +2,14 @@
 	<script src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.js"></script>
 	<script src="/js/jquery.barcode.0.3.js"></script>
 	<meta charset="utf-8" />
-	<div data-param="foo" class="barcodeI25" style="width:153px;height:25px;border:1px solid red;">
+	<div class="Labeldiv"></div>
 	
 	</div>
 	
 	<script>
    $(document).ready(function(){
-				generateI25 = function(){
-					$('.barcodeI25').barcode({code:'I25'});
-				};}
+				var Label=getUrlParameter('param');
+				Label=decodeURIComponent(Labeldiv);
 	);
 	window.print();
     </script>
