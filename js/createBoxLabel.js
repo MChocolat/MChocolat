@@ -57,7 +57,7 @@ function createBatchSpotScan(){
 		
 		var upcDiv = document.createElement("div");
 
-		$(upcDiv).addClass("large-6 columns");
+		$(upcDiv).addClass("large-12 columns");
 
 		
 		var upc = document.createElement("input");
@@ -94,7 +94,7 @@ function createBatchSpotSelect(){
 		
 		var selectDiv = document.createElement("div");
 
-		$(selectDiv).addClass("large-6 columns");
+		$(selectDiv).addClass("large-12 columns");
 
 		
 		var selection = document.createElement("select");
