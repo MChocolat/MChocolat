@@ -322,12 +322,15 @@ function createSubIngredientList($data){
 						'$where'  
 				GROUP by IngrName
 				order by batchIngr.Amount;";
+				echo $sql;
+				/*
 	$result = runQuery($sql);
 	$finalResult = array();
 	while ($row = $result->fetch_assoc()){
 	  $finalResult[] = $row;
 	}
 	echo json_encode($finalResult);
+	*/
 
 }
 
