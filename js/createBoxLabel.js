@@ -129,7 +129,8 @@ function createBatchSpotSelect(){
 	$(div).addClass("row");
 	self.getElementById('batchesDiv').appendChild(div);
 	var btn = document.createElement("BUTTON");        // Create a <button> element
-	btn.setAttribute("id", "createLabelButton")
+	btn.setAttribute("id", "createLabelButton");
+	btn.setAttribute("class", "tiny button");
 	var t = document.createTextNode("Create Label");       // Create a text node
 	btn.appendChild(t); 
 	div.appendChild(btn);
