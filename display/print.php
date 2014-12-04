@@ -14,7 +14,7 @@
 				
 				var IRID = getUrlParameter('param');
 				$('.barcode39').text(IRID);  //The IRID is passed into the gemerateI25 function in order to create a barcode that represents the IRID value
-				generateI25();
+				generateC39();
 				window.print();
 	});
 	
