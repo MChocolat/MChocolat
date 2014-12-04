@@ -2,23 +2,23 @@
 	<script src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.js"></script>
 	<script src="/js/jquery.barcode.0.3.js"></script>
 	<meta charset="utf-8" />
-	<div class="barcodeI25" style="width:153px;height:25px;border:1px solid red;"></div>
+	<div class="barcodeC39" style="width:153px;height:25px;border:1px solid red;"></div>
 	<div class="recipeName"></div>
 	<div class="date"></div>	
 	
 	
 	<script>
-   $(document).ready(function(){ //The function reads in the BID and recipeName from the data passed in from addBatch.js and generates a barcode barcodeI25 div. It also adds the recipe name and current date to the page before printing-->
+   $(document).ready(function(){ //The function reads in the BID and recipeName from the data passed in from addBatch.js and generates a barcode barcodeC39 div. It also adds the recipe name and current date to the page before printing-->
    
 			var data = {"BID":getUrlParameter('param')};
 					
-				var generateI25 = function(){
-					$('.barcodeI25').barcode({code:'I25'});//The BID is passed into the gemerateI25 function in order to create a barcode that represents the BID value
+				var generateC39 = function(){
+					$('.barcodeC39').barcode({code:'code39'});//The BID is passed into the gemerateC39 function in order to create a barcode that represents the BID value
 				}
 				
 				var IRID = getUrlParameter('param');
-				$('.barcodeI25').text(IRID);
-				generateI25();
+				$('.barcodeC39').text(IRID);
+				generateC39();
 				var recipeName=getUrlParameter('param2');
 				recipeName=decodeURIComponent(recipeName);
 				$('.recipeName').text(recipeName);
