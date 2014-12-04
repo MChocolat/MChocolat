@@ -8,12 +8,12 @@
 	
 	
 	<script>
-   $(document).ready(function(){
+   $(document).ready(function(){<!--The function reads in the BID and recipeName from the data passed in from addBatch.js and generates a barcode barcodeI25 div. It also adds the recipe name and current date to the page before printing-->
    
 			var data = {"BID":getUrlParameter('param')};
 					
 				var generateI25 = function(){
-					$('.barcodeI25').barcode({code:'I25'});
+					$('.barcodeI25').barcode({code:'I25'});//The BID is passed into the gemerateI25 function in order to create a barcode that represents the BID value
 				}
 				
 				var IRID = getUrlParameter('param');
@@ -40,7 +40,7 @@
 				window.print();
 	});
 	
-	function getUrlParameter(sParam){
+	function getUrlParameter(sParam){<!-- The data from addBatch.js is parsed in order to find the BID and recipe name-->
 		var sPageURL = window.location.search.substring(1);
 		var sURLVariables = sPageURL.split('&');
 		for (var i = 0; i < sURLVariables.length; i++) 
@@ -53,5 +53,5 @@
 		}
 	}
     </script>
-	<meta http-equiv="refresh" content="0; url=/display/addBatch.php" />
+	<meta http-equiv="refresh" content="0; url=/display/addBatch.php" /><!--Redirects back to page user came from-->
 </html>

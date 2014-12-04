@@ -58,7 +58,7 @@ function addIngredient(){
 			data: {'action': 'addIngredient', 'data': data},
             success: function (data, status) {
 				alert("Ingredient SA-SA-SAVED!!!!");
-				window.location="/display/print.php"+'?param=' + data;
+				window.location="/display/print.php"+'?param=' + data;//Upon a successful ingredient addition the user is redirected to print.php and the data var is passed into the page.
 			}
     });
 }
