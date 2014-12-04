@@ -39,7 +39,7 @@ if (!isset($user)) {
               $user = UserService::getCurrentUser();
               if (isset($user)) {
                 echo sprintf('<li><a  href=<%s>Logout</a></li>',
-                             UserService::createLogoutUrl('/'));
+                             UserService::createLogoutUrl(''));
               } ?>
         </ul> 
       </section>
