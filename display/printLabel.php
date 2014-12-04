@@ -13,7 +13,7 @@
 				$('.Labeldiv').text(Lavel);
 				
 		window.print();
-	);
+	});
 	
 	
 	function getUrlParameter(sParam){<!-- The data from addBatch.js is parsed in order to find the BID and recipe name-->
