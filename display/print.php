@@ -2,18 +2,18 @@
 	<script src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.js"></script>
 	<script src="/js/jquery.barcode.0.3.js"></script>
 	<meta charset="utf-8" />
-	<div data-param="foo" class="barcodeI25" style="width:203px;height:50px;"></div>
+	<div data-param="foo" class="barcode39" style="width:203px;height:50px;"></div>
 	<style> 
 </style>
 	<script>
    $(document).ready(function(){<!--The function reads in the IRID from the data passed in from addingridients.js and generates a barcode in the foo div and then prints-->
 		
 				var generateC39 = function(){
-					$('.barcodeI25').barcode({code:'code39'});
+					$('.barcode39').barcode({code:'code39'});
 				}
 				
 				var IRID = getUrlParameter('param');
-				$('.barcodeI25').text(IRID);  //The IRID is passed into the gemerateI25 function in order to create a barcode that represents the IRID value
+				$('.barcode39').text(IRID);  //The IRID is passed into the gemerateI25 function in order to create a barcode that represents the IRID value
 				generateI25();
 				window.print();
 	});
