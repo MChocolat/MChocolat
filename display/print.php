@@ -32,5 +32,5 @@
 	} 
 	
     </script>
-	<!--<meta http-equiv="refresh" content="0; url=/display/addIngredient.php" /> <!--Redirects back to page user came from-->
+	<meta http-equiv="refresh" content="0; url=/display/addIngredient.php" /> <!--Redirects back to page user came from-->
 </html>
