@@ -12,7 +12,7 @@
 		<div class="row ">
 			<div id="selectNumberSection" class="large-6 columns">
 				<div class="panel">
-		  			<div class="h3">How many chocolates are in your box?</div>
+		  			<div class="h3">Is this working? How many chocolates are in your box?</div>
 					<p></p>
 						
 					<div class="row">
