@@ -321,7 +321,7 @@ function createSubIngredientList($data){
 						join batchIngr ON batchIngr.IngrID = ingredients.IngrID
 						$where  
 				GROUP by IngrName
-				order by batchIngr.Amount;";
+				order by batchIngr.Amount desc;";
 	$result = runQuery($sql);
 	$finalResult = array();
 	while ($row = $result->fetch_assoc()){
