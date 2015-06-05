@@ -143,7 +143,7 @@ function createLabel(){
 				var ingrName;
 				var subIngr;
 				ingrList = "";
-				for (var i = 0; i<data.length; i++){
+				for (var i = data.length -1 ; i>= 0; i--){
 					ingrName = data[i]['IngrName'];
 					subIngr = data[i]['SubIngr'];
 					if (subIngr == null || subIngr == ""){
