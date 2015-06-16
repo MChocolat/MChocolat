@@ -253,7 +253,12 @@ function addBatchIngredients($data){
 	   $IngrID = mysqli_real_escape_string($con, $data[$i]['IngrID']);
 	   $Amount = mysqli_real_escape_string($con, $data[$i]['Amount']);
 
-	   $ingredients[] = "('$BID', '$IngrID', '$Amount')";
+	   $allIngr = explode(",", $IngrID);
+	   foreach ($allIngr as $curr) {
+	   	$ingredients[] = "('$BID', '$curr', '$Amount')";
+	   }
+	   		
+	   
 	}
 
 	$sql = "INSERT INTO batchIngr (BID, IngrID, Amount) VALUES " . implode(', ', $ingredients);
