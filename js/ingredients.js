@@ -71,7 +71,16 @@ function printIngredient(){
 	var IngrID = self.selectedRow[0].innerText;
 	var name = self.selectedRow[1].innerText;
 	var date = self.selectedRow[3].innerText;
-	window.location="/display/print.php"+'?param=' + ingrID + '&param2=' + name + '&param3=' + date;
+	$.ajax({
+		type: 'POST',
+		url: '/functions.php',
+			cache: false,
+			data: {'action': 'cheatAndDoNothing', 'data': name},
+            success: function (data, status) {
+            	window.location="/display/print.php"+'?param=' + ingrID + '&param2=' + name + '&param3=' + date;
+            }
+			
+	})
 }
 
 //Delete ingredient from DB

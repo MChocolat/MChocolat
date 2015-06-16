@@ -268,6 +268,10 @@ function addBatchIngredients($data){
 	echo $BID;
 }
 
+function cheatAndDoNothing($data){
+	//I want ajax to work, and i'm copying and pasting old code.
+	echo $data;
+}
 function updateBatchIngredients($data){
 	global $con;
 	$ingredients = array();    
