@@ -3,6 +3,8 @@
 	<script src="/js/jquery.barcode.0.3.js"></script>
 	<meta charset="utf-8" />
 	<div data-param="foo" class="barcodeC39" style="width:150px;height:30px;border:2px solid red;"></div>
+	<div class="name"></div>
+	<div class="date"></div>	
 	<style> 
 </style>
 	<script>
@@ -15,6 +17,25 @@
 				var IRID = getUrlParameter('param');
 				$('.barcodeC39').text(IRID);  //The IRID is passed into the gemerateC39 function in order to create a barcode that represents the IRID value
 				generateC39();
+				var name = getUrlParameter('param2');
+
+				name=decodeURIComponent(name);
+				$('.name').text(name);
+				var today = new Date();
+				var dd = today.getDate();
+				var mm = today.getMonth()+1; //January is 0!
+				var yyyy = today.getFullYear();
+
+				if(dd<10) {	
+					dd='0'+dd
+				} 
+
+				if(mm<10) {
+					mm='0'+mm
+				} 
+
+				today = mm+'/'+dd+'/'+yyyy;
+				$('.date').text(today);
 				window.print();
 	});
 	

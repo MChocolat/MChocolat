@@ -62,7 +62,7 @@ function createBatchSpotScan(){
 		
 		var upc = document.createElement("input");
 		upc.type = "text";
-		upc.placeholder = "Ingredient UPC";
+		upc.placeholder = "Batch UPC";
 
 		upcDiv.appendChild(upc);
 
