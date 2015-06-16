@@ -57,8 +57,22 @@ function addIngredient(){
 			cache: false,
 			data: {'action': 'addIngredient', 'data': data},
             success: function (data, status) {
-				//alert("Ingredient SA-SA-SAVED!!!!");
-				window.location="/display/print.php"+'?param=' + data + '&param2=' + $('#addNameInput').val();//Upon a successful ingredient addition the user is redirected to print.php and the data var is passed into the page.
+				//alert("Ingredient SA-SA-SAVED!!!!");''
+				var today = new Date();
+				var dd = today.getDate();
+				var mm = today.getMonth()+1; //January is 0!
+				var yyyy = today.getFullYear();
+
+				if(dd<10) {	
+					dd='0'+dd
+				} 
+
+				if(mm<10) {
+					mm='0'+mm
+				} 
+
+				today = mm+'/'+dd+'/'+yyyy;
+				window.location="/display/print.php"+'?param=' + data + '&param2=' + $('#addNameInput').val() + '&param3=' + today;//Upon a successful ingredient addition the user is redirected to print.php and the data var is passed into the page.
 			}
     });
 }

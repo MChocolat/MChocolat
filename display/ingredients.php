@@ -15,6 +15,7 @@
 			<!-- Search Bar / Inventory Table -->
 			<a id="editIngredientButton" class="tiny button" data-reveal-id="dialog">Edit Selected</a>
 			<a id="deleteIngredientButton" class="tiny button">Delete Selected</a>
+			<a id="printIngredientButton" class="tiny button">Print Barcode for Selected</a>
 			
 			<div class="reveal-modal small" id="dialog" data-reveal="">
 				<h3>Edit Ingredient</h3>

@@ -61,12 +61,18 @@ $(document).ready( function () {
 	//Set Button Functions
 	$("#updateIngredientButton").bind("click", updateIngredient);
 	$("#deleteIngredientButton").bind("click", deleteIngredient);
-	
+	$("#printIngredientButton").bind("click", printIngredient);
 	$("#editIngredientButton").bind("click", editIngredient);
 	
 	
 } );
 
+function printIngredient(){
+	var IngrID = self.selectedRow[0].innerText;
+	var name = self.selectedRow[1].innerText;
+	var date = self.selectedRow[3].innerText;
+	window.location="/display/print.php"+'?param=' + ingrID + '&param2=' + name + '&param3=' + date;
+}
 
 //Delete ingredient from DB
 function deleteIngredient(){
