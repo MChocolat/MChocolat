@@ -52,7 +52,7 @@ function addIngredient(){
 				"LotNum":$('#addLotNumInput').val(),
 				"SubIngr":$('#addSubInput').val()};
 	if (data["IngrName"].indexOf("&") >= 0){
-		data["IngrName"].replace("&", "and");
+		data["IngrName"] = data["IngrName"].replace("&", "and");
 	}
 	$.ajax({
             type: 'POST',
