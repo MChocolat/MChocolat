@@ -4,11 +4,14 @@ var ingredientsList;
 var recipeID;
 $(document).keypress(function(e) {
 		if(e.which == 13) {
-				var test = document.activeElement.id;
+				var ingredients = $(ingredientsDiv).children();	
+	for(i = 0; i < ingredients.size(); i++){
+		var thing = $($($(ingredients[i]).children()[1]).children()[0]).val();
+		if(thing !+ "" && thing.indexOf(",") == -1){
+			thing.val(thing.val() + ",");
+		}
 
-				$(test).val($(test).val() + ",");
-
-		alert(test);
+	}
 		}
 	});
 
