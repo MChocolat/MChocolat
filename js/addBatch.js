@@ -4,8 +4,10 @@ var ingredientsList;
 var recipeID;
 $(document).keypress(function(e) {
 		if(e.which == 13) {
-				$(document.activeElement.id).val($(document.activeElement.id).val() + ",");
+				var test = document.activeElement.id;
+				$(test).val($(test).val() + ",");
 		}
+		alert("you pressed enter!");
 	});
 
 // Function for when page first loads, what you want it to do
