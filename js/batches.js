@@ -70,7 +70,7 @@ function printBatch(){
 			cache: false,
 			data: {'action': 'cheatAndDoNothing', 'data': name},
             success: function (data, status) {
-            	window.location="/display/print.php"+'?param=' + BatchID + '&param2=' + name + '&param3=' + date;
+            	window.location="/display/print.php"+'?param=' + BatchID + '#param2=' + name + '#param3=' + date;
             }
 			
 	})

@@ -139,7 +139,7 @@ function addBatchIngredients(batchID){
 			data: {'action': 'addBatchIngredients', 'data': data},
             success: function (data, status) {
 				saveSuccessful();
-				window.location="/display/printBatch.php"+'?param=' + data + "&param2="+ encodeURIComponent($("#recipeSelect option:selected").text());//Upon a successful batch addition the user is redirected to printBatch.php and the data var is passed into the page.
+				window.location="/display/printBatch.php"+'?param=' + data + "#param2="+ encodeURIComponent($("#recipeSelect option:selected").text());//Upon a successful batch addition the user is redirected to printBatch.php and the data var is passed into the page.
 			}
     });
 

@@ -29,7 +29,7 @@
 	
 	function getUrlParameter(sParam){ // The data from addingridients.js is parsed in order to find the IRID-->
 		var sPageURL = window.location.search.substring(1);
-		var sURLVariables = sPageURL.split('&');
+		var sURLVariables = sPageURL.split('#');
 		for (var i = 0; i < sURLVariables.length; i++) 
 		{
 			var sParameterName = sURLVariables[i].split('=');
@@ -41,5 +41,5 @@
 	} 
 	
     </script>
-	<meta http-equiv="refresh" content="0; url=/display/addIngredient.php" /> <!--Redirects back to page user came from-->
+	<meta http-equiv="refresh" content="0; url=/" /> <!--Redirects back to page user came from-->
 </html>

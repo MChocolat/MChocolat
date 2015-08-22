@@ -72,7 +72,7 @@ function addIngredient(){
 				} 
 
 				today = mm+'/'+dd+'/'+yyyy;
-				window.location="/display/print.php"+'?param=' + data + '&param2=' + $('#addNameInput').val() + '&param3=' + today;//Upon a successful ingredient addition the user is redirected to print.php and the data var is passed into the page.
+				window.location="/display/print.php"+'?param=' + data + '#param2=' + $('#addNameInput').val() + '#param3=' + today;//Upon a successful ingredient addition the user is redirected to print.php and the data var is passed into the page.
 			}
     });
 }
