@@ -7,7 +7,7 @@ $(document).keypress(function(e) {
 				var ingredients = $(ingredientsDiv).children();	
 	for(i = 0; i < ingredients.size(); i++){
 		var thing = $($($(ingredients[i]).children()[1]).children()[0]).val();
-		if(thing !+ "" && thing.indexOf(",") == -1){
+		if(thing != "" && thing.indexOf(",") == -1){
 			thing.val(thing.val() + ",");
 		}
 
