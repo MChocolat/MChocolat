@@ -112,7 +112,7 @@ function removeIngredient(){
 
 function editIngredient(){
 	$('#editNameInput').val(self.selectedRow[1].innerText);
-	$('#editUpcInput').val(self.selectedRow[2].innerText);
+	$('#editUpcInput').val("You cannot edit UPC codes- Delete ingredient and re-enter");
 	$('#editLotNumInput').val(self.selectedRow[5].innerText);
 	$('#editExpInput').val(self.selectedRow[4].innerText);
 	$('#editSubInput').val(self.selectedRow[6].innerText);	
@@ -122,7 +122,7 @@ function updateIngredient(){
 	//TODO: form validation
 	var data = {"IngrID":self.selectedRow[0].innerText,
 				"IngrName":$('#editNameInput').val(),
-				"UPC":$('#editUpcInput').val(),
+				"UPC":self.selectedRow[2].innerText,
 				"Exp":$('#editExpInput').val(),
 				"LotNum":$('#editLotNumInput').val(),
 				"SubIngr":$('#editSubInput').val()};

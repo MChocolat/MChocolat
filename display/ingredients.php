@@ -31,7 +31,7 @@
 
 						<div class="row">
 							<div class="large-12 medium-4 columns">
-								<input id="editUpcInput" type = "text" placeholder = "UPC">
+								<input id="editUpcInput" type = "text" placeholder = "UPC (only numbers)">
 							</div>
 						</div>
 
