@@ -146,7 +146,7 @@ function addBatchIngredients(batchID){
 		var names = IngrID.split(",");
 		var uniqueIngrIDs = [];
 		$.each(names, function(k, el){
-    			if($.inArray(el, uniqueIngrIDs) === -1) uniqueIngrIDs.push(el);
+    			if($.inArray(el, uniqueIngrIDs) === -1 && el != "") uniqueIngrIDs.push(el);
 		});
 
 		for (j = 0; j < uniqueIngrIDs.length; j++) { 
