@@ -2,6 +2,11 @@ var self;
 var recipesList;
 var ingredientsList;
 var recipeID;
+$(document).keypress(function(e) {
+		if(e.which == 13) {
+				&(document.activeElement.id).val(&(document.activeElement.id).val + ",");
+		}
+	});
 
 // Function for when page first loads, what you want it to do
 $(document).ready( function () {
@@ -139,7 +144,11 @@ function addBatchIngredients(batchID){
 			data: {'action': 'addBatchIngredients', 'data': data},
             success: function (data, status) {
 				saveSuccessful();
-				window.location="/display/printBatch.php"+'?param=' + data + "&param2="+ encodeURIComponent($("#recipeSelect option:selected").text());//Upon a successful batch addition the user is redirected to printBatch.php and the data var is passed into the page.
+				var name = encodeURIComponent($("#recipeSelect option:selected").text());
+				if (name.indexOf("&") >= 0){
+					name = name.replace("&", "and");
+				}
+				window.location="/display/printBatch.php"+'?param=' + data + "&param2="+ name;//Upon a successful batch addition the user is redirected to printBatch.php and the data var is passed into the page.
 			}
     });
 
