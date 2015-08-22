@@ -112,7 +112,7 @@ function addBatch(){
             success: function (data, status) {
 				//Do another AJAX save ingredients associated with recipe to ingrRecipe table
 				addBatchIngredients(data);
-			}
+			} 
     });
 }
 

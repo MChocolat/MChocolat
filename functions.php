@@ -73,7 +73,8 @@ function addIngredient($data){
 	$lotNum = mysqli_real_escape_string($con, $data['LotNum']);
 	$subIngr = mysqli_real_escape_string($con, $data['SubIngr']);
 
-	$date = date("Y-m-d");
+
+	$date = date("y-m-d");
 	
 
 	$sql = "INSERT IGNORE INTO uniqueIngr (UPC, IngrName, SubIngr)
@@ -110,11 +111,10 @@ function updateIngredient($data){
 
 	$date = date("Y-m-d");
 	
-	$sql = "INSERT IGNORE INTO uniqueIngr (UPC, IngrName, SubIngr)
-		VALUES('$UPC', '$IngrName', '$subIngr');";
+	$sql = "UPDATE uniqueIngr set IngrName = '$IngrName', SubIngr = '$subIngr' Where UPC = '$UPC';";
 	$result = runQuery($sql); 
 
-	$sql2 = "UPDATE ingredients SET UPC = '$UPC', DOP = '$date', Exp = '$exp', Lot = '$lotNum'  WHERE IngrID = '$IngrID';";
+	$sql2 = "UPDATE ingredients SET UPC = '$UPC', DOP = '$date', Exp = '$exp', Lot = '$lotNum', IngrName = '$IngrName'  WHERE IngrID = '$IngrID';";
 	$result2 = runQuery($sql2); 
 	
 	echo $result2;
@@ -253,10 +253,12 @@ function addBatchIngredients($data){
 	   $IngrID = mysqli_real_escape_string($con, $data[$i]['IngrID']);
 	   $Amount = mysqli_real_escape_string($con, $data[$i]['Amount']);
 
-	   $allIngr = explode(",", $IngrID);
-	   foreach ($allIngr as $curr) {
-	   	$ingredients[] = "('$BID', '$curr', '$Amount')";
-	   }
+	   $ingredients[] = "('$BID', '$IngrID', '$Amount')";
+
+	   //$allIngr = explode(",", $IngrID);
+	   //foreach ($allIngr as $curr) {
+	   //	$ingredients[] = "('$BID', '$curr', '$Amount')";
+	   //}
 	   		
 	   
 	}
