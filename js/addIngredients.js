@@ -46,14 +46,17 @@ $(document).ready( function () {
 
 function addIngredient(){
 	//TODO: form validation
+	if ($('#addNameInput').val().indexOf("&") >= 0){
+		$('#addNameInput').val() = $('#addNameInput').val().replace("&", "and");
+	}
 	var data = {"IngrName":$('#addNameInput').val(),
 				"UPC":$('#addUpcInput').val(),
 				"Exp":$('#addExpInput').val(),
 				"LotNum":$('#addLotNumInput').val(),
 				"SubIngr":$('#addSubInput').val()};
-	if (data["IngrName"].indexOf("&") >= 0){
-		data["IngrName"] = data["IngrName"].replace("&", "and");
-	}
+	//if (data["IngrName"].indexOf("&") >= 0){
+	//	data["IngrName"] = data["IngrName"].replace("&", "and");
+	//}
 	$.ajax({
             type: 'POST',
             url: '/functions.php',
