@@ -4,7 +4,7 @@ var ingredientsList;
 var recipeID;
 $(document).keypress(function(e) {
 		if(e.which == 13) {
-				document.activeElement.id.val(&(document.activeElement.id).val + ",");
+				document.activeElement.id.val(document.activeElement.id.val() + ",");
 		}
 	});
 
