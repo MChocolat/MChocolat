@@ -140,7 +140,6 @@ function updateIngredient(){
             success: function (data, status) {
 			
 				$(self.selectedRow[1]).text($('#editNameInput').val());
-				$(self.selectedRow[2]).text($('#editUpcInput').val());
 				$(self.selectedRow[4]).text($('#editExpInput').val());
 				$(self.selectedRow[5]).text($('#editLotNumInput').val());
 				$(self.selectedRow[6]).text($('#editSubInput').val());
