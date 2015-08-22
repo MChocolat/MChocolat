@@ -77,7 +77,7 @@ function printIngredient(){
 			cache: false,
 			data: {'action': 'cheatAndDoNothing', 'data': name},
             success: function (data, status) {
-            	window.location="/display/print.php"+'?param=' + IngrID + '#param2=' + name + '#param3=' + date;
+            	window.location="/display/print.php"+'?param=' + IngrID + '&param2=' + name + '&param3=' + date;
             }
 			
 	})
