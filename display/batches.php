@@ -15,7 +15,7 @@
 			<!-- Search Bar / Inventory Table -->
 			<a id="editBatchButton" class="tiny button" data-reveal-id="dialog">View Ingredients of Batch</a>
 			<a id="deleteBatchButton" class="tiny button">Delete Selected</a>
-			
+			<a id="printBatchButton" class="tiny button">Print Barcode for Selected</a>
 			<div class="reveal-modal small" id="dialog" data-reveal="">
 				<h3>View Batch</h3>
 				<a class="close-reveal-modal">×</a>

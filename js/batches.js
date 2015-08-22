@@ -56,8 +56,25 @@ $(document).ready( function () {
 	$("#editBatchButton").bind("click", editBatch);
 	$("#updateBatchButton").bind("click", updateBatch);
 	$("#deleteBatchButton").bind("click", deleteBatch);
-	
+	$('#printBatchButton').bind("click", printBatch);
+
 } );
+
+function printBatch(){
+	var BatchID = self.selectedRow[0].innerText;
+	var name = self.selectedRow[1].innerText;
+	var date = self.selectedRow[2].innerText;
+	$.ajax({
+		type: 'POST',
+		url: '/functions.php',
+			cache: false,
+			data: {'action': 'cheatAndDoNothing', 'data': name},
+            success: function (data, status) {
+            	window.location="/display/print.php"+'?param=' + BatchID + '&param2=' + name + '&param3=' + date;
+            }
+			
+	})
+} 
 
 // Load the Edit form with Batch's info
 function loadEditForm(){
