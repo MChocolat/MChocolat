@@ -90,6 +90,9 @@ function createIngredientRow(){
 function addRecipe(){
 	//TODO: form validation
 	var data = {"RecipeName":$('#addNameInput').val()};
+	if (data["RecipeName"].indexOf("&") >= 0){
+		data["RecipeName"] = data["RecipeName"].replace("&", "and");
+	}
 	$.ajax({
             type: 'POST',
             url: '/functions.php',

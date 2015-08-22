@@ -54,6 +54,9 @@ function addIngredient(){
 	if (data["IngrName"].indexOf("&") >= 0){
 		data["IngrName"] = data["IngrName"].replace("&", "and");
 	}
+	if (data["SubIngr"].indexOf("&") >= 0){
+		data["SubIngr"] = data["SubIngr"].replace("&", "and");
+	}
 	$.ajax({
             type: 'POST',
             url: '/functions.php',
