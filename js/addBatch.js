@@ -6,8 +6,8 @@ $(document).keypress(function(e) {
 		if(e.which == 13) {
 				var ingredients = $(ingredientsDiv).children();	
 	for(i = 0; i < ingredients.size(); i++){
-		var thing = $($($(ingredients[i]).children()[1]).children()[0]).val();
-		if(thing != "" && thing.indexOf(",") == -1){
+		var thing = $($($(ingredients[i]).children()[1]).children()[0]);
+		if(thing.val() != "" && thing.val().indexOf(",") == -1){
 			thing.val(thing.val() + ",");
 		}
 
