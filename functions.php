@@ -295,7 +295,7 @@ function deleteBatch($data){
 	global $con;
 	$BID = mysqli_real_escape_string($con, $data['BID']);
 	
-	$sql = "DELETE FROM batchIngr2 WHERE BID = '$BID';";
+	$sql = "DELETE FROM batchIngr WHERE BID = '$BID';";
 	$result = runQuery($sql); 
 	
 	$sql2 = "DELETE FROM batches WHERE BID = '$BID';";
