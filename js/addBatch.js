@@ -5,9 +5,10 @@ var recipeID;
 $(document).keypress(function(e) {
 		if(e.which == 13) {
 				var test = document.activeElement.id;
+
 				$(test).val($(test).val() + ",");
-				
-		alert("you pressed enter!");
+
+		alert(test);
 		}
 	});
 
