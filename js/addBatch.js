@@ -136,12 +136,26 @@ function addBatchIngredients(batchID){
 	
 	var id;
 	var IngrID;
+	var count = 0;
 	
 	for(i = 0; i < ingredients.size(); i++){
 		IngrID = $($($(ingredients[i]).children()[1]).children()[0]).val();
 		Amount = $($($(ingredients[i]).children()[0]).children()[0]).val();
-		var row = {"BID": batchID, "IngrID":IngrID, "Amount":Amount};
-		data[i] = row;
+
+		//copy/pasted code... but it works
+		var names = IngrID.split(",");
+		var uniqueIngrIDs = [];
+		$.each(names, function(k, el){
+    			if($.inArray(el, uniqueIngrIDs) === -1) uniqueIngrIDs.push(el);
+		});
+
+		for (j = 0; j < uniqueIngrIDs.length; j++) { 
+		    var row = {"BID": batchID, "IngrID":uniqueIngrIDs[j], "Amount":Amount/uniqueIngrIDs.length};
+		    data[count] = row;
+			count = count + 1;
+		}
+		
+
 	}
 
 	$.ajax({
