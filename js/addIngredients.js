@@ -67,15 +67,19 @@ function addIngredient(){
 				var yyyy = today.getFullYear();
 
 				if(dd<10) {	
-					dd='0'+dd
+					dd='0'+dd;
 				} 
 
 				if(mm<10) {
-					mm='0'+mm
+					mm='0'+mm;
 				} 
 
 				today = mm+'/'+dd+'/'+yyyy;
-				window.location="/display/print.php"+'?param=' + data + '&param2=' + $('#addNameInput').val() + '&param3=' + today;//Upon a successful ingredient addition the user is redirected to print.php and the data var is passed into the page.
+				var name = $('#addNameInput').val();
+				if (name.indexOf("&") >= 0){
+					name = name.replace("&", "and");
+				}
+				window.location="/display/print.php"+'?param=' + data + '&param2=' + name + '&param3=' + today;//Upon a successful ingredient addition the user is redirected to print.php and the data var is passed into the page.
 			}
     });
 }
