@@ -51,8 +51,8 @@ function addIngredient(){
 				"Exp":$('#addExpInput').val(),
 				"LotNum":$('#addLotNumInput').val(),
 				"SubIngr":$('#addSubInput').val()};
-	if (data["IngrName"].indexOf("&") > 0){
-		data["IngrName"].replace("$", "and");
+	if (data["IngrName"].indexOf("&") >= 0){
+		data["IngrName"].replace("&", "and");
 	}
 	$.ajax({
             type: 'POST',
