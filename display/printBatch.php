@@ -37,6 +37,7 @@
 
 				today = mm+'/'+dd+'/'+yyyy;
 				$('.date').text(today);
+				$('.lotNum').text(IRID);
 				window.print();
 	});
 	
